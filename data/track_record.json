@@ -1,11 +1,11 @@
 {
-  "_purpose": "Running record of live SharpOds runs: predictions, closes, results, and the lessons folded back into the engine. CLV against the close — not P&L — is the KPI (Squares & Sharps; Sharper).",
+  "_purpose": "Running record of live SharpOds runs: predictions, closes, results, and the lessons folded back into the engine. CLV against the close \u2014 not P&L \u2014 is the KPI (Squares & Sharps; Sharper).",
   "slates": [
     {
       "date": "2026-07-29",
       "sport": "mlb",
-      "mode": "degraded — no sharp-book anchor reachable (network policy); consensus/article sources, sharpness 0.55-0.60",
-      "engine_verdict": "PASS: no side cleared the EV bar. Best candidate: Tigers ML, fair 1.617, limit order at >= 1.633 — never filled (line closed 1.56-1.59, moving toward Detroit).",
+      "mode": "degraded \u2014 no sharp-book anchor reachable (network policy); consensus/article sources, sharpness 0.55-0.60",
+      "engine_verdict": "PASS: no side cleared the EV bar. Best candidate: Tigers ML, fair 1.617, limit order at >= 1.633 \u2014 never filled (line closed 1.56-1.59, moving toward Detroit).",
       "games": [
         {
           "event_id": "mlb-2026-07-29-bal-det",
@@ -63,8 +63,8 @@
     {
       "date": "2026-07-30",
       "sport": "mlb",
-      "mode": "degraded — consensus/article/prediction-market sources; run with --market-weight 0.85 (third-party model probs are unvalidated)",
-      "engine_verdict": "PASS at listed prices; limit orders shipped. Top: Cubs ML fair 1.942, bet at >= 1.991 (+1.47% EV at listed 1.971). Runner-up: Reds ML fair 1.937, bet at >= 1.985. Cross-source discrepancy on CHC/STL (synthetic hold -1.28%) flagged as unverified arbitrage — quotes are from different moments, treat as stale-line artifact.",
+      "mode": "degraded \u2014 consensus/article/prediction-market sources; run with --market-weight 0.85 (third-party model probs are unvalidated)",
+      "engine_verdict": "PASS at listed prices; limit orders shipped. Top: Cubs ML fair 1.942, bet at >= 1.991 (+1.47% EV at listed 1.971). Runner-up: Reds ML fair 1.937, bet at >= 1.985. Cross-source discrepancy on CHC/STL (synthetic hold -1.28%) flagged as unverified arbitrage \u2014 quotes are from different moments, treat as stale-line artifact.",
       "predictions_home_fair": {
         "mlb-2026-07-30-tex-tb": 0.6203,
         "mlb-2026-07-30-chc-stl": 0.4852,
@@ -75,7 +75,23 @@
         "mlb-2026-07-30-nyy-cws": 0.4317,
         "mlb-2026-07-30-sea-lad": 0.5883
       },
-      "settle": "pending"
+      "settle": "pending",
+      "live_tickets": [
+        {
+          "event_id": "mlb-2026-07-30-chc-stl",
+          "selection": "Cubs ML (match winner incl. extras)",
+          "book": "1win (offshore, user-placed)",
+          "fill_decimal": 1.99,
+          "target_decimal": 1.991,
+          "stake": 30000.0,
+          "potential_return": 59700.0,
+          "ev_at_fill": 0.0244,
+          "fair_probability": 0.5148,
+          "policy_note": "Stake exceeds engine policy by ~476x: quarter-Kelly/2%-cap sizing implies $30k only for a ~$4.8M bankroll (full-Kelly equivalent ~$1.2M). Logged as placed; sizing discretion was the user's.",
+          "hedge_parity": "STL at >= 2.01 locks profit (e.g. $28,656 at 2.08 returns $59,700 both ways, ~+$1,040 riskless)",
+          "clv": "pending close"
+        }
+      ]
     }
   ]
 }
