@@ -1,0 +1,130 @@
+{
+  "events": [
+    {
+      "event_id": "nfl-2026-w9-kc-buf",
+      "sport": "nfl",
+      "league": "NFL",
+      "home": "Bills",
+      "away": "Chiefs",
+      "start_time": "2026-11-01T18:00:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "pinnacle", "side": "home", "decimal_odds": 1.87, "timestamp": 1780000250 },
+            { "book": "pinnacle", "side": "away", "decimal_odds": 2.05, "timestamp": 1780000250 },
+            { "book": "circa", "side": "home", "decimal_odds": 1.88, "timestamp": 1780000200 },
+            { "book": "circa", "side": "away", "decimal_odds": 2.04, "timestamp": 1780000200 },
+            { "book": "draftkings", "side": "home", "decimal_odds": 1.83, "timestamp": 1780000100 },
+            { "book": "draftkings", "side": "away", "decimal_odds": 2.10, "timestamp": 1780000100 },
+            { "book": "fanduel", "side": "home", "decimal_odds": 1.85, "timestamp": 1780000100 },
+            { "book": "fanduel", "side": "away", "decimal_odds": 2.02, "timestamp": 1780000100 },
+            { "book": "betmgm", "side": "home", "decimal_odds": 1.80, "timestamp": 1779999800 },
+            { "book": "betmgm", "side": "away", "decimal_odds": 2.15, "timestamp": 1779999800 }
+          ]
+        },
+        {
+          "kind": "spread",
+          "quotes": [
+            { "book": "pinnacle", "side": "home", "line": -7.5, "decimal_odds": 1.909 },
+            { "book": "pinnacle", "side": "away", "line": 7.5, "decimal_odds": 1.909 },
+            { "book": "circa", "side": "home", "line": -7.5, "decimal_odds": 1.917 },
+            { "book": "circa", "side": "away", "line": 7.5, "decimal_odds": 1.901 },
+            { "book": "draftkings", "side": "home", "line": -7.5, "decimal_odds": 1.87 },
+            { "book": "draftkings", "side": "away", "line": 7.5, "decimal_odds": 1.95 }
+          ]
+        },
+        {
+          "kind": "total",
+          "quotes": [
+            { "book": "pinnacle", "side": "over", "line": 47.5, "decimal_odds": 1.917 },
+            { "book": "pinnacle", "side": "under", "line": 47.5, "decimal_odds": 1.901 },
+            { "book": "draftkings", "side": "over", "line": 47.5, "decimal_odds": 1.87 },
+            { "book": "draftkings", "side": "under", "line": 47.5, "decimal_odds": 1.95 },
+            { "book": "fanduel", "side": "over", "line": 47.5, "decimal_odds": 1.89 },
+            { "book": "fanduel", "side": "under", "line": 47.5, "decimal_odds": 1.93 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "nfl-2026-w9-dal-phi",
+      "sport": "nfl",
+      "league": "NFL",
+      "home": "Eagles",
+      "away": "Cowboys",
+      "start_time": "2026-11-01T21:25:00Z",
+      "markets": [
+        {
+          "kind": "spread",
+          "quotes": [
+            { "book": "pinnacle", "side": "home", "line": -3.0, "decimal_odds": 1.925 },
+            { "book": "pinnacle", "side": "away", "line": 3.0, "decimal_odds": 1.887 },
+            { "book": "caesars", "side": "home", "line": -2.5, "decimal_odds": 1.952 },
+            { "book": "caesars", "side": "away", "line": 2.5, "decimal_odds": 1.87 },
+            { "book": "barstool", "side": "home", "line": -3.5, "decimal_odds": 1.94 },
+            { "book": "barstool", "side": "away", "line": 3.5, "decimal_odds": 1.87 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "epl-2026-ars-liv",
+      "sport": "soccer",
+      "league": "Premier League",
+      "home": "Arsenal",
+      "away": "Liverpool",
+      "start_time": "2026-11-01T16:30:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "pinnacle", "side": "home", "decimal_odds": 2.30 },
+            { "book": "pinnacle", "side": "draw", "decimal_odds": 3.45 },
+            { "book": "pinnacle", "side": "away", "decimal_odds": 3.30 },
+            { "book": "bet365", "side": "home", "decimal_odds": 2.25 },
+            { "book": "bet365", "side": "draw", "decimal_odds": 3.40 },
+            { "book": "bet365", "side": "away", "decimal_odds": 3.20 },
+            { "book": "draftkings", "side": "home", "decimal_odds": 2.28 },
+            { "book": "draftkings", "side": "draw", "decimal_odds": 3.50 },
+            { "book": "draftkings", "side": "away", "decimal_odds": 3.40 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "nba-2026-lal-bos",
+      "sport": "nba",
+      "league": "NBA",
+      "home": "Celtics",
+      "away": "Lakers",
+      "start_time": "2026-11-01T23:30:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "pinnacle", "side": "home", "decimal_odds": 1.95 },
+            { "book": "pinnacle", "side": "away", "decimal_odds": 1.97 },
+            { "book": "draftkings", "side": "home", "decimal_odds": 2.02 },
+            { "book": "draftkings", "side": "away", "decimal_odds": 1.92 },
+            { "book": "fanduel", "side": "home", "decimal_odds": 1.90 },
+            { "book": "fanduel", "side": "away", "decimal_odds": 2.02 }
+          ]
+        }
+      ]
+    }
+  ],
+  "model_probabilities": {
+    "nfl-2026-w9-kc-buf:moneyline:home": 0.545,
+    "nfl-2026-w9-kc-buf:moneyline:away": 0.455,
+    "epl-2026-ars-liv:moneyline:home": 0.44,
+    "epl-2026-ars-liv:moneyline:draw": 0.29,
+    "epl-2026-ars-liv:moneyline:away": 0.27
+  },
+  "history": {
+    "nfl-2026-w9-kc-buf:moneyline": [
+      { "book": "pinnacle", "side": "home", "decimal_odds": 1.95, "timestamp": 1780000000 },
+      { "book": "pinnacle", "side": "home", "decimal_odds": 1.87, "timestamp": 1780000250 }
+    ]
+  }
+}
