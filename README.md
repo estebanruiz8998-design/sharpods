@@ -89,12 +89,15 @@ sharpods/
 │   ├── elo.py         Elo with MOV multiplier and home advantage
 │   ├── poisson.py     Poisson + Dixon-Coles score-matrix model
 │   ├── pythagorean.py Pythagorean expectation, Pythagenpat, luck wins
+│   ├── wintotals.py   Poisson-binomial season win totals; spread↔ML map
 │   └── montecarlo.py  seeded simulation with error bars
-├── edges.py           EV, line shopping, key numbers, Wong teasers,
-│                      arbitrage, middles, steam detection
-├── kelly.py           full/fractional Kelly, growth, risk-of-ruin math
-├── portfolio.py       exposure caps: per-bet, per-event, per-slate
-├── clv.py             closing line value ledger + significance testing
+├── edges.py           EV, line shopping, key numbers + half-point parity,
+│                      Wong teasers, parlays (incl. correlated), hedging,
+│                      free-bet conversion, arbitrage, middles, steam
+├── kelly.py           full/fractional Kelly, growth & Shannon ceiling,
+│                      drawdown law, risk-of-ruin math
+├── portfolio.py       exposure caps; card ranked by log-growth contribution
+├── clv.py             CLV ledger, Buchdahl significance tests, runs test
 ├── engine.py          the orchestrator; produces the bet card
 ├── io.py              snapshot JSON loader
 └── cli.py             `sharpods` command

@@ -70,6 +70,55 @@ def expected_log_growth(
     return probability * math.log1p(fraction * b) + q * math.log1p(-fraction)
 
 
+def fractional_tradeoff(kelly_multiplier: float) -> float:
+    """Share of maximal growth retained when betting c x Kelly: 2c - c^2.
+
+    Growth is locally quadratic around f*: g(c*f*) ~ (2c - c^2) * g(f*).
+    Half Kelly keeps 75% of the growth at half the volatility — the
+    quantitative case for fractional Kelly (Poundstone, via Thorp).
+    """
+    if not 0.0 < kelly_multiplier <= 1.0:
+        raise ValueError("kelly multiplier must be in (0, 1]")
+    return 2.0 * kelly_multiplier - kelly_multiplier**2
+
+
+def max_growth_rate(probability: float) -> float:
+    """Kelly-Shannon growth ceiling for an even-money bet, in nats per bet:
+
+    G_max = ln(2) + p*ln(p) + q*ln(q)
+
+    This equals the information rate of the bettor's private signal (1 - H(p)
+    bits): bankroll growth is bounded by how much the model truly knows that
+    the market does not — the deepest result in Fortune's Formula.
+    """
+    _check_probability(probability)
+    q = 1.0 - probability
+    return math.log(2.0) + probability * math.log(probability) + q * math.log(q)
+
+
+def doubling_time(growth_per_bet: float) -> float:
+    """Expected number of bets to double the bankroll at log-growth g:
+    n = ln(2) / g."""
+    if growth_per_bet <= 0:
+        raise ValueError("growth must be positive")
+    return math.log(2.0) / growth_per_bet
+
+
+def ruin_probability_fixed_stake(probability: float, bankroll_units: int) -> float:
+    """Risk of ruin betting a FIXED one-unit stake on even-money bets with a
+    B-unit bankroll: RoR = ((1-p)/p)^B for p > 0.5 (gambler's ruin).
+
+    The contrast that motivates proportional staking: fixed stakes carry real
+    ruin risk that Kelly's fractional stakes dissolve entirely.
+    """
+    _check_probability(probability)
+    if bankroll_units < 1:
+        raise ValueError("bankroll must be at least one unit")
+    if probability <= 0.5:
+        return 1.0
+    return ((1.0 - probability) / probability) ** bankroll_units
+
+
 def probability_of_halving(kelly_multiplier: float) -> float:
     """P(bankroll ever falls to half) when betting a constant fraction of Kelly.
 

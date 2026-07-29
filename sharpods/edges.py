@@ -134,6 +134,126 @@ def half_point_ev_gain(
     return freq * gain_per_freq
 
 
+def half_point_parity_payout_worse(
+    net_payout: float, p_win: float, p_push: float
+) -> float:
+    """Wong's parity price for taking the WORSE side of a half point.
+
+    Moving a dog from +N to +(N-0.5) turns pushes at N into losses; the payout
+    that leaves EV unchanged is a' = a + q/w (a = current net payout, w =
+    P(win), q = P(push)). Accept the worse number only if paid more than a'.
+    """
+    if net_payout <= 0 or not 0.0 < p_win < 1.0 or p_push < 0:
+        raise ValueError("invalid parity inputs")
+    return net_payout + p_push / p_win
+
+
+def half_point_parity_payout_better(
+    net_payout: float, p_win: float, p_push: float
+) -> float:
+    """Wong's parity price for buying the BETTER side of a half point.
+
+    Moving from +N to +(N+0.5) turns pushes at N into wins; the payout that
+    leaves EV unchanged is a'' = w*a/(w+q). Buy the half point only if the
+    book charges less than the drop from a to a''.
+    """
+    if net_payout <= 0 or not 0.0 < p_win < 1.0 or p_push < 0:
+        raise ValueError("invalid parity inputs")
+    return p_win * net_payout / (p_win + p_push)
+
+
+# ---------------------------------------------------------------------------
+# Parlays (Wong; Weighing the Odds)
+# ---------------------------------------------------------------------------
+
+
+def parlay_ev(leg_probabilities: Sequence[float], decimal_payout: float) -> float:
+    """EV of a parlay with independent legs: prod(p_i) * d - 1.
+
+    Wong's result: at true multiplied odds, 1+EV of the parlay is the product
+    of the legs' 1+EV — parlays compound edge when legs are +EV and compound
+    the vig when they are not. Standard fixed payout charts are -EV for fair
+    legs; the engine only emits parlays of individually +EV legs.
+    """
+    if not leg_probabilities:
+        raise ValueError("need at least one leg")
+    if decimal_payout <= 1.0:
+        raise ValueError("decimal payout must exceed 1.0")
+    p_all = 1.0
+    for p in leg_probabilities:
+        if not 0.0 < p < 1.0:
+            raise ValueError(f"leg probability out of range: {p}")
+        p_all *= p
+    return p_all * decimal_payout - 1.0
+
+
+def correlated_parlay_ev(joint_probability: float, decimal_payout: float) -> float:
+    """EV of a parlay priced by the book as independent when the legs are
+    correlated (Yao): bet iff P(A and B) > 1/d. The joint probability must
+    come from a joint model (e.g. simulated game scripts), not marginals.
+    """
+    if not 0.0 < joint_probability < 1.0:
+        raise ValueError("joint probability out of range")
+    if decimal_payout <= 1.0:
+        raise ValueError("decimal payout must exceed 1.0")
+    return joint_probability * decimal_payout - 1.0
+
+
+# ---------------------------------------------------------------------------
+# Hedging (Wong; Weighing the Odds)
+# ---------------------------------------------------------------------------
+
+
+def hedge_stake_for_lock(ticket_payout: float, hedge_decimal_odds: float) -> float:
+    """Stake on the complement that equalizes profit either way.
+
+    Holding a ticket paying X if the outcome hits, staking h = X / d_h on the
+    complement guarantees X - h regardless of result.
+    """
+    if ticket_payout <= 0 or hedge_decimal_odds <= 1.0:
+        raise ValueError("invalid hedge inputs")
+    return ticket_payout / hedge_decimal_odds
+
+
+def hedge_ev_cost(
+    hedge_stake: float, hedge_decimal_odds: float, complement_fair_probability: float
+) -> float:
+    """EV given up by hedging: -stake * EV_of_hedge_bet.
+
+    A hedge is itself a bet; its EV per unit is q*d_h - 1 (usually negative —
+    you pay the vig for insurance). Wong and Yao: hedge for bankroll/utility
+    reasons only, unless the hedge side is independently +EV (a scalp), in
+    which case this function returns a negative cost.
+    """
+    if hedge_stake < 0:
+        raise ValueError("hedge stake must be non-negative")
+    if not 0.0 < complement_fair_probability < 1.0:
+        raise ValueError("probability out of range")
+    if hedge_decimal_odds <= 1.0:
+        raise ValueError("invalid hedge odds")
+    per_unit_ev = complement_fair_probability * hedge_decimal_odds - 1.0
+    return -hedge_stake * per_unit_ev
+
+
+# ---------------------------------------------------------------------------
+# Promos (The Logic of Sports Betting)
+# ---------------------------------------------------------------------------
+
+
+def free_bet_ev(stake: float, decimal_odds: float, fair_probability: float) -> float:
+    """Expected cash value of a free bet (stake not returned on a win):
+    EV = p * (d - 1) * S. Conversion is maximized on long odds in low-hold
+    markets, where (d-1)/d approaches 1 — typically ~70%+ of face value.
+    """
+    if stake <= 0:
+        raise ValueError("stake must be positive")
+    if decimal_odds <= 1.0:
+        raise ValueError("decimal odds must exceed 1.0")
+    if not 0.0 < fair_probability < 1.0:
+        raise ValueError("probability out of range")
+    return fair_probability * (decimal_odds - 1.0) * stake
+
+
 # ---------------------------------------------------------------------------
 # Wong teasers
 # ---------------------------------------------------------------------------
@@ -253,6 +373,26 @@ def find_arbitrage(
         profit_margin=1.0 / inverse_sum - 1.0,
         stakes=stakes,
     )
+
+
+def middle_breakeven(
+    risk_a: float, win_a: float, risk_b: float, win_b: float
+) -> float:
+    """Hit probability needed for a middle to break even (Wong, generalized).
+
+    Missing the window loses one side and wins the other: net = win - risk of
+    the two legs. Hitting wins both. At -110/-110 (risk 1.1 to win 1 each):
+    miss costs 0.1, hit wins 2 -> breakeven = 0.1/2.1 ~= 4.76% (1 in 21).
+    """
+    if min(risk_a, win_a, risk_b, win_b) <= 0:
+        raise ValueError("stakes and wins must be positive")
+    miss_cost_a = risk_a - win_b  # side B wins, side A loses
+    miss_cost_b = risk_b - win_a  # side A wins, side B loses
+    avg_miss_cost = (miss_cost_a + miss_cost_b) / 2.0
+    hit_gain = win_a + win_b
+    if avg_miss_cost <= 0:
+        return 0.0  # the two prices arb: every miss still profits
+    return avg_miss_cost / (hit_gain + avg_miss_cost)
 
 
 @dataclass(frozen=True)

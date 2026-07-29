@@ -63,9 +63,18 @@ class TestPipeline:
         for ticket in card.tickets:
             assert ticket.candidate.kind == MarketKind.MONEYLINE
 
-    def test_tickets_ranked_by_ev(self, card):
-        evs = [t.candidate.ev_pct for t in card.tickets]
-        assert evs == sorted(evs, reverse=True)
+    def test_tickets_ranked_by_log_growth(self, card):
+        from sharpods.kelly import expected_log_growth
+
+        growths = [
+            expected_log_growth(
+                t.candidate.fair_probability,
+                t.candidate.quote.decimal_odds,
+                t.stake_fraction,
+            )
+            for t in card.tickets
+        ]
+        assert growths == sorted(growths, reverse=True)
 
     def test_stakes_respect_caps(self, card):
         for t in card.tickets:

@@ -16,7 +16,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 
 from sharpods.datatypes import BetCandidate, BetTicket
-from sharpods.kelly import kelly_fraction
+from sharpods.kelly import expected_log_growth, kelly_fraction
 
 
 @dataclass
@@ -85,4 +85,15 @@ class Portfolio:
             event_exposure[eid] = event_exposure.get(eid, 0.0) + frac
             slate_exposure += frac
 
+        # Final card order: expected log-growth contribution at the allocated
+        # stake, not raw EV — at equal EV, variance drag favours the shorter
+        # price (Fortune's Formula; the synthesis' ranking rule).
+        tickets.sort(
+            key=lambda t: expected_log_growth(
+                t.candidate.fair_probability,
+                t.candidate.quote.decimal_odds,
+                t.stake_fraction,
+            ),
+            reverse=True,
+        )
         return tickets

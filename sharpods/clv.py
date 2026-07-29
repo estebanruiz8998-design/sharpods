@@ -16,9 +16,89 @@ toward the model as positive CLV accumulates with statistical significance.
 from __future__ import annotations
 
 import math
+from collections.abc import Sequence
 from dataclasses import dataclass
 
 from sharpods.odds import devig
+
+
+def _norm_cdf(x: float) -> float:
+    return 0.5 * (1.0 + math.erf(x / math.sqrt(2.0)))
+
+
+# ---------------------------------------------------------------------------
+# Buchdahl's record-significance toolkit (Fixed Odds Sports Betting;
+# Squares & Sharps): is a betting record distinguishable from luck?
+# ---------------------------------------------------------------------------
+
+
+def yield_t_statistic(
+    yield_pct: float, n_bets: int, avg_decimal_odds: float
+) -> float:
+    """Buchdahl's t statistic for a betting yield:
+
+    t = Y * sqrt(n) / sqrt(dbar - 1)
+
+    where Y is profit over turnover, n the number of bets, dbar the average
+    decimal odds. Var of a single level-stake bet at fair odds ~ (dbar - 1).
+    """
+    if n_bets < 1:
+        raise ValueError("need at least one bet")
+    if avg_decimal_odds <= 1.0:
+        raise ValueError("average decimal odds must exceed 1.0")
+    return yield_pct * math.sqrt(n_bets) / math.sqrt(avg_decimal_odds - 1.0)
+
+
+def min_sample_size(
+    target_yield: float, avg_decimal_odds: float, t_star: float = 1.64
+) -> int:
+    """Bets needed before a yield of ``target_yield`` becomes significant at
+    the one-tailed threshold t*: n >= t*^2 * (dbar - 1) / Y^2.
+
+    At 5% yield on -110 bets (dbar=1.909): ~978 bets for t*=1.64; at 2%
+    yield, ~6,113. The point of the formula is its size: records need
+    thousands of bets before P&L means anything — which is why CLV, which
+    converges in hundreds, is the primary KPI.
+    """
+    if target_yield <= 0:
+        raise ValueError("target yield must be positive")
+    if avg_decimal_odds <= 1.0:
+        raise ValueError("average decimal odds must exceed 1.0")
+    return math.ceil(t_star**2 * (avg_decimal_odds - 1.0) / target_yield**2)
+
+
+def luck_p_value(yield_pct: float, n_bets: int, avg_decimal_odds: float) -> float:
+    """P(a zero-edge bettor achieves a yield this good or better by luck):
+    1 - Phi(t). Displayed beside every record as the pure-luck baseline —
+    Buchdahl's antidote to survivorship-driven tipster records."""
+    return 1.0 - _norm_cdf(yield_t_statistic(yield_pct, n_bets, avg_decimal_odds))
+
+
+def runs_test_z(win_loss_sequence: Sequence[int]) -> float:
+    """Wald-Wolfowitz runs test on a win/loss sequence (1 = win, 0 = loss).
+
+    z = (R - E[R]) / sd(R), E[R] = 2WL/n + 1. |z| < 2 means the sequence is
+    consistent with independence — Buchdahl's screen that keeps streak and
+    momentum features out of the model (hot hands are almost always noise).
+    """
+    n = len(win_loss_sequence)
+    wins = sum(1 for x in win_loss_sequence if x == 1)
+    losses = n - wins
+    if wins == 0 or losses == 0:
+        return 0.0
+    runs = 1 + sum(
+        1
+        for i in range(1, n)
+        if win_loss_sequence[i] != win_loss_sequence[i - 1]
+    )
+    expected = 2.0 * wins * losses / n + 1.0
+    variance = (
+        2.0 * wins * losses * (2.0 * wins * losses - n)
+        / (n**2 * (n - 1.0))
+    )
+    if variance <= 0:
+        return 0.0
+    return (runs - expected) / math.sqrt(variance)
 
 
 @dataclass(frozen=True)
