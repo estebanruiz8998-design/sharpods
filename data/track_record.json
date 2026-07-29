@@ -1,0 +1,81 @@
+{
+  "_purpose": "Running record of live SharpOds runs: predictions, closes, results, and the lessons folded back into the engine. CLV against the close — not P&L — is the KPI (Squares & Sharps; Sharper).",
+  "slates": [
+    {
+      "date": "2026-07-29",
+      "sport": "mlb",
+      "mode": "degraded — no sharp-book anchor reachable (network policy); consensus/article sources, sharpness 0.55-0.60",
+      "engine_verdict": "PASS: no side cleared the EV bar. Best candidate: Tigers ML, fair 1.617, limit order at >= 1.633 — never filled (line closed 1.56-1.59, moving toward Detroit).",
+      "games": [
+        {
+          "event_id": "mlb-2026-07-29-bal-det",
+          "our_home_fair": 0.6184,
+          "close_home_novig": 0.6225,
+          "home_won": false,
+          "final": "Orioles 10, Tigers 9 (12 innings; Tigers led 7-0)"
+        },
+        {
+          "event_id": "mlb-2026-07-29-atl-nym-g1",
+          "our_home_fair": 0.4953,
+          "close_home_novig": 0.4907,
+          "home_won": true,
+          "final": "Mets 3, Braves 2"
+        },
+        {
+          "event_id": "mlb-2026-07-29-col-sd",
+          "our_home_fair": 0.5644,
+          "close_home_novig": 0.5617,
+          "home_won": true,
+          "final": "Padres 7, Rockies 3"
+        },
+        {
+          "event_id": "mlb-2026-07-29-tor-wsh",
+          "our_home_fair": 0.4653,
+          "close_home_novig": 0.4678,
+          "home_won": false,
+          "final": "Blue Jays 5, Nationals 2"
+        },
+        {
+          "event_id": "mlb-2026-07-29-phi-mia",
+          "our_home_fair": 0.4108,
+          "close_home_novig": 0.3865,
+          "home_won": true,
+          "final": "Marlins 8, Phillies 6 (Marlins trailed 6-0)"
+        }
+      ],
+      "metrics": {
+        "brier_ours": 0.2781,
+        "brier_close": 0.2868,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0076,
+        "max_abs_fair_vs_close": 0.0243,
+        "favorites_record": "2-3",
+        "n": 5,
+        "note": "n=5 is far below Buchdahl's significance floor; numbers logged, not believed."
+      },
+      "lessons_applied": [
+        "Passing was correct: the two most-likely sides (DET 62%, PHI 59%) both lost on blown 7-0 and 6-0 leads; every listed price was -EV vs fair.",
+        "Fair lines tracked no-vig closes well (4/5 within 0.8pt) but the PHI miss (2.4pt) shows consensus-anchor tail risk -> engine change: EV bar scales 2.5x when no market-maker-grade book anchors the fair line (Engine.degraded_ev_multiplier).",
+        "Hand-computed price targets were the day's real output -> engine change: target_decimal on every candidate, BetCard.price_targets(), rendered as limit orders.",
+        "Snapshot JSON now carries its own book-sharpness registry so degraded runs are reproducible from the CLI."
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "sport": "mlb",
+      "mode": "degraded — consensus/article/prediction-market sources; run with --market-weight 0.85 (third-party model probs are unvalidated)",
+      "engine_verdict": "PASS at listed prices; limit orders shipped. Top: Cubs ML fair 1.942, bet at >= 1.991 (+1.47% EV at listed 1.971). Runner-up: Reds ML fair 1.937, bet at >= 1.985. Cross-source discrepancy on CHC/STL (synthetic hold -1.28%) flagged as unverified arbitrage — quotes are from different moments, treat as stale-line artifact.",
+      "predictions_home_fair": {
+        "mlb-2026-07-30-tex-tb": 0.6203,
+        "mlb-2026-07-30-chc-stl": 0.4852,
+        "mlb-2026-07-30-mia-nym": 0.5522,
+        "mlb-2026-07-30-pit-cin": 0.505,
+        "mlb-2026-07-30-wsh-atl": 0.5255,
+        "mlb-2026-07-30-bos-ath": 0.4117,
+        "mlb-2026-07-30-nyy-cws": 0.4317,
+        "mlb-2026-07-30-sea-lad": 0.5883
+      },
+      "settle": "pending"
+    }
+  ]
+}

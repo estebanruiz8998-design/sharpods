@@ -1,0 +1,177 @@
+{
+  "_provenance": {
+    "collected": "2026-07-29 ~19:30 ET, via web-search snippets (live odds feeds blocked by network policy)",
+    "notes": [
+      "consensus-a/consensus-b are aggregated article/odds-page snapshots (SportsGrid, Action Network, Covers, CBS), not real books; sharpness 0.60.",
+      "polymarket prices are tradable prediction-market quotes (cents -> decimal as 1/price); sharpness 0.65.",
+      "TEX@TB: a conflicting TB -149/TEX +123 pair was excluded — two of three scouts attributed it to the Jul 29 game.",
+      "CHC@STL: the 54.8% STL model figure was excluded — it referred to the Jul 29 game.",
+      "SEA@LAD: docs-sports LAD -196 is single-sided (no SEA price found); cannot enter the fair line.",
+      "SFG@SDP omitted entirely: only garbled moneyline figures were found.",
+      "model_probabilities are third-party (SportsGrid, ESPN Analytics) with no CLV track record in our ledger -> run with --market-weight 0.85."
+    ]
+  },
+  "books": {
+    "consensus-a": { "sharpness": 0.6, "notes": "aggregated odds-article snapshot" },
+    "consensus-b": { "sharpness": 0.6, "notes": "aggregated odds-article snapshot, second source" },
+    "polymarket": { "sharpness": 0.65, "notes": "prediction market midprice" },
+    "docs-sports": { "sharpness": 0.4, "notes": "single preview article" }
+  },
+  "events": [
+    {
+      "event_id": "mlb-2026-07-30-tex-tb",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Rays",
+      "away": "Rangers",
+      "start_time": "2026-07-30T16:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "home", "decimal_odds": 1.5714 },
+            { "book": "consensus-a", "side": "away", "decimal_odds": 2.50 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-30-chc-stl",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Cardinals",
+      "away": "Cubs",
+      "start_time": "2026-07-30T18:15:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "away", "decimal_odds": 1.9709 },
+            { "book": "consensus-a", "side": "home", "decimal_odds": 1.9346 },
+            { "book": "consensus-b", "side": "away", "decimal_odds": 1.833 },
+            { "book": "consensus-b", "side": "home", "decimal_odds": 2.00 },
+            { "book": "polymarket", "side": "away", "decimal_odds": 1.8868 },
+            { "book": "polymarket", "side": "home", "decimal_odds": 2.0833 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-30-mia-nym",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Mets",
+      "away": "Marlins",
+      "start_time": "2026-07-30T23:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "away", "decimal_odds": 2.16 },
+            { "book": "consensus-a", "side": "home", "decimal_odds": 1.7874 },
+            { "book": "consensus-b", "side": "away", "decimal_odds": 2.15 },
+            { "book": "consensus-b", "side": "home", "decimal_odds": 1.7407 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-30-pit-cin",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Reds",
+      "away": "Pirates",
+      "start_time": "2026-07-30T23:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "polymarket", "side": "home", "decimal_odds": 1.9608 },
+            { "book": "polymarket", "side": "away", "decimal_odds": 2.00 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-30-wsh-atl",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Braves",
+      "away": "Nationals",
+      "start_time": "2026-07-30T23:15:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "away", "decimal_odds": 2.01 },
+            { "book": "consensus-a", "side": "home", "decimal_odds": 1.8197 },
+            { "book": "consensus-b", "side": "away", "decimal_odds": 2.01 },
+            { "book": "consensus-b", "side": "home", "decimal_odds": 1.8333 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-30-bos-ath",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Athletics",
+      "away": "Red Sox",
+      "start_time": "2026-07-31T01:40:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "away", "decimal_odds": 1.641 },
+            { "book": "consensus-a", "side": "home", "decimal_odds": 2.29 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-30-nyy-cws",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "White Sox",
+      "away": "Yankees",
+      "start_time": "2026-07-30T18:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "away", "decimal_odds": 1.6944 },
+            { "book": "consensus-a", "side": "home", "decimal_odds": 2.19 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-30-sea-lad",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Dodgers",
+      "away": "Mariners",
+      "start_time": "2026-07-31T02:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "away", "decimal_odds": 2.29 },
+            { "book": "consensus-a", "side": "home", "decimal_odds": 1.641 },
+            { "book": "docs-sports", "side": "home", "decimal_odds": 1.5102 }
+          ]
+        }
+      ]
+    }
+  ],
+  "model_probabilities": {
+    "mlb-2026-07-30-tex-tb:moneyline:home": 0.50,
+    "mlb-2026-07-30-tex-tb:moneyline:away": 0.50,
+    "mlb-2026-07-30-mia-nym:moneyline:home": 0.54,
+    "mlb-2026-07-30-mia-nym:moneyline:away": 0.46,
+    "mlb-2026-07-30-pit-cin:moneyline:home": 0.58,
+    "mlb-2026-07-30-pit-cin:moneyline:away": 0.42,
+    "mlb-2026-07-30-sea-lad:moneyline:home": 0.609,
+    "mlb-2026-07-30-sea-lad:moneyline:away": 0.391
+  }
+}

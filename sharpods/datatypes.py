@@ -109,6 +109,11 @@ class FairLine:
     # Diagnostic: which books/weights the consensus was built from.
     sources: dict[str, float] = field(default_factory=dict)
     method: str = "weighted-logit"
+    # Raw sharpness of the best contributing book. Below market-maker grade
+    # the fair line is a soft estimate and EV thresholds should widen
+    # (live-run lesson, 2026-07-29: consensus-grade anchors missed no-vig
+    # closes by ~2 probability points on 2 of 5 markets).
+    anchor_sharpness: float = 0.0
 
     def fair_decimal(self, side: Side) -> float:
         p = self.probabilities[side]
@@ -132,6 +137,9 @@ class BetCandidate:
     # engine's EV threshold. On efficient days the correct card is a list of
     # these targets, not tickets — "bet value, never winners" as an order type.
     target_decimal: float | None = None
+    # EV this candidate must clear to become a ticket. Exceeds the policy
+    # floor when the fair line's anchor is below market-maker grade.
+    required_ev: float = 0.0
 
     @property
     def fair_decimal(self) -> float:

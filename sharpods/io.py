@@ -29,6 +29,7 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from sharpods.books_registry import BookProfile, BooksRegistry
 from sharpods.datatypes import Event, MarketKind, MarketSnapshot, Quote, Side
 
 
@@ -39,6 +40,16 @@ class SlateData:
         default_factory=dict
     )
     history: dict[tuple[str, MarketKind], list[Quote]] = field(default_factory=dict)
+    # Optional per-slate sharpness overrides ("books" section), so degraded
+    # snapshots (article/consensus sources instead of real books) document
+    # their own anchor quality and runs stay reproducible from the CLI.
+    book_profiles: list[BookProfile] = field(default_factory=list)
+
+    def registry(self) -> BooksRegistry:
+        reg = BooksRegistry()
+        for profile in self.book_profiles:
+            reg.register(profile)
+        return reg
 
 
 def _parse_quote(raw: dict) -> Quote:
@@ -83,8 +94,19 @@ def load_slate(path: str | Path) -> SlateData:
         event_id, kind = key.rsplit(":", 1)
         history[(event_id, MarketKind(kind))] = [_parse_quote(q) for q in quotes]
 
+    book_profiles = [
+        BookProfile(
+            name=str(name).lower(),
+            sharpness=float(raw.get("sharpness", 0.2)),
+            market_maker=bool(raw.get("market_maker", False)),
+            notes=str(raw.get("notes", "")),
+        )
+        for name, raw in data.get("books", {}).items()
+    ]
+
     return SlateData(
         snapshots=snapshots,
         model_probabilities=model_probabilities,
         history=history,
+        book_profiles=book_profiles,
     )

@@ -56,7 +56,9 @@ class Portfolio:
         slate_exposure = 0.0
 
         for cand in sorted(candidates, key=lambda c: c.ev_pct, reverse=True):
-            if cand.ev_pct < self.policy.min_ev:
+            # A candidate may demand more than the policy floor (degraded
+            # fair-line anchor); the stricter bar wins.
+            if cand.ev_pct < max(self.policy.min_ev, cand.required_ev):
                 continue
             full = kelly_fraction(cand.fair_probability, cand.quote.decimal_odds)
             frac = full * self.policy.kelly_multiplier

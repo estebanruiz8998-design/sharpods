@@ -1,0 +1,95 @@
+{
+  "events": [
+    {
+      "event_id": "mlb-2026-07-29-atl-nym-g1",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Mets",
+      "away": "Braves",
+      "start_time": "2026-07-29T17:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "fanduel", "side": "home", "decimal_odds": 1.9434 },
+            { "book": "fanduel", "side": "away", "decimal_odds": 1.9091 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-29-bal-det",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Tigers",
+      "away": "Orioles",
+      "start_time": "2026-07-29T17:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "home", "decimal_odds": 1.5747 },
+            { "book": "consensus-a", "side": "away", "decimal_odds": 2.46 },
+            { "book": "consensus-b", "side": "home", "decimal_odds": 1.5714 },
+            { "book": "consensus-b", "side": "away", "decimal_odds": 2.43 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-29-col-sd",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Padres",
+      "away": "Rockies",
+      "start_time": "2026-07-30T00:40:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "home", "decimal_odds": 1.7042 },
+            { "book": "consensus-a", "side": "away", "decimal_odds": 2.17 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-29-tor-wsh",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Nationals",
+      "away": "Blue Jays",
+      "start_time": "2026-07-29T22:45:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "home", "decimal_odds": 2.06 },
+            { "book": "consensus-a", "side": "away", "decimal_odds": 1.8065 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-29-phi-mia",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Marlins",
+      "away": "Phillies",
+      "start_time": "2026-07-29T23:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "home", "decimal_odds": 2.30 },
+            { "book": "consensus-a", "side": "away", "decimal_odds": 1.6410 }
+          ]
+        }
+      ]
+    }
+  ],
+  "model_probabilities": {
+    "mlb-2026-07-29-bal-det:moneyline:home": 0.626,
+    "mlb-2026-07-29-bal-det:moneyline:away": 0.374
+  }
+}

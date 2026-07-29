@@ -200,3 +200,60 @@ class TestPriceTargets:
         text = render_bet_card(card, 10_000)
         assert "PRICE TARGETS" in text
         assert "bet at >=" in text
+
+
+class TestDegradedAnchor:
+    """Live-run lesson (2026-07-29): consensus-grade anchors carry ~2pt
+    probability noise, so the EV bar scales up when no market maker anchors
+    the fair line."""
+
+    def _snapshot(self, home_odds, away_odds, book="bet365"):
+        from sharpods.datatypes import Event, MarketSnapshot, Quote
+
+        return MarketSnapshot(
+            event=Event(event_id="degraded", sport="mlb", home="H", away="A"),
+            kind=MarketKind.MONEYLINE,
+            quotes=[
+                Quote(book, Side.HOME, home_odds),
+                Quote(book, Side.AWAY, away_odds),
+            ],
+        )
+
+    def test_sub_bar_edge_is_not_ticketed_on_soft_anchor(self):
+        # bet365 (sharpness 0.55) anchors; fair home prob is 0.500, so 2.03
+        # is a +1.5% edge — above the 1% floor, below the 2.5% degraded bar.
+        snap = self._snapshot(1.909, 1.909)
+        snap.quotes.append(
+            __import__("sharpods.datatypes", fromlist=["Quote"]).Quote(
+                "fanduel", Side.HOME, 2.03
+            )
+        )
+        card = Engine().run([snap], 10_000)
+        assert card.tickets == []
+        # But it survives as a limit order with a raised requirement.
+        cand = next(c for c in card.candidates if c.side == Side.HOME)
+        assert cand.ev_pct > 0.01
+        assert cand.required_ev == pytest.approx(0.025)
+        assert cand.ev_pct < cand.required_ev
+
+    def test_big_edge_still_tickets_on_soft_anchor(self):
+        snap = self._snapshot(1.909, 1.909)
+        snap.quotes.append(
+            __import__("sharpods.datatypes", fromlist=["Quote"]).Quote(
+                "fanduel", Side.HOME, 2.12
+            )
+        )
+        card = Engine().run([snap], 10_000)
+        assert len(card.tickets) == 1
+        assert card.tickets[0].candidate.ev_pct > 0.025
+
+    def test_sharp_anchor_keeps_normal_bar(self, card):
+        # Sample slate is pinnacle-anchored: requirements stay at the floor.
+        for c in card.candidates:
+            assert c.required_ev == pytest.approx(0.01)
+
+    def test_targets_reflect_raised_bar(self):
+        snap = self._snapshot(1.909, 1.909)
+        card = Engine().run([snap], 10_000)
+        for c in card.candidates:
+            assert c.fair_probability * c.target_decimal - 1.0 == pytest.approx(0.025)

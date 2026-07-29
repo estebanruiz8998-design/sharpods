@@ -93,6 +93,7 @@ def market_fair_line(
         probabilities=consensus,
         sources={book: weights[book] / total_weight for book in per_book},
         method=f"weighted-logit/{devig_method}",
+        anchor_sharpness=max(weights.values()),
     )
 
 

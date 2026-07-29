@@ -91,6 +91,13 @@ class Engine:
     devig_method: str = "power"
     market_weight: float = 0.75
     min_consensus_sharpness: float = 0.5
+    # Degraded-anchor guard (live-run lesson, 2026-07-29): when no book at or
+    # above sharp_anchor_threshold contributes to the fair line, the EV bar is
+    # policy.min_ev * degraded_ev_multiplier. Consensus-grade fair lines
+    # missed no-vig closes by ~2 probability points (~2%+ EV at even money)
+    # on 2 of 5 graded markets — a 1% bar sits inside that noise.
+    sharp_anchor_threshold: float = 0.8
+    degraded_ev_multiplier: float = 2.5
 
     def consensus_line(self, snapshot: MarketSnapshot) -> float | None:
         """Pin spreads/totals to one market number so EV compares like with
@@ -161,6 +168,11 @@ class Engine:
         steam = detect_steam(history or [], snapshot, self.registry)
         steam_sides = {s.side for s in steam}
 
+        degraded = fair.anchor_sharpness < self.sharp_anchor_threshold
+        required_ev = self.policy.min_ev * (
+            self.degraded_ev_multiplier if degraded else 1.0
+        )
+
         candidates: list[BetCandidate] = []
         for side in snapshot.sides():
             probability = fair.probabilities.get(side)
@@ -176,8 +188,13 @@ class Engine:
             if quote is None:
                 continue
             ev = expected_value(probability, quote.decimal_odds)
-            target = (1.0 + self.policy.min_ev) / probability
+            target = (1.0 + required_ev) / probability
             tags = [f"best price of {len(snapshot.quotes_for(side, line))} quotes"]
+            if degraded:
+                tags.append(
+                    f"degraded anchor (max sharpness {fair.anchor_sharpness:.2f}): "
+                    f"EV bar raised to {required_ev:.1%}"
+                )
             if model_probabilities and side in model_probabilities:
                 tags.append(
                     f"market/model blend {self.market_weight:.0%}/{1 - self.market_weight:.0%}"
@@ -194,6 +211,7 @@ class Engine:
                     ev_pct=ev,
                     tags=tags,
                     target_decimal=target,
+                    required_ev=required_ev,
                 )
             )
         return candidates, diagnostics

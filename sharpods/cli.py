@@ -46,6 +46,7 @@ def main(argv: list[str] | None = None) -> int:
     args = build_parser().parse_args(argv)
     slate = load_slate(args.snapshot)
     engine = Engine(
+        registry=slate.registry(),
         policy=RiskPolicy(kelly_multiplier=args.kelly, min_ev=args.min_ev),
         devig_method=args.devig,
         market_weight=args.market_weight,
