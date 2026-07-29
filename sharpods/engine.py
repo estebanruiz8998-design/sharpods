@@ -67,6 +67,21 @@ class BetCard:
     teaser_legs: list[TeaserLeg]
     diagnostics: list[MarketDiagnostics]
     skipped: list[str] = field(default_factory=list)
+    # Every evaluated side, ranked by EV — including sub-threshold ones. The
+    # sub-threshold entries carry target_decimal: the day's limit orders.
+    candidates: list[BetCandidate] = field(default_factory=list)
+
+    def price_targets(self) -> list[BetCandidate]:
+        """Sub-threshold candidates as limit orders, best-first."""
+        ticketed = {
+            (t.candidate.event.event_id, t.candidate.kind, t.candidate.side)
+            for t in self.tickets
+        }
+        return [
+            c
+            for c in self.candidates
+            if (c.event.event_id, c.kind, c.side) not in ticketed
+        ]
 
 
 @dataclass
@@ -161,6 +176,7 @@ class Engine:
             if quote is None:
                 continue
             ev = expected_value(probability, quote.decimal_odds)
+            target = (1.0 + self.policy.min_ev) / probability
             tags = [f"best price of {len(snapshot.quotes_for(side, line))} quotes"]
             if model_probabilities and side in model_probabilities:
                 tags.append(
@@ -177,6 +193,7 @@ class Engine:
                     fair_probability=probability,
                     ev_pct=ev,
                     tags=tags,
+                    target_decimal=target,
                 )
             )
         return candidates, diagnostics
@@ -240,6 +257,7 @@ class Engine:
             teaser_legs=teaser_legs,
             diagnostics=diagnostics,
             skipped=skipped,
+            candidates=sorted(all_candidates, key=lambda c: c.ev_pct, reverse=True),
         )
 
 
@@ -271,6 +289,19 @@ def render_bet_card(card: BetCard, bankroll: float) -> str:
     else:
         lines.append("")
         lines.append("No bets clear the EV threshold. Not betting is a position.")
+
+    targets = card.price_targets()
+    if targets:
+        lines.append("")
+        lines.append("PRICE TARGETS (limit orders — bet only at or above the target):")
+        for c in targets[:10]:
+            line_txt = f" {c.quote.line:+g}" if c.quote.line is not None else ""
+            lines.append(
+                f"  {c.event.away} @ {c.event.home} | {c.kind.value} "
+                f"{c.side.value}{line_txt} | best {c.quote.decimal_odds:.3f} "
+                f"({c.quote.book}) | fair {c.fair_decimal:.3f} | "
+                f"bet at >= {c.target_decimal:.3f} | EV now {c.ev_pct:+.2%}"
+            )
 
     if card.arbitrages:
         lines.append("")

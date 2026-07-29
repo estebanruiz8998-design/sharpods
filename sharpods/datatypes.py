@@ -128,6 +128,10 @@ class BetCandidate:
     fair_probability: float
     ev_pct: float  # expected value per unit staked, as a fraction (0.05 = +5%)
     tags: list[str] = field(default_factory=list)
+    # Limit order: the minimum decimal price at which this side clears the
+    # engine's EV threshold. On efficient days the correct card is a list of
+    # these targets, not tickets — "bet value, never winners" as an order type.
+    target_decimal: float | None = None
 
     @property
     def fair_decimal(self) -> float:

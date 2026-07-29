@@ -174,3 +174,29 @@ class TestRefusals:
         card = Engine().run([snap], 10_000)
         assert card.tickets == []
         assert any("refusing to invent a fair line" in s for s in card.skipped)
+
+
+class TestPriceTargets:
+    def test_every_candidate_carries_a_target(self, card):
+        assert card.candidates, "engine should surface evaluated candidates"
+        for c in card.candidates:
+            assert c.target_decimal is not None
+            # Target is exactly the price that yields min_ev at the fair prob.
+            assert c.fair_probability * c.target_decimal - 1.0 == pytest.approx(0.01)
+
+    def test_candidates_ranked_by_ev(self, card):
+        evs = [c.ev_pct for c in card.candidates]
+        assert evs == sorted(evs, reverse=True)
+
+    def test_targets_exclude_ticketed_sides(self, card):
+        ticketed = {
+            (t.candidate.event.event_id, t.candidate.kind, t.candidate.side)
+            for t in card.tickets
+        }
+        for c in card.price_targets():
+            assert (c.event.event_id, c.kind, c.side) not in ticketed
+
+    def test_render_shows_limit_orders(self, card):
+        text = render_bet_card(card, 10_000)
+        assert "PRICE TARGETS" in text
+        assert "bet at >=" in text
