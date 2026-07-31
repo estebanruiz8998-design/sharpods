@@ -75,7 +75,7 @@
         "mlb-2026-07-30-nyy-cws": 0.4317,
         "mlb-2026-07-30-sea-lad": 0.5883
       },
-      "settle": "pending",
+      "settle": "partial: 3 of 8 final at grading time",
       "live_tickets": [
         {
           "event_id": "mlb-2026-07-30-chc-stl",
@@ -89,8 +89,74 @@
           "fair_probability": 0.5148,
           "policy_note": "Stake exceeds engine policy by ~476x: quarter-Kelly/2%-cap sizing implies $30k only for a ~$4.8M bankroll (full-Kelly equivalent ~$1.2M). Logged as placed; sizing discretion was the user's.",
           "hedge_parity": "STL at >= 2.01 locks profit (e.g. $28,656 at 2.08 returns $59,700 both ways, ~+$1,040 riskless)",
-          "clv": "pending close"
+          "clv": "settled",
+          "won": true,
+          "pnl": 29700.0,
+          "clv_raw": -0.005,
+          "clv_novig": -0.0513,
+          "result_note": "WON: Cubs 4-2 in 10. Close was CHC +100/STL -120 with reported late sharp move to STL (78% handle / 30% tickets on STL): raw CLV -0.5%, no-vig CLV -4.8%. The win was variance; the close says the edge estimate was wrong."
         }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-07-30-tex-tb",
+          "our_home_fair": 0.6203,
+          "close_home_novig": 0.5713,
+          "home_won": true,
+          "final": "Rays 3, Rangers 2"
+        },
+        {
+          "event_id": "mlb-2026-07-30-chc-stl",
+          "our_home_fair": 0.4852,
+          "close_home_novig": 0.5233,
+          "home_won": false,
+          "final": "Cubs 4, Cardinals 2 (10 innings)"
+        },
+        {
+          "event_id": "mlb-2026-07-30-mia-nym",
+          "our_home_fair": 0.5522,
+          "status": "pending at grading time (rain delay / late starts)"
+        },
+        {
+          "event_id": "mlb-2026-07-30-pit-cin",
+          "our_home_fair": 0.505,
+          "status": "pending at grading time (rain delay / late starts)"
+        },
+        {
+          "event_id": "mlb-2026-07-30-wsh-atl",
+          "our_home_fair": 0.5255,
+          "status": "pending at grading time (rain delay / late starts)"
+        },
+        {
+          "event_id": "mlb-2026-07-30-bos-ath",
+          "our_home_fair": 0.4117,
+          "status": "pending at grading time (rain delay / late starts)"
+        },
+        {
+          "event_id": "mlb-2026-07-30-nyy-cws",
+          "our_home_fair": 0.4317,
+          "close_home_novig": 0.5115,
+          "home_won": true,
+          "final": "White Sox 2, Yankees 1 (11 innings)"
+        },
+        {
+          "event_id": "mlb-2026-07-30-sea-lad",
+          "our_home_fair": 0.5883,
+          "status": "pending at grading time (rain delay / late starts)"
+        }
+      ],
+      "metrics": {
+        "n": 3,
+        "brier_ours": 0.2342,
+        "brier_close": 0.2321,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0556,
+        "max_abs_fair_vs_close": 0.0798
+      },
+      "lessons_applied": [
+        "Our fair (CHC 51.5%) missed the no-vig close (47.8%) by 3.7pts on the source-conflict market; second tail miss in two days -> engine change: degraded anchor + negative cross-source synthetic hold = market refused entirely (no fair line, no orders, no arb listing).",
+        "NYY@CWS pre-registered fair (43.2% home) was likely poisoned by a July-29 line (date trap flagged at collection); close was CWS-favored. Scout prompts now require explicit Friday/date-tagged sources.",
+        "Ticket outcome vs process: +$29,700 P&L, negative CLV. Logged both; the ledger, not the scoreboard, drives model trust."
       ]
     }
   ]

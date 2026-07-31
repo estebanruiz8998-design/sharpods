@@ -1,0 +1,134 @@
+{
+  "_provenance": {
+    "collected": "2026-07-30 ~23:00 ET via web-search snippets (live odds feeds blocked by network policy)",
+    "notes": [
+      "Scouts required explicit Friday/July-31 date tags after the Jul-30 date-trap lesson; every quote below carries a dated source.",
+      "consensus-a aggregates dated odds-article/board snapshots (Covers, theScore, Action Network, SportsGrid); polymarket prices are tradable cents (decimal = 100/cents).",
+      "NYY@CHC carries a 7-point implied-probability conflict between the sportsbook consensus (CHC -142) and Polymarket (CHC 52c) — included as-is; the engine's new conflict rule decides.",
+      "ARI@CLE has only a one-sided Diamondbacks price; the engine will refuse it.",
+      "CWS@TB omitted: model probability only, no prices.",
+      "model_probabilities are third-party (SportsGrid, ESPN Analytics), unvalidated -> run with --market-weight 0.85."
+    ]
+  },
+  "books": {
+    "consensus-a": { "sharpness": 0.6, "notes": "dated odds-article snapshot" },
+    "polymarket": { "sharpness": 0.65, "notes": "prediction market cents" }
+  },
+  "events": [
+    {
+      "event_id": "mlb-2026-07-31-nyy-chc",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Cubs",
+      "away": "Yankees",
+      "start_time": "2026-07-31T18:20:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "home", "decimal_odds": 1.7042 },
+            { "book": "consensus-a", "side": "away", "decimal_odds": 2.18 },
+            { "book": "polymarket", "side": "home", "decimal_odds": 1.923 },
+            { "book": "polymarket", "side": "away", "decimal_odds": 2.041 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-31-mia-nym",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Mets",
+      "away": "Marlins",
+      "start_time": "2026-07-31T23:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "home", "decimal_odds": 1.7692 },
+            { "book": "consensus-a", "side": "away", "decimal_odds": 2.08 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-31-pit-cin",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Reds",
+      "away": "Pirates",
+      "start_time": "2026-07-31T22:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "home", "decimal_odds": 2.04 },
+            { "book": "consensus-a", "side": "away", "decimal_odds": 1.7937 },
+            { "book": "polymarket", "side": "home", "decimal_odds": 2.041 },
+            { "book": "polymarket", "side": "away", "decimal_odds": 1.887 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-31-stl-tor",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Blue Jays",
+      "away": "Cardinals",
+      "start_time": "2026-07-31T23:07:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "home", "decimal_odds": 1.578 },
+            { "book": "consensus-a", "side": "away", "decimal_odds": 2.43 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-31-phi-bal",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Orioles",
+      "away": "Phillies",
+      "start_time": "2026-07-31T23:05:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "polymarket", "side": "home", "decimal_odds": 1.887 },
+            { "book": "polymarket", "side": "away", "decimal_odds": 2.041 }
+          ]
+        }
+      ]
+    },
+    {
+      "event_id": "mlb-2026-07-31-ari-cle",
+      "sport": "mlb",
+      "league": "MLB",
+      "home": "Guardians",
+      "away": "Diamondbacks",
+      "start_time": "2026-07-31T23:10:00Z",
+      "markets": [
+        {
+          "kind": "moneyline",
+          "quotes": [
+            { "book": "consensus-a", "side": "away", "decimal_odds": 2.15 }
+          ]
+        }
+      ]
+    }
+  ],
+  "model_probabilities": {
+    "mlb-2026-07-31-mia-nym:moneyline:home": 0.54,
+    "mlb-2026-07-31-mia-nym:moneyline:away": 0.46,
+    "mlb-2026-07-31-pit-cin:moneyline:home": 0.51,
+    "mlb-2026-07-31-pit-cin:moneyline:away": 0.49,
+    "mlb-2026-07-31-stl-tor:moneyline:home": 0.63,
+    "mlb-2026-07-31-stl-tor:moneyline:away": 0.37,
+    "mlb-2026-07-31-phi-bal:moneyline:home": 0.46,
+    "mlb-2026-07-31-phi-bal:moneyline:away": 0.54
+  }
+}

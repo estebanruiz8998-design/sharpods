@@ -237,6 +237,21 @@ class TestDegradedAnchor:
         assert cand.ev_pct < cand.required_ev
 
     def test_big_edge_still_tickets_on_soft_anchor(self):
+        # 2.06 at fair 0.500 is +3.0% EV, above the 2.5% bar, and the
+        # cross-source hold stays positive (no conflict refusal).
+        snap = self._snapshot(1.909, 1.909)
+        snap.quotes.append(
+            __import__("sharpods.datatypes", fromlist=["Quote"]).Quote(
+                "fanduel", Side.HOME, 2.06
+            )
+        )
+        card = Engine().run([snap], 10_000)
+        assert len(card.tickets) == 1
+        assert card.tickets[0].candidate.ev_pct > 0.025
+
+    def test_negative_hold_refuses_degraded_market(self):
+        # A cross-source "arb" on soft anchors is conflicting quotes, not
+        # value: no candidates, no arb listing, an explicit skip reason.
         snap = self._snapshot(1.909, 1.909)
         snap.quotes.append(
             __import__("sharpods.datatypes", fromlist=["Quote"]).Quote(
@@ -244,8 +259,14 @@ class TestDegradedAnchor:
             )
         )
         card = Engine().run([snap], 10_000)
-        assert len(card.tickets) == 1
-        assert card.tickets[0].candidate.ev_pct > 0.025
+        assert card.tickets == []
+        assert card.candidates == []
+        assert card.arbitrages == []
+        assert any("conflicting quotes" in s for s in card.skipped)
+
+    def test_sharp_anchor_negative_hold_still_arbs(self, card):
+        # Pinnacle-anchored sample slate keeps its genuine arbs.
+        assert len(card.arbitrages) == 2
 
     def test_sharp_anchor_keeps_normal_bar(self, card):
         # Sample slate is pinnacle-anchored: requirements stay at the floor.

@@ -57,6 +57,7 @@ class MarketDiagnostics:
     consensus_line: float | None
     fair_line: FairLine | None
     synthetic_hold: float | None
+    unpriceable_reason: str | None = None
 
 
 @dataclass
@@ -165,6 +166,24 @@ class Engine:
         if fair is None:
             return [], diagnostics
 
+        # Live-run lesson (2026-07-30, CHC@STL): with degraded anchors, a
+        # negative cross-source synthetic hold is not an arb — it is quotes
+        # from different moments disagreeing. The one time we priced through
+        # it, our fair missed the no-vig close by 3.7 points and the "value"
+        # side closed as the dog. Such markets are unpriceable: no fair
+        # line, no candidates, no orders.
+        if (
+            fair.anchor_sharpness < self.sharp_anchor_threshold
+            and hold is not None
+            and hold < 0.0
+        ):
+            diagnostics.fair_line = None
+            diagnostics.unpriceable_reason = (
+                f"degraded anchor + negative cross-source hold ({hold:+.2%}): "
+                "conflicting quotes, not an arb — refusing to price"
+            )
+            return [], diagnostics
+
         steam = detect_steam(history or [], snapshot, self.registry)
         steam_sides = {s.side for s in steam}
 
@@ -248,14 +267,26 @@ class Engine:
             diagnostics.append(diag)
             if not candidates and diag.fair_line is None:
                 skipped.append(
-                    f"{snap.event.event_id}/{snap.kind.value}: no sharp book quotes "
-                    "the full market; refusing to invent a fair line"
+                    f"{snap.event.event_id}/{snap.kind.value}: "
+                    + (
+                        diag.unpriceable_reason
+                        or "no sharp book quotes the full market; "
+                        "refusing to invent a fair line"
+                    )
                 )
             all_candidates.extend(candidates)
 
-            arb = find_arbitrage(snap, diag.consensus_line)
-            if arb is not None:
-                arbitrages.append((snap.event.event_id, arb))
+            # Arbitrage listings require trust in simultaneity: with a
+            # degraded (or refused) anchor, a sub-1 book across sources is a
+            # stale-quote artifact, not free money (2026-07-30 lesson).
+            trustworthy = (
+                diag.fair_line is not None
+                and diag.fair_line.anchor_sharpness >= self.sharp_anchor_threshold
+            )
+            if trustworthy:
+                arb = find_arbitrage(snap, diag.consensus_line)
+                if arb is not None:
+                    arbitrages.append((snap.event.event_id, arb))
             if snap.kind == MarketKind.SPREAD:
                 for mid in find_middles(snap):
                     if mid.ev > 0:
