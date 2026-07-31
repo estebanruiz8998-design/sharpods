@@ -87,7 +87,7 @@
   .findings li::marker { color: var(--ink-faint); }
 
   .board-scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; margin-bottom: 12px; }
-  table { border-collapse: collapse; width: 100%; min-width: 860px; font-size: 13px; }
+  table { border-collapse: collapse; width: 100%; min-width: 1000px; font-size: 13px; }
   thead th { font-family: var(--disp); font-size: 10.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-faint); text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--rule); background: var(--ticket); }
   tbody td { padding: 8px 10px; border-bottom: 1px solid var(--rule); background: var(--ticket); vertical-align: top; font-variant-numeric: tabular-nums; }
   tbody tr:last-child td { border-bottom: none; }
@@ -97,6 +97,35 @@
   .chip.won, .chip.validated, .chip.worked { color: var(--felt); border-color: var(--felt); background: var(--felt-soft); }
   .chip.miss, .chip.lost { color: var(--stamp); border-color: var(--stamp); }
   .chip.pending { color: var(--ink-faint); border-style: dashed; }
+
+  /* ---- your-grades layer ---- */
+  .seg { display: inline-flex; border: 1px solid var(--rule); border-radius: 5px; overflow: hidden; }
+  .seg button {
+    all: unset; cursor: pointer; font-family: var(--disp); font-weight: 700;
+    font-size: 10px; letter-spacing: .06em; text-transform: uppercase;
+    padding: 3px 8px; color: var(--ink-soft); background: var(--ticket);
+    border-right: 1px solid var(--rule);
+  }
+  .seg button:last-child { border-right: none; }
+  .seg button:focus-visible { outline: 2px solid var(--brass); outline-offset: -2px; }
+  .seg button[aria-pressed="true"].w { background: var(--felt); color: var(--paper); }
+  .seg button[aria-pressed="true"].l { background: var(--stamp); color: var(--paper); }
+  .seg button[aria-pressed="true"].n { background: var(--ink-soft); color: var(--paper); }
+  .yourrec { border: 1px solid var(--rule); border-left: 4px solid var(--brass); border-radius: 6px; background: var(--ticket); padding: 14px 18px; margin: 0 0 30px; }
+  .yourrec .head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .yourrec h2 { margin: 0; }
+  .yourrec .stake-ctl { font-size: 12.5px; color: var(--ink-soft); display: inline-flex; align-items: center; gap: 6px; }
+  .yourrec input[type="number"] {
+    width: 90px; font-family: var(--mono); font-size: 13px; padding: 3px 6px;
+    border: 1px solid var(--rule); border-radius: 4px; background: var(--paper); color: var(--ink);
+  }
+  .yourrec .stats { display: flex; flex-wrap: wrap; gap: 10px 26px; font-family: var(--mono); font-size: 12px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .yourrec .stats b { color: var(--ink); font-weight: 700; display: block; font-size: 15px; }
+  .yourrec .stats b.good { color: var(--felt); }
+  .yourrec .stats b.bad { color: var(--stamp); }
+  .yourrec .hint { font-size: 12px; color: var(--ink-faint); margin: 10px 0 0; }
+  .yourrec .tools { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; align-items: center; }
+  .yourrec .tools button.ghost { background: transparent; color: var(--ink-soft); border: 1px solid var(--rule); }
 
   .actions { display: flex; gap: 10px; align-items: center; margin-bottom: 30px; flex-wrap: wrap; }
   button {
@@ -155,11 +184,34 @@
     </div>
   </div>
 
+  <div class="yourrec">
+    <div class="head">
+      <h2>Your record — mark what you actually did</h2>
+      <label class="stake-ctl">unit stake $
+        <input type="number" id="unitStake" min="1" step="1" value="100">
+      </label>
+    </div>
+    <div class="stats" id="yourStats"></div>
+    <p class="hint">
+      Use the <b>Your call</b> column below: <b>W</b> = you bet it and it won ·
+      <b>L</b> = you bet it and it lost · <b>No bet</b> = you passed because the
+      target odds never printed. Everything recomputes instantly and is saved
+      in this browser. Won/lost P&amp;L uses the fill price when there is one,
+      else the target, at your unit stake.
+    </p>
+    <div class="tools">
+      <button id="exportGrades">Export my grades (JSON)</button>
+      <button id="clearGrades" class="ghost">Clear all marks</button>
+      <span class="action-note" id="gradesNote"></span>
+    </div>
+  </div>
+
   <h2>Decision log</h2>
   <p class="section-sub">
-    Two grades per decision: <b>Result</b> is what the scoreboard paid;
-    <b>Process</b> is what the closing line says about the decision. They
-    disagree exactly when variance pays for a mistake — or punishes a good bet.
+    Three grades per decision: <b>Result</b> is what the scoreboard paid;
+    <b>Process</b> is what the closing line says about the decision;
+    <b>Your call</b> is what you actually did — mark it and your record
+    above updates itself.
   </p>
   <div class="board-scroll">
     <table id="log">
@@ -167,7 +219,8 @@
         <tr>
           <th>Date</th><th>Event</th><th>Selection</th><th>Type</th>
           <th>Target</th><th>Fill</th><th>Stake</th><th>Result</th>
-          <th>P&amp;L</th><th>CLV (no-vig)</th><th>Process</th><th>Why</th>
+          <th>P&amp;L</th><th>CLV (no-vig)</th><th>Process</th>
+          <th>Your call</th><th>Why</th>
         </tr>
       </thead>
       <tbody></tbody>
@@ -288,8 +341,94 @@ document.querySelector("#log tbody").innerHTML = DATA.decisions.map(d => `
     <td class="num">${d.pnl ? fmt.usd(d.pnl) : "—"}</td>
     <td class="num">${d.clv_novig == null ? "—" : fmt.pct(d.clv_novig)}</td>
     <td><span class="chip ${d.process}">${d.process}</span></td>
+    <td><span class="seg" role="group" aria-label="your call for ${d.id}" data-id="${d.id}">
+      <button class="w" data-mark="won" aria-pressed="false" title="you bet it — won">W</button>
+      <button class="l" data-mark="lost" aria-pressed="false" title="you bet it — lost">L</button>
+      <button class="n" data-mark="nobet" aria-pressed="false" title="no bet — target odds never printed">No bet</button>
+    </span></td>
     <td class="note">${d.note || ""}</td>
   </tr>`).join("");
+
+// ---- Your record: marks live in this browser (localStorage) ---------------
+const GKEY = "sharpods-grades-v1";
+const loadGrades = () => {
+  try { return JSON.parse(localStorage.getItem(GKEY)) || {}; }
+  catch { return {}; }
+};
+const saveGrades = g => { try { localStorage.setItem(GKEY, JSON.stringify(g)); } catch {} };
+let grades = loadGrades();
+const stakeInput = document.getElementById("unitStake");
+if (grades.__unit) stakeInput.value = grades.__unit;
+
+const byId = Object.fromEntries(DATA.decisions.map(d => [d.id, d]));
+
+function renderYourRecord() {
+  const unit = Math.max(1, Number(stakeInput.value) || 100);
+  let w = 0, l = 0, nobet = 0, pnl = 0;
+  for (const [id, mark] of Object.entries(grades)) {
+    const d = byId[id];
+    if (!d || typeof mark !== "string") continue;
+    const price = d.fill != null ? d.fill : d.target;
+    if (mark === "won") { w++; if (price != null) pnl += unit * (price - 1); }
+    else if (mark === "lost") { l++; pnl -= unit; }
+    else if (mark === "nobet") { nobet++; }
+  }
+  const bets = w + l;
+  const stats = [
+    { lbl: "bets marked", val: String(bets), cls: "" },
+    { lbl: "record", val: `${w}–${l}`, cls: "" },
+    { lbl: "win rate", val: bets ? Math.round((w / bets) * 100) + "%" : "—", cls: "" },
+    { lbl: "P&L at unit stake", val: bets ? fmt.usd(Math.round(pnl)) : "—",
+      cls: pnl > 0 ? "good" : pnl < 0 ? "bad" : "" },
+    { lbl: "no bet — odds not met", val: String(nobet), cls: "" },
+  ];
+  document.getElementById("yourStats").innerHTML = stats.map(s =>
+    `<div><b class="${s.cls}">${s.val}</b>${s.lbl}</div>`).join("");
+  document.querySelectorAll(".seg").forEach(seg => {
+    const mark = grades[seg.dataset.id];
+    seg.querySelectorAll("button").forEach(b =>
+      b.setAttribute("aria-pressed", String(b.dataset.mark === mark)));
+  });
+}
+
+document.querySelectorAll(".seg button").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const id = btn.closest(".seg").dataset.id;
+    grades[id] = grades[id] === btn.dataset.mark ? undefined : btn.dataset.mark;
+    if (grades[id] === undefined) delete grades[id];
+    grades.__unit = Number(stakeInput.value) || 100;
+    saveGrades(grades);
+    renderYourRecord();
+  });
+});
+stakeInput.addEventListener("input", () => {
+  grades.__unit = Number(stakeInput.value) || 100;
+  saveGrades(grades);
+  renderYourRecord();
+});
+document.getElementById("clearGrades").addEventListener("click", () => {
+  grades = {};
+  saveGrades(grades);
+  renderYourRecord();
+});
+document.getElementById("exportGrades").addEventListener("click", async () => {
+  const note = document.getElementById("gradesNote");
+  const payload = JSON.stringify(
+    { unit_stake: Number(stakeInput.value) || 100,
+      grades: Object.fromEntries(Object.entries(grades).filter(([k]) => k !== "__unit")) },
+    null, 2);
+  if (window.claude && window.claude.downloads) {
+    try {
+      await window.claude.downloads.save({ filename: "sharpods-my-grades.json", data: payload });
+      note.textContent = "Saved — share it back and it gets folded into the ledger.";
+    } catch (e) {
+      note.textContent = e && e.code === "declined" ? "" : "Export unavailable in this view.";
+    }
+  } else {
+    note.textContent = "Export unavailable in this view.";
+  }
+});
+renderYourRecord();
 
 // ---- CSV export via the downloads capability -------------------------------
 const btn = document.getElementById("exportBtn");
