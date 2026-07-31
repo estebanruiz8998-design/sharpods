@@ -35,25 +35,48 @@
   h1 span { color: var(--felt); }
   .sub { color: var(--ink-soft); font-size: 14px; margin: 0 0 20px; }
 
-  .tiles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 14px; }
+  .bank { background: var(--card); border: 1px solid var(--rule); border-radius: 12px;
+    padding: 14px 16px 12px; margin-bottom: 8px;
+    display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+  .bank .val { font-family: var(--mono); font-size: 30px; font-weight: 700;
+    font-variant-numeric: tabular-nums; line-height: 1.15; }
+  .bank .lbl { font-family: var(--disp); font-size: 10px; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); }
+  .bank svg { flex: none; }
+  .bank .spark-line { fill: none; stroke: var(--felt); stroke-width: 2; }
+  .bank .spark-dot { fill: var(--felt); }
+
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px; }
   .tile { background: var(--card); border: 1px solid var(--rule); border-radius: 10px;
     padding: 12px 8px 10px; text-align: center; }
-  .tile .val { font-family: var(--mono); font-size: 24px; font-weight: 700;
+  .tile .val { font-family: var(--mono); font-size: 22px; font-weight: 700;
     font-variant-numeric: tabular-nums; line-height: 1.2; }
   .tile .val.good { color: var(--felt); }
   .tile .val.bad { color: var(--stamp); }
   .tile .lbl { font-family: var(--disp); font-size: 10px; font-weight: 700;
     letter-spacing: .12em; text-transform: uppercase; color: var(--ink-faint); margin-top: 2px; }
+  .tile .sub { font-family: var(--mono); font-size: 10.5px; color: var(--ink-faint); }
 
-  .stake { display: flex; justify-content: flex-end; align-items: center; gap: 8px;
-    font-size: 13px; color: var(--ink-soft); margin-bottom: 20px; }
-  .stake input { width: 84px; font-family: var(--mono); font-size: 15px;
+  .inputs { display: flex; justify-content: flex-end; align-items: center; gap: 16px;
+    font-size: 13px; color: var(--ink-soft); margin-bottom: 20px; flex-wrap: wrap; }
+  .inputs input { width: 92px; font-family: var(--mono); font-size: 15px;
     padding: 6px 8px; border: 1px solid var(--rule); border-radius: 8px;
     background: var(--card); color: var(--ink); text-align: right; }
 
-  .day { font-family: var(--disp); font-size: 12px; font-weight: 700;
+  .day { display: flex; justify-content: space-between; align-items: baseline;
+    font-family: var(--disp); font-size: 12px; font-weight: 700;
     letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint);
     margin: 18px 2px 8px; }
+  .day .dpnl { font-family: var(--mono); letter-spacing: 0; }
+  .day .dpnl.good { color: var(--felt); }
+  .day .dpnl.bad { color: var(--stamp); }
+
+  .status { flex: 1; border-radius: 9px; padding: 9px 12px;
+    font-family: var(--disp); font-weight: 700; font-size: 13px;
+    letter-spacing: .08em; text-transform: uppercase; }
+  .status.won { background: var(--felt-soft); color: var(--felt); border: 1.5px solid var(--felt); }
+  .status.lost { background: transparent; color: var(--stamp); border: 1.5px solid var(--stamp); }
+  .status.skip { background: transparent; color: var(--ink-faint); border: 1.5px dashed var(--rule); }
   .bet { background: var(--card); border: 1px solid var(--rule); border-radius: 12px;
     padding: 14px 14px 12px; margin-bottom: 10px; }
   .bet .top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
@@ -88,13 +111,14 @@
   <div class="masthead">
     <h1>Sharp<span>Ods</span> Tracker</h1>
   </div>
-  <p class="sub">Tap what happened. The math does itself.</p>
+  <p class="sub">Your bets, your bankroll. Settled ones fill in on their own.</p>
 
+  <div class="bank" id="bank"></div>
   <div class="tiles" id="tiles"></div>
 
-  <div class="stake">
-    <label for="unitStake">$ per bet</label>
-    <input type="number" id="unitStake" min="1" step="1" value="100">
+  <div class="inputs">
+    <label>start bankroll $ <input type="number" id="startBank" min="0" step="100" value="30000"></label>
+    <label>$ per new bet <input type="number" id="unitStake" min="1" step="1" value="100"></label>
   </div>
 
   <div id="bets"></div>
@@ -103,7 +127,7 @@
     <span class="note" id="range"></span>
     <span style="display:flex;gap:8px">
       <button class="ghost" id="exportGrades">Save my record</button>
-      <button class="ghost" id="clearGrades">Reset</button>
+      <button class="ghost" id="clearGrades">Reset my marks</button>
     </span>
   </div>
 </div>
@@ -111,9 +135,12 @@
 <script>
 const DATA = __DATA_JSON__;
 
-// Only playable picks — internals stay in the ledger.
+// Playable picks only; ledger facts (the actual chat history) lock in.
 const BETTABLE = new Set(["ticket", "order_open", "order_unfilled"]);
 const picks = DATA.decisions.filter(d => BETTABLE.has(d.type) && (d.fill != null || d.target != null));
+// A pick is "settled by history" when the ledger already knows the outcome:
+// a graded ticket (won/lost with real stake+P&L) or an order that never filled.
+const settled = d => d.result === "won" || d.result === "lost" || d.result === "no fill";
 
 const GKEY = "sharpods-grades-v1";
 const load = () => { try { return JSON.parse(localStorage.getItem(GKEY)) || {}; } catch { return {}; } };
@@ -121,19 +148,36 @@ const save = g => { try { localStorage.setItem(GKEY, JSON.stringify(g)); } catch
 let grades = load();
 
 const stakeEl = document.getElementById("unitStake");
+const bankEl = document.getElementById("startBank");
 if (grades.__unit) stakeEl.value = grades.__unit;
+if (grades.__bank) bankEl.value = grades.__bank;
 
 const usd = v => (v < 0 ? "−$" : "+$") + Math.abs(Math.round(v)).toLocaleString("en-US");
+const usd0 = v => "$" + Math.abs(Math.round(v)).toLocaleString("en-US");
 const price = d => d.fill != null ? d.fill : d.target;
 const MONTHS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 const nice = iso => MONTHS[+iso.slice(5, 7) - 1] + " " + (+iso.slice(8, 10));
 
-// Bets list, newest day first
+// Cards, newest day first; day headers carry data slots for the day's P&L.
 const bets = document.getElementById("bets");
 let lastDay = "";
 bets.innerHTML = [...picks].sort((a, b) => b.date.localeCompare(a.date)).map(d => {
-  const day = d.date !== lastDay ? `<div class="day">${nice(d.date)}</div>` : "";
+  const day = d.date !== lastDay
+    ? `<div class="day"><span>${nice(d.date)}</span><span class="dpnl" data-day="${d.date}"></span></div>` : "";
   lastDay = d.date;
+  let controls;
+  if (d.result === "won" || d.result === "lost") {
+    controls = `<span class="status ${d.result}">${d.result} · stake ${usd0(d.stake)}</span>
+      <span class="pnl ${d.result === "won" ? "good" : "bad"}">${usd(d.pnl)}</span>`;
+  } else if (d.result === "no fill") {
+    controls = `<span class="status skip">No bet · odds never hit ${d.target.toFixed(2)}</span><span class="pnl">$0</span>`;
+  } else {
+    controls = `
+      <button class="btn won" data-mark="won" aria-pressed="false">Won</button>
+      <button class="btn lost" data-mark="lost" aria-pressed="false">Lost</button>
+      <button class="btn nobet" data-mark="nobet" aria-pressed="false">No bet</button>
+      <span class="pnl" data-pnl></span>`;
+  }
   return day + `
   <div class="bet" data-id="${d.id}">
     <div class="top">
@@ -141,40 +185,83 @@ bets.innerHTML = [...picks].sort((a, b) => b.date.localeCompare(a.date)).map(d =
       <span class="odds">${price(d).toFixed(2)}</span>
     </div>
     <div class="game">${d.event}</div>
-    <div class="row">
-      <button class="btn won" data-mark="won" aria-pressed="false">Won</button>
-      <button class="btn lost" data-mark="lost" aria-pressed="false">Lost</button>
-      <button class="btn nobet" data-mark="nobet" aria-pressed="false">No bet</button>
-      <span class="pnl" data-pnl></span>
-    </div>
+    <div class="row">${controls}</div>
   </div>`;
 }).join("");
 
+function pickPnl(d, unit) {
+  // Returns [pnl, kind]; kind: "w" | "l" | "skip" | null (unmarked/pending)
+  if (d.result === "won") return [d.pnl, "w"];
+  if (d.result === "lost") return [d.pnl, "l"];
+  if (d.result === "no fill") return [0, "skip"];
+  const mark = grades[d.id];
+  if (mark === "won") return [unit * (price(d) - 1), "w"];
+  if (mark === "lost") return [-unit, "l"];
+  if (mark === "nobet") return [0, "skip"];
+  return [0, null];
+}
+
 function render() {
   const unit = Math.max(1, Number(stakeEl.value) || 100);
-  let w = 0, l = 0, skip = 0, pnl = 0;
+  const start = Math.max(0, Number(bankEl.value) || 0);
+  let w = 0, l = 0, skip = 0, pnl = 0, open = 0;
+  const byDay = {};
+  for (const d of picks) {
+    const [v, kind] = pickPnl(d, unit);
+    if (kind === "w") { w++; pnl += v; }
+    else if (kind === "l") { l++; pnl += v; }
+    else if (kind === "skip") skip++;
+    else open++;
+    if (kind === "w" || kind === "l") byDay[d.date] = (byDay[d.date] || 0) + v;
+  }
+
+  // Per-card chips + button states (pending cards only)
   document.querySelectorAll(".bet").forEach(card => {
     const d = picks.find(p => p.id === card.dataset.id);
+    if (settled(d)) return;
     const mark = grades[d.id];
     card.querySelectorAll(".btn").forEach(b =>
       b.setAttribute("aria-pressed", String(b.dataset.mark === mark)));
     const out = card.querySelector("[data-pnl]");
-    if (mark === "won") { const v = unit * (price(d) - 1); w++; pnl += v;
-      out.textContent = usd(v); out.className = "pnl good"; }
-    else if (mark === "lost") { l++; pnl -= unit;
-      out.textContent = usd(-unit); out.className = "pnl bad"; }
-    else if (mark === "nobet") { skip++; out.textContent = "$0"; out.className = "pnl"; }
+    const [v, kind] = pickPnl(d, unit);
+    if (kind === "w") { out.textContent = usd(v); out.className = "pnl good"; }
+    else if (kind === "l") { out.textContent = usd(v); out.className = "pnl bad"; }
+    else if (kind === "skip") { out.textContent = "$0"; out.className = "pnl"; }
     else { out.textContent = ""; out.className = "pnl"; }
   });
+
+  // Day headers
+  document.querySelectorAll("[data-day]").forEach(el => {
+    const v = byDay[el.dataset.day];
+    el.textContent = v ? usd(v) : "";
+    el.className = "dpnl " + (v > 0 ? "good" : v < 0 ? "bad" : "");
+  });
+
+  // Bankroll hero with sparkline over the ledger's dates
+  const balance = start + pnl;
+  let run = start;
+  const series = [start, ...DATA.dates.map(day => (run += (byDay[day] || 0)))];
+  const W = 120, H = 32, mn = Math.min(...series), mx = Math.max(...series);
+  const y = v => mx === mn ? H / 2 : H - 3 - ((v - mn) / (mx - mn)) * (H - 6);
+  const pts = series.map((v, i) => `${(i / (series.length - 1)) * (W - 6) + 3},${y(v).toFixed(1)}`);
+  document.getElementById("bank").innerHTML = `
+    <div>
+      <div class="val">${usd0(balance)}</div>
+      <div class="lbl">bankroll</div>
+    </div>
+    <svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="bankroll by day">
+      <polyline class="spark-line" points="${pts.join(" ")}"></polyline>
+      <circle class="spark-dot" cx="${pts[pts.length - 1].split(",")[0]}" cy="${pts[pts.length - 1].split(",")[1]}" r="3"></circle>
+    </svg>`;
+
   const n = w + l;
   const tiles = [
-    { val: `${w}–${l}`, lbl: "record" },
-    { val: n ? Math.round(100 * w / n) + "%" : "—", lbl: "win rate" },
     { val: n ? usd(pnl) : "—", lbl: "profit", cls: pnl > 0 ? "good" : pnl < 0 ? "bad" : "" },
-    { val: String(skip), lbl: "no bet" },
+    { val: `${w}–${l}`, lbl: "record", sub: n ? Math.round(100 * w / n) + "% win" : "" },
+    { val: String(skip), lbl: "no bet", sub: open ? `${open} open` : "" },
   ];
   document.getElementById("tiles").innerHTML = tiles.map(t =>
-    `<div class="tile"><div class="val ${t.cls || ""}">${t.val}</div><div class="lbl">${t.lbl}</div></div>`).join("");
+    `<div class="tile"><div class="val ${t.cls || ""}">${t.val}</div><div class="lbl">${t.lbl}</div><div class="sub">${t.sub || ""}</div></div>`).join("");
 }
 
 bets.addEventListener("click", e => {
@@ -186,16 +273,20 @@ bets.addEventListener("click", e => {
   grades.__unit = Number(stakeEl.value) || 100;
   save(grades); render();
 });
-stakeEl.addEventListener("input", () => {
+for (const el of [stakeEl, bankEl]) el.addEventListener("input", () => {
   grades.__unit = Number(stakeEl.value) || 100;
+  grades.__bank = Number(bankEl.value) || 0;
   save(grades); render();
 });
 document.getElementById("clearGrades").addEventListener("click", () => {
-  grades = {}; save(grades); render();
+  const keep = { __unit: grades.__unit, __bank: grades.__bank };
+  grades = keep; save(grades); render();
 });
 document.getElementById("exportGrades").addEventListener("click", async () => {
-  const payload = JSON.stringify({ unit_stake: Number(stakeEl.value) || 100,
-    grades: Object.fromEntries(Object.entries(grades).filter(([k]) => k !== "__unit")) }, null, 2);
+  const payload = JSON.stringify({
+    start_bankroll: Number(bankEl.value) || 0,
+    unit_stake: Number(stakeEl.value) || 100,
+    grades: Object.fromEntries(Object.entries(grades).filter(([k]) => !k.startsWith("__"))) }, null, 2);
   if (window.claude && window.claude.downloads) {
     try { await window.claude.downloads.save({ filename: "sharpods-my-record.json", data: payload }); }
     catch (e) { /* declined or unavailable — nothing to clean up */ }
@@ -203,7 +294,8 @@ document.getElementById("exportGrades").addEventListener("click", async () => {
 });
 
 const dates = DATA.dates;
-document.getElementById("range").textContent =
-  dates.length ? `${nice(dates[0])} – ${nice(dates[dates.length - 1])} · marks stay on this device` : "";
+document.getElementById("range").textContent = dates.length
+  ? `${nice(dates[0])} – ${nice(dates[dates.length - 1])} · settled bets sync from the ledger on every new slip · your marks stay on this device`
+  : "";
 render();
 </script>
