@@ -1,0 +1,323 @@
+<title>SharpOds Tracker</title>
+<style>
+  :root {
+    --paper: #EFF2EC; --ticket: #F7F8F4; --ink: #1A2321; --ink-soft: #55625C;
+    --ink-faint: #8A958F; --felt: #0E5B43; --felt-soft: #0E5B4318;
+    --brass: #96782E; --stamp: #B3382E; --rule: #C9D1C8; --row: #EAEEE7;
+    --chart-clean: #1D62A0; --chart-flag: #B0752B;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    --disp: "Arial Narrow", "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+    --body: system-ui, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) { :root {
+    --paper: #121713; --ticket: #1A211C; --ink: #E6EBE4; --ink-soft: #A7B2AA;
+    --ink-faint: #6E7A72; --felt: #4CAE87; --felt-soft: #4CAE8722;
+    --brass: #C2A24E; --stamp: #D9584C; --rule: #2E3830; --row: #202823;
+    --chart-clean: #4E96D1; --chart-flag: #C08536;
+  } }
+  :root[data-theme="dark"] {
+    --paper: #121713; --ticket: #1A211C; --ink: #E6EBE4; --ink-soft: #A7B2AA;
+    --ink-faint: #6E7A72; --felt: #4CAE87; --felt-soft: #4CAE8722;
+    --brass: #C2A24E; --stamp: #D9584C; --rule: #2E3830; --row: #202823;
+    --chart-clean: #4E96D1; --chart-flag: #C08536;
+  }
+  :root[data-theme="light"] {
+    --paper: #EFF2EC; --ticket: #F7F8F4; --ink: #1A2321; --ink-soft: #55625C;
+    --ink-faint: #8A958F; --felt: #0E5B43; --felt-soft: #0E5B4318;
+    --brass: #96782E; --stamp: #B3382E; --rule: #C9D1C8; --row: #EAEEE7;
+    --chart-clean: #1D62A0; --chart-flag: #B0752B;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: var(--body); font-size: 15px; line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 880px; margin: 0 auto; padding: 40px 20px 64px; }
+  .masthead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+  .masthead h1 { font-family: var(--disp); font-size: 26px; font-weight: 900; letter-spacing: .04em; text-transform: uppercase; margin: 0; }
+  .masthead h1 span { color: var(--felt); }
+  .masthead .date { font-family: var(--mono); font-size: 13px; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+  .subtitle { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 24px; }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 10px; margin-bottom: 30px; }
+  .tile { background: var(--ticket); border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px 10px; }
+  .tile .lbl { font-family: var(--disp); font-size: 10.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-faint); }
+  .tile .val { font-family: var(--mono); font-size: 23px; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1.3; }
+  .tile .sub { font-family: var(--mono); font-size: 11px; color: var(--ink-soft); }
+  .tile .val.good { color: var(--felt); }
+  .tile .val.bad { color: var(--stamp); }
+
+  h2 { font-family: var(--disp); font-size: 15px; font-weight: 900; letter-spacing: .16em; text-transform: uppercase; margin: 0 0 4px; }
+  .section-sub { font-size: 13px; color: var(--ink-soft); margin: 0 0 14px; }
+
+  .panel { background: var(--ticket); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 18px; margin-bottom: 30px; }
+  .legend { display: flex; gap: 18px; font-size: 12px; color: var(--ink-soft); margin-bottom: 12px; }
+  .legend .key { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+  .chart { display: flex; flex-direction: column; gap: 2px; }
+  .bar-row { display: grid; grid-template-columns: 190px 1fr; align-items: center; gap: 10px; min-height: 22px; }
+  .bar-label { font-family: var(--mono); font-size: 11.5px; color: var(--ink-soft); text-align: right; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bar-track { position: relative; height: 16px; }
+  .bar { position: absolute; top: 1px; height: 14px; border-radius: 0 4px 4px 0; min-width: 2px; cursor: default; }
+  .bar-val { position: absolute; top: 0; font-family: var(--mono); font-size: 11px; color: var(--ink); line-height: 16px; padding-left: 6px; white-space: nowrap; }
+  .bar-val.inside { transform: translateX(-100%); padding: 0 6px 0 0; color: var(--paper); font-weight: 700; }
+  .axis { display: grid; grid-template-columns: 190px 1fr; gap: 10px; margin-top: 6px; }
+  .axis .ticks { position: relative; height: 14px; font-family: var(--mono); font-size: 10px; color: var(--ink-faint); }
+  .axis .tick { position: absolute; transform: translateX(-50%); }
+  .gridline { position: absolute; top: 0; bottom: 20px; width: 1px; background: var(--rule); opacity: .6; }
+  .chart-area { position: relative; }
+
+  #tooltip {
+    position: fixed; display: none; z-index: 10; max-width: 300px;
+    background: var(--ink); color: var(--paper); border-radius: 5px;
+    padding: 8px 10px; font-size: 12px; line-height: 1.45; pointer-events: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,.25);
+  }
+  #tooltip b { display: block; font-family: var(--mono); }
+
+  .findings { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 30px; }
+  @media (max-width: 640px) { .findings { grid-template-columns: 1fr; } .bar-row { grid-template-columns: 120px 1fr; } .axis { grid-template-columns: 120px 1fr; } }
+  .findings .col { background: var(--ticket); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; }
+  .findings .col.worked { border-top: 3px solid var(--felt); }
+  .findings .col.missed { border-top: 3px solid var(--stamp); }
+  .findings h3 { font-family: var(--disp); font-size: 12.5px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; margin: 0 0 8px; }
+  .findings ul { margin: 0; padding-left: 18px; font-size: 13px; color: var(--ink-soft); }
+  .findings li { margin-bottom: 8px; }
+  .findings li::marker { color: var(--ink-faint); }
+
+  .board-scroll { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; margin-bottom: 12px; }
+  table { border-collapse: collapse; width: 100%; min-width: 860px; font-size: 13px; }
+  thead th { font-family: var(--disp); font-size: 10.5px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: var(--ink-faint); text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--rule); background: var(--ticket); }
+  tbody td { padding: 8px 10px; border-bottom: 1px solid var(--rule); background: var(--ticket); vertical-align: top; font-variant-numeric: tabular-nums; }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num { font-family: var(--mono); font-size: 12px; white-space: nowrap; }
+  td.note { color: var(--ink-soft); font-size: 12px; min-width: 260px; }
+  .chip { display: inline-block; font-family: var(--disp); font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; border-radius: 3px; padding: 1px 7px; border: 1px solid var(--rule); color: var(--ink-soft); white-space: nowrap; }
+  .chip.won, .chip.validated, .chip.worked { color: var(--felt); border-color: var(--felt); background: var(--felt-soft); }
+  .chip.miss, .chip.lost { color: var(--stamp); border-color: var(--stamp); }
+  .chip.pending { color: var(--ink-faint); border-style: dashed; }
+
+  .actions { display: flex; gap: 10px; align-items: center; margin-bottom: 30px; flex-wrap: wrap; }
+  button {
+    font-family: var(--disp); font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+    font-size: 12px; color: var(--paper); background: var(--felt);
+    border: none; border-radius: 5px; padding: 9px 16px; cursor: pointer;
+  }
+  button:focus-visible { outline: 3px solid var(--brass); outline-offset: 2px; }
+  button:disabled { opacity: .5; cursor: default; }
+  .action-note { font-size: 12px; color: var(--ink-soft); }
+
+  .laws { margin-top: 26px; padding-top: 14px; border-top: 1px solid var(--rule); font-size: 12px; color: var(--ink-faint); }
+  .laws b { color: var(--ink-soft); letter-spacing: .04em; }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <div class="masthead">
+    <h1>Sharp<span>Ods</span> · Tracker</h1>
+    <div class="date" id="daterange"></div>
+  </div>
+  <p class="subtitle">
+    Every engine decision — tickets, limit orders, passes, refusals — graded
+    against results <i>and</i> the closing line. Regenerated from the ledger
+    (<span style="font-family:var(--mono)">data/track_record.json</span>) by
+    <span style="font-family:var(--mono)">sharpods-tracker</span> each
+    review-improve-ship cycle; the companion spreadsheet
+    (<span style="font-family:var(--mono)">data/tracker.xlsx</span>) recomputes
+    itself by formula when rows settle.
+  </p>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="panel">
+    <h2>Calibration — |fair − close| per graded market</h2>
+    <p class="section-sub">
+      Probability points between our pre-registered fair line and the devigged
+      closing line, ranked worst-first. The pattern to see: source quality,
+      not math, drives the misses.
+    </p>
+    <div class="legend">
+      <span class="key"><span class="swatch" style="background:var(--chart-clean)"></span>clean source</span>
+      <span class="key"><span class="swatch" style="background:var(--chart-flag)"></span>flagged source (conflict / date trap / low-conf close)</span>
+    </div>
+    <div class="chart-area" id="chart"></div>
+  </div>
+
+  <div class="findings">
+    <div class="col worked">
+      <h3>What worked</h3>
+      <ul id="worked"></ul>
+    </div>
+    <div class="col missed">
+      <h3>What didn't</h3>
+      <ul id="missed"></ul>
+    </div>
+  </div>
+
+  <h2>Decision log</h2>
+  <p class="section-sub">
+    Two grades per decision: <b>Result</b> is what the scoreboard paid;
+    <b>Process</b> is what the closing line says about the decision. They
+    disagree exactly when variance pays for a mistake — or punishes a good bet.
+  </p>
+  <div class="board-scroll">
+    <table id="log">
+      <thead>
+        <tr>
+          <th>Date</th><th>Event</th><th>Selection</th><th>Type</th>
+          <th>Target</th><th>Fill</th><th>Stake</th><th>Result</th>
+          <th>P&amp;L</th><th>CLV (no-vig)</th><th>Process</th><th>Why</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="actions">
+    <button id="exportBtn" hidden>Export decision log (CSV)</button>
+    <span class="action-note" id="exportNote"></span>
+  </div>
+
+  <div class="laws">
+    <b>THE FIVE LAWS</b> · The sharp market is truth · Price first, picks
+    second · Bet value, never winners · Fractional Kelly survives ·
+    CLV is the verdict — <i>win rate above answers to law five, not law
+    three: with n this small, every number here is provisional.</i>
+  </div>
+</div>
+
+<div id="tooltip" role="tooltip"></div>
+
+<script>
+const DATA = __DATA_JSON__;
+
+const fmt = {
+  usd: v => (v < 0 ? "−$" : "+$") + Math.abs(v).toLocaleString("en-US"),
+  usd0: v => "$" + Math.abs(v).toLocaleString("en-US"),
+  pct: v => (v >= 0 ? "+" : "−") + Math.abs(v * 100).toFixed(1) + "%",
+  pct0: v => (v * 100).toFixed(0) + "%",
+  num: v => v == null ? "—" : v.toFixed(3),
+};
+
+// ---- KPI tiles -------------------------------------------------------------
+const s = DATA.stats;
+const tiles = [
+  { lbl: "Net P&L", val: fmt.usd(s.pnl), cls: s.pnl >= 0 ? "good" : "bad",
+    sub: `on ${fmt.usd0(s.staked)} staked · ROI ${s.roi == null ? "—" : fmt.pct(s.roi)}` },
+  { lbl: "Tickets", val: `${s.ticket_wins}–${s.ticket_losses}`,
+    sub: `win rate ${s.win_rate == null ? "—" : fmt.pct0(s.win_rate)} · n=${s.tickets_settled} (tiny sample)` },
+  { lbl: "Mean CLV (no-vig)", val: s.mean_clv_novig == null ? "—" : fmt.pct(s.mean_clv_novig),
+    cls: s.mean_clv_novig != null && s.mean_clv_novig < 0 ? "bad" : "good",
+    sub: "the process verdict — negative = market disagreed" },
+  { lbl: "Process grade", val: `${s.process_worked}/${s.decisions_settled}`,
+    sub: `decisions validated by the close · ${s.process_missed} miss` },
+  { lbl: "Fair lines graded", val: s.fairlines_n,
+    sub: `mean err ${s.mean_err_pts.toFixed(2)} pts · max ${s.max_err_pts.toFixed(2)}` },
+  { lbl: "Brier (ours / close)", val: `${s.brier_ours} / ${s.brier_close}`,
+    sub: "0.25 = coin flip; lower is better" },
+];
+document.getElementById("tiles").innerHTML = tiles.map(t =>
+  `<div class="tile"><div class="lbl">${t.lbl}</div>` +
+  `<div class="val ${t.cls || ""}">${t.val}</div>` +
+  `<div class="sub">${t.sub}</div></div>`).join("");
+
+const dates = DATA.dates;
+document.getElementById("daterange").textContent =
+  dates.length ? dates[0].replaceAll("-", ".") + " — " + dates[dates.length - 1].replaceAll("-", ".") : "";
+
+// ---- Calibration chart -----------------------------------------------------
+const rows = [...DATA.fairlines].sort((a, b) => b.err_pts - a.err_pts);
+const maxErr = Math.max(4, Math.ceil(Math.max(...rows.map(r => r.err_pts))));
+const chart = document.getElementById("chart");
+const tooltip = document.getElementById("tooltip");
+const short = e => e.replace(/^mlb-\d{4}-\d{2}-\d{2}-/, "").toUpperCase().replace("-", " @ ");
+
+chart.innerHTML =
+  '<div class="chart" id="bars"></div>' +
+  '<div class="axis"><div></div><div class="ticks" id="ticks"></div></div>';
+const bars = document.getElementById("bars");
+rows.forEach(r => {
+  const w = (r.err_pts / maxErr) * 100;
+  const clean = r.flag === "clean";
+  const row = document.createElement("div");
+  row.className = "bar-row";
+  const inside = w > 82;
+  row.innerHTML =
+    `<div class="bar-label">${short(r.event)} · ${r.date.slice(5)}</div>` +
+    `<div class="bar-track"><div class="bar" style="width:${w}%;background:${clean ? "var(--chart-clean)" : "var(--chart-flag)"}"></div>` +
+    `<div class="bar-val${inside ? " inside" : ""}" style="left:${w}%">${r.err_pts.toFixed(2)}${clean ? "" : " ⚑"}</div></div>`;
+  const bar = row.querySelector(".bar-track");
+  bar.addEventListener("mousemove", ev => {
+    tooltip.style.display = "block";
+    tooltip.innerHTML = `<b>${short(r.event)} · ${r.date}</b>` +
+      `our fair ${r.our_fair.toFixed(4)} vs close ${r.close_novig.toFixed(4)} ` +
+      `→ ${r.err_pts.toFixed(2)} pts off · source: ${r.flag}` +
+      (r.final ? `<br>${r.final}` : "");
+    tooltip.style.left = Math.min(ev.clientX + 14, innerWidth - 310) + "px";
+    tooltip.style.top = (ev.clientY + 14) + "px";
+  });
+  bar.addEventListener("mouseleave", () => { tooltip.style.display = "none"; });
+  bars.appendChild(row);
+});
+const ticks = document.getElementById("ticks");
+for (let t = 0; t <= maxErr; t += 2) {
+  const x = (t / maxErr) * 100;
+  ticks.insertAdjacentHTML("beforeend", `<span class="tick" style="left:${x}%">${t}</span>`);
+}
+
+// ---- Findings --------------------------------------------------------------
+document.getElementById("worked").innerHTML =
+  DATA.findings.worked.map(f => `<li>${f}</li>`).join("") || "<li>—</li>";
+document.getElementById("missed").innerHTML =
+  DATA.findings.missed.map(f => `<li>${f}</li>`).join("") || "<li>—</li>";
+
+// ---- Decision log ----------------------------------------------------------
+const typeName = { ticket: "ticket", order_unfilled: "order · no fill",
+  order_open: "order · open", pass: "pass", refusal: "refusal", flag: "flag" };
+document.querySelector("#log tbody").innerHTML = DATA.decisions.map(d => `
+  <tr>
+    <td class="num">${d.date.slice(5)}</td>
+    <td>${d.event}</td>
+    <td>${d.selection}</td>
+    <td><span class="chip">${typeName[d.type] || d.type}</span></td>
+    <td class="num">${d.target == null ? "—" : d.target.toFixed(3)}</td>
+    <td class="num">${d.fill == null ? "—" : d.fill.toFixed(3)}</td>
+    <td class="num">${d.stake ? fmt.usd0(d.stake) : "—"}</td>
+    <td><span class="chip ${d.result === "won" ? "won" : d.result === "lost" ? "lost" : d.result === "pending" ? "pending" : "validated"}">${d.result}</span></td>
+    <td class="num">${d.pnl ? fmt.usd(d.pnl) : "—"}</td>
+    <td class="num">${d.clv_novig == null ? "—" : fmt.pct(d.clv_novig)}</td>
+    <td><span class="chip ${d.process}">${d.process}</span></td>
+    <td class="note">${d.note || ""}</td>
+  </tr>`).join("");
+
+// ---- CSV export via the downloads capability -------------------------------
+const btn = document.getElementById("exportBtn");
+const note = document.getElementById("exportNote");
+if (window.claude && window.claude.downloads) {
+  btn.hidden = false;
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; note.textContent = "";
+    try {
+      await window.claude.downloads.save({ filename: "sharpods-decisions.csv", data: DATA.csv });
+      note.textContent = "Saved.";
+    } catch (e) {
+      if (e && e.code === "extension_not_enabled") {
+        try {
+          await window.claude.downloads.save({ filename: "sharpods-decisions.txt", data: DATA.csv });
+          note.textContent = "Saved as .txt (CSV format).";
+        } catch (e2) { note.textContent = e2 && e2.code === "declined" ? "" : "Export unavailable."; }
+      } else if (e && e.code === "declined") {
+        note.textContent = "";
+      } else if (e && e.code === "rate_limited") {
+        note.textContent = "A save prompt is already open — try again in a moment.";
+      } else {
+        note.textContent = "Export unavailable in this view.";
+        btn.hidden = true;
+      }
+    } finally { btn.disabled = false; }
+  });
+} else {
+  note.textContent = "Full spreadsheet: data/tracker.xlsx in the repo.";
+}
+</script>

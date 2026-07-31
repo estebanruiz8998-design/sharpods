@@ -12,35 +12,40 @@
           "our_home_fair": 0.6184,
           "close_home_novig": 0.6225,
           "home_won": false,
-          "final": "Orioles 10, Tigers 9 (12 innings; Tigers led 7-0)"
+          "final": "Orioles 10, Tigers 9 (12 innings; Tigers led 7-0)",
+          "source_flag": "clean"
         },
         {
           "event_id": "mlb-2026-07-29-atl-nym-g1",
           "our_home_fair": 0.4953,
           "close_home_novig": 0.4907,
           "home_won": true,
-          "final": "Mets 3, Braves 2"
+          "final": "Mets 3, Braves 2",
+          "source_flag": "clean"
         },
         {
           "event_id": "mlb-2026-07-29-col-sd",
           "our_home_fair": 0.5644,
           "close_home_novig": 0.5617,
           "home_won": true,
-          "final": "Padres 7, Rockies 3"
+          "final": "Padres 7, Rockies 3",
+          "source_flag": "clean"
         },
         {
           "event_id": "mlb-2026-07-29-tor-wsh",
           "our_home_fair": 0.4653,
           "close_home_novig": 0.4678,
           "home_won": false,
-          "final": "Blue Jays 5, Nationals 2"
+          "final": "Blue Jays 5, Nationals 2",
+          "source_flag": "clean"
         },
         {
           "event_id": "mlb-2026-07-29-phi-mia",
           "our_home_fair": 0.4108,
           "close_home_novig": 0.3865,
           "home_won": true,
-          "final": "Marlins 8, Phillies 6 (Marlins trailed 6-0)"
+          "final": "Marlins 8, Phillies 6 (Marlins trailed 6-0)",
+          "source_flag": "clean"
         }
       ],
       "metrics": {
@@ -58,6 +63,40 @@
         "Fair lines tracked no-vig closes well (4/5 within 0.8pt) but the PHI miss (2.4pt) shows consensus-anchor tail risk -> engine change: EV bar scales 2.5x when no market-maker-grade book anchors the fair line (Engine.degraded_ev_multiplier).",
         "Hand-computed price targets were the day's real output -> engine change: target_decimal on every candidate, BetCard.price_targets(), rendered as limit orders.",
         "Snapshot JSON now carries its own book-sharpness registry so degraded runs are reproducible from the CLI."
+      ],
+      "decisions": [
+        {
+          "id": "2026-07-29-PASS",
+          "type": "pass",
+          "event": "Full 5-game slate",
+          "selection": "No bet - all 10 sides -EV",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "validated",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "worked",
+          "note": "Favorites went 2-3; both most-likely sides blew 6+ run leads; every listed price was -EV vs fair (avg -3.3%). Passing saved money."
+        },
+        {
+          "id": "2026-07-29-DET-ORDER",
+          "type": "order_unfilled",
+          "event": "BAL @ DET",
+          "selection": "Tigers ML",
+          "target": 1.633,
+          "fill": null,
+          "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "worked",
+          "note": "Line closed 1.56-1.59, moving away; discipline held. Tigers lost 9-10 in 12 - a chased fill would have lost."
+        }
       ]
     },
     {
@@ -103,14 +142,16 @@
           "our_home_fair": 0.6203,
           "close_home_novig": 0.5713,
           "home_won": true,
-          "final": "Rays 3, Rangers 2"
+          "final": "Rays 3, Rangers 2",
+          "source_flag": "low-conf close"
         },
         {
           "event_id": "mlb-2026-07-30-chc-stl",
           "our_home_fair": 0.4852,
           "close_home_novig": 0.5233,
           "home_won": false,
-          "final": "Cubs 4, Cardinals 2 (10 innings)"
+          "final": "Cubs 4, Cardinals 2 (10 innings)",
+          "source_flag": "conflict"
         },
         {
           "event_id": "mlb-2026-07-30-mia-nym",
@@ -137,7 +178,8 @@
           "our_home_fair": 0.4317,
           "close_home_novig": 0.5115,
           "home_won": true,
-          "final": "White Sox 2, Yankees 1 (11 innings)"
+          "final": "White Sox 2, Yankees 1 (11 innings)",
+          "source_flag": "date trap"
         },
         {
           "event_id": "mlb-2026-07-30-sea-lad",
@@ -157,6 +199,119 @@
         "Our fair (CHC 51.5%) missed the no-vig close (47.8%) by 3.7pts on the source-conflict market; second tail miss in two days -> engine change: degraded anchor + negative cross-source synthetic hold = market refused entirely (no fair line, no orders, no arb listing).",
         "NYY@CWS pre-registered fair (43.2% home) was likely poisoned by a July-29 line (date trap flagged at collection); close was CWS-favored. Scout prompts now require explicit Friday/date-tagged sources.",
         "Ticket outcome vs process: +$29,700 P&L, negative CLV. Logged both; the ledger, not the scoreboard, drives model trust."
+      ],
+      "decisions": [
+        {
+          "id": "2026-07-30-CHC-TICKET",
+          "type": "ticket",
+          "event": "CHC @ STL",
+          "selection": "Cubs ML",
+          "target": 1.991,
+          "fill": 1.99,
+          "stake": 30000,
+          "result": "won",
+          "pnl": 29700,
+          "clv_raw": -0.005,
+          "clv_novig": -0.0513,
+          "anchor": "conflict",
+          "process": "miss",
+          "note": "Cashed on variance: close (CHC +100/STL -120, sharp money on STL) says the edge was not there. Fair missed the no-vig close by 3.7pts on a source-conflict market -> conflict-refusal rule shipped."
+        },
+        {
+          "id": "2026-07-30-CIN-ORDER",
+          "type": "order_unfilled",
+          "event": "PIT @ CIN",
+          "selection": "Reds ML",
+          "target": 1.985,
+          "fill": null,
+          "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "note": "Game pending at grading. Skenes scratched late (bullpen game) - the priced premise changed; listed-pitcher rules would have mattered."
+        },
+        {
+          "id": "2026-07-30-ARB-FLAG",
+          "type": "flag",
+          "event": "CHC @ STL",
+          "selection": "Cross-source 'arb' +1.28%",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "validated",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "conflict",
+          "process": "worked",
+          "note": "Labeled unverified staleness and not executed; the close proved it was quote drift, not free money."
+        }
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "sport": "mlb",
+      "mode": "degraded - dated consensus + polymarket; --market-weight 0.85; conflict-refusal rule active",
+      "engine_verdict": "PASS at listed prices. Top order: Phillies ML fair 2.046, bet at >= 2.097 (-0.22% EV at listed 2.041). Runner-up: Pirates ML at >= 1.966. REFUSED: NYY@CHC (conflict rule, -2.17% cross-source hold) and ARI@CLE (one-sided price).",
+      "predictions_home_fair": {
+        "mlb-2026-07-31-mia-nym": 0.5426,
+        "mlb-2026-07-31-pit-cin": 0.4785,
+        "mlb-2026-07-31-stl-tor": 0.6161,
+        "mlb-2026-07-31-phi-bal": 0.5112
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-07-31-NYYCHC-REFUSAL",
+          "type": "refusal",
+          "event": "NYY @ CHC",
+          "selection": "Market refused (conflict rule)",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "conflict",
+          "process": "pending",
+          "note": "Consensus CHC -142 vs Polymarket 52c -> -2.17% pseudo-arb: yesterday's failure signature; refused under the new rule."
+        },
+        {
+          "id": "2026-07-31-PHI-ORDER",
+          "type": "order_open",
+          "event": "PHI @ BAL",
+          "selection": "Phillies ML",
+          "target": 2.097,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "note": "Listed 2.041 sits at fair (-0.2% EV); order rests at 2.10 where the SportsGrid Phillies lean is paid for."
+        },
+        {
+          "id": "2026-07-31-PIT-ORDER",
+          "type": "order_open",
+          "event": "PIT @ CIN",
+          "selection": "Pirates ML",
+          "target": 1.966,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "note": "Runner-up order; fair 1.918 vs best 1.887."
+        }
       ]
     }
   ]
