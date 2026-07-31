@@ -50,6 +50,12 @@ from sharpods.odds import synthetic_hold
 from sharpods.portfolio import Portfolio, RiskPolicy
 
 
+# Sports whose margin distributions the NFL key-number tables describe.
+# CFL is close enough in scoring structure for teaser/middle *detection* to
+# be plausible, but Wong's numbers are NFL-calibrated — NFL only.
+FOOTBALL_SPORTS = frozenset({"nfl"})
+
+
 @dataclass
 class MarketDiagnostics:
     event_id: str
@@ -287,13 +293,20 @@ class Engine:
                 arb = find_arbitrage(snap, diag.consensus_line)
                 if arb is not None:
                     arbitrages.append((snap.event.event_id, arb))
-            if snap.kind == MarketKind.SPREAD:
+            # Key-number machinery (Wong teasers, NFL margin-frequency
+            # middles) is football math: a +1.5 MLB run line satisfying
+            # Wong's window is a category error, not a teaser leg.
+            if snap.kind == MarketKind.SPREAD and snap.event.sport in FOOTBALL_SPORTS:
                 for mid in find_middles(snap):
                     if mid.ev > 0:
                         middles.append((snap.event.event_id, mid))
 
         teaser_legs = find_wong_teaser_legs(
-            [s for s in snapshots if s.kind == MarketKind.SPREAD]
+            [
+                s
+                for s in snapshots
+                if s.kind == MarketKind.SPREAD and s.event.sport in FOOTBALL_SPORTS
+            ]
         )
 
         portfolio = Portfolio(bankroll=bankroll, policy=self.policy)

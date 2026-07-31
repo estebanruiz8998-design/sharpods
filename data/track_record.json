@@ -384,22 +384,24 @@
     {
       "date": "2026-08-01",
       "sport": "mlb",
-      "mode": "degraded - first multi-sport all-markets card (11 MLB + 3 UFC + CFL spread + 2 WNBA; 20 markets, 3 refusals); soccer scout still in flight at ship time; --market-weight 0.85",
-      "engine_verdict": "PASS at listed prices. Best bet: Reds ML fair 2.188, bet at >= 2.242 (+0.57% at listed 2.20, Stats Insider model-supported, Ashcraft vs Abbott). Near-fair: Aces ML 1.40 (-0.16%), Luciano ML 1.333 (-0.35%). REFUSED: NYY@CHC (conflict, day 2), WSH@ATL and SFG@SDP (polymarket-only).",
+      "mode": "degraded - COMPLETE all-sports card v3: 39 events / 49 markets (MLB ML+RL+totals, 14 UFC, CFL, WNBA, 8 soccer three-ways incl. Liga MX), in-house log5 live, teaser gating fix, WNBA venue fix; --market-weight 0.85",
+      "engine_verdict": "ONE BET CLEARS THE BAR: Timbers ML at 2.273 (prediction-market 44c) vs fair 2.175 from the bet365 anchor = +4.51% EV, quarter-Kelly 0.89%. Robust both ways: if the book is right it's +4.5%; if the prediction market is right it's fair. Backup orders: Orioles ML >= 2.225 (+1.35% at listed), Reds ML >= 2.231. REFUSED: NYY@CHC (conflict day 2), WSH@ATL, SFG@SDP (pm-only).",
       "predictions_home_fair": {
-        "mlb-2026-08-01-pit-cin": 0.4531,
+        "mlb-2026-08-01-pit-cin": 0.4596,
         "mlb-2026-08-01-cws-tb": 0.5645,
         "mlb-2026-08-01-mil-laa": 0.4623,
         "mlb-2026-08-01-det-ath": 0.4006,
         "mlb-2026-08-01-stl-tor": 0.6113,
         "mlb-2026-08-01-tex-hou": 0.5454,
         "mlb-2026-08-01-mia-nym": 0.5454,
-        "mlb-2026-08-01-kc-col": 0.5035,
+        "mlb-2026-08-01-kc-col": 0.5069,
         "ufc-2026-08-01-medic-rodriguez": 0.7759,
         "ufc-2026-08-01-klein-musayev": 0.2902,
         "ufc-2026-08-01-luciano-spasic": 0.7474,
         "wnba-2026-08-01-lva-chi": 0.2869,
-        "wnba-2026-08-01-phx-nyl": 0.5589
+        "wnba-2026-08-01-phx-nyl": 0.5589,
+        "mlb-2026-08-01-phi-bal": 0.4606,
+        "mls-2026-08-01-sea-por": 0.4598
       },
       "predictions_other": {
         "mlb-2026-08-01-cws-tb:total:8.5": {
@@ -414,7 +416,7 @@
           "type": "order_open",
           "event": "PIT @ CIN",
           "selection": "Reds ML",
-          "target": 2.242,
+          "target": 2.231,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -423,8 +425,8 @@
           "clv_novig": null,
           "anchor": "clean",
           "process": "pending",
-          "note": "Best bet of the multi-sport card. Saturday sources split on CIN (2.05 vs 2.20); best price near fair 2.188 and the Stats Insider model (CIN 48%) nudges it up. Premise: Ashcraft (PIT) vs LHP Abbott (CIN), 6:40 PM ET - Skenes pitched Friday.",
-          "headline": true
+          "note": "Runner-up on the full card (was headline on the draft). Fair 2.176 with in-house log5 (CIN 51.2% by records) ensembled with Stats Insider (48%). Ashcraft vs Abbott.",
+          "headline": false
         },
         {
           "id": "2026-08-01-PIT-ORDER",
@@ -434,13 +436,13 @@
           "target": 1.888,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "superseded",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
           "process": "pending",
-          "note": "Runner-up order; fair 1.842 vs best 1.80.",
+          "note": "Superseded by the full-card re-rank (PIT side fell out of the top orders).",
           "headline": false
         },
         {
@@ -476,6 +478,40 @@
           "process": "pending",
           "note": "Only Polymarket quotes both sides; after its ledger-evidenced demotion to 0.45 it cannot anchor a fair line.",
           "headline": false
+        },
+        {
+          "id": "2026-08-01-BAL-ORDER",
+          "type": "order_open",
+          "event": "PHI @ BAL",
+          "selection": "Orioles ML",
+          "target": 2.225,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Best bet of the full all-sports card. Market prices PHI -130 despite PHI 2-8 last ten and a hot Baltimore (ESPN Analytics 55.5% BAL). Fair 2.171; order fires at 2.225+. Sanchez vs Baz, 7:05 PM ET Camden Yards. Caveat: single-book price (FanDuel via Covers), BAL record stale in our in-house layer - model prob is ESPN-only."
+        },
+        {
+          "id": "2026-08-01-POR-TICKET",
+          "type": "order_open",
+          "event": "SEA @ POR (MLS)",
+          "selection": "Timbers ML",
+          "target": 2.273,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": true,
+          "note": "BEST BET - the only bar-clearing play on the 49-market card. Prediction market pays 2.273 (44c) on a side bet365 prices 2.05; fair 2.175 -> +4.51% EV, robust under either price being true. Fill condition: Portland at 44c or better; if the ask has moved above 44c, the edge shrinks - engine minimum price 2.23 (45c). Providence Park, ~10:30 PM ET."
         }
       ]
     }
