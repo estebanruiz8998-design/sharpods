@@ -1,0 +1,241 @@
+{
+  "_provenance": {
+    "collected": "2026-07-31 late evening ET; supersedes the MLB-only 2026-08-01.json card",
+    "notes": [
+      "First multi-sport all-markets slate: MLB (15 games verified, ML/RL/totals where Saturday-dated prices exist), UFC Belgrade, CFL Week 9, WNBA, soccer (added on scout return).",
+      "Date verified: shipped Friday evening Jul 31 for Saturday Aug 1. Saturday PIT@CIN is Ashcraft vs Abbott (Skenes pitched Friday).",
+      "polymarket remains demoted (0.45, shop-only). Consensus books are date-stamped article/board pairs; range pairs from different books are entered as consensus-a/b.",
+      "Excluded for missing/one-sided/Friday-contaminated prices: BOS@LAD, PHI@BAL (no prices), MIN@SEA (one-sided), NYY@CHC run line (one-sided), CFL totals (no prices), WNBA spreads/totals (no prices), DET@ATH total (one-sided).",
+      "UFC sides: fighter listed second (p2) is entered as 'home'.",
+      "models: Stats Insider (10k sims), ESPN Analytics, SportsGrid - all third-party/unvalidated -> --market-weight 0.85. NYY@CHC model probs excluded (SI 57% CHC vs SportsGrid 63% NYY - models conflict like the books)."
+    ]
+  },
+  "books": {
+    "consensus-a": { "sharpness": 0.6, "notes": "primary date-stamped board/article pair" },
+    "consensus-b": { "sharpness": 0.6, "notes": "secondary date-stamped pair" },
+    "polymarket": { "sharpness": 0.45, "notes": "demoted per ledger; shop-only" }
+  },
+  "events": [
+    {
+      "event_id": "mlb-2026-08-01-nyy-chc",
+      "sport": "mlb", "league": "MLB", "home": "Cubs", "away": "Yankees",
+      "start_time": "2026-08-01T23:15:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "home", "decimal_odds": 1.62 },
+          { "book": "consensus-a", "side": "away", "decimal_odds": 2.35 },
+          { "book": "polymarket", "side": "home", "decimal_odds": 2.128 },
+          { "book": "polymarket", "side": "away", "decimal_odds": 1.852 }
+        ]},
+        { "kind": "total", "quotes": [
+          { "book": "consensus-a", "side": "over", "line": 9.0, "decimal_odds": 1.91 },
+          { "book": "consensus-a", "side": "under", "line": 9.0, "decimal_odds": 1.91 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "mlb-2026-08-01-pit-cin",
+      "sport": "mlb", "league": "MLB", "home": "Reds", "away": "Pirates",
+      "start_time": "2026-08-01T22:40:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "away", "decimal_odds": 1.80 },
+          { "book": "consensus-a", "side": "home", "decimal_odds": 2.05 },
+          { "book": "consensus-b", "side": "away", "decimal_odds": 1.75 },
+          { "book": "consensus-b", "side": "home", "decimal_odds": 2.20 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "mlb-2026-08-01-det-ath",
+      "sport": "mlb", "league": "MLB", "home": "Athletics", "away": "Tigers",
+      "start_time": "2026-08-02T01:40:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "away", "decimal_odds": 1.613 },
+          { "book": "consensus-a", "side": "home", "decimal_odds": 2.35 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "mlb-2026-08-01-stl-tor",
+      "sport": "mlb", "league": "MLB", "home": "Blue Jays", "away": "Cardinals",
+      "start_time": "2026-08-01T19:07:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "home", "decimal_odds": 1.588 },
+          { "book": "consensus-a", "side": "away", "decimal_odds": 2.43 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "mlb-2026-08-01-tex-hou",
+      "sport": "mlb", "league": "MLB", "home": "Astros", "away": "Rangers",
+      "start_time": "2026-08-01T23:10:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "home", "decimal_odds": 1.769 },
+          { "book": "consensus-a", "side": "away", "decimal_odds": 2.10 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "mlb-2026-08-01-mia-nym",
+      "sport": "mlb", "league": "MLB", "home": "Mets", "away": "Marlins",
+      "start_time": "2026-08-01T20:10:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "home", "decimal_odds": 1.763 },
+          { "book": "consensus-a", "side": "away", "decimal_odds": 2.09 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "mlb-2026-08-01-kc-col",
+      "sport": "mlb", "league": "MLB", "home": "Rockies", "away": "Royals",
+      "start_time": "2026-08-02T00:10:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "home", "decimal_odds": 1.901 },
+          { "book": "consensus-a", "side": "away", "decimal_odds": 1.926 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "mlb-2026-08-01-cws-tb",
+      "sport": "mlb", "league": "MLB", "home": "Rays", "away": "White Sox",
+      "start_time": "2026-08-01T20:10:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-b", "side": "home", "decimal_odds": 1.7092 },
+          { "book": "consensus-b", "side": "away", "decimal_odds": 2.18 }
+        ]},
+        { "kind": "total", "quotes": [
+          { "book": "consensus-b", "side": "over", "line": 8.5, "decimal_odds": 1.9615 },
+          { "book": "consensus-b", "side": "under", "line": 8.5, "decimal_odds": 1.8475 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "mlb-2026-08-01-mil-laa",
+      "sport": "mlb", "league": "MLB", "home": "Angels", "away": "Brewers",
+      "start_time": "2026-08-02T02:07:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "away", "decimal_odds": 1.76 },
+          { "book": "consensus-a", "side": "home", "decimal_odds": 2.02 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "mlb-2026-08-01-wsh-atl",
+      "sport": "mlb", "league": "MLB", "home": "Braves", "away": "Nationals",
+      "start_time": "2026-08-01T23:15:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "polymarket", "side": "home", "decimal_odds": 1.538 },
+          { "book": "polymarket", "side": "away", "decimal_odds": 2.778 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "mlb-2026-08-01-sfg-sdp",
+      "sport": "mlb", "league": "MLB", "home": "Padres", "away": "Giants",
+      "start_time": "2026-08-02T00:40:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "polymarket", "side": "home", "decimal_odds": 1.724 },
+          { "book": "polymarket", "side": "away", "decimal_odds": 2.326 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "ufc-2026-08-01-medic-rodriguez",
+      "sport": "ufc", "league": "UFC Fight Night Belgrade", "home": "Medic", "away": "Rodriguez",
+      "start_time": "2026-08-01T17:00:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "home", "decimal_odds": 1.25 },
+          { "book": "consensus-a", "side": "away", "decimal_odds": 4.10 },
+          { "book": "consensus-b", "side": "home", "decimal_odds": 1.278 },
+          { "book": "consensus-b", "side": "away", "decimal_odds": 3.85 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "ufc-2026-08-01-klein-musayev",
+      "sport": "ufc", "league": "UFC Fight Night Belgrade", "home": "Musayev", "away": "Klein",
+      "start_time": "2026-08-01T15:00:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "home", "decimal_odds": 3.15 },
+          { "book": "consensus-a", "side": "away", "decimal_odds": 1.3846 },
+          { "book": "consensus-b", "side": "home", "decimal_odds": 3.20 },
+          { "book": "consensus-b", "side": "away", "decimal_odds": 1.370 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "ufc-2026-08-01-luciano-spasic",
+      "sport": "ufc", "league": "UFC Fight Night Belgrade", "home": "Luciano", "away": "Spasic",
+      "start_time": "2026-08-01T14:00:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "home", "decimal_odds": 1.2941 },
+          { "book": "consensus-a", "side": "away", "decimal_odds": 3.75 },
+          { "book": "consensus-b", "side": "home", "decimal_odds": 1.3333 },
+          { "book": "consensus-b", "side": "away", "decimal_odds": 3.50 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "cfl-2026-08-01-cgy-ham",
+      "sport": "cfl", "league": "CFL", "home": "Tiger-Cats", "away": "Stampeders",
+      "start_time": "2026-08-01T19:00:00Z",
+      "markets": [
+        { "kind": "spread", "quotes": [
+          { "book": "consensus-a", "side": "home", "line": 4.5, "decimal_odds": 1.9091 },
+          { "book": "consensus-a", "side": "away", "line": -4.5, "decimal_odds": 1.9091 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "wnba-2026-08-01-lva-chi",
+      "sport": "wnba", "league": "WNBA", "home": "Sky", "away": "Aces",
+      "start_time": "2026-08-01T17:00:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "home", "decimal_odds": 3.35 },
+          { "book": "consensus-a", "side": "away", "decimal_odds": 1.3333 },
+          { "book": "consensus-b", "side": "home", "decimal_odds": 2.98 },
+          { "book": "consensus-b", "side": "away", "decimal_odds": 1.40 }
+        ]}
+      ]
+    },
+    {
+      "event_id": "wnba-2026-08-01-phx-nyl",
+      "sport": "wnba", "league": "WNBA", "home": "Liberty", "away": "Mercury",
+      "start_time": "2026-08-01T19:00:00Z",
+      "markets": [
+        { "kind": "moneyline", "quotes": [
+          { "book": "consensus-a", "side": "home", "decimal_odds": 1.6667 },
+          { "book": "consensus-a", "side": "away", "decimal_odds": 2.22 },
+          { "book": "consensus-b", "side": "home", "decimal_odds": 1.769 },
+          { "book": "consensus-b", "side": "away", "decimal_odds": 2.06 }
+        ]}
+      ]
+    }
+  ],
+  "model_probabilities": {
+    "mlb-2026-08-01-pit-cin:moneyline:home": 0.48,
+    "mlb-2026-08-01-pit-cin:moneyline:away": 0.52,
+    "mlb-2026-08-01-stl-tor:moneyline:home": 0.64,
+    "mlb-2026-08-01-stl-tor:moneyline:away": 0.36,
+    "mlb-2026-08-01-tex-hou:moneyline:home": 0.524,
+    "mlb-2026-08-01-tex-hou:moneyline:away": 0.476,
+    "mlb-2026-08-01-wsh-atl:moneyline:home": 0.58,
+    "mlb-2026-08-01-wsh-atl:moneyline:away": 0.42,
+    "mlb-2026-08-01-sfg-sdp:moneyline:home": 0.44,
+    "mlb-2026-08-01-sfg-sdp:moneyline:away": 0.56
+  }
+}
