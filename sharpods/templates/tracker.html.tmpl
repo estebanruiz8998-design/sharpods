@@ -111,7 +111,7 @@
   <div class="masthead">
     <h1>Sharp<span>Ods</span> Tracker</h1>
   </div>
-  <p class="sub">Your bets, your bankroll. Settled ones fill in on their own.</p>
+  <p class="sub">One pick a day — the slip's best bet. Settled ones fill in on their own.</p>
 
   <div class="bank" id="bank"></div>
   <div class="tiles" id="tiles"></div>
@@ -135,9 +135,9 @@
 <script>
 const DATA = __DATA_JSON__;
 
-// Playable picks only; ledger facts (the actual chat history) lock in.
-const BETTABLE = new Set(["ticket", "order_open", "order_unfilled"]);
-const picks = DATA.decisions.filter(d => BETTABLE.has(d.type) && (d.fill != null || d.target != null));
+// One card per day: the slip's best bet only (the user bets only that one).
+// Ledger facts (the actual chat history) lock in.
+const picks = DATA.decisions.filter(d => d.headline && (d.fill != null || d.target != null));
 // A pick is "settled by history" when the ledger already knows the outcome:
 // a graded ticket (won/lost with real stake+P&L) or an order that never filled.
 const settled = d => d.result === "won" || d.result === "lost" || d.result === "no fill";

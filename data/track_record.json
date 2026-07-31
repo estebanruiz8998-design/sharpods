@@ -79,7 +79,8 @@
           "clv_novig": null,
           "anchor": "clean",
           "process": "worked",
-          "note": "Favorites went 2-3; both most-likely sides blew 6+ run leads; every listed price was -EV vs fair (avg -3.3%). Passing saved money."
+          "note": "Favorites went 2-3; both most-likely sides blew 6+ run leads; every listed price was -EV vs fair (avg -3.3%). Passing saved money.",
+          "headline": false
         },
         {
           "id": "2026-07-29-DET-ORDER",
@@ -95,7 +96,8 @@
           "clv_novig": null,
           "anchor": "clean",
           "process": "worked",
-          "note": "Line closed 1.56-1.59, moving away; discipline held. Tigers lost 9-10 in 12 - a chased fill would have lost."
+          "note": "Line closed 1.56-1.59, moving away; discipline held. Tigers lost 9-10 in 12 - a chased fill would have lost.",
+          "headline": true
         }
       ]
     },
@@ -229,7 +231,8 @@
           "clv_novig": -0.0513,
           "anchor": "conflict",
           "process": "miss",
-          "note": "Cashed on variance: close (CHC +100/STL -120, sharp money on STL) says the edge was not there. Fair missed the no-vig close by 3.7pts on a source-conflict market -> conflict-refusal rule shipped."
+          "note": "Cashed on variance: close (CHC +100/STL -120, sharp money on STL) says the edge was not there. Fair missed the no-vig close by 3.7pts on a source-conflict market -> conflict-refusal rule shipped.",
+          "headline": true
         },
         {
           "id": "2026-07-30-CIN-ORDER",
@@ -245,7 +248,8 @@
           "clv_novig": null,
           "anchor": "clean",
           "process": "pending",
-          "note": "Game pending at grading. Skenes scratched late (bullpen game) - the priced premise changed; listed-pitcher rules would have mattered."
+          "note": "Game pending at grading. Skenes scratched late (bullpen game) - the priced premise changed; listed-pitcher rules would have mattered.",
+          "headline": false
         },
         {
           "id": "2026-07-30-ARB-FLAG",
@@ -261,7 +265,8 @@
           "clv_novig": null,
           "anchor": "conflict",
           "process": "worked",
-          "note": "Labeled unverified staleness and not executed; the close proved it was quote drift, not free money."
+          "note": "Labeled unverified staleness and not executed; the close proved it was quote drift, not free money.",
+          "headline": false
         }
       ]
     },
@@ -292,7 +297,8 @@
           "clv_novig": null,
           "anchor": "conflict",
           "process": "worked",
-          "note": "Close CHC -140 landed on the sportsbook consensus; Polymarket 52c was the stale outlier (NYY won 2-0 as a +130 dog - vs the close that bet was -7% EV luck). Refusal correct."
+          "note": "Close CHC -140 landed on the sportsbook consensus; Polymarket 52c was the stale outlier (NYY won 2-0 as a +130 dog - vs the close that bet was -7% EV luck). Refusal correct.",
+          "headline": false
         },
         {
           "id": "2026-07-31-PHI-ORDER",
@@ -308,7 +314,8 @@
           "clv_novig": null,
           "anchor": "clean",
           "process": "worked",
-          "note": "PHI never traded above 2.06 (target 2.10). Close no-vig PHI 0.467: even at target the bet was -2% vs close - not filling saved money. SportsGrid model lean (PHI 54%) was the wrong side per the close."
+          "note": "PHI never traded above 2.06 (target 2.10). Close no-vig PHI 0.467: even at target the bet was -2% vs close - not filling saved money. SportsGrid model lean (PHI 54%) was the wrong side per the close.",
+          "headline": true
         },
         {
           "id": "2026-07-31-PIT-ORDER",
@@ -324,7 +331,8 @@
           "clv_novig": null,
           "anchor": "clean",
           "process": "worked",
-          "note": "PIT -120 to -136 all day, never near the 1.966 target. Close no-vig PIT 0.564: a 1.966 fill would have been ~+11% EV vs close - right side, market never paid the price."
+          "note": "PIT -120 to -136 all day, never near the 1.966 target. Close no-vig PIT 0.564: a 1.966 fill would have been ~+11% EV vs close - right side, market never paid the price.",
+          "headline": false
         }
       ],
       "games": [
@@ -376,12 +384,22 @@
     {
       "date": "2026-08-01",
       "sport": "mlb",
-      "mode": "degraded - all-markets slate (ML + first priced total); polymarket demoted to 0.45 per ledger; --market-weight 0.85; date check: shipped Friday evening Jul 31 for Saturday Aug 1",
-      "engine_verdict": "PASS at listed prices. Top order: Reds ML fair 2.207, bet at >= 2.262 (-0.32% at listed 2.20). Runner-up: Pirates ML >= 1.874. REFUSED: NYY@CHC (conflict rule, -11.67% cross-source hold, 2nd straight day), DET@ATH (one-sided), WSH@ATL (no anchor at/above 0.5 after polymarket demotion).",
+      "mode": "degraded - first multi-sport all-markets card (11 MLB + 3 UFC + CFL spread + 2 WNBA; 20 markets, 3 refusals); soccer scout still in flight at ship time; --market-weight 0.85",
+      "engine_verdict": "PASS at listed prices. Best bet: Reds ML fair 2.188, bet at >= 2.242 (+0.57% at listed 2.20, Stats Insider model-supported, Ashcraft vs Abbott). Near-fair: Aces ML 1.40 (-0.16%), Luciano ML 1.333 (-0.35%). REFUSED: NYY@CHC (conflict, day 2), WSH@ATL and SFG@SDP (polymarket-only).",
       "predictions_home_fair": {
         "mlb-2026-08-01-pit-cin": 0.4531,
         "mlb-2026-08-01-cws-tb": 0.5645,
-        "mlb-2026-08-01-mil-laa": 0.4623
+        "mlb-2026-08-01-mil-laa": 0.4623,
+        "mlb-2026-08-01-det-ath": 0.4006,
+        "mlb-2026-08-01-stl-tor": 0.6113,
+        "mlb-2026-08-01-tex-hou": 0.5454,
+        "mlb-2026-08-01-mia-nym": 0.5454,
+        "mlb-2026-08-01-kc-col": 0.5035,
+        "ufc-2026-08-01-medic-rodriguez": 0.7759,
+        "ufc-2026-08-01-klein-musayev": 0.2902,
+        "ufc-2026-08-01-luciano-spasic": 0.7474,
+        "wnba-2026-08-01-lva-chi": 0.2869,
+        "wnba-2026-08-01-phx-nyl": 0.5589
       },
       "predictions_other": {
         "mlb-2026-08-01-cws-tb:total:8.5": {
@@ -396,7 +414,7 @@
           "type": "order_open",
           "event": "PIT @ CIN",
           "selection": "Reds ML",
-          "target": 2.262,
+          "target": 2.242,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -405,14 +423,15 @@
           "clv_novig": null,
           "anchor": "clean",
           "process": "pending",
-          "note": "Saturday sources split (CIN 2.05 vs 2.20); best price sits near fair. PREMISE RESOLVED (Jul 31 grading): Skenes pitches FRIDAY, not Saturday - Saturday is Ashcraft (PIT) vs LHP Abbott (CIN), 6:40 PM ET. The feared Skenes premium in the PIT price is misplaced; Reds order premise strengthened."
+          "note": "Best bet of the multi-sport card. Saturday sources split on CIN (2.05 vs 2.20); best price near fair 2.188 and the Stats Insider model (CIN 48%) nudges it up. Premise: Ashcraft (PIT) vs LHP Abbott (CIN), 6:40 PM ET - Skenes pitched Friday.",
+          "headline": true
         },
         {
           "id": "2026-08-01-PIT-ORDER",
           "type": "order_open",
           "event": "PIT @ CIN",
           "selection": "Pirates ML",
-          "target": 1.874,
+          "target": 1.888,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -421,7 +440,8 @@
           "clv_novig": null,
           "anchor": "clean",
           "process": "pending",
-          "note": "Runner-up order; fair 1.828 vs best 1.80."
+          "note": "Runner-up order; fair 1.842 vs best 1.80.",
+          "headline": false
         },
         {
           "id": "2026-08-01-NYYCHC-REFUSAL",
@@ -437,7 +457,8 @@
           "clv_novig": null,
           "anchor": "conflict",
           "process": "pending",
-          "note": "Books: Cubs 1.62; Polymarket: Yankees favored (-11.67% pseudo-hold) - day-2 conflict. Saturday pitchers unresolved (Warren vs Imanaga was Friday's game, which NYY won 2-0). Refusal graded at Saturday's close."
+          "note": "Books: Cubs 1.62; Polymarket: Yankees favored (-11.67% pseudo-hold) - day-2 conflict. Saturday pitchers unresolved (Warren vs Imanaga was Friday's game, which NYY won 2-0). Refusal graded at Saturday's close.",
+          "headline": false
         },
         {
           "id": "2026-08-01-WSHATL-REFUSAL",
@@ -453,7 +474,8 @@
           "clv_novig": null,
           "anchor": "clean",
           "process": "pending",
-          "note": "Only Polymarket quotes both sides; after its ledger-evidenced demotion to 0.45 it cannot anchor a fair line."
+          "note": "Only Polymarket quotes both sides; after its ledger-evidenced demotion to 0.45 it cannot anchor a fair line.",
+          "headline": false
         }
       ]
     }
