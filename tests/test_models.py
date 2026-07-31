@@ -132,3 +132,44 @@ class TestMonteCarlo:
         assert sim["draw"].probability == pytest.approx(analytic[1], abs=0.02)
         total = sum(r.probability for r in sim.values())
         assert total == pytest.approx(1.0)
+
+
+class TestLog5:
+    def test_symmetric_even(self):
+        from sharpods.models.pythagorean import log5
+
+        assert log5(0.5, 0.5) == pytest.approx(0.5)
+        assert log5(0.6, 0.6) == pytest.approx(0.5)
+
+    def test_known_value(self):
+        from sharpods.models.pythagorean import log5
+
+        # .600 team vs .400 team: p = .6*.6/(.6*.6+.4*.4) = .36/.52
+        assert log5(0.6, 0.4) == pytest.approx(0.36 / 0.52)
+
+    def test_complement(self):
+        from sharpods.models.pythagorean import log5
+
+        assert log5(0.55, 0.48) + log5(0.48, 0.55) == pytest.approx(1.0)
+
+    def test_home_edge_at_even(self):
+        from sharpods.models.pythagorean import home_log5
+
+        assert home_log5(0.5, 0.5) == pytest.approx(0.54)
+        assert home_log5(0.5, 0.5, home_edge=0.5) == pytest.approx(0.5)
+
+    def test_matchup_pipeline(self):
+        from sharpods.models.pythagorean import pythagorean_matchup
+
+        # Stronger home team by run differential must exceed the bare
+        # home edge; a mirror matchup must be its complement-ish.
+        p = pythagorean_matchup(560, 480, 480, 560, 108, 108)
+        assert p > 0.54
+        q = pythagorean_matchup(480, 560, 560, 480, 108, 108)
+        assert q < 0.54
+
+    def test_bounds(self):
+        from sharpods.models.pythagorean import log5
+
+        with pytest.raises(ValueError):
+            log5(0.0, 0.5)
