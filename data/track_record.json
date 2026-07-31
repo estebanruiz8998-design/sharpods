@@ -376,7 +376,7 @@
     {
       "date": "2026-08-01",
       "sport": "mlb",
-      "mode": "degraded - all-markets slate (ML + first priced total); polymarket demoted to 0.45 per ledger; --market-weight 0.85",
+      "mode": "degraded - all-markets slate (ML + first priced total); polymarket demoted to 0.45 per ledger; --market-weight 0.85; date check: shipped Friday evening Jul 31 for Saturday Aug 1",
       "engine_verdict": "PASS at listed prices. Top order: Reds ML fair 2.207, bet at >= 2.262 (-0.32% at listed 2.20). Runner-up: Pirates ML >= 1.874. REFUSED: NYY@CHC (conflict rule, -11.67% cross-source hold, 2nd straight day), DET@ATH (one-sided), WSH@ATL (no anchor at/above 0.5 after polymarket demotion).",
       "predictions_home_fair": {
         "mlb-2026-08-01-pit-cin": 0.4531,
@@ -405,7 +405,7 @@
           "clv_novig": null,
           "anchor": "clean",
           "process": "pending",
-          "note": "Saturday sources split (CIN 2.05 vs 2.20); best price sits near fair. Premise risk: sources conflict on whether Skenes starts Saturday or pitched Friday - if Skenes is gone, the CIN side strengthens."
+          "note": "Saturday sources split (CIN 2.05 vs 2.20); best price sits near fair. PREMISE RESOLVED (Jul 31 grading): Skenes pitches FRIDAY, not Saturday - Saturday is Ashcraft (PIT) vs LHP Abbott (CIN), 6:40 PM ET. The feared Skenes premium in the PIT price is misplaced; Reds order premise strengthened."
         },
         {
           "id": "2026-08-01-PIT-ORDER",
@@ -437,7 +437,7 @@
           "clv_novig": null,
           "anchor": "conflict",
           "process": "pending",
-          "note": "Books: Cubs 1.62; Polymarket: Yankees favored. Same signature the close resolved toward books yesterday (-11.67% pseudo-hold). Saturday pitchers also unresolved."
+          "note": "Books: Cubs 1.62; Polymarket: Yankees favored (-11.67% pseudo-hold) - day-2 conflict. Saturday pitchers unresolved (Warren vs Imanaga was Friday's game, which NYY won 2-0). Refusal graded at Saturday's close."
         },
         {
           "id": "2026-08-01-WSHATL-REFUSAL",
