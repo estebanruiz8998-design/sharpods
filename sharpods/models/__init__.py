@@ -17,16 +17,30 @@ from sharpods.models.wintotals import (
     win_total_ev,
     win_total_probabilities,
 )
+from sharpods.models.xg import (
+    Shot,
+    blend_goals_xg,
+    finishing_luck,
+    shot_xg,
+    team_lambdas_from_xg,
+    xg_from_shots,
+)
 
 __all__ = [
     "EloModel",
     "PoissonModel",
+    "Shot",
+    "blend_goals_xg",
+    "finishing_luck",
     "pythagorean_expectation",
     "pythagenpat_exponent",
     "poisson_binomial_pmf",
+    "shot_xg",
     "simulate_binary",
     "simulate_poisson_match",
     "spread_to_win_probability",
+    "team_lambdas_from_xg",
     "win_total_ev",
     "win_total_probabilities",
+    "xg_from_shots",
 ]

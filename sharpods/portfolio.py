@@ -1,14 +1,22 @@
-"""Portfolio and exposure discipline — Trading Bases' fund-management layer.
+"""Portfolio and exposure discipline — the fund-management layer.
 
-Peta ran his betting like a long/short fund: position limits, daily loss
-awareness, and refusing correlated concentration. Kelly (Fortune's Formula)
-sizes individual bets; this module bounds the *joint* exposure:
+Peta (Trading Bases) ran his betting like a long/short fund; Walters
+(Gambler) ran the most successful betting operation on record on the same
+skeleton: many small diversified positions, hard caps that no conviction
+level overrides (Walters' ceiling was ~3% of bankroll at maximum
+conviction; ours is stricter), and a method that changes only on ledger
+evidence, never after a bad weekend. Kelly (Fortune's Formula) sizes
+individual bets; this module bounds the *joint* exposure:
 
-- per-bet cap (model overconfidence guard),
+- per-bet cap (model overconfidence guard; Walters' conviction ceiling),
 - per-event cap (same-game bets are correlated: a spread and a moneyline on
   the same team are nearly the same bet),
 - per-slate cap (simultaneous bets share one bankroll — Thorp's scaling),
 - minimum edge threshold (transaction-cost and estimation-noise floor).
+
+Walters' star system survives as ``star_rating``: a 1-5 conviction tier
+from how far the edge clears its required bar — communication and audit
+trail, not sizing, because Kelly already scales stake with edge.
 """
 
 from __future__ import annotations
@@ -17,6 +25,27 @@ from dataclasses import dataclass, field
 
 from sharpods.datatypes import BetCandidate, BetTicket
 from sharpods.kelly import expected_log_growth, kelly_fraction
+
+
+def star_rating(ev: float, required_ev: float) -> int:
+    """Walters-style conviction tier: how many times the edge clears the
+    required EV bar. 0 stars = below the bar (no bet); 5 = 4x the bar or
+    better. Monotone in edge quality, capped so no rating can talk the
+    portfolio past its exposure limits."""
+    if required_ev <= 0:
+        raise ValueError("required_ev must be positive")
+    if ev < required_ev:
+        return 0
+    ratio = ev / required_ev
+    if ratio >= 4.0:
+        return 5
+    if ratio >= 3.0:
+        return 4
+    if ratio >= 2.0:
+        return 3
+    if ratio >= 1.5:
+        return 2
+    return 1
 
 
 @dataclass
@@ -74,6 +103,11 @@ class Portfolio:
             rationale = list(cand.tags)
             if frac < full * self.policy.kelly_multiplier:
                 rationale.append("stake reduced by exposure caps")
+            required = max(self.policy.min_ev, cand.required_ev)
+            stars = star_rating(cand.ev_pct, required)
+            rationale.append(
+                f"conviction {'★' * stars} ({cand.ev_pct / required:.1f}x the EV bar)"
+            )
 
             tickets.append(
                 BetTicket(
@@ -82,6 +116,7 @@ class Portfolio:
                     stake_amount=round(self.bankroll * frac, 2),
                     kelly_multiplier=self.policy.kelly_multiplier,
                     rationale=rationale,
+                    stars=stars,
                 )
             )
             event_exposure[eid] = event_exposure.get(eid, 0.0) + frac

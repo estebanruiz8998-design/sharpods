@@ -27,6 +27,17 @@ into the engine (see [`docs/synthesis.md`](docs/synthesis.md)):
 | 9 | *Mathletics* | Wayne L. Winston | Pythagorean exponents, power ratings, Elo, win-probability math |
 | 10 | *Fortune's Formula* | William Poundstone | Kelly criterion, fractional Kelly, drawdown/risk-of-ruin math |
 
+### Extended canon (audit round)
+
+An audit against a second ten-book list confirmed seven titles already in
+the canon and added three:
+
+| # | Book | Author | What the model takes |
+|---|------|--------|----------------------|
+| 11 | *Gambler* | Billy Walters | Conviction tiers (star ratings), hard caps no conviction overrides, method persistence — change only on ledger evidence |
+| 12 | *Soccermatics* | David Sumpter | Logistic xG shot model; Poisson lambdas estimated from xG rates |
+| 13 | *Net Gains* | Ryan O'Hanlon | Team finishing (goals − xG) regresses: shrink scoring rates toward xG, flag over/under-performers |
+
 ## The Five Laws (what the books agree on)
 
 1. **The sharp market is the best public estimate of truth.** Devig
@@ -90,6 +101,8 @@ sharpods/
 │   ├── poisson.py     Poisson + Dixon-Coles score-matrix model
 │   ├── pythagorean.py Pythagorean expectation, Pythagenpat, luck wins
 │   ├── wintotals.py   Poisson-binomial season win totals; spread↔ML map
+│   ├── xg.py          logistic shot xG; xG-shrunk Poisson lambdas;
+│   │                  finishing-luck regression flags
 │   └── montecarlo.py  seeded simulation with error bars
 ├── edges.py           EV, line shopping, key numbers + half-point parity,
 │                      Wong teasers, parlays (incl. correlated), hedging,
@@ -114,6 +127,8 @@ Straight from the books' warnings:
 - **No chasing steam.** A move at Pinnacle is information; betting the moved
   price is not. Only *stale* prices left behind are flagged.
 - **No unbounded correlated exposure.** Same-event bets share a 3% cap.
+- **No tinkering after a bad weekend.** Parameters change only on ledger
+  evidence (Walters); every change cites the graded miss that earned it.
 
 ## Disclaimer
 

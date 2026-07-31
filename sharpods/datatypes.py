@@ -155,3 +155,7 @@ class BetTicket:
     stake_amount: float
     kelly_multiplier: float
     rationale: list[str] = field(default_factory=list)
+    # Walters-style conviction tier (Gambler): 1-5 stars from how far the
+    # edge clears the required bar. Communication and audit, not sizing —
+    # Kelly already scales the stake with the edge.
+    stars: int = 0
