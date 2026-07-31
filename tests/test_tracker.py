@@ -35,7 +35,8 @@ class TestDataset:
 
     def test_calibration_split_shows_source_lesson(self, data):
         s = data["stats"]
-        assert s["fairlines_n"] == 8
+        # The ledger grows daily; assert the invariant, not a snapshot count.
+        assert s["fairlines_n"] >= 8
         # Clean sources track the close far better than flagged ones.
         assert s["clean_mean_err"] < 1.0
         assert s["flagged_mean_err"] > 4.0

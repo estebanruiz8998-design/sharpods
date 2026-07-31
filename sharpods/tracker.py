@@ -50,7 +50,14 @@ def dataset(record: dict[str, Any]) -> dict[str, Any]:
         for d in slate.get("decisions", []):
             decisions.append({"date": slate["date"], **d})
         for g in slate.get("games", []):
-            if g.get("close_home_novig") is None or g.get("home_won") is None:
+            # Gradeable = we predicted AND the close and result are known.
+            # Refused markets carry a close but no prediction; pending games
+            # carry a prediction but no result. Both are skipped, not guessed.
+            if (
+                g.get("our_home_fair") is None
+                or g.get("close_home_novig") is None
+                or g.get("home_won") is None
+            ):
                 continue
             fairlines.append(
                 {

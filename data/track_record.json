@@ -114,7 +114,7 @@
         "mlb-2026-07-30-nyy-cws": 0.4317,
         "mlb-2026-07-30-sea-lad": 0.5883
       },
-      "settle": "partial: 3 of 8 final at grading time",
+      "settle": "complete: 8 of 8 (pit-cin result-only; close unverified)",
       "live_tickets": [
         {
           "event_id": "mlb-2026-07-30-chc-stl",
@@ -156,22 +156,33 @@
         {
           "event_id": "mlb-2026-07-30-mia-nym",
           "our_home_fair": 0.5522,
-          "status": "pending at grading time (rain delay / late starts)"
+          "close_home_novig": 0.5454,
+          "home_won": true,
+          "final": "Mets 4, Marlins 2 (rain-delayed)",
+          "source_flag": "clean"
         },
         {
           "event_id": "mlb-2026-07-30-pit-cin",
           "our_home_fair": 0.505,
-          "status": "pending at grading time (rain delay / late starts)"
+          "home_won": true,
+          "final": "Reds 3, Pirates 2 (walk-off; Skenes scratched)",
+          "note": "close excluded from calibration: only the PIT side (-115) verified"
         },
         {
           "event_id": "mlb-2026-07-30-wsh-atl",
           "our_home_fair": 0.5255,
-          "status": "pending at grading time (rain delay / late starts)"
+          "close_home_novig": 0.5665,
+          "home_won": true,
+          "final": "Braves 5, Nationals 4 (comeback)",
+          "source_flag": "stale quote"
         },
         {
           "event_id": "mlb-2026-07-30-bos-ath",
           "our_home_fair": 0.4117,
-          "status": "pending at grading time (rain delay / late starts)"
+          "close_home_novig": 0.3733,
+          "home_won": false,
+          "final": "Red Sox 5, Athletics 4",
+          "source_flag": "low-conf close"
         },
         {
           "event_id": "mlb-2026-07-30-nyy-cws",
@@ -184,15 +195,18 @@
         {
           "event_id": "mlb-2026-07-30-sea-lad",
           "our_home_fair": 0.5883,
-          "status": "pending at grading time (rain delay / late starts)"
+          "close_home_novig": 0.5934,
+          "home_won": true,
+          "final": "Dodgers 6, Mariners 2",
+          "source_flag": "clean"
         }
       ],
       "metrics": {
-        "n": 3,
-        "brier_ours": 0.2342,
-        "brier_close": 0.2321,
+        "n": 7,
+        "brier_ours": 0.2096,
+        "brier_close": 0.1994,
         "brier_coinflip": 0.25,
-        "mean_abs_fair_vs_close": 0.0556,
+        "mean_abs_fair_vs_close": 0.0369,
         "max_abs_fair_vs_close": 0.0798
       },
       "lessons_applied": [
@@ -262,7 +276,7 @@
         "mlb-2026-07-31-stl-tor": 0.6161,
         "mlb-2026-07-31-phi-bal": 0.5112
       },
-      "settle": "pending",
+      "settle": "partial: NYY@CHC final; 4 games pending; both orders confirmed no-fill",
       "decisions": [
         {
           "id": "2026-07-31-NYYCHC-REFUSAL",
@@ -272,13 +286,13 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "validated",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "conflict",
-          "process": "pending",
-          "note": "Consensus CHC -142 vs Polymarket 52c -> -2.17% pseudo-arb: yesterday's failure signature; refused under the new rule."
+          "process": "worked",
+          "note": "Close CHC -140 landed on the sportsbook consensus; Polymarket 52c was the stale outlier (NYY won 2-0 as a +130 dog - vs the close that bet was -7% EV luck). Refusal correct."
         },
         {
           "id": "2026-07-31-PHI-ORDER",
@@ -288,13 +302,13 @@
           "target": 2.097,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
-          "note": "Listed 2.041 sits at fair (-0.2% EV); order rests at 2.10 where the SportsGrid Phillies lean is paid for."
+          "process": "worked",
+          "note": "PHI never traded above 2.06 (target 2.10). Close no-vig PHI 0.467: even at target the bet was -2% vs close - not filling saved money. SportsGrid model lean (PHI 54%) was the wrong side per the close."
         },
         {
           "id": "2026-07-31-PIT-ORDER",
@@ -304,13 +318,142 @@
           "target": 1.966,
           "fill": null,
           "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "worked",
+          "note": "PIT -120 to -136 all day, never near the 1.966 target. Close no-vig PIT 0.564: a 1.966 fill would have been ~+11% EV vs close - right side, market never paid the price."
+        }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-07-31-mia-nym",
+          "our_home_fair": 0.5426,
+          "close_home_novig": 0.539,
+          "home_won": null,
+          "final": "pending at grading",
+          "source_flag": "clean"
+        },
+        {
+          "event_id": "mlb-2026-07-31-pit-cin",
+          "our_home_fair": 0.4785,
+          "close_home_novig": 0.4454,
+          "home_won": null,
+          "final": "pending at grading",
+          "source_flag": "conflict"
+        },
+        {
+          "event_id": "mlb-2026-07-31-stl-tor",
+          "our_home_fair": 0.6161,
+          "close_home_novig": 0.6159,
+          "home_won": null,
+          "final": "pending at grading",
+          "source_flag": "clean"
+        },
+        {
+          "event_id": "mlb-2026-07-31-phi-bal",
+          "our_home_fair": 0.5112,
+          "close_home_novig": 0.5348,
+          "home_won": null,
+          "final": "pending at grading",
+          "source_flag": "conflict"
+        },
+        {
+          "event_id": "mlb-2026-07-31-nyy-chc",
+          "our_home_fair": null,
+          "close_home_novig": 0.5749,
+          "home_won": false,
+          "final": "Yankees 2, Cubs 0",
+          "source_flag": "refused (conflict rule)"
+        }
+      ],
+      "lessons_applied": [
+        "Polymarket thin MLB markets missed the true close by 5-6 pts three times in the ledger (CHC Jul 30; PIT and NYY@CHC Jul 31) -> sharpness demoted 0.65 to 0.45 in future slates. Ledger-evidenced change per the Walters anti-tinkering rule."
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "sport": "mlb",
+      "mode": "degraded - all-markets slate (ML + first priced total); polymarket demoted to 0.45 per ledger; --market-weight 0.85",
+      "engine_verdict": "PASS at listed prices. Top order: Reds ML fair 2.207, bet at >= 2.262 (-0.32% at listed 2.20). Runner-up: Pirates ML >= 1.874. REFUSED: NYY@CHC (conflict rule, -11.67% cross-source hold, 2nd straight day), DET@ATH (one-sided), WSH@ATL (no anchor at/above 0.5 after polymarket demotion).",
+      "predictions_home_fair": {
+        "mlb-2026-08-01-pit-cin": 0.4531,
+        "mlb-2026-08-01-cws-tb": 0.5645,
+        "mlb-2026-08-01-mil-laa": 0.4623
+      },
+      "predictions_other": {
+        "mlb-2026-08-01-cws-tb:total:8.5": {
+          "over": 0.4839,
+          "under": 0.5161
+        }
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-01-CIN-ORDER",
+          "type": "order_open",
+          "event": "PIT @ CIN",
+          "selection": "Reds ML",
+          "target": 2.262,
+          "fill": null,
+          "stake": 0,
           "result": "pending",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
           "process": "pending",
-          "note": "Runner-up order; fair 1.918 vs best 1.887."
+          "note": "Saturday sources split (CIN 2.05 vs 2.20); best price sits near fair. Premise risk: sources conflict on whether Skenes starts Saturday or pitched Friday - if Skenes is gone, the CIN side strengthens."
+        },
+        {
+          "id": "2026-08-01-PIT-ORDER",
+          "type": "order_open",
+          "event": "PIT @ CIN",
+          "selection": "Pirates ML",
+          "target": 1.874,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "note": "Runner-up order; fair 1.828 vs best 1.80."
+        },
+        {
+          "id": "2026-08-01-NYYCHC-REFUSAL",
+          "type": "refusal",
+          "event": "NYY @ CHC",
+          "selection": "Market refused (conflict rule, day 2)",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "conflict",
+          "process": "pending",
+          "note": "Books: Cubs 1.62; Polymarket: Yankees favored. Same signature the close resolved toward books yesterday (-11.67% pseudo-hold). Saturday pitchers also unresolved."
+        },
+        {
+          "id": "2026-08-01-WSHATL-REFUSAL",
+          "type": "refusal",
+          "event": "WSH @ ATL",
+          "selection": "Market refused (no anchor >= 0.5)",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "note": "Only Polymarket quotes both sides; after its ledger-evidenced demotion to 0.45 it cannot anchor a fair line."
         }
       ]
     }
