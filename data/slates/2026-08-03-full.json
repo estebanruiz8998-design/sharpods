@@ -1,0 +1,318 @@
+{
+ "_provenance": "Monday 2026-08-03 card, compiled Sunday ~7:30 PM ET (pessimistic-now verified: clock 23:17Z Aug 2 AND recap-index evidence agree on Sunday evening; every event on this slate starts Monday 3:45 PM ET or later = 20+ hours past pessimistic-now, clearing the 2-hour ship-time gate). All quotes from pages explicitly dated to Aug 3 games. EXCLUDED as unpriceable or off-protocol: PIT@MIL and TOR@HOU (one-sided boards), SD@ARI (garbled -185/+737 scrape, refusal-grade), all Monday tennis (Montreal rain backlog; Dimers model probs exist but zero book lines indexed - Sonego-Griekspoor has only prediction-market cents, shop-only class), Sarmiento-Ind.Rivadavia (away leg only), CentralCordoba-SanLorenzo (no numbers), Athletico-PR-Vitoria Copa do Brasil (partial trio), Argentine 'hasta' best-price aggregates (understate hold, never anchors). SLATE-WIDE CAVEAT: MLB trade deadline is 6:00 PM ET Monday - BEFORE every MLB first pitch here; rosters can move under these prices (Skubal-to-LAD already wired). Betting splits do not exist yet for Monday (published day-of). Model probs: in-house home-adjusted log5 on records updated through Sunday's verified finals, ensembled equally in logit space with dated third-party models (ESPN Analytics, SportsGrid); run with --market-weight 0.85.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "primary date-stamped board (ESPN game pages, bplay direct, SportsGrid/FanDuel)"
+  },
+  "consensus-b": {
+   "sharpness": 0.6,
+   "notes": "named-book quotes relayed via dated preview pages"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "coherent single-page trios, book unnamed"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "demoted per ledger; shop-only"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-03-wsh-phi",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Phillies",
+   "away": "Nationals",
+   "start_time": "2026-08-03T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.67
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.23
+      }
+     ]
+    }
+   ],
+   "note": "Citizens Bank Park 6:40 PM ET. Nola (3-9, 5.61) vs Foster Griffin (ex-NPB). A second ESPN snapshot had WSH +102 - +123 pair used as the coherent board, variance flagged. Total 9.5 one-sided, not priced."
+  },
+  {
+   "event_id": "mlb-2026-08-03-stl-nyy",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Yankees",
+   "away": "Cardinals",
+   "start_time": "2026-08-03T23:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.54
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.57
+      }
+     ]
+    }
+   ],
+   "note": "Yankee Stadium 7:05 PM ET. Schlittler (10-6, 2.04) vs McGreevy. ESPN Analytics 75.5% NYY is far above market ~63% - pitcher-driven model; ensemble tempers it."
+  },
+  {
+   "event_id": "mlb-2026-08-03-lad-chc",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Cubs",
+   "away": "Dodgers",
+   "start_time": "2026-08-04T00:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.09
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.76
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 8.5,
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 8.5,
+       "decimal_odds": 1.83
+      }
+     ]
+    }
+   ],
+   "note": "Wrigley 8:05 PM ET. Wrobleski vs Boyd. MODEL CONFLICT: ESPN 56.6% CHC vs SportsGrid 57% LAD - both ensembled. LAD missing Ohtani(pitching)/Snell/Glasnow; wires report a Skubal trade to LAD - deadline chaos, verify rosters at bet time."
+  },
+  {
+   "event_id": "mlb-2026-08-03-sfg-tex",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Rangers",
+   "away": "Giants",
+   "start_time": "2026-08-04T00:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.93
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.89
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 8.0,
+       "decimal_odds": 1.87
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 8.0,
+       "decimal_odds": 1.95
+      }
+     ]
+    }
+   ],
+   "note": "Globe Life Field 8:05 PM ET, ESPN national. Webb vs Quantrill, near pick-em. RL one-sided, not priced."
+  },
+  {
+   "event_id": "mlb-2026-08-03-tb-col",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Rockies",
+   "away": "Rays",
+   "start_time": "2026-08-04T00:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.35
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.62
+      }
+     ]
+    }
+   ],
+   "note": "Coors 8:40 PM ET. Seymour (7-3) vs Lorenzen (3-9, 6.54). COL 4-1 in their last five (just swept KC); TB deadline-day roster risk noted. No Coors total indexed."
+  },
+  {
+   "event_id": "wnba-2026-08-03-sea-nyl",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Liberty",
+   "away": "Storm",
+   "start_time": "2026-08-03T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.22
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 4.29
+      }
+     ]
+    }
+   ],
+   "note": "Barclays 7 PM ET, only WNBA game Monday. Decimals derived from SportsGrid's stated FanDuel implied probs (81.8%/23.3%, 5.1% overround) - single-book class. SEA on an 8-game skid. Spread/total prices absent, not priced."
+  },
+  {
+   "event_id": "arg-2026-08-03-ind-vel",
+   "sport": "soccer",
+   "league": "Argentina Clausura fecha 3",
+   "home": "Velez Sarsfield",
+   "away": "Independiente",
+   "start_time": "2026-08-03T22:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.4
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 3.2
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.9
+      }
+     ]
+    }
+   ],
+   "note": "Amalfitani 6 PM ET. Named-book trio (bplay's own blog), hold 7.4% - but published Jul 31 for Aug 3: 3-day-old prices, drift risk flagged. Wincomparator aggregate excluded per protocol."
+  },
+  {
+   "event_id": "arg-2026-08-03-tal-pla",
+   "sport": "soccer",
+   "league": "Argentina Clausura fecha 3",
+   "home": "Platense",
+   "away": "Talleres",
+   "start_time": "2026-08-03T22:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.5
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 2.75
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 3.3
+      }
+     ]
+    }
+   ],
+   "note": "Vicente Lopez 6 PM ET. Coherent single-page trio (hold 6.7%), underlying book unnamed - consensus-c grade."
+  },
+  {
+   "event_id": "arg-2026-08-03-atu-hur",
+   "sport": "soccer",
+   "league": "Argentina Clausura fecha 3",
+   "home": "Huracan",
+   "away": "Atletico Tucuman",
+   "start_time": "2026-08-04T00:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-b",
+       "side": "home",
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "consensus-b",
+       "side": "draw",
+       "decimal_odds": 2.87
+      },
+      {
+       "book": "consensus-b",
+       "side": "away",
+       "decimal_odds": 4.33
+      }
+     ]
+    }
+   ],
+   "note": "Duco 8:15 PM ET. Parimatch trio (hold 7.9%) relayed via futbol24/protipster preview pages - named book, aggregator-relayed."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-03-wsh-phi:moneyline:home": 0.5598,
+  "mlb-2026-08-03-wsh-phi:moneyline:away": 0.4402,
+  "mlb-2026-08-03-stl-nyy:moneyline:home": 0.6871,
+  "mlb-2026-08-03-stl-nyy:moneyline:away": 0.3129,
+  "mlb-2026-08-03-lad-chc:moneyline:home": 0.4916,
+  "mlb-2026-08-03-lad-chc:moneyline:away": 0.5084,
+  "mlb-2026-08-03-sfg-tex:moneyline:home": 0.5638,
+  "mlb-2026-08-03-sfg-tex:moneyline:away": 0.4362,
+  "mlb-2026-08-03-tb-col:moneyline:home": 0.3818,
+  "mlb-2026-08-03-tb-col:moneyline:away": 0.6182
+ }
+}

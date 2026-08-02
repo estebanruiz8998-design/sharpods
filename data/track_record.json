@@ -737,7 +737,7 @@
           "away": 0.6408
         }
       },
-      "settle": "pending",
+      "settle": "partially settled 2026-08-02 ~7:30 PM ET (pessimistic-now): 14 finals, 8 graded vs two-sided closes; 9 pending markets carry to the next cycle",
       "decisions": [
         {
           "id": "2026-08-02-ATL-ORDER",
@@ -798,6 +798,227 @@
           "target": null,
           "fill": null,
           "stake": 0,
+          "result": "validated",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "conflict",
+          "process": "worked",
+          "headline": false,
+          "note": "Refusal validated on PROCESS: the book-vs-Polymarket gap (CIN 1.676 vs 55c) never visibly converged before first pitch - the market stayed unpriceable by our rule at every observable snapshot. CIN won 10-2 (Burns 6 IP 9 K) and the close landed -148, but outcome isn't the verdict; the conflict rule is now 4-for-4 on process. Pre-registered under the conflict rule, graded at the close."
+        }
+      ],
+      "lessons_applied": [
+        "SHIP-TIME STALENESS (graded miss, user-reported): the Aug 2 card shipped ~5 hours after its headline game's first pitch. Root cause: with the clock and the search evidence disagreeing, I picked the reading that made the card shippable. Rule shipped to CLAUDE.md: take 'now' as the MOST PESSIMISTIC (latest) of container clock vs search evidence; absence of finals in a lagging search index is never pre-game proof; ship only bets/orders whose start time clears pessimistic-now by 2+ hours, and if nothing on the target day qualifies, ship the next day's card instead.",
+        "Void orders are graded 'no fill' with process 'miss', and their outcomes are deliberately not looked up - no hindsight grading either direction.",
+        "Sharp-handle signals split on the day (STL 71%-handle cashed; WSH 80%-handle lost 4-2 to the swept Braves): handle percentages are context, not a model input - keep them as slip caveats only.",
+        "Heavy-favorite humility: MIL 1.431 (steamed to -232, 91%+ tickets AND handle) lost 0-3; our fair carried LAA above the no-vig close - the records-only log5 layer earned its 15% weight today.",
+        "Two more date-traps caught in grading (Aug-1 'Tigers 8-6' masquerading as Sunday; a years-old Cueto recap) - the reject-undated-scores rule keeps paying."
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-08-02-stl-tor",
+          "our_home_fair": 0.5279,
+          "source_flag": "clean",
+          "close_home_novig": 0.5294,
+          "home_won": false,
+          "final": "Cardinals 5, Blue Jays 1 (4-run 9th; Scherzer 6 IP 1 R wasted)",
+          "note": "Sharp signal cashed: 71% of ML handle on STL at +102."
+        },
+        {
+          "event_id": "mlb-2026-08-02-kc-col",
+          "our_home_fair": 0.5423,
+          "source_flag": "clean",
+          "close_home_novig": 0.5454,
+          "home_won": true,
+          "final": "Rockies 8, Royals 1 (Coors sweep)",
+          "note": "Sharp side (79% handle KC) lost. Book spread on close (-131 vs -114) - noisy."
+        },
+        {
+          "event_id": "mlb-2026-08-02-mil-laa",
+          "our_home_fair": 0.3168,
+          "source_flag": "clean",
+          "close_home_novig": 0.3424,
+          "home_won": true,
+          "final": "Angels 3, Brewers 0 (Urena outduels Misiorowski's 7 IP 2 H 10 K)",
+          "note": "Slate's heaviest favorite lost; close steamed MIL -182 -> -232 and everyone was wrong. Our fair (LAA 31.7%) sat ABOVE the ~29% close - in-house layer's best relative read of the day."
+        },
+        {
+          "event_id": "mlb-2026-08-02-nyy-chc",
+          "our_home_fair": 0.478,
+          "source_flag": "clean",
+          "close_home_novig": 0.4546,
+          "home_won": false,
+          "final": "Yankees 2, Cubs 1 (Caballero HR; 20+ mph wind in)",
+          "note": "Rubber match; our fair leaned NYY (52.2%) - right side of the close."
+        },
+        {
+          "event_id": "mlb-2026-08-02-wsh-atl",
+          "our_home_fair": 0.5492,
+          "source_flag": "clean",
+          "close_home_novig": 0.5367,
+          "home_won": true,
+          "final": "Braves 4, Nationals 2 (sweep behind spot-starter Ritchie)",
+          "note": "The 80%-handle-on-WSH sharp signal LOST. Voided order's side won - noted for calibration only, order stays void, no hindsight grade."
+        },
+        {
+          "event_id": "mlb-2026-08-02-az-cle",
+          "our_home_fair": 0.5821,
+          "source_flag": "clean",
+          "close_home_novig": 0.5821,
+          "home_won": true,
+          "final": "Guardians 5, D-backs 0 (Williams 5.2 IP 10 K; benches-clear + rain delay)"
+        },
+        {
+          "event_id": "wnba-2026-08-02-la-por",
+          "our_home_fair": 0.5177,
+          "source_flag": "clean",
+          "close_home_novig": 0.5233,
+          "home_won": false,
+          "final": "Sparks 89, Fire 72 (road +100 dog by 17)"
+        },
+        {
+          "event_id": "wta-2026-08-02-rakhimova-williams",
+          "our_home_fair": 0.2195,
+          "source_flag": "clean",
+          "close_home_novig": 0.2176,
+          "home_won": false,
+          "final": "Rakhimova d. V. Williams 6-4 6-1 (Venus 0-10 in 2026)"
+        },
+        {
+          "event_id": "mlb-2026-08-02-mia-nym",
+          "our_home_fair": 0.4676,
+          "close_home_novig": null,
+          "home_won": false,
+          "final": "Marlins 2, Mets 0 (Alcantara-led combined shutout)",
+          "source_flag": "clean",
+          "note": "Only the MIA close leg (1.82) surfaced; NYM side null - no two-sided close, no Brier entry."
+        },
+        {
+          "event_id": "wnba-2026-08-02-ind-min",
+          "our_home_fair": 0.6757,
+          "close_home_novig": null,
+          "home_won": true,
+          "final": "Lynx 108, Fever 100 (Mitchell 37)",
+          "source_flag": "clean",
+          "note": "Only IND +175 surfaced at close; MIN leg null rather than derived from the spread."
+        },
+        {
+          "event_id": "cdb-2026-08-02-for-pal",
+          "our_home_fair": 0.778,
+          "close_home_novig": null,
+          "home_won": true,
+          "final": "Palmeiras 3, Fortaleza 0 (Allianz Parque; R16 leg 1)",
+          "source_flag": "clean",
+          "note": "Close trio partial (home ~1.30, draw 5.5, away leg only as a rejected 20.0 boost outlier). Our 77.8% home fair; home leg shortened from our 1.25 anchor."
+        },
+        {
+          "event_id": "nwsl-2026-08-02-sd-was",
+          "our_home_fair": 0.4471,
+          "close_home_novig": null,
+          "home_won": true,
+          "final": "Spirit 2, Wave 1 (Kouassi winner 171s after the equalizer)",
+          "source_flag": "clean",
+          "note": "Close trio partial (2.05/3.25/away null) - same shape as our anchor; no full-trio devig."
+        }
+      ],
+      "metrics": {
+        "n": 8,
+        "brier_ours": 0.2347,
+        "brier_close": 0.2296,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0092,
+        "max_abs_fair_vs_close": 0.0256,
+        "note": "Partial Sunday-evening settle: 8 markets with verified two-sided closes graded; 4 finals recorded close-less; 9 markets still in-progress/unknown at pessimistic-now (det-ath, sfg-sdp, min-sea, bos-lad, conn-dal, san-ame, cru-cha, cor-int, both remaining tennis) - re-grade next cycle, never guessed."
+      }
+    },
+    {
+      "date": "2026-08-03",
+      "sport": "multi",
+      "mode": "degraded - Monday card compiled Sunday evening under the new ship-time gate: 9 events / 11 markets (5 MLB full boards, WNBA Storm@Liberty, 3 Argentina fecha-3 trios); every start 20+ hours past pessimistic-now. In-house log5 on Sunday-updated records ensembled with ESPN Analytics/SportsGrid; --market-weight 0.85. Excluded: PIT@MIL + TOR@HOU (one-sided), SD@ARI (garbled board), all Monday tennis (no book lines - Montreal rain backlog), 3 partial/unpriced soccer boards, best-price aggregates. SLATE CAVEAT: MLB trade deadline 6 PM ET Monday precedes every MLB first pitch.",
+      "engine_verdict": "PASS - second straight day nothing clears the degraded 2.5% bar. Top orders: Yankees ML >= 1.599 (EV now -1.29%), Liberty ML >= 1.278 (-2.19%), Rangers ML >= 2.030 (-2.56%), Rays ML >= 1.706 (-2.65%).",
+      "predictions_home_fair": {
+        "mlb-2026-08-03-stl-nyy": 0.641,
+        "wnba-2026-08-03-sea-nyl": 0.8017,
+        "mlb-2026-08-03-sfg-tex": 0.5049,
+        "mlb-2026-08-03-lad-chc": 0.4597,
+        "mlb-2026-08-03-wsh-phi": 0.5744,
+        "arg-2026-08-03-atu-hur": 0.4735,
+        "arg-2026-08-03-tal-pla": 0.3776,
+        "arg-2026-08-03-ind-vel": 0.3919,
+        "mlb-2026-08-03-tb-col": 0.3991
+      },
+      "predictions_other": {
+        "mlb-2026-08-03-lad-chc:total:8.5": {
+          "under": 0.5237,
+          "over": 0.4763
+        },
+        "mlb-2026-08-03-sfg-tex:total:8.0": {
+          "over": 0.5112,
+          "under": 0.4888
+        }
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-03-NYY-ORDER",
+          "type": "order_open",
+          "event": "STL @ NYY (7:05 PM ET Mon)",
+          "selection": "Yankees ML",
+          "target": 1.599,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": true,
+          "note": "BEST ORDER on a second straight pass card. Fair 1.560 (market 0.6326 blended 85/15 with model 0.6871 - in-house log5 tempering ESPN's aggressive 75.5% Schlittler-driven number). Fires only at 1.599+ (+2.5% bar): Schlittler (2.04 ERA) vs McGreevy with the model side and market side agreeing on the direction, disagreeing on size. Deadline caveat: 6 PM ET roster moves precede first pitch - re-check lineups before taking any fill."
+        },
+        {
+          "id": "2026-08-03-NYL-ORDER",
+          "type": "order_open",
+          "event": "SEA @ NYL (7:00 PM ET Mon)",
+          "selection": "Liberty ML",
+          "target": 1.278,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Fair 1.247 off the FanDuel-class 1.22 board; Storm on an 8-game skid. Short-price order - only worth taking at 1.278+ and small."
+        },
+        {
+          "id": "2026-08-03-TEX-ORDER",
+          "type": "order_open",
+          "event": "SFG @ TEX (8:05 PM ET Mon)",
+          "selection": "Rangers ML",
+          "target": 2.03,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Near pick-em (Webb vs Quantrill); fair 1.981 with in-house log5 and SportsGrid both leaning TEX. Fires at 2.030+ (plus-money on a coin-flip our blend has at 50.5%)."
+        },
+        {
+          "id": "2026-08-03-SDARI-FLAG",
+          "type": "flag",
+          "event": "SDP @ AZ (9:40 PM ET Mon)",
+          "selection": "Board rejected pre-slate (garbled quotes)",
+          "target": null,
+          "fill": null,
+          "stake": 0,
           "result": "pending",
           "pnl": 0,
           "clv_raw": null,
@@ -805,12 +1026,8 @@
           "anchor": "conflict",
           "process": "pending",
           "headline": false,
-          "note": "Book prices CIN 1.676 (Burns 12-1, 2.40 ERA); Polymarket pays 1.818 on the same side - cross-source hold -3.07%. Degraded anchor + negative hold = unpriceable, never an arb (ledger rule, 3x validated). Graded against Sunday's close."
+          "note": "Only board found was 'SD -185 / ARI +737' (twice) - an incoherent pair that also contradicts ESPN Analytics 52.6% ARI. Scrape garbage, never entered the slate. Graded at Monday's close to confirm the rejection was right."
         }
-      ],
-      "lessons_applied": [
-        "SHIP-TIME STALENESS (graded miss, user-reported): the Aug 2 card shipped ~5 hours after its headline game's first pitch. Root cause: with the clock and the search evidence disagreeing, I picked the reading that made the card shippable. Rule shipped to CLAUDE.md: take 'now' as the MOST PESSIMISTIC (latest) of container clock vs search evidence; absence of finals in a lagging search index is never pre-game proof; ship only bets/orders whose start time clears pessimistic-now by 2+ hours, and if nothing on the target day qualifies, ship the next day's card instead.",
-        "Void orders are graded 'no fill' with process 'miss', and their outcomes are deliberately not looked up - no hindsight grading either direction."
       ]
     }
   ]
