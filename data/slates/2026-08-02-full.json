@@ -1,0 +1,901 @@
+{
+ "_provenance": "Sunday 2026-08-02 full card, compiled Sunday morning ET from date-stamped WebSearch snippets (network policy 403s all odds feeds; every quote is from a page explicitly dated to Aug 2 or a dated splits/preview article). Date verified vs drifted container clock: ~40 agent searches surface ZERO Sunday finals/in-progress scores while Saturday's 15-game slate is fully indexed -> pre-game, Sunday morning ET. EXCLUDED as unpriceable or off-protocol: CWS@TB, TEX@HOU, PHI@BAL (one-sided ML boards); Toluca-Necaxa, Newell's-Boca, River-Rosario Central (multi-book best-price aggregates - understate hold, never anchors); Denver Summit-Boston Legacy (no odds indexed); Sonego-Griekspoor (actually Monday Aug 3); Man City-Inter friendly (played Saturday). Sunday has no UFC/boxing/CFL/NFL markets - the 'Sunday' combat listings are 01:00 UK Saturday-night ET traps. Model probs: in-house home-adjusted log5 on fresh W-L (records sweep through Sat) ensembled 50/50 in logit space with dated third-party models (SportsGrid, Dimers, Stats Insider) where published; run with --market-weight 0.85.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "primary date-stamped board/article pair"
+  },
+  "consensus-b": {
+   "sharpness": 0.6,
+   "notes": "secondary date-stamped pair"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "coherent single-page BR palpites trios, book unnamed"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "demoted per ledger; shop-only"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-02-mia-nym",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Mets",
+   "away": "Marlins",
+   "start_time": "2026-08-02T17:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.08
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.862
+      }
+     ]
+    }
+   ],
+   "note": "SportsGrid board -116 MIA/+108 NYM. Alcantara vs emergency starter Robert Stock. RL/total one-sided in source - not priced."
+  },
+  {
+   "event_id": "mlb-2026-08-02-pit-cin",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Reds",
+   "away": "Pirates",
+   "start_time": "2026-08-02T17:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.676
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.38
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 1.818
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 2.222
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -1.5,
+       "decimal_odds": 2.32
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 1.5,
+       "decimal_odds": 1.625
+      }
+     ]
+    }
+   ],
+   "note": "Chase Burns (12-1, 2.40) vs Mitch Keller. Polymarket 55c/45c shop-only."
+  },
+  {
+   "event_id": "mlb-2026-08-02-det-ath",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Athletics",
+   "away": "Tigers",
+   "start_time": "2026-08-02T20:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.25
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.69
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": -1.5,
+       "decimal_odds": 2.05
+      },
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": 1.5,
+       "decimal_odds": 1.8
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 10.5,
+       "decimal_odds": 1.87
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 10.5,
+       "decimal_odds": 1.952
+      }
+     ]
+    }
+   ],
+   "note": "Sutter Health Park, 107F heat flagged; sharps 76% handle on Over. DET 4-0 vs ATH in 2026."
+  },
+  {
+   "event_id": "mlb-2026-08-02-stl-tor",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Blue Jays",
+   "away": "Cardinals",
+   "start_time": "2026-08-02T17:37:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.813
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.02
+      }
+     ]
+    }
+   ],
+   "note": "Liberatore vs Scherzer (1-4, 9.49 ERA, -0.95 WAR). Sharps: 71% ML handle on STL, 83% on STL -1.5 (+161, one-sided - not priced)."
+  },
+  {
+   "event_id": "mlb-2026-08-02-kc-col",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Rockies",
+   "away": "Royals",
+   "start_time": null,
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.763
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.09
+      }
+     ]
+    }
+   ],
+   "note": "Coors. Start time not captured - left null. Sharps 79% ML handle on KC. Freeland expected for COL."
+  },
+  {
+   "event_id": "mlb-2026-08-02-mil-laa",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Angels",
+   "away": "Brewers",
+   "start_time": "2026-08-02T19:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.88
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.431
+      }
+     ]
+    }
+   ],
+   "note": "Misiorowski for MLB-best MIL (69-41). 3:15 PM ET slot per BettorsInsider - medium confidence on time only."
+  },
+  {
+   "event_id": "mlb-2026-08-02-bos-lad",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Dodgers",
+   "away": "Red Sox",
+   "start_time": "2026-08-02T23:20:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.541
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.53
+      },
+      {
+       "book": "consensus-b",
+       "side": "home",
+       "decimal_odds": 1.625
+      },
+      {
+       "book": "consensus-b",
+       "side": "away",
+       "decimal_odds": 2.35
+      }
+     ]
+    }
+   ],
+   "note": "Sunday Night Baseball. DK -185/+153 vs Caesars -160/+135 - real book spread. BOS won Fri+Sat, eyeing sweep; Bennett vs Sheehan."
+  },
+  {
+   "event_id": "mlb-2026-08-02-nyy-chc",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Cubs",
+   "away": "Yankees",
+   "start_time": "2026-08-02T18:20:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.05
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.8
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": -1.5,
+       "decimal_odds": 2.4
+      },
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": 1.5,
+       "decimal_odds": 1.588
+      }
+     ]
+    }
+   ],
+   "note": "Rubber match, Cole vs Rea. Two prior days this market was refused on book-vs-polymarket conflict; today's board is single-book clean (no pm quote surfaced)."
+  },
+  {
+   "event_id": "mlb-2026-08-02-wsh-atl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Braves",
+   "away": "Nationals",
+   "start_time": "2026-08-02T17:35:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.82
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.06
+      }
+     ]
+    }
+   ],
+   "note": "ATL rookie JR Ritchie short-notice spot start; sharps 80% ML handle on WSH."
+  },
+  {
+   "event_id": "mlb-2026-08-02-sfg-sdp",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Padres",
+   "away": "Giants",
+   "start_time": "2026-08-02T20:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.641
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.3
+      }
+     ]
+    }
+   ],
+   "note": "Roupp vs King (91st pct run value)."
+  },
+  {
+   "event_id": "mlb-2026-08-02-min-sea",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Mariners",
+   "away": "Twins",
+   "start_time": "2026-08-02T20:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.746
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.24
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -1.5,
+       "decimal_odds": 2.6
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 1.5,
+       "decimal_odds": 1.515
+      }
+     ]
+    }
+   ],
+   "note": "FD pair -134/+124; DK shows SEA -142 (one side only). Cross-book ML disagreement + total quoted 7 vs 7.5 - board flagged medium confidence."
+  },
+  {
+   "event_id": "mlb-2026-08-02-az-cle",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Guardians",
+   "away": "Diamondbacks",
+   "start_time": "2026-08-02T17:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.694
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.34
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -1.5,
+       "decimal_odds": 2.5
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 1.5,
+       "decimal_odds": 1.549
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 8.0,
+       "decimal_odds": 1.952
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 8.0,
+       "decimal_odds": 1.87
+      }
+     ]
+    }
+   ],
+   "note": "Fullest board on the slate (SBR/Predictem/Covers agree). Kelly vs Williams; AZ on 4-game streak. No in-house records for AZ/CLE this sweep - market+no model."
+  },
+  {
+   "event_id": "wnba-2026-08-02-ind-min",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Lynx",
+   "away": "Fever",
+   "start_time": "2026-08-02T17:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.44
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.85
+      }
+     ]
+    }
+   ],
+   "note": "ABC, Target Center. Spread/total prices one-sided in snippets - not priced. Scout flagged an auto-generated 'final score' page; lines verified pre-game."
+  },
+  {
+   "event_id": "wnba-2026-08-02-la-por",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Fire",
+   "away": "Sparks",
+   "start_time": "2026-08-02T19:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.87
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.0
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -1.5,
+       "decimal_odds": 1.93
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 1.5,
+       "decimal_odds": 1.83
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 185.5,
+       "decimal_odds": 1.91
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 185.5,
+       "decimal_odds": 1.91
+      }
+     ]
+    }
+   ],
+   "note": "Moda Center, NBC/Peacock. Near pick-em; snippets contradicted on favorite - Fire -114/-115 is the consistent reading."
+  },
+  {
+   "event_id": "wnba-2026-08-02-conn-dal",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Wings",
+   "away": "Sun",
+   "start_time": "2026-08-02T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.15
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 5.4
+      }
+     ]
+    }
+   ],
+   "note": "DAL -667 across a -650/-525 book range; CONN Edwards/Griner/Jackson GTD."
+  },
+  {
+   "event_id": "atp-2026-08-02-berrettini-navone",
+   "sport": "tennis",
+   "league": "ATP Montreal R1",
+   "home": "Navone",
+   "away": "Berrettini",
+   "start_time": "2026-08-02T16:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.7
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.46
+      },
+      {
+       "book": "consensus-b",
+       "side": "home",
+       "decimal_odds": 2.55
+      },
+      {
+       "book": "consensus-b",
+       "side": "away",
+       "decimal_odds": 1.53
+      }
+     ]
+    }
+   ],
+   "note": "H2H 3-0 Berrettini, never on hard."
+  },
+  {
+   "event_id": "wta-2026-08-02-rakhimova-williams",
+   "sport": "tennis",
+   "league": "WTA Toronto R1",
+   "home": "Williams",
+   "away": "Rakhimova",
+   "start_time": "2026-08-02T18:25:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 4.0
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.25
+      }
+     ]
+    }
+   ],
+   "note": "TAB (AU) single book. Venus on a 12-match losing streak; models ~77% Rakhimova."
+  },
+  {
+   "event_id": "wta-2026-08-02-bartunkova-andreescu",
+   "sport": "tennis",
+   "league": "WTA Toronto R1",
+   "home": "Andreescu",
+   "away": "Bartunkova",
+   "start_time": "2026-08-02T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.25
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.65
+      },
+      {
+       "book": "consensus-b",
+       "side": "home",
+       "decimal_odds": 2.3
+      },
+      {
+       "book": "consensus-b",
+       "side": "away",
+       "decimal_odds": 1.62
+      }
+     ]
+    }
+   ],
+   "note": "Public 76% on Andreescu (ranked 174) vs Bartunkova (career-high 41); Dimers 56% Bartunkova."
+  },
+  {
+   "event_id": "ligamx-2026-08-02-san-ame",
+   "sport": "soccer",
+   "league": "Liga MX Apertura J3",
+   "home": "America",
+   "away": "Santos Laguna",
+   "start_time": "2026-08-02T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.42
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 4.75
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 6.8
+      }
+     ]
+    }
+   ],
+   "note": "caliente.mx date-stamped board (-239/+375/+580), Estadio Banorte. Confirmed unchanged on re-sweep."
+  },
+  {
+   "event_id": "cdb-2026-08-02-for-pal",
+   "sport": "soccer",
+   "league": "Copa do Brasil R16 leg 1",
+   "home": "Palmeiras",
+   "away": "Fortaleza",
+   "start_time": "2026-08-02T19:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.25
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 5.5
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 10.0
+      }
+     ]
+    }
+   ],
+   "note": "Single palpites page, book unnamed; away leg dispersed across books (10/14/19.5) - low-quality tail, home leg consistent 1.22-1.26."
+  },
+  {
+   "event_id": "cdb-2026-08-02-cru-cha",
+   "sport": "soccer",
+   "league": "Copa do Brasil R16 leg 1",
+   "home": "Chapecoense",
+   "away": "Cruzeiro",
+   "start_time": "2026-08-02T21:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 4.4
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 3.4
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.82
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 2.5,
+       "decimal_odds": 2.08
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 2.5,
+       "decimal_odds": 1.7
+      }
+     ]
+    }
+   ],
+   "note": "Coherent single-page trio (hold ~7.1%); second page had Cruzeiro 1.95 - away leg dispersion. Chape are Serie A bottom (1 win in 20)."
+  },
+  {
+   "event_id": "cdb-2026-08-02-cor-int",
+   "sport": "soccer",
+   "league": "Copa do Brasil R16 leg 1",
+   "home": "Internacional",
+   "away": "Corinthians",
+   "start_time": "2026-08-02T22:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.14
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 3.15
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 3.45
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 2.5,
+       "decimal_odds": 2.38
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 2.5,
+       "decimal_odds": 1.54
+      }
+     ]
+    }
+   ],
+   "note": "Corinthians missing 14+ (Depay, Garro, Yuri Alberto); market leans under. Inter home leg dispersed 2.14-2.34 - shop before filling."
+  },
+  {
+   "event_id": "nwsl-2026-08-02-sd-was",
+   "sport": "soccer",
+   "league": "NWSL",
+   "home": "Spirit",
+   "away": "Wave",
+   "start_time": "2026-08-02T20:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.05
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 3.25
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 3.05
+      }
+     ]
+    }
+   ],
+   "note": "RotoWire +105/+225/+205 (hold ~12.3%, plausible single US book). Spirit 5-match home win streak; draw leg varies (+225/+275)."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-02-mia-nym:moneyline:home": 0.4451,
+  "mlb-2026-08-02-mia-nym:moneyline:away": 0.5549,
+  "mlb-2026-08-02-pit-cin:moneyline:home": 0.5492,
+  "mlb-2026-08-02-pit-cin:moneyline:away": 0.4508,
+  "mlb-2026-08-02-det-ath:moneyline:home": 0.4669,
+  "mlb-2026-08-02-det-ath:moneyline:away": 0.5331,
+  "mlb-2026-08-02-stl-tor:moneyline:home": 0.522,
+  "mlb-2026-08-02-stl-tor:moneyline:away": 0.478,
+  "mlb-2026-08-02-kc-col:moneyline:home": 0.5252,
+  "mlb-2026-08-02-kc-col:moneyline:away": 0.4748,
+  "mlb-2026-08-02-mil-laa:moneyline:home": 0.298,
+  "mlb-2026-08-02-mil-laa:moneyline:away": 0.702,
+  "mlb-2026-08-02-bos-lad:moneyline:home": 0.6251,
+  "mlb-2026-08-02-bos-lad:moneyline:away": 0.3749,
+  "mlb-2026-08-02-nyy-chc:moneyline:home": 0.5491,
+  "mlb-2026-08-02-nyy-chc:moneyline:away": 0.4509,
+  "mlb-2026-08-02-wsh-atl:moneyline:home": 0.6408,
+  "mlb-2026-08-02-wsh-atl:moneyline:away": 0.3592,
+  "mlb-2026-08-02-sfg-sdp:moneyline:home": 0.6279,
+  "mlb-2026-08-02-sfg-sdp:moneyline:away": 0.3721,
+  "mlb-2026-08-02-min-sea:moneyline:home": 0.5525,
+  "mlb-2026-08-02-min-sea:moneyline:away": 0.4475,
+  "wta-2026-08-02-rakhimova-williams:moneyline:home": 0.23,
+  "wta-2026-08-02-rakhimova-williams:moneyline:away": 0.77,
+  "wta-2026-08-02-bartunkova-andreescu:moneyline:home": 0.44,
+  "wta-2026-08-02-bartunkova-andreescu:moneyline:away": 0.56
+ }
+}

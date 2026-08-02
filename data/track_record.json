@@ -409,23 +409,23 @@
           "under": 0.5161
         }
       },
-      "settle": "pending",
+      "settle": "settled 2026-08-02 (GO cycle): finals + closes from date-stamped recaps/boards; UFC odds never indexed, results only",
       "decisions": [
         {
           "id": "2026-08-01-CIN-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "PIT @ CIN",
           "selection": "Reds ML",
           "target": 2.231,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
-          "note": "Runner-up on the full card (was headline on the draft). Fair 2.176 with in-house log5 (CIN 51.2% by records) ensembled with Stats Insider (48%). Ashcraft vs Abbott.",
+          "process": "worked",
+          "note": "CIN never traded above +106 (2.06) - 17 cents short of the 2.231 bar; the '+120 one source' quote was never corroborated. CIN lost 1-4, so no fill dodged a loss; vs the no-vig close a 2.231 fill would still have been +EV (right side, market never paid).",
           "headline": false
         },
         {
@@ -441,7 +441,7 @@
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "superseded",
           "note": "Superseded by the full-card re-rank (PIT side fell out of the top orders).",
           "headline": false
         },
@@ -453,13 +453,13 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "validated",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "conflict",
-          "process": "pending",
-          "note": "Books: Cubs 1.62; Polymarket: Yankees favored (-11.67% pseudo-hold) - day-2 conflict. Saturday pitchers unresolved (Warren vs Imanaga was Friday's game, which NYY won 2-0). Refusal graded at Saturday's close.",
+          "process": "worked",
+          "note": "Refusal correct, with a twist: the close landed NYY road-favorite (-122 to -132; CHC +102/+105) - the OPPOSITE of our 'books CHC 1.62' quote, which no closing book corroborates. That quote was stale/wrong (flagged for provenance). Polymarket NYY 54c was actually the consensus side. CHC won 5-2 anyway - neither side's value story survived. Conflict rule worked for the right reason: garbage inputs were refused, not priced.",
           "headline": false
         },
         {
@@ -470,38 +470,281 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "validated",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
-          "note": "Only Polymarket quotes both sides; after its ledger-evidenced demotion to 0.45 it cannot anchor a fair line.",
+          "process": "worked",
+          "note": "Braves 8-3. Polymarket-only board stayed unpriced per the 0.45-sharpness demotion; no book close collected for this game.",
           "headline": false
         },
         {
           "id": "2026-08-01-BAL-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "PHI @ BAL",
           "selection": "Orioles ML",
           "target": 2.225,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Best bet of the full all-sports card. Market prices PHI -130 despite PHI 2-8 last ten and a hot Baltimore (ESPN Analytics 55.5% BAL). Fair 2.171; order fires at 2.225+. Sanchez vs Baz, 7:05 PM ET Camden Yards. Caveat: single-book price (FanDuel via Covers), BAL record stale in our in-house layer - model prob is ESPN-only."
+          "note": "Fill ambiguous: consensus close +119 (2.19) never reached the 2.225 bar, but SportsGrid reported 'BAL +125 at other books' pregame, which would have filled. Graded no-fill on the consensus board we price from. BAL lost 0-5, so neither grading forfeits a win; a phantom fill would have lost. Single-book-anchor caveat from pre-registration stands."
         },
         {
           "id": "2026-08-01-POR-TICKET",
-          "type": "order_open",
+          "type": "ticket",
           "event": "SEA @ POR (MLS)",
           "selection": "Timbers ML",
           "target": 2.273,
+          "fill": 2.273,
+          "stake": 0,
+          "result": "won",
+          "pnl": 0,
+          "clv_raw": 0.1088,
+          "clv_novig": 0.0451,
+          "anchor": "clean",
+          "process": "worked",
+          "headline": true,
+          "note": "WON - Portland 2-1 Seattle. Graded at the pre-registered listed price 2.273 (prediction-market 44c; post-hoc fill verification impossible, page 403s). bet365 close 2.05/3.80/3.00: raw CLV +10.9%, no-vig CLV +4.5% - first positive-CLV ticket. User stake unconfirmed (no ticket screenshot); tracker computes P&L at your unit stake."
+        }
+      ],
+      "games": [
+        {
+          "event_id": "mls-2026-08-01-sea-por",
+          "our_home_fair": 0.4598,
+          "close_home_novig": 0.4598,
+          "home_won": true,
+          "final": "Timbers 2, Sounders 1 (Kelsy, Bye; Seattle's 6th straight loss)",
+          "source_flag": "clean",
+          "note": "1X2 close bet365 2.05/3.80/3.00 - identical to our pre-game anchor; no-vig home prob from 3-way power devig."
+        },
+        {
+          "event_id": "mlb-2026-08-01-pit-cin",
+          "our_home_fair": 0.4596,
+          "source_flag": "clean",
+          "close_home_novig": 0.4736,
+          "home_won": false,
+          "final": "Pirates 4, Reds 1 (Ashcraft outpitched Abbott)"
+        },
+        {
+          "event_id": "mlb-2026-08-01-cws-tb",
+          "our_home_fair": 0.5645,
+          "source_flag": "clean",
+          "close_home_novig": 0.6045,
+          "home_won": true,
+          "final": "Rays 1, White Sox 0",
+          "note": "Closing total was 7.5-8, NOT the 8.5 our slate priced - totals quote was off-market; game went UNDER any number (1 run)."
+        },
+        {
+          "event_id": "mlb-2026-08-01-mil-laa",
+          "our_home_fair": 0.4623,
+          "source_flag": "clean",
+          "close_home_novig": 0.4428,
+          "home_won": false,
+          "final": "Brewers 3, Angels 1",
+          "note": "Close is a midpoint of genuinely split books (MIL -120 BetMGM vs -146 FanDuel); treat CLV vs this close as approximate."
+        },
+        {
+          "event_id": "mlb-2026-08-01-det-ath",
+          "our_home_fair": 0.4006,
+          "source_flag": "clean",
+          "close_home_novig": 0.4424,
+          "home_won": false,
+          "final": "Tigers 8, Athletics 6"
+        },
+        {
+          "event_id": "mlb-2026-08-01-stl-tor",
+          "our_home_fair": 0.6113,
+          "source_flag": "clean",
+          "close_home_novig": 0.6116,
+          "home_won": true,
+          "final": "Blue Jays 5, Cardinals 1"
+        },
+        {
+          "event_id": "mlb-2026-08-01-tex-hou",
+          "our_home_fair": 0.5454,
+          "source_flag": "clean",
+          "close_home_novig": 0.4654,
+          "home_won": true,
+          "final": "Astros 5, Rangers 4 (won as home dogs vs deGrom)"
+        },
+        {
+          "event_id": "mlb-2026-08-01-mia-nym",
+          "our_home_fair": 0.5454,
+          "source_flag": "clean",
+          "close_home_novig": 0.5502,
+          "home_won": false,
+          "final": "Marlins 6, Mets 2"
+        },
+        {
+          "event_id": "mlb-2026-08-01-kc-col",
+          "our_home_fair": 0.5069,
+          "source_flag": "clean",
+          "close_home_novig": 0.5181,
+          "home_won": true,
+          "final": "Rockies 12, Royals 6",
+          "note": "Single-source close (BetMGM blog KC -102/COL -118); approximate."
+        },
+        {
+          "event_id": "mlb-2026-08-01-phi-bal",
+          "our_home_fair": 0.4606,
+          "source_flag": "clean",
+          "close_home_novig": 0.4309,
+          "home_won": false,
+          "final": "Phillies 5, Orioles 0 (Cristopher Sanchez shutout)"
+        },
+        {
+          "event_id": "wnba-2026-08-01-phx-nyl",
+          "our_home_fair": 0.5589,
+          "source_flag": "clean",
+          "close_home_novig": 0.4411,
+          "home_won": false,
+          "final": "Liberty 94, Mercury 92 at Phoenix (venue re-confirmed)",
+          "note": "Close is a midpoint (NYL -130 to -150 across books)."
+        },
+        {
+          "event_id": "wnba-2026-08-01-lva-chi",
+          "our_home_fair": 0.2869,
+          "close_home_novig": null,
+          "home_won": true,
+          "final": "Sky 84, Aces 83 (Sydney Taylor 29, buzzer-beater 3)",
+          "source_flag": "clean",
+          "note": "Aces closed ~-250; Sky side never directly quoted - close left null rather than fabricated. Our 28.7% home fair; the dog landed."
+        },
+        {
+          "event_id": "ufc-2026-08-01-medic-rodriguez",
+          "our_home_fair": 0.7759,
+          "close_home_novig": null,
+          "home_won": false,
+          "final": "Rodriguez TKO R1 0:30 over Medic",
+          "source_flag": "clean",
+          "note": "Slate home=Medic (our 77.6%) - upset vs our line. No closing odds indexed."
+        },
+        {
+          "event_id": "ufc-2026-08-01-klein-musayev",
+          "our_home_fair": 0.2902,
+          "close_home_novig": null,
+          "home_won": true,
+          "final": "Musayev TKO R2 over Klein",
+          "source_flag": "clean",
+          "note": "Slate home=Musayev (our 29.0%) - upset vs our line. No closing odds indexed."
+        },
+        {
+          "event_id": "ufc-2026-08-01-luciano-spasic",
+          "our_home_fair": 0.7474,
+          "close_home_novig": null,
+          "home_won": true,
+          "final": "Luciano sub (RNC) R1 3:30 over Spasic",
+          "source_flag": "clean",
+          "note": "Slate home=Luciano (our 74.7%) - correct side. NOTE: this entry deviated from the p2-as-home convention (Spasic was listed second); result grading follows the slate's own home field. No closing odds indexed."
+        }
+      ],
+      "metrics": {
+        "n": 11,
+        "brier_ours": 0.2263,
+        "brier_close": 0.2197,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0326,
+        "max_abs_fair_vs_close": 0.1178,
+        "note": "11 markets with verified two-sided closes graded; 4 results recorded without closes (1 one-sided WNBA quote, 3 UFC no-odds)."
+      },
+      "lessons_applied": [
+        "HEADLINE VALIDATED: Timbers 2.273 vs 2.05-2.10 close = +10.9% raw / +2.2% no-vig CLV, and it cashed. The playbook - book anchor sets fair, prediction market pays the discount - produced its first positive-CLV ticket. Keep prediction markets shop-only (0.45) but keep shopping them.",
+        "STALE-QUOTE PROVENANCE (graded miss): the 'CHC 1.62' Saturday quote was contradicted by every closing book (NYY -125/-132). Likely a leftover Friday line - same-series prior-day trap, but in a BOOK quote, not a news line. Rule extension: every anchor quote entering a slate must carry book + explicit date-stamp; un-stamped quotes get the conflict treatment. The refusal held for the right reason.",
+        "OFF-MARKET TOTAL (graded miss): our CWS@TB 8.5 total closed 7.5-8 - a full run off. Totals move with pitching/weather all day; a single morning number can't anchor an evening total. Same-day re-verification or no total pricing.",
+        "Prediction-market fills are unverifiable post-hoc (403 walls): grade at the pre-registered listed price only when the slip documented price+time - it did. Keep pre-registering exact asks.",
+        "Model-side humility: three graded upsets vs our lines (Sky 28.7%, Musayev 29.0%, Medic 77.6% loser) but 11-market Brier still tracks the close. No parameter change - Walters rule, sample far below Buchdahl's floor."
+      ]
+    },
+    {
+      "date": "2026-08-02",
+      "sport": "multi",
+      "mode": "degraded - Sunday full card: 23 events / 34 markets (12 MLB boards, 3 WNBA, 3 tennis, Liga MX, 3 Copa do Brasil, NWSL); in-house log5 on fresh Sat-night records ensembled 50/50 with SportsGrid/Dimers/Stats Insider; --market-weight 0.85. Excluded: 3 one-sided MLB boards, 3 best-price aggregates, Sonego-Griekspoor (Monday), no-odds NWSL game. No Sunday UFC/CFL/NFL markets exist.",
+      "engine_verdict": "PASS - no side clears the degraded 2.5% EV bar; the card's honest output is limit orders. Top orders: Braves ML >= 1.866 (EV now -0.04%), Dodgers ML >= 1.666 (-0.05%), Marlins ML >= 1.925 (-0.87%). REFUSED: PIT@CIN moneyline (Polymarket 55c vs book 1.676 = negative cross-source hold -3.07%, conflict rule).",
+      "predictions_home_fair": {
+        "mlb-2026-08-02-wsh-atl": 0.5492,
+        "mlb-2026-08-02-bos-lad": 0.6151,
+        "mlb-2026-08-02-az-cle": 0.5821,
+        "mlb-2026-08-02-min-sea": 0.562,
+        "wnba-2026-08-02-conn-dal": 0.8531,
+        "mlb-2026-08-02-nyy-chc": 0.478,
+        "mlb-2026-08-02-sfg-sdp": 0.5951,
+        "ligamx-2026-08-02-san-ame": 0.6858,
+        "wnba-2026-08-02-ind-min": 0.6757,
+        "mlb-2026-08-02-mia-nym": 0.4676,
+        "cdb-2026-08-02-for-pal": 0.778,
+        "mlb-2026-08-02-det-ath": 0.4313,
+        "wnba-2026-08-02-la-por": 0.5177,
+        "mlb-2026-08-02-stl-tor": 0.5279,
+        "wta-2026-08-02-bartunkova-andreescu": 0.416,
+        "mlb-2026-08-02-kc-col": 0.5423,
+        "atp-2026-08-02-berrettini-navone": 0.3522,
+        "cdb-2026-08-02-cor-int": 0.4424,
+        "nwsl-2026-08-02-sd-was": 0.4471,
+        "mlb-2026-08-02-mil-laa": 0.3168,
+        "cdb-2026-08-02-cru-cha": 0.2043,
+        "wta-2026-08-02-rakhimova-williams": 0.2195
+      },
+      "predictions_other": {
+        "mlb-2026-08-02-nyy-chc:spread:1.5": {
+          "home": 0.609,
+          "away": 0.391
+        },
+        "mlb-2026-08-02-det-ath:spread:1.5": {
+          "home": 0.5346,
+          "away": 0.4654
+        },
+        "mlb-2026-08-02-det-ath:total:10.5": {
+          "over": 0.5115,
+          "under": 0.4885
+        },
+        "mlb-2026-08-02-az-cle:total:8.0": {
+          "under": 0.5115,
+          "over": 0.4885
+        },
+        "wnba-2026-08-02-la-por:total:185.5": {
+          "over": 0.5,
+          "under": 0.5
+        },
+        "cdb-2026-08-02-cor-int:total:2.5": {
+          "under": 0.6187,
+          "over": 0.3813
+        },
+        "cdb-2026-08-02-cru-cha:total:2.5": {
+          "under": 0.5556,
+          "over": 0.4444
+        },
+        "mlb-2026-08-02-pit-cin:spread:-1.5": {
+          "home": 0.4057,
+          "away": 0.5943
+        },
+        "wnba-2026-08-02-la-por:spread:-1.5": {
+          "home": 0.4854,
+          "away": 0.5146
+        },
+        "mlb-2026-08-02-az-cle:spread:-1.5": {
+          "home": 0.3745,
+          "away": 0.6255
+        },
+        "mlb-2026-08-02-min-sea:spread:-1.5": {
+          "home": 0.3592,
+          "away": 0.6408
+        }
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-02-ATL-ORDER",
+          "type": "order_open",
+          "event": "WSH @ ATL",
+          "selection": "Braves ML",
+          "target": 1.866,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -511,7 +754,58 @@
           "anchor": "clean",
           "process": "pending",
           "headline": true,
-          "note": "BEST BET - the only bar-clearing play on the 49-market card. Prediction market pays 2.273 (44c) on a side bet365 prices 2.05; fair 2.175 -> +4.51% EV, robust under either price being true. Fill condition: Portland at 44c or better; if the ask has moved above 44c, the edge shrinks - engine minimum price 2.23 (45c). Providence Park, ~10:30 PM ET."
+          "note": "BEST ORDER on a pass card - nothing is bettable at listed prices today. Fair 1.821 (market 0.5325 blended with in-house log5 0.6408 at 85/15); order fires only at 1.866+ (+2.5% EV bar). CAVEAT, stated plainly: 80% of sharp ML handle is on WSH fading ATL's rookie spot-starter JR Ritchie - our records-only log5 cannot see pitching. If the line moves toward the order, it is moving against the sharps. Bet the number or nothing."
+        },
+        {
+          "id": "2026-08-02-LAD-ORDER",
+          "type": "order_open",
+          "event": "BOS @ LAD (Sunday Night Baseball)",
+          "selection": "Dodgers ML",
+          "target": 1.666,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Fair 1.626 off the Caesars 1.625 board (DK is shaded to 1.541); in-house log5 agrees with the market (LAD 62.5%). BOS won Fri+Sat - if steam keeps pushing BOS, LAD 1.666+ becomes available. Bennett vs Sheehan."
+        },
+        {
+          "id": "2026-08-02-MIA-ORDER",
+          "type": "order_open",
+          "event": "MIA @ NYM",
+          "selection": "Marlins ML",
+          "target": 1.925,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Strongest situational thesis on the card: Alcantara vs an emergency spot starter (Robert Stock), SportsGrid 56% MIA, in-house log5 55.5% MIA. Fair 1.878; needs +108 -> +115ish to fire."
+        },
+        {
+          "id": "2026-08-02-PITCIN-REFUSAL",
+          "type": "refusal",
+          "event": "PIT @ CIN",
+          "selection": "Moneyline refused (conflict rule)",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "conflict",
+          "process": "pending",
+          "headline": false,
+          "note": "Book prices CIN 1.676 (Burns 12-1, 2.40 ERA); Polymarket pays 1.818 on the same side - cross-source hold -3.07%. Degraded anchor + negative hold = unpriceable, never an arb (ledger rule, 3x validated). Graded against Sunday's close."
         }
       ]
     }

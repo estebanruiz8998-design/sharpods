@@ -167,8 +167,13 @@ bets.innerHTML = [...picks].sort((a, b) => b.date.localeCompare(a.date)).map(d =
   lastDay = d.date;
   let controls;
   if (d.result === "won" || d.result === "lost") {
-    controls = `<span class="status ${d.result}">${d.result} · stake ${usd0(d.stake)}</span>
-      <span class="pnl ${d.result === "won" ? "good" : "bad"}">${usd(d.pnl)}</span>`;
+    // A real recorded stake locks the card; a model-graded result without a
+    // confirmed stake computes at your unit stake below.
+    controls = d.stake
+      ? `<span class="status ${d.result}">${d.result} · stake ${usd0(d.stake)}</span>
+        <span class="pnl ${d.result === "won" ? "good" : "bad"}">${usd(d.pnl)}</span>`
+      : `<span class="status ${d.result}">${d.result} · at your stake</span>
+        <span class="pnl" data-pnl></span>`;
   } else if (d.result === "no fill") {
     controls = `<span class="status skip">No bet · odds never hit ${d.target.toFixed(2)}</span><span class="pnl">$0</span>`;
   } else {
@@ -191,8 +196,8 @@ bets.innerHTML = [...picks].sort((a, b) => b.date.localeCompare(a.date)).map(d =
 
 function pickPnl(d, unit) {
   // Returns [pnl, kind]; kind: "w" | "l" | "skip" | null (unmarked/pending)
-  if (d.result === "won") return [d.pnl, "w"];
-  if (d.result === "lost") return [d.pnl, "l"];
+  if (d.result === "won") return [d.stake ? d.pnl : unit * (price(d) - 1), "w"];
+  if (d.result === "lost") return [d.stake ? d.pnl : -unit, "l"];
   if (d.result === "no fill") return [0, "skip"];
   const mark = grades[d.id];
   if (mark === "won") return [unit * (price(d) - 1), "w"];
@@ -218,7 +223,7 @@ function render() {
   // Per-card chips + button states (pending cards only)
   document.querySelectorAll(".bet").forEach(card => {
     const d = picks.find(p => p.id === card.dataset.id);
-    if (settled(d)) return;
+    if (settled(d) && (d.stake || d.result === "no fill")) return;
     const mark = grades[d.id];
     card.querySelectorAll(".btn").forEach(b =>
       b.setAttribute("aria-pressed", String(b.dataset.mark === mark)));
