@@ -498,20 +498,20 @@
         },
         {
           "id": "2026-08-01-POR-TICKET",
-          "type": "ticket",
+          "type": "order_unfilled",
           "event": "SEA @ POR (MLS)",
           "selection": "Timbers ML",
-          "target": 2.273,
-          "fill": 2.273,
+          "target": 2.23,
+          "fill": null,
           "stake": 0,
-          "result": "won",
+          "result": "no fill",
           "pnl": 0,
-          "clv_raw": 0.1088,
-          "clv_novig": 0.0451,
+          "clv_raw": null,
+          "clv_novig": null,
           "anchor": "clean",
           "process": "worked",
           "headline": true,
-          "note": "WON - Portland 2-1 Seattle. Graded at the pre-registered listed price 2.273 (prediction-market 44c; post-hoc fill verification impossible, page 403s). bet365 close 2.05/3.80/3.00: raw CLV +10.9%, no-vig CLV +4.5% - first positive-CLV ticket. User stake unconfirmed (no ticket screenshot); tracker computes P&L at your unit stake."
+          "note": "NO BET - user report (the only fill oracle; pages 403 post-hoc): the prediction-market ask had moved above the 45c stand-down line (engine minimum 2.23) by bet time, so per the slip's own fill rule the order did not fire. Paper grade of the 2.273 listed snapshot: Portland won 2-1 and the number beat the bet365 close 2.05/3.80/3.00 by +10.9% raw / +4.5% no-vig - the edge was real at the snapshot, and it decayed before execution. Standing down was correct: at the moved ask the +2.5% EV bar was no longer met."
         }
       ],
       "games": [
@@ -655,10 +655,10 @@
         "note": "11 markets with verified two-sided closes graded; 4 results recorded without closes (1 one-sided WNBA quote, 3 UFC no-odds)."
       },
       "lessons_applied": [
-        "HEADLINE VALIDATED: Timbers 2.273 vs 2.05-2.10 close = +10.9% raw / +2.2% no-vig CLV, and it cashed. The playbook - book anchor sets fair, prediction market pays the discount - produced its first positive-CLV ticket. Keep prediction markets shop-only (0.45) but keep shopping them.",
+        "HEADLINE PROCESS VALIDATED, NOT CASHED: the flagged 2.273 snapshot beat the 2.05-2.10 close (+10.9% raw / +4.5% no-vig) and Portland won - but the prediction-market ask moved above the 45c stand-down before the user could bet, so the slip's fill rule said no bet and the user correctly passed. Prediction-market discounts decay fast: they are real edge AND a narrow execution window. Keep them shop-only; treat every pm price as minutes-fresh or dead.",
         "STALE-QUOTE PROVENANCE (graded miss): the 'CHC 1.62' Saturday quote was contradicted by every closing book (NYY -125/-132). Likely a leftover Friday line - same-series prior-day trap, but in a BOOK quote, not a news line. Rule extension: every anchor quote entering a slate must carry book + explicit date-stamp; un-stamped quotes get the conflict treatment. The refusal held for the right reason.",
         "OFF-MARKET TOTAL (graded miss): our CWS@TB 8.5 total closed 7.5-8 - a full run off. Totals move with pitching/weather all day; a single morning number can't anchor an evening total. Same-day re-verification or no total pricing.",
-        "Prediction-market fills are unverifiable post-hoc (403 walls): grade at the pre-registered listed price only when the slip documented price+time - it did. Keep pre-registering exact asks.",
+        "Fill discipline works end-to-end: post-hoc pm verification is impossible (403 walls), so the slip's printed stand-down line is the binding contract and the user's execution report is the fill oracle. It did its job - ask moved, user stood down, a would-have-won bet stays unbooked because the price wasn't there. Grade orders on fills, never on hindsight.",
         "Model-side humility: three graded upsets vs our lines (Sky 28.7%, Musayev 29.0%, Medic 77.6% loser) but 11-market Brier still tracks the close. No parameter change - Walters rule, sample far below Buchdahl's floor."
       ]
     },
