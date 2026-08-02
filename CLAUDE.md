@@ -8,9 +8,13 @@ docs/books/). It runs a daily review-improve-ship cycle operated through chat.
 When the user says **"GO"** (alone or with a date/sport hint), execute the full
 cycle at maximum capacity, exactly like the 2026-08-01 complete run:
 
-1. **Verify the date first.** Infer today's real date from search results, not
-   assumption — the clock has drifted before. "Tomorrow" = the next calendar
-   day from the *verified* date.
+1. **Verify the date AND time-of-day first — pessimistically.** Infer the real
+   date from search results, not assumption — the clock has drifted before.
+   When the clock and the evidence disagree, "now" for staleness decisions is
+   the LATEST of the two readings. Absence of finals in search snippets is
+   NEVER pre-game proof (the index lags — this shipped a card 5 hours after
+   first pitch on 2026-08-02). "Tomorrow" = the next calendar day from the
+   *verified* date.
 2. **Grade** (parallel agent): settle the previous card in
    `data/track_record.json` via `sharpods.ledger` — finals, closing lines
    (devig with power method), order fill checks, ticket P&L + CLV (raw and
@@ -28,12 +32,17 @@ cycle at maximum capacity, exactly like the 2026-08-01 complete run:
    models, then `--market-weight 0.85`.
 5. **Run** `python -m sharpods <slate> --bankroll 10000 --market-weight 0.85`,
    plus `python -m pytest tests/` — both must be clean before shipping.
-6. **Ship**: rewrite the slip (artifact 5edc38a1-94f5-4edb-aa83-13527003c966,
+6. **Ship-time staleness gate (hard rule)**: a bet or order goes on the slip
+   ONLY if its start time clears pessimistic-now (step 1) by 2+ hours. If
+   nothing on the target day qualifies, ship the NEXT day's card instead —
+   never a card the user can't act on. State each pick's start time vs
+   verified-now on the slip.
+7. **Ship**: rewrite the slip (artifact 5edc38a1-94f5-4edb-aa83-13527003c966,
    favicon 🎟️, same scratchpad path `betslip.html` to keep the URL) with the
    best bet as the headline; regenerate the tracker (`sharpods-tracker`,
    artifact a867633c-7d86-4ce1-841b-7aa779960c2f, favicon 📊) — the tracker
    shows ONE card per day: the ledger decision flagged `headline: true`.
-7. **Record**: pre-register fair lines and decisions in the ledger; commit and
+8. **Record**: pre-register fair lines and decisions in the ledger; commit and
    push every changed file to the designated branch.
 
 ## NO-MISTAKES CHECKLIST (each item has burned us once)
@@ -41,6 +50,15 @@ cycle at maximum capacity, exactly like the 2026-08-01 complete run:
 - **Date discipline**: reject any price not explicitly dated to the target
   day. Same-series prior-day lines are the #1 trap (Friday Mariners -187,
   July-29 NYY line, an April Fool's Pirates recap).
+- **Ship-time staleness**: never ship a pick whose game may have started under
+  the most pessimistic clock reading (Aug-2 miss: trusted "no Sunday finals
+  indexed" over a clock saying Sunday evening; the headline order shipped
+  ~5 hours after first pitch and was voided). Optimistic time inference is
+  motivated reasoning — the lagging index can't prove pre-game, only a start
+  time comfortably in the future can.
+- **Prediction-market fills decay in minutes** (Timbers ask moved past the
+  45c stand-down before bet time): the printed stand-down line is binding and
+  the user's execution report is the only fill oracle.
 - **Venue/home verification**: confirm home team by venue/ticketing, not
   article phrasing (Liberty AT Phoenix reversal; TEX@SEA mis-pairing).
 - **Sport gating**: key-number machinery (Wong teasers, NFL margin middles)

@@ -666,7 +666,7 @@
       "date": "2026-08-02",
       "sport": "multi",
       "mode": "degraded - Sunday full card: 23 events / 34 markets (12 MLB boards, 3 WNBA, 3 tennis, Liga MX, 3 Copa do Brasil, NWSL); in-house log5 on fresh Sat-night records ensembled 50/50 with SportsGrid/Dimers/Stats Insider; --market-weight 0.85. Excluded: 3 one-sided MLB boards, 3 best-price aggregates, Sonego-Griekspoor (Monday), no-odds NWSL game. No Sunday UFC/CFL/NFL markets exist.",
-      "engine_verdict": "PASS - no side clears the degraded 2.5% EV bar; the card's honest output is limit orders. Top orders: Braves ML >= 1.866 (EV now -0.04%), Dodgers ML >= 1.666 (-0.05%), Marlins ML >= 1.925 (-0.87%). REFUSED: PIT@CIN moneyline (Polymarket 55c vs book 1.676 = negative cross-source hold -3.07%, conflict rule).",
+      "engine_verdict": "PASS - no side clears the degraded 2.5% EV bar; the card's honest output is limit orders. Top orders: Braves ML >= 1.866 (EV now -0.04%), Dodgers ML >= 1.666 (-0.05%), Marlins ML >= 1.925 (-0.87%). REFUSED: PIT@CIN moneyline (Polymarket 55c vs book 1.676 = negative cross-source hold -3.07%, conflict rule). || POST-SHIP VOID: user reported the headline game already finished at ship time - date/time verification failed (clock said Sunday evening, snippet evidence misread as Sunday morning). All three orders voided; day stands as a full PASS with zero actionable output. Refusal still grades at the close.",
       "predictions_home_fair": {
         "mlb-2026-08-02-wsh-atl": 0.5492,
         "mlb-2026-08-02-bos-lad": 0.6151,
@@ -741,54 +741,54 @@
       "decisions": [
         {
           "id": "2026-08-02-ATL-ORDER",
-          "type": "order_open",
+          "type": "order_void",
           "event": "WSH @ ATL",
           "selection": "Braves ML",
           "target": 1.866,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "miss",
           "headline": true,
-          "note": "BEST ORDER on a pass card - nothing is bettable at listed prices today. Fair 1.821 (market 0.5325 blended with in-house log5 0.6408 at 85/15); order fires only at 1.866+ (+2.5% EV bar). CAVEAT, stated plainly: 80% of sharp ML handle is on WSH fading ATL's rookie spot-starter JR Ritchie - our records-only log5 cannot see pitching. If the line moves toward the order, it is moving against the sharps. Bet the number or nothing."
+          "note": "VOID - PROCESS MISS (user report): the card shipped hours after this game's 1:35 PM ET first pitch. The container clock read Sunday evening; I overrode it because search snippets showed no Sunday finals - but a lagging search index is not pre-game proof. Order was never actionable; no bet placed, none should be. Original order terms preserved above for the record; outcome deliberately NOT graded (no hindsight grading of a void order)."
         },
         {
           "id": "2026-08-02-LAD-ORDER",
-          "type": "order_open",
+          "type": "order_void",
           "event": "BOS @ LAD (Sunday Night Baseball)",
           "selection": "Dodgers ML",
           "target": 1.666,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "miss",
           "headline": false,
-          "note": "Fair 1.626 off the Caesars 1.625 board (DK is shaded to 1.541); in-house log5 agrees with the market (LAD 62.5%). BOS won Fri+Sat - if steam keeps pushing BOS, LAD 1.666+ becomes available. Bennett vs Sheehan."
+          "note": "VOID - cancelled at 7:03 PM ET with first pitch 7:20 PM ET: no time to re-verify the line, and every price on the card is a morning-stale snapshot. An unsupervisable order is not an order."
         },
         {
           "id": "2026-08-02-MIA-ORDER",
-          "type": "order_open",
+          "type": "order_void",
           "event": "MIA @ NYM",
           "selection": "Marlins ML",
           "target": 1.925,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "miss",
           "headline": false,
-          "note": "Strongest situational thesis on the card: Alcantara vs an emergency spot starter (Robert Stock), SportsGrid 56% MIA, in-house log5 55.5% MIA. Fair 1.878; needs +108 -> +115ish to fire."
+          "note": "VOID - shipped after the 1:40 PM ET first pitch (same process miss as the headline order). No bet placed, none should be."
         },
         {
           "id": "2026-08-02-PITCIN-REFUSAL",
@@ -807,6 +807,10 @@
           "headline": false,
           "note": "Book prices CIN 1.676 (Burns 12-1, 2.40 ERA); Polymarket pays 1.818 on the same side - cross-source hold -3.07%. Degraded anchor + negative hold = unpriceable, never an arb (ledger rule, 3x validated). Graded against Sunday's close."
         }
+      ],
+      "lessons_applied": [
+        "SHIP-TIME STALENESS (graded miss, user-reported): the Aug 2 card shipped ~5 hours after its headline game's first pitch. Root cause: with the clock and the search evidence disagreeing, I picked the reading that made the card shippable. Rule shipped to CLAUDE.md: take 'now' as the MOST PESSIMISTIC (latest) of container clock vs search evidence; absence of finals in a lagging search index is never pre-game proof; ship only bets/orders whose start time clears pessimistic-now by 2+ hours, and if nothing on the target day qualifies, ship the next day's card instead.",
+        "Void orders are graded 'no fill' with process 'miss', and their outcomes are deliberately not looked up - no hindsight grading either direction."
       ]
     }
   ]
