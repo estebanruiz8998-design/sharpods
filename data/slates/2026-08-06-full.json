@@ -1,0 +1,167 @@
+{
+ "_provenance": "Thursday 2026-08-06 card, compiled Wednesday ~9:30 PM ET (pessimistic-now: clock Aug 6 00:49Z AND Wed-final evidence agree; every event starts Thursday afternoon ET or later - 14+ hours past pessimistic-now, gate cleared; two start times are assumed-typical and stated as such). THIN CARD BY HONESTY: books post most Thursday boards day-of, so only 3 events carry anchor-grade quotes tonight. EXCLUDED: NYM@CLE (away leg only), CHW@BOS (4-book best-price aggregate - understates hold), SD@AZ (existence itself unconfirmed for Thu), PIT@MIL, TOR@CHC, DET@SEA, LAA@BAL, WSH@PHI (games confirmed, no dated boards), CGY@TOR CFL (favorite-side conflict between prose and listed line, TOR ML missing), both WNBA games (LAS@MIN no board; Tempo@Fire date-ambiguous Aug 6-vs-7 and partial), all Thursday tennis R3 (order of play priced pages not indexed), 5 other Conference League legs (no full trios). Three prior-day/prior-YEAR traps rejected in scouting (two 2025 articles, one Aug-5 pairing). Deadline context: Skubal->LAD, Rutschman->BOS, Peralta->TB, Gausman+Holmes->CHC, Arraez->PHI, May->MIL. NO model probabilities on this card: CIN records conflicted, preseason football models are noise, no dated soccer model - pure market pricing, degraded 2.5% bar.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "primary date-stamped single-book boards (Covers featured book, DraftKings, 1xBet)"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "demoted per ledger; shop-only"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-06-ath-cin",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Reds",
+   "away": "Athletics",
+   "start_time": "2026-08-06T16:35:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.585
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.41
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -1.5,
+       "decimal_odds": 2.19
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 1.5,
+       "decimal_odds": 1.699
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 9.5,
+       "decimal_odds": 2.02
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 9.5,
+       "decimal_odds": 1.82
+      }
+     ]
+    }
+   ],
+   "note": "Only complete coherent MLB board indexed tonight (Covers page dated Aug 06: CIN -171/ATH +141, CIN -1.5 +119/ATH +1.5 -143, 9.5 O+102/U-122). Start time UNVERIFIED - typical 12:35 PM ET Cincinnati getaway assumed; even the earliest plausible start clears the gate by 14+ hours from Wed-night ship. Aug-6 pitchers unannounced. NO in-house model: CIN's published records are arithmetically conflicted across sources (54-58 vs verified 52-59 baseline - losses cannot decrease) and ATH is 4 days stale; market-only pricing."
+  },
+  {
+   "event_id": "nfl-2026-08-06-ari-car",
+   "sport": "nfl",
+   "league": "NFL preseason - Hall of Fame Game",
+   "home": "Panthers",
+   "away": "Cardinals",
+   "start_time": "2026-08-07T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.87
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.95
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -1.5,
+       "decimal_odds": 2.1
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 1.5,
+       "decimal_odds": 1.77
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 35.5,
+       "decimal_odds": 1.91
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 35.5,
+       "decimal_odds": 1.91
+      }
+     ]
+    }
+   ],
+   "note": "First football market of the season. Tom Benson HOF Stadium, Canton - NEUTRAL SITE; 'home' = Panthers per book listing convention only. Single DK board: CAR -115/ARI -105, CAR -1.5 +110/ARI +1.5 -130, total 35.5 -110/-110 (moved 36.5 -> 35.5; juice flipped toward the ARI dog side). PRESEASON: starters sit, Carson Beck starts at QB for ARI, variance is extreme and key-number logic does not transfer - any teaser/middle output on this game is suppressed from the slip by hand. No model prob used (Kalshi/covers 52% CAR is shop-only class)."
+  },
+  {
+   "event_id": "uecl-2026-08-06-din-bra",
+   "sport": "soccer",
+   "league": "UEFA Conference League Q3 leg 1",
+   "home": "Braga",
+   "away": "Dinamo Minsk",
+   "start_time": "2026-08-06T19:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.1
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 9.6
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 27.0
+      }
+     ]
+    }
+   ],
+   "note": "Only Thursday UEFA fixture with a complete single-book trio (1xBet 1.10/9.60/27.00, hold ~5.0%). UEFA.com-confirmed Conference League (one source mislabeled it Europa). Kickoff ET unconfirmed (Braga Euro-qualifier norm ~3:00-3:45 PM ET assumed) - earliest plausible start clears the gate by 16+ hours. Extreme favorite; almost certainly unbettable at the bar."
+  }
+ ],
+ "model_probabilities": {}
+}

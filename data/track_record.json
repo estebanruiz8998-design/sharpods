@@ -737,7 +737,7 @@
           "away": 0.6408
         }
       },
-      "settle": "partially settled 2026-08-02 ~7:30 PM ET (pessimistic-now): 14 finals, 8 graded vs two-sided closes; 9 pending markets carry to the next cycle",
+      "settle": "fully settled 2026-08-05 (Wed catch-up pass; all 23 events final)",
       "decisions": [
         {
           "id": "2026-08-02-ATL-ORDER",
@@ -920,16 +920,103 @@
           "final": "Spirit 2, Wave 1 (Kouassi winner 171s after the equalizer)",
           "source_flag": "clean",
           "note": "Close trio partial (2.05/3.25/away null) - same shape as our anchor; no full-trio devig."
+        },
+        {
+          "event_id": "mlb-2026-08-02-det-ath",
+          "our_home_fair": 0.4313,
+          "source_flag": "clean",
+          "close_home_novig": 0.4547,
+          "home_won": false,
+          "final": "Tigers 11, Athletics 0",
+          "note": "Close is a midpoint of a wide range (-114 to -135 DET across dated sources); the -172 quote circulating was the Aug-1 game - trap caught."
+        },
+        {
+          "event_id": "mlb-2026-08-02-sfg-sdp",
+          "our_home_fair": 0.5951,
+          "source_flag": "clean",
+          "close_home_novig": 0.5815,
+          "home_won": true,
+          "final": "Padres 5, Giants 4"
+        },
+        {
+          "event_id": "mlb-2026-08-02-min-sea",
+          "our_home_fair": 0.562,
+          "source_flag": "clean",
+          "close_home_novig": 0.563,
+          "home_won": true,
+          "final": "Mariners 7, Twins 6 (Emerson walk-off after blowing 6-0 lead)"
+        },
+        {
+          "event_id": "mlb-2026-08-02-bos-lad",
+          "our_home_fair": 0.6151,
+          "source_flag": "clean",
+          "close_home_novig": 0.6287,
+          "home_won": false,
+          "final": "Red Sox 8, Dodgers 4 (SNB sweep)",
+          "note": "Book range LAD -160 to -185; FanDuel two-sided used."
+        },
+        {
+          "event_id": "atp-2026-08-02-berrettini-navone",
+          "our_home_fair": 0.3522,
+          "source_flag": "clean",
+          "close_home_novig": 0.358,
+          "home_won": true,
+          "final": "Navone d. Berrettini 6-3 6-7(5) 6-3 (played Mon Aug 3 after Sunday washout)",
+          "note": "Rain moved the match to Monday; graded vs its actual close. Our 35.2% home fair vs ~38% close - and the dog won."
+        },
+        {
+          "event_id": "wta-2026-08-02-bartunkova-andreescu",
+          "our_home_fair": 0.416,
+          "source_flag": "clean",
+          "close_home_novig": 0.4042,
+          "home_won": false,
+          "final": "Bartunkova d. Andreescu 7-5 6-4 (played Mon Aug 3 night)",
+          "note": "Slid to Monday; Bartunkova closed favorite as our fair leaned."
+        },
+        {
+          "event_id": "ligamx-2026-08-02-san-ame",
+          "our_home_fair": 0.6858,
+          "close_home_novig": 0.6949,
+          "home_won": true,
+          "final": "America 3, Santos 0 (Azteca reopened)",
+          "source_flag": "clean",
+          "note": "Close trio is a best-price aggregate (SportyTrader/Wincomparator) - indicative close, devig slightly shaded."
+        },
+        {
+          "event_id": "cdb-2026-08-02-cru-cha",
+          "our_home_fair": 0.2043,
+          "close_home_novig": 0.2275,
+          "home_won": false,
+          "final": "Chapecoense 0, Cruzeiro 0 (R16 leg 1 draw)",
+          "source_flag": "clean",
+          "note": "Futbol24 same-day pre-match trio; draw = home didn't win."
+        },
+        {
+          "event_id": "cdb-2026-08-02-cor-int",
+          "our_home_fair": 0.4424,
+          "close_home_novig": 0.4312,
+          "home_won": true,
+          "final": "Internacional 2, Corinthians 0 (Bahia 15', Alan Patrick pen)",
+          "source_flag": "clean"
+        },
+        {
+          "event_id": "wnba-2026-08-02-conn-dal",
+          "our_home_fair": 0.8531,
+          "close_home_novig": null,
+          "home_won": true,
+          "final": "Wings 83, Sun 63",
+          "source_flag": "clean",
+          "note": "Only the DAL leg (~1.15) visible at close; no two-sided devig - result recorded, no Brier entry."
         }
       ],
       "metrics": {
-        "n": 8,
-        "brier_ours": 0.2347,
-        "brier_close": 0.2296,
+        "n": 17,
+        "brier_ours": 0.226,
+        "brier_close": 0.2264,
         "brier_coinflip": 0.25,
-        "mean_abs_fair_vs_close": 0.0092,
+        "mean_abs_fair_vs_close": 0.011,
         "max_abs_fair_vs_close": 0.0256,
-        "note": "Partial Sunday-evening settle: 8 markets with verified two-sided closes graded; 4 finals recorded close-less; 9 markets still in-progress/unknown at pessimistic-now (det-ath, sfg-sdp, min-sea, bos-lad, conn-dal, san-ame, cru-cha, cor-int, both remaining tennis) - re-grade next cycle, never guessed."
+        "note": "Fully settled over two passes (Sun evening + Wed catch-up): 17 markets graded vs closes, 5 finals recorded close-less. Both tennis matches slid to Monday on the Montreal washout and graded vs their real closes."
       }
     },
     {
@@ -958,58 +1045,58 @@
           "under": 0.4888
         }
       },
-      "settle": "pending",
+      "settle": "settled 2026-08-05 (Wed catch-up; Tue/Wed had no cards - no GO ran)",
       "decisions": [
         {
           "id": "2026-08-03-NYY-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "STL @ NYY (7:05 PM ET Mon)",
           "selection": "Yankees ML",
           "target": 1.599,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "BEST ORDER on a second straight pass card. Fair 1.560 (market 0.6326 blended 85/15 with model 0.6871 - in-house log5 tempering ESPN's aggressive 75.5% Schlittler-driven number). Fires only at 1.599+ (+2.5% bar): Schlittler (2.04 ERA) vs McGreevy with the model side and market side agreeing on the direction, disagreeing on size. Deadline caveat: 6 PM ET roster moves precede first pitch - re-check lineups before taking any fill."
+          "note": "NOT FILLED - and saved by it. Every dated Monday price moved AWAY from the 1.599 trigger (NYY -186 Sunday -> -195/-210/-217/-235 across books at close); then NYY lost 7-13 (Burleson 3 HR off Schlittler). Our fair (64.1%) sat above a close (~65%) that the result embarrassed - calibration fine, outcome brutal, order discipline kept the stake at zero."
         },
         {
           "id": "2026-08-03-NYL-ORDER",
-          "type": "order_open",
+          "type": "order_filled_paper",
           "event": "SEA @ NYL (7:00 PM ET Mon)",
           "selection": "Liberty ML",
           "target": 1.278,
-          "fill": null,
+          "fill": 1.278,
           "stake": 0,
-          "result": "pending",
+          "result": "won",
           "pnl": 0,
-          "clv_raw": null,
-          "clv_novig": null,
+          "clv_raw": -0.0318,
+          "clv_novig": -0.0536,
           "anchor": "clean",
-          "process": "pending",
+          "process": "flagged",
           "headline": false,
-          "note": "Fair 1.247 off the FanDuel-class 1.22 board; Storm on an 8-game skid. Short-price order - only worth taking at 1.278+ and small."
+          "note": "FILL CONDITION MET AND CASHED - but read the CLV. Liberty drifted -450 -> -315 close, straight through the 1.278 trigger, and won 95-83. At the conservative fill (1.278) that is NEGATIVE CLV vs the ~1.35 no-vig close: a resting limit order fills precisely when the market moves through it - adverse selection (Walters: the drift was information; the market said the Storm were live-r than our day-old board). Paper grade only, stake 0: this was a backup order, not the headline, and the user bets headline only."
         },
         {
           "id": "2026-08-03-TEX-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "SFG @ TEX (8:05 PM ET Mon)",
           "selection": "Rangers ML",
           "target": 2.03,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Near pick-em (Webb vs Quantrill); fair 1.981 with in-house log5 and SportsGrid both leaning TEX. Fires at 2.030+ (plus-money on a coin-flip our blend has at 50.5%)."
+          "note": "NOT FILLED - TEX never reached plus-money (observed -105 to -125 across books; +103 trigger unreached), then lost 1-5 with five errors behind Webb's 6 shutout IP. Second unfilled loser dodged on the day."
         },
         {
           "id": "2026-08-03-SDARI-FLAG",
@@ -1019,14 +1106,211 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "validated",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "conflict",
+          "process": "worked",
+          "headline": false,
+          "note": "Rejection fully validated: the real Monday market was near pick'em with ARI a slight HOME favorite (BetMGM/DK SDP -102 / ARI -118; Yahoo -113) - the garbled 'SD -185/ARI +737' board was wrong on side AND magnitude. ARI won 5-1. Garbage in, nothing out: correct."
+        }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-08-03-stl-nyy",
+          "our_home_fair": 0.641,
+          "source_flag": "clean",
+          "close_home_novig": 0.6561,
+          "home_won": false,
+          "final": "Cardinals 13, Yankees 7 (Burleson 3 HR)",
+          "note": "Close BetMGM -210/+170; cross-book NYY 1.43-1.51. The -186 board steamed further toward NYY all day, then NYY lost."
+        },
+        {
+          "event_id": "mlb-2026-08-03-wsh-phi",
+          "our_home_fair": 0.5744,
+          "source_flag": "clean",
+          "close_home_novig": 0.5899,
+          "home_won": true,
+          "final": "Phillies 6, Nationals 3 (Hill grand slam erases 0-3 hole)",
+          "note": "Deadline context: PHI had just added Arraez/Raley."
+        },
+        {
+          "event_id": "mlb-2026-08-03-lad-chc",
+          "our_home_fair": 0.4597,
+          "source_flag": "clean",
+          "close_home_novig": 0.4631,
+          "home_won": true,
+          "final": "Cubs 10, Dodgers 5 (15 runs - our 8.5-under lean wrong; market closed 8)",
+          "note": "CHC had just added Gausman/Holmes; LAD 4th straight loss despite the Skubal splash (completed Sat, did not pitch)."
+        },
+        {
+          "event_id": "mlb-2026-08-03-sfg-tex",
+          "our_home_fair": 0.5049,
+          "source_flag": "clean",
+          "close_home_novig": 0.5091,
+          "home_won": false,
+          "final": "Giants 5, Rangers 1 (Webb 6 shutout IP; TEX 5 errors; total 8 went under vs our over lean)"
+        },
+        {
+          "event_id": "mlb-2026-08-03-tb-col",
+          "our_home_fair": 0.3991,
+          "source_flag": "clean",
+          "close_home_novig": 0.3963,
+          "home_won": false,
+          "final": "Rays 13, Rockies 9 at Coors"
+        },
+        {
+          "event_id": "wnba-2026-08-03-sea-nyl",
+          "our_home_fair": 0.8017,
+          "source_flag": "clean",
+          "close_home_novig": 0.7405,
+          "home_won": true,
+          "final": "Liberty 95, Storm 83 (Stewart 24)",
+          "note": "Our 80.2% fair (off Sunday's derived -450 board) vs ~74% no-vig close - a 6pt miss from a day-old single-book derived line. Lesson logged."
+        },
+        {
+          "event_id": "arg-2026-08-03-ind-vel",
+          "our_home_fair": 0.3919,
+          "close_home_novig": 0.3751,
+          "home_won": true,
+          "final": "Velez 1, Independiente 0 (Aguirre 70'; Zona A lead)",
+          "source_flag": "clean",
+          "note": "Close is a best-price aggregate near kickoff - indicative; our bplay anchor was 3 days old and the home price did drift 2.40 -> ~2.63."
+        },
+        {
+          "event_id": "arg-2026-08-03-tal-pla",
+          "our_home_fair": 0.3776,
+          "close_home_novig": 0.3776,
+          "home_won": false,
+          "final": "Talleres 4, Platense 0 (away upset at ~3.3)",
+          "source_flag": "clean",
+          "note": "Betfair pre-match trio, same numbers as our anchor; drift unverifiable."
+        },
+        {
+          "event_id": "arg-2026-08-03-atu-hur",
+          "our_home_fair": 0.4735,
+          "close_home_novig": null,
+          "home_won": false,
+          "final": "Huracan 0, Atletico Tucuman 0 (draw)",
+          "source_flag": "clean",
+          "note": "Closing trio quality too low to devig (irreconcilable offshore best-prices) - result only."
+        }
+      ],
+      "metrics": {
+        "n": 8,
+        "brier_ours": 0.2312,
+        "brier_close": 0.2379,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0149,
+        "max_abs_fair_vs_close": 0.0612,
+        "note": "8 markets graded vs closes, 1 result-only. Both registered totals leaned wrong (LAD@CHC under-8.5 -> 15 runs; SFG@TEX over-8 -> 6 runs)."
+      },
+      "lessons_applied": [
+        "ADVERSE SELECTION ON LIMIT ORDERS (graded, n=1 - no parameter change yet): the only order that filled (Liberty 1.278) cashed with NEGATIVE no-vig CLV, because a drifting line fills your order exactly when the market moves through it. The two orders the market never came to would both have lost. Direction of drift is information; consider requiring re-verification (not just a resting trigger) before any favorite order is deemed filled.",
+        "Day-old derived boards decay: our WNBA fair (off Sunday night's derived -450) missed the Monday close by 6pts - the card's worst line. Single-book implied-prob boards get a freshness haircut going forward: note-only until a second graded instance (Walters rule).",
+        "Registered totals went 0-for-2 directionally (15 runs vs under-8.5 lean; 6 runs vs over-8 lean) - totals remain the model's weakest market; keep them order-only unless a two-sided fresh quote and a model total both exist.",
+        "The garbled-board flag process (reject incoherent quotes pre-slate, grade the rejection at the close) worked first try - SD@ARI. Keep flagging rather than silently dropping.",
+        "Deadline effects were real but did not invalidate any priced premise (no probable starter changed); the slate-wide caveat was the right treatment."
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "sport": "multi",
+      "mode": "degraded, MARKET-ONLY - thin honest Thursday card: 3 events / 7 markets (ATH@CIN full MLB board, HOF Game full NFL board - first football market, Braga-Dinamo Minsk UECL trio). Books post most Thursday boards day-of; 13 confirmed events excluded for partial/aggregate/unverified boards, all documented in the slate. No model probabilities: CIN records arithmetically conflicted across sources, preseason football models are noise, no dated soccer model. Three prior-day/prior-YEAR scouting traps rejected.",
+      "engine_verdict": "PASS - third straight card with nothing over the degraded 2.5% bar. Engine's top order by EV (Braga ML >= 1.141, -1.22% now) demoted from headline: extreme-favorite orders fill on cross-book noise, not market moves (Aug-3 Liberty adverse-selection lesson). Headline order: Reds ML >= 1.679 (-3.25% now). Wong teaser leg fired on the preseason HOF game (ARI +1.5 -> +7.5) and was SUPPRESSED by hand - preseason has no key-number structure; engine gating change deferred pending graded evidence (anti-tinkering).",
+      "predictions_home_fair": {
+        "uecl-2026-08-06-din-bra": 0.898,
+        "mlb-2026-08-06-ath-cin": 0.6104,
+        "nfl-2026-08-06-ari-car": 0.5112
+      },
+      "predictions_other": {
+        "mlb-2026-08-06-ath-cin:total:9.5": {
+          "under": 0.5278,
+          "over": 0.4722
+        },
+        "nfl-2026-08-06-ari-car:total:35.5": {
+          "over": 0.5,
+          "under": 0.5
+        },
+        "nfl-2026-08-06-ari-car:spread:-1.5": {
+          "home": 0.4547,
+          "away": 0.5453
+        },
+        "mlb-2026-08-06-ath-cin:spread:-1.5": {
+          "home": 0.4326,
+          "away": 0.5674
+        }
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-06-CIN-ORDER",
+          "type": "order_open",
+          "event": "ATH @ CIN (start time unverified; typical 12:35 PM ET getaway)",
+          "selection": "Reds ML",
+          "target": 1.679,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER on a market-only card. Fair 1.638 (pure power-devig of the Covers single-book board CIN -171/ATH +141; no model - CIN's published records conflict arithmetically with our verified baseline, so the in-house layer sits out rather than eat bad input). Fires at 1.679+ only. Caveats: Aug-6 pitchers unannounced at ship time; single-book anchor; verify the start time before acting - the gate clears even at the earliest plausible start, but a fill needs a live re-check of pitchers and price."
+        },
+        {
+          "id": "2026-08-06-BRAGA-ORDER",
+          "type": "order_open",
+          "event": "Dinamo Minsk @ Braga (UECL Q3 leg 1; kickoff ~3:00-3:45 PM ET assumed)",
+          "selection": "Braga ML (3-way, draw/away lose)",
+          "target": 1.141,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
           "process": "pending",
           "headline": false,
-          "note": "Only board found was 'SD -185 / ARI +737' (twice) - an incoherent pair that also contradicts ESPN Analytics 52.6% ARI. Scrape garbage, never entered the slate. Graded at Monday's close to confirm the rejection was right."
+          "note": "Engine's top order by EV, deliberately NOT the headline: on a 1.10 favorite, a 4-cent 'fill' is usually cross-book variance, not a market move - the Aug-3 Liberty grade showed resting-trigger fills on drifting lines carry negative CLV. This order requires a re-verified live quote at 1.141+, not a resting fill."
+        },
+        {
+          "id": "2026-08-06-ARI-SPREAD-ORDER",
+          "type": "order_open",
+          "event": "ARI @ CAR, Hall of Fame Game (8:00 PM ET Thu, Canton - neutral site)",
+          "selection": "Cardinals +1.5",
+          "target": 1.88,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "First football order of the season, strictly a backup. Fair 1.834 off the DK board; juice already flipped toward the ARI side (dog money). PRESEASON: starters sit, Carson Beck starts for ARI, variance extreme - star sizing only if it somehow fills."
+        },
+        {
+          "id": "2026-08-06-TEASER-FLAG",
+          "type": "flag",
+          "event": "ARI @ CAR (HOF Game)",
+          "selection": "Wong teaser leg suppressed (ARI +1.5 -> +7.5)",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "The teaser machinery is correctly football-gated, but preseason football lacks the key-number margin distribution Wong teasers exploit (starters sit; 3s and 7s aren't privileged). Leg suppressed from the slip by hand; a preseason/regular-season gate in the engine is deferred until a graded miss justifies it (Walters rule). This flag is that paper trail."
         }
       ]
     }
