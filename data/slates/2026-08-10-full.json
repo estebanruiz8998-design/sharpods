@@ -1,0 +1,430 @@
+{
+ "_provenance": "Monday 2026-08-10 card, compiled Monday ~11 AM ET (pessimistic-now verified: clock 9:26 AM ET AND evidence agree - Sunday finals fully indexed, Monday-morning-only content visible, zero Monday finals; one snippet claiming Monday finals was debunked as relabeled Sunday scores). EVERY event starts 7:00 PM ET or later - 8+ hours past pessimistic-now, gate cleared with room; one Chase Field start time is assumed-typical and stated as such. EXCLUDED: MIL@SD (Frankenstein ML pair - different books each favoring the other side), CHI@SEA WNBA (sources genuinely contradict on the favorite), ATP Jodar-Fils QF (GATE EXCLUSION: conflicting start times with a pessimistic read of 12:35 PM ET - inside the 2-hour runway, first true mid-card application of the staleness gate) plus its odds were internally muddled, Shelton-Darderi (matchup unconfirmed, no board), Banfield-Belgrano and Goias-Londrina (best-price aggregate trios), Tempo-Dream spread/total (dispersion 11.5-13.5 / 183.5-187.5). In-house log5 runs only where both records anchor Aug 4+ with verified weekend folds (TB@ATH and TEX@LAA are market-only; records agent resolved the CIN conflict - 54-58 branch was correct). Third-party models: SportsGrid (BOS@TOR), Dimers/Stats Insider (both WTA QFs). Run with --market-weight 0.85.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "primary date-stamped coherent boards (bettorsinsider, capperspicks, docsports, BetRivers, Dimers-quoted, BetUS)"
+  },
+  "consensus-b": {
+   "sharpness": 0.6,
+   "notes": "coherent pairs with an aggregate-framing caveat"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "unnamed-book single-page trios and worst-price composites"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "demoted per ledger; shop-only"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-10-bos-tor",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Blue Jays",
+   "away": "Red Sox",
+   "start_time": "2026-08-10T23:07:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.36
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.61
+      }
+     ]
+    }
+   ],
+   "note": "Rogers Centre 7:07 PM ET. Sonny Gray (14-2, 2.78) vs Taillon (5.96). BOS 5-game road streak; TOR leads season series 6-3. ML range -164/-174 across books; bettorsinsider coherent pair used."
+  },
+  {
+   "event_id": "mlb-2026-08-10-nym-atl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Braves",
+   "away": "Mets",
+   "start_time": "2026-08-10T23:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.637
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.3
+      }
+     ]
+    }
+   ],
+   "note": "Truist 7:15 PM ET. Scott vs Elder (3.00 home ERA). Two dated sources agree within 3 cents."
+  },
+  {
+   "event_id": "mlb-2026-08-10-phi-stl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Cardinals",
+   "away": "Phillies",
+   "start_time": "2026-08-10T23:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.943
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.909
+      }
+     ]
+    }
+   ],
+   "note": "Busch 7:45 PM ET. Painter vs Dobbins. TRUE PICK'EM with a favorite dispute (BetRivers PHI -110/STL -106 vs CBS STL -109) - coherent BetRivers pair used, dispute flagged."
+  },
+  {
+   "event_id": "mlb-2026-08-10-bal-min",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Twins",
+   "away": "Orioles",
+   "start_time": "2026-08-10T23:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-b",
+       "side": "home",
+       "decimal_odds": 1.962
+      },
+      {
+       "book": "consensus-b",
+       "side": "away",
+       "decimal_odds": 1.87
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-b",
+       "side": "over",
+       "line": 8.5,
+       "decimal_odds": 1.893
+      },
+      {
+       "book": "consensus-b",
+       "side": "under",
+       "line": 8.5,
+       "decimal_odds": 1.917
+      }
+     ]
+    }
+   ],
+   "note": "Target Field 7:40 PM ET. Rogers vs Kremer (1.80 ERA since MIN debut). BetRivers-attributed coherent pair framed as 'best lines' - consensus-b grade with caution."
+  },
+  {
+   "event_id": "mlb-2026-08-10-tb-ath",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Athletics",
+   "away": "Rays",
+   "start_time": "2026-08-11T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.35
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.637
+      }
+     ]
+    }
+   ],
+   "note": "Sutter Health Park 9:40 PM ET. Peralta (deadline pickup) vs Lopez. Two dated sources agree TB -157. NO in-house layer: ATH record anchor is Aug 1 (stalest) - market-only."
+  },
+  {
+   "event_id": "mlb-2026-08-10-hou-sf",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Giants",
+   "away": "Astros",
+   "start_time": "2026-08-11T01:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.35
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.633
+      }
+     ]
+    }
+   ],
+   "note": "Oracle 9:45 PM ET. Wesneski vs Tidwell. Single-source coherent pair (capperspicks)."
+  },
+  {
+   "event_id": "mlb-2026-08-10-tex-laa",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Angels",
+   "away": "Rangers",
+   "start_time": "2026-08-11T01:38:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.847
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "line": -1.5,
+       "decimal_odds": 2.36
+      },
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "line": 1.5,
+       "decimal_odds": 1.621
+      }
+     ]
+    }
+   ],
+   "note": "Angel Stadium 9:38 PM ET. Gore vs Detmers. Quotes are the CONSERVATIVE end of cross-book ranges (worst-price composite overstates hold - safe direction, never fabricates value) - consensus-c grade. NO in-house layer: both records anchored Aug 2."
+  },
+  {
+   "event_id": "mlb-2026-08-10-kc-lad",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Dodgers",
+   "away": "Royals",
+   "start_time": "2026-08-11T02:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.625
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.32
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 1.351
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 3.704
+      }
+     ]
+    }
+   ],
+   "note": "Dodger Stadium 10:10 PM ET. SKUBAL'S HOME DEBUT vs rookie Cameron. docsports pair -160/+132; Polymarket 74c/27c shop-only. Covers public consensus 70% LAD (context, not model)."
+  },
+  {
+   "event_id": "mlb-2026-08-10-col-az",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Diamondbacks",
+   "away": "Rockies",
+   "start_time": "2026-08-11T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.559
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.5
+      }
+     ]
+    }
+   ],
+   "note": "Chase Field, evening (exact time not captured; typical 9:40 PM ET - even a 6:40 start clears the gate by 6+ hours from a noon ship). Hughes vs Soroka."
+  },
+  {
+   "event_id": "wta-2026-08-10-shn-swi",
+   "sport": "tennis",
+   "league": "WTA Toronto QF",
+   "home": "Swiatek",
+   "away": "Shnaider",
+   "start_time": "2026-08-10T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.35
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 3.45
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET. Book range Swiatek -285/-300, Shnaider +225/+245 - Dimers-quoted pair used. Dimers 10k-sim: Swiatek 74%. Sabalenka is already OUT (lost R16) - no markets involving her exist."
+  },
+  {
+   "event_id": "wta-2026-08-10-ale-svi",
+   "sport": "tennis",
+   "league": "WTA Toronto QF",
+   "home": "Svitolina",
+   "away": "Alexandrova",
+   "start_time": "2026-08-11T01:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.38
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 3.1
+      }
+     ]
+    }
+   ],
+   "note": "Night session (~9 PM ET, follows the 7 PM QF). BetUS two-sided board; range across books 1.36-1.40 / 3.00-3.125. Alexandrova beat world No. 1 Sabalenka in R16. Stats Insider 66% / Dimers 67% Svitolina."
+  },
+  {
+   "event_id": "wnba-2026-08-10-tor-atl",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Dream",
+   "away": "Tempo",
+   "start_time": "2026-08-11T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-b",
+       "side": "home",
+       "decimal_odds": 1.13
+      },
+      {
+       "book": "consensus-b",
+       "side": "away",
+       "decimal_odds": 5.9
+      }
+     ]
+    }
+   ],
+   "note": "8:00 PM ET, Atlanta. Two Monday-dated articles agree ATL -769/TOR +490; extreme favorite (same class as Braga - order requires re-verified live quote, never a resting fill). Spread quoted 11.5-13.5 and total 183.5-187.5 across sources - dispersion too wide, NOT priced."
+  },
+  {
+   "event_id": "arg-2026-08-10-cc-uni",
+   "sport": "soccer",
+   "league": "Argentina Clausura fecha 4",
+   "home": "Union Santa Fe",
+   "away": "Central Cordoba SdE",
+   "start_time": "2026-08-11T00:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.83
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 2.92
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.6
+      }
+     ]
+    }
+   ],
+   "note": "Estadio 15 de Abril 8:15 PM ET. Coherent single-page trio (hold 8.0%) but quoting book unnamed - consensus-c. Away side slight favorite at Union's home - flagged for sanity, matches recent form."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-10-bos-tor:moneyline:home": 0.4578,
+  "mlb-2026-08-10-bos-tor:moneyline:away": 0.5422,
+  "mlb-2026-08-10-nym-atl:moneyline:home": 0.708,
+  "mlb-2026-08-10-nym-atl:moneyline:away": 0.292,
+  "mlb-2026-08-10-phi-stl:moneyline:home": 0.5063,
+  "mlb-2026-08-10-phi-stl:moneyline:away": 0.4937,
+  "mlb-2026-08-10-bal-min:moneyline:home": 0.5439,
+  "mlb-2026-08-10-bal-min:moneyline:away": 0.4561,
+  "mlb-2026-08-10-hou-sf:moneyline:home": 0.4461,
+  "mlb-2026-08-10-hou-sf:moneyline:away": 0.5539,
+  "mlb-2026-08-10-kc-lad:moneyline:home": 0.7137,
+  "mlb-2026-08-10-kc-lad:moneyline:away": 0.2863,
+  "mlb-2026-08-10-col-az:moneyline:home": 0.6757,
+  "mlb-2026-08-10-col-az:moneyline:away": 0.3243,
+  "wta-2026-08-10-shn-swi:moneyline:home": 0.74,
+  "wta-2026-08-10-shn-swi:moneyline:away": 0.26,
+  "wta-2026-08-10-ale-svi:moneyline:home": 0.665,
+  "wta-2026-08-10-ale-svi:moneyline:away": 0.335
+ }
+}

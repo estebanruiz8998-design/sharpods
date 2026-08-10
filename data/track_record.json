@@ -1357,6 +1357,107 @@
         "First football card graded: coin-flip fair (51.1%) vs close (52.9%) was fine, but everything else about preseason (63 points on a 34.5 total, walk-off scramble margin) confirms preseason football is priced-but-distrusted. Teaser suppression stands.",
         "Extreme-favorite trios devig imprecisely at the tails (Braga 89.8% fair vs 92.5% anchor no-vig) - known limitation, keep such orders re-verify-only."
       ]
+    },
+    {
+      "date": "2026-08-10",
+      "sport": "multi",
+      "mode": "degraded - Monday night card shipped Monday ~11 AM ET under the gate (every start 7 PM ET+, 8+ hours clear): 13 events / 15 markets (9 MLB, 2 WTA Toronto QFs, WNBA Tempo@Dream ML, Argentina Union-C.Cordoba trio). In-house log5 only where both records anchor Aug 4+ (TB@ATH, TEX@LAA market-only); CIN records conflict resolved (54-58 branch correct). First mid-card gate exclusion: ATP Jodar-Fils QF (pessimistic start 12:35 PM ET, inside the runway). Excluded: MIL@SD Frankenstein pair, CHI@SEA favorite contradiction, 2 aggregate soccer trios, Tempo@Dream spread/total dispersion.",
+      "engine_verdict": "PASS - fourth straight card, nothing over the 2.5% bar. REFUSED: KC@LAD moneyline (Skubal home debut) - book LAD 1.625 vs Polymarket 1.351 = -12.95% cross-source hold, conflict rule (5th application). Top orders: Braves ML >= 1.684 (EV now -0.34%), Swiatek ML >= 1.403 (-1.38%), D-backs ML >= 1.624 (-1.59%).",
+      "predictions_home_fair": {
+        "mlb-2026-08-10-nym-atl": 0.6088,
+        "wta-2026-08-10-shn-swi": 0.7305,
+        "mlb-2026-08-10-col-az": 0.6313,
+        "wnba-2026-08-10-tor-atl": 0.8693,
+        "mlb-2026-08-10-bal-min": 0.4957,
+        "wta-2026-08-10-ale-svi": 0.6999,
+        "mlb-2026-08-10-hou-sf": 0.411,
+        "mlb-2026-08-10-phi-stl": 0.497,
+        "mlb-2026-08-10-bos-tor": 0.4078,
+        "mlb-2026-08-10-tex-laa": 0.4789,
+        "mlb-2026-08-10-tb-ath": 0.4057,
+        "arg-2026-08-10-cc-uni": 0.3265
+      },
+      "predictions_other": {
+        "mlb-2026-08-10-tex-laa:spread:1.5": {
+          "home": 0.5985,
+          "away": 0.4015
+        },
+        "mlb-2026-08-10-bal-min:total:8.5": {
+          "over": 0.5034,
+          "under": 0.4966
+        }
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-10-ATL-ORDER",
+          "type": "order_open",
+          "event": "NYM @ ATL (7:15 PM ET Mon)",
+          "selection": "Braves ML",
+          "target": 1.684,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER. Fair 1.643 (market 0.590 blended 85/15 with in-house log5 0.708 - ATL 69-45 vs NYM 49-66, model and market agree on direction). Fires at 1.684+ (needs a 4-5 cent drift from -157). Scott vs Elder (3.00 home ERA). If it fills: $92 at quarter-Kelly (0.92%), returns $155. Re-verify the price live - order, not a bet."
+        },
+        {
+          "id": "2026-08-10-SWIATEK-ORDER",
+          "type": "order_open",
+          "event": "Shnaider vs Swiatek, WTA Toronto QF (7:00 PM ET Mon)",
+          "selection": "Swiatek ML",
+          "target": 1.403,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Fair 1.369 (market 0.729 blended with Dimers 74%). Book range already spans -285/-300; a 1.403 (+/-248) print at a real book fires it. Short-price order - small sizing."
+        },
+        {
+          "id": "2026-08-10-AZ-ORDER",
+          "type": "order_open",
+          "event": "COL @ AZ (Chase Field, evening - exact time TBC)",
+          "selection": "Diamondbacks ML",
+          "target": 1.624,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Fair 1.584 (market 0.623 + in-house 0.676 - AZ 63-56 vs COL 45-71). Verify the start time before acting; even the earliest plausible window clears the gate."
+        },
+        {
+          "id": "2026-08-10-KCLAD-REFUSAL",
+          "type": "refusal",
+          "event": "KC @ LAD (10:10 PM ET Mon - Skubal home debut)",
+          "selection": "Moneyline refused (conflict rule)",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "conflict",
+          "process": "pending",
+          "headline": false,
+          "note": "Book prices LAD 1.625 (-160); Polymarket pays 1.351 (74c) on the same side - cross-source hold -12.95%, the widest conflict we've recorded. Degraded anchor + negative hold = unpriceable, never an arb (rule now applied a 5th time; 4-for-4 validated so far). The hype game is exactly where quote quality dies. Graded at Monday's close."
+        }
+      ]
     }
   ]
 }
