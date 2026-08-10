@@ -1242,58 +1242,58 @@
           "away": 0.5674
         }
       },
-      "settle": "pending",
+      "settle": "settled 2026-08-10 (Mon); all 3 events final; all 3 orders unfilled, $0 P&L",
       "decisions": [
         {
           "id": "2026-08-06-CIN-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "ATH @ CIN (start time unverified; typical 12:35 PM ET getaway)",
           "selection": "Reds ML",
           "target": 1.679,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER on a market-only card. Fair 1.638 (pure power-devig of the Covers single-book board CIN -171/ATH +141; no model - CIN's published records conflict arithmetically with our verified baseline, so the in-house layer sits out rather than eat bad input). Fires at 1.679+ only. Caveats: Aug-6 pitchers unannounced at ship time; single-book anchor; verify the start time before acting - the gate clears even at the earliest plausible start, but a fill needs a live re-check of pitchers and price."
+          "note": "NOT FILLED: CIN drifted our way (-171 open -> -158 at first pitch) but never reached the -147 (1.679) bar; best documented 1.633. CIN won 6-5, and a 1.679 fill would have carried +2.8% raw CLV vs the close - right side, right price demand, market never paid it. Reverse line movement toward the road dog noted pregame; the bar held anyway."
         },
         {
           "id": "2026-08-06-BRAGA-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Dinamo Minsk @ Braga (UECL Q3 leg 1; kickoff ~3:00-3:45 PM ET assumed)",
           "selection": "Braga ML (3-way, draw/away lose)",
           "target": 1.141,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Engine's top order by EV, deliberately NOT the headline: on a 1.10 favorite, a 4-cent 'fill' is usually cross-book variance, not a market move - the Aug-3 Liberty grade showed resting-trigger fills on drifting lines carry negative CLV. This order requires a re-verified live quote at 1.141+, not a resting fill."
+          "note": "NOT FILLED: Braga sat 1.10-1.11 everywhere pre-match; the 1.141 re-verified quote never existed. Braga won 1-0. The demotion logic validated exactly: on extreme favorites the only 'fills' available are cross-book noise, and even that noise stayed under 4 cents."
         },
         {
           "id": "2026-08-06-ARI-SPREAD-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "ARI @ CAR, Hall of Fame Game (8:00 PM ET Thu, Canton - neutral site)",
           "selection": "Cardinals +1.5",
           "target": 1.88,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "First football order of the season, strictly a backup. Fair 1.834 off the DK board; juice already flipped toward the ARI side (dog money). PRESEASON: starters sit, Carson Beck starts for ARI, variance extreme - star sizing only if it somehow fills."
+          "note": "NOT FILLED by one cent of juice: ARI +1.5 reached ~-115 game-day vs the -114 bar - and then LOST (CAR won by exactly 3 on the final play). The near-miss dodged a loser; fill discipline is net positive on the card (two would-have-won fills never reached target, the one would-have-lost fill missed by a cent)."
         },
         {
           "id": "2026-08-06-TEASER-FLAG",
@@ -1303,15 +1303,59 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "validated",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "The teaser machinery is correctly football-gated, but preseason football lacks the key-number margin distribution Wong teasers exploit (starters sit; 3s and 7s aren't privileged). Leg suppressed from the slip by hand; a preseason/regular-season gate in the engine is deferred until a graded miss justifies it (Walters rule). This flag is that paper trail."
+          "note": "Suppression validated on process with an ironic outcome: the suppressed leg (ARI +1.5 -> +7.5) would have back-doored a win (lost by 3), but the game produced 63 points against a 34.5 total - preseason margins have NO key-number structure, which is precisely why the leg had no business existing. Note-only; engine gating change still deferred (Walters rule)."
         }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-08-06-ath-cin",
+          "our_home_fair": 0.6104,
+          "source_flag": "clean",
+          "close_home_novig": 0.6038,
+          "home_won": true,
+          "final": "Reds 6, Athletics 5 (De La Cruz leadoff HR, 4 CIN homers; sweep)",
+          "note": "Close -158/+146 at first pitch (drifted from our -171 board). Run line: CIN won by 1 - our ATH +1.5 cover lean (56.7%) was right. Total closed 9.5, went OVER (11 runs) vs our under lean - third straight totals directional miss."
+        },
+        {
+          "event_id": "nfl-2026-08-06-ari-car",
+          "our_home_fair": 0.5112,
+          "source_flag": "clean",
+          "close_home_novig": 0.5302,
+          "home_won": true,
+          "final": "Panthers 33, Cardinals 30 (Haynes King walk-off TD scramble; 63 pts vs 34.5 total)",
+          "note": "Closing ML from Polymarket cents (54c/48c, ~2% hold) - no book closing ML indexed; flagged, not fabricated. Spread closed CAR -1.5 ~-105; CAR covered by 1.5 exactly - our ARI-cover lean (54.5%) was wrong. First football fair line: 51.1% home vs ~52.9% no-vig close."
+        },
+        {
+          "event_id": "uecl-2026-08-06-din-bra",
+          "our_home_fair": 0.898,
+          "close_home_novig": 0.898,
+          "home_won": true,
+          "final": "Braga 1, Dinamo Minsk 0 (Horta pen 45'; UECL Q3 leg 1)",
+          "source_flag": "clean",
+          "note": "Close = the same 1xBet trio (no timestamped closing snapshot indexed); our 89.8% vs ~92.5% no-vig - extreme-favorite tails devig imprecisely."
+        }
+      ],
+      "metrics": {
+        "n": 3,
+        "brier_ours": 0.1337,
+        "brier_close": 0.1294,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0085,
+        "max_abs_fair_vs_close": 0.019,
+        "note": "3 markets graded vs closes (one close is prediction-market-derived, flagged). Fri Aug 7 - Sun Aug 9: no cards ran (no GO) - documented gap, nothing pending."
+      },
+      "lessons_applied": [
+        "Fill discipline graded net positive across the card: the two orders that would have cashed (CIN +2.8% CLV counterfactual, Braga) never reached target, and the one that came within a cent (ARI +1.5) would have lost. The bar is doing its job in both directions - no loosening.",
+        "Totals: third consecutive directional miss (CIN over 9.5 vs our under lean). Standing rule reinforced - totals stay order-only and never headline.",
+        "First football card graded: coin-flip fair (51.1%) vs close (52.9%) was fine, but everything else about preseason (63 points on a 34.5 total, walk-off scramble margin) confirms preseason football is priced-but-distrusted. Teaser suppression stands.",
+        "Extreme-favorite trios devig imprecisely at the tails (Braga 89.8% fair vs 92.5% anchor no-vig) - known limitation, keep such orders re-verify-only."
       ]
     }
   ]
