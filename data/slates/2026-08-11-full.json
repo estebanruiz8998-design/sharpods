@@ -1,0 +1,475 @@
+{
+ "_provenance": "Tuesday 2026-08-11 card, compiled Monday ~11:30 PM ET (pessimistic-now verified: clock and evidence agree - Monday early finals indexed, West Coast games live, Tuesday content is previews-only). Every event starts Tuesday 1:30 PM ET or later = 14+ hours past pessimistic-now; two assumed/conflicted kickoff hours stated as such. SIX same-series Monday-price traps rejected by the scout (BOS@TOR incl. the Cease flip, CHC@WSH, PHI@STL, TEX@LAA, CIN@CWS, MIL@SD) - those games carry NULL boards and are excluded rather than backfilled. Also excluded: BAL@MIN (Aug-10 board only), both late WNBA games + Liberty@Fever (no/partial dated boards), both rain-moved ATP QFs (12:30 PM ET session inside/near the gate + stale aggregate quotes), Osaka-Rybakina and Mensik-Shelton (one-sided), Charlotte/Tigres/Cincy/Minnesota/Fluminense/Talleres soccer (partial or unpriced). Two venue conflicts resolved by MLB.com schedule (CHC at WSH; NYM at ATL - the FOX Citi Field claim was wrong). Models: SportsGrid where Aug-11-dated; in-house log5 on dated matchup-page records. Run with --market-weight 0.85. DRIFT-CANCEL RULE now standing: any order trigger crossed by market drift is re-priced before betting.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "Aug-11-dated coherent boards (Covers, SportsGrid, SBR, bet365-sourced UEFA pages)"
+  },
+  "consensus-b": {
+   "sharpness": 0.6,
+   "notes": "Aug-11-dated articles, single coherent pair"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "Aug-11-titled pages with same-series or provenance caveats"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "demoted per ledger; shop-only"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-11-sea-nyy",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Yankees",
+   "away": "Mariners",
+   "start_time": "2026-08-11T23:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.77
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.1
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -1.5,
+       "decimal_odds": 2.68
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 1.5,
+       "decimal_odds": 1.49
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 8.5,
+       "decimal_odds": 1.96
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 8.5,
+       "decimal_odds": 1.85
+      }
+     ]
+    }
+   ],
+   "note": "Fullest board (Covers 369281, Aug-11 titled). Woo vs TBD NYY. 7:05 PM ET Yankee Stadium (B-R preview confirms)."
+  },
+  {
+   "event_id": "mlb-2026-08-11-pit-mia",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Marlins",
+   "away": "Pirates",
+   "start_time": "2026-08-11T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.04
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.82
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 7.5,
+       "decimal_odds": 2.02
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 7.5,
+       "decimal_odds": 1.81
+      }
+     ]
+    }
+   ],
+   "note": "Covers + SportsGrid both Aug-11 dated. Away favorite; SportsGrid PIT 55%. 6:40 PM ET loanDepot park."
+  },
+  {
+   "event_id": "mlb-2026-08-11-nym-atl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Braves",
+   "away": "Mets",
+   "start_time": "2026-08-11T23:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.55
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.55
+      }
+     ]
+    }
+   ],
+   "note": "FOX Aug-11 board (ATL -183, Morton vs Megill) - but the same article mis-stated the venue as Citi Field; MLB.com schedule confirms Truist Park mid-series, home=ATL. Provenance medium, consensus-c, EV bar protects. RL/total legs possibly Aug-10 blends - not priced."
+  },
+  {
+   "event_id": "mlb-2026-08-11-cle-det",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Tigers",
+   "away": "Guardians",
+   "start_time": "2026-08-11T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.13
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.85
+      }
+     ]
+    }
+   ],
+   "note": "ActionNetwork Aug-11-titled page (CLE -117 away favorite); same-series verify-before-bet flag. Comerica 6:40 PM ET."
+  },
+  {
+   "event_id": "mlb-2026-08-11-col-az",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Diamondbacks",
+   "away": "Rockies",
+   "start_time": "2026-08-12T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.56
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.45
+      }
+     ]
+    }
+   ],
+   "note": "AN Aug-11-titled page (ARI -180, Hughes vs Soroka); same-series risk flagged. Chase Field 9:40 PM ET."
+  },
+  {
+   "event_id": "mlb-2026-08-11-tb-ath",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Athletics",
+   "away": "Rays",
+   "start_time": "2026-08-12T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-b",
+       "side": "home",
+       "decimal_odds": 2.36
+      },
+      {
+       "book": "consensus-b",
+       "side": "away",
+       "decimal_odds": 1.68
+      }
+     ]
+    }
+   ],
+   "note": "NBC/Yahoo explicitly Aug-11 (TB -146/ATH +136; Peralta 5.37 ERA vs Lopez). Total 9.0 number-only, not priced. ATH record anchor now aug9-approx - in-house runs with a staleness note."
+  },
+  {
+   "event_id": "mlb-2026-08-11-hou-sf",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Giants",
+   "away": "Astros",
+   "start_time": "2026-08-12T01:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-b",
+       "side": "home",
+       "decimal_odds": 2.34
+      },
+      {
+       "book": "consensus-b",
+       "side": "away",
+       "decimal_odds": 1.62
+      }
+     ]
+    }
+   ],
+   "note": "TeamRankings/SportsGrid Aug-11 (HOU -162; Wesneski vs Tidwell, snippet ties pitchers+odds to Tuesday 9:45 PM Oracle). U8.5 one-sided, not priced."
+  },
+  {
+   "event_id": "mlb-2026-08-11-kc-lad",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Dodgers",
+   "away": "Royals",
+   "start_time": "2026-08-12T02:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.35
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 3.7
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 1.389
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 3.571
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -1.5,
+       "decimal_odds": 1.79
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 1.5,
+       "decimal_odds": 2.22
+      }
+     ]
+    }
+   ],
+   "note": "Covers Aug-11 board LAD -285/KC +270; Polymarket Aug-11 URL 72c/28c. Book and PM nearly agree today (unlike Monday's 15-pt chasm) but cross-source best prices still net a small negative hold - the engine rules on it consistently. 10:10 PM ET."
+  },
+  {
+   "event_id": "lc-2026-08-11-pum-clb",
+   "sport": "soccer",
+   "league": "Leagues Cup MD3",
+   "home": "Columbus Crew",
+   "away": "Pumas UNAM",
+   "start_time": "2026-08-11T23:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.571
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 4.33
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 4.75
+      }
+     ]
+    }
+   ],
+   "note": "SBR Aug-11 trio (-175/+333/+375), hold ~5.7%. ScottsMiracle-Gro Field 7:30 PM ET. 90-minute 1X2 (Leagues Cup draws go to pens - draw leg is the 90-min draw)."
+  },
+  {
+   "event_id": "lc-2026-08-11-jua-rsl",
+   "sport": "soccer",
+   "league": "Leagues Cup MD3",
+   "home": "Real Salt Lake",
+   "away": "FC Juarez",
+   "start_time": "2026-08-12T01:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.8
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 3.45
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 5.0
+      }
+     ]
+    }
+   ],
+   "note": "Sportskeeda/Squawka Aug-11 trio (-125/+245/+400), hold ~8.5%. America First Field; Tuesday confirmed by club, HOUR unverified (~9:30 PM ET assumed; even a 7 PM start clears the gate by 19+ hours). Kalshi trio noted shop-only, not used as model."
+  },
+  {
+   "event_id": "ucl-2026-08-11-spa-lyo",
+   "sport": "soccer",
+   "league": "UCL Q3 leg 2",
+   "home": "Lyon",
+   "away": "Sparta Prague",
+   "start_time": "2026-08-11T19:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.42
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 4.46
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 6.25
+      }
+     ]
+    }
+   ],
+   "note": "Mightytips/Wincomparator 11.08 board (bet365-sourced), hold ~5.9%. Groupama Stadium 3 PM ET. Aggregate context: Sparta lead 2-1 - a DRAW eliminates Lyon; 90-min 1X2 priced, advancement not."
+  },
+  {
+   "event_id": "ucl-2026-08-11-fen-stu",
+   "sport": "soccer",
+   "league": "UCL Q3 leg 2",
+   "home": "Sturm Graz",
+   "away": "Fenerbahce",
+   "start_time": "2026-08-11T17:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 4.0
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 3.9
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.9
+      }
+     ]
+    }
+   ],
+   "note": "Dailysports/Mightytips 11.08 board, hold ~6.3%. Graz; kickoff conflict 1:30 vs 2:30 PM ET - pessimistic 1:30 PM used, still 14+ hours past ship. Fener lead 2-0 agg (through on any draw)."
+  },
+  {
+   "event_id": "wta-2026-08-11-gau-ben",
+   "sport": "tennis",
+   "league": "WTA Toronto QF",
+   "home": "Bencic",
+   "away": "Gauff",
+   "start_time": "2026-08-11T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.4
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.7
+      }
+     ]
+    }
+   ],
+   "note": "Telecomasia Aug-11 pair (Gauff 1.70/Bencic 2.40) - aggregate-flavored, no named book, listing order varies across sources (odds keyed to named players; second-listed-as-home convention applied to the source used). Gauff leads H2H 6-2. 7 PM ET Centre Court."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-11-sea-nyy:moneyline:home": 0.5789,
+  "mlb-2026-08-11-sea-nyy:moneyline:away": 0.4211,
+  "mlb-2026-08-11-pit-mia:moneyline:home": 0.5054,
+  "mlb-2026-08-11-pit-mia:moneyline:away": 0.4946,
+  "mlb-2026-08-11-nym-atl:moneyline:home": 0.6992,
+  "mlb-2026-08-11-nym-atl:moneyline:away": 0.3008,
+  "mlb-2026-08-11-cle-det:moneyline:home": 0.5271,
+  "mlb-2026-08-11-cle-det:moneyline:away": 0.4729,
+  "mlb-2026-08-11-col-az:moneyline:home": 0.674,
+  "mlb-2026-08-11-col-az:moneyline:away": 0.326,
+  "mlb-2026-08-11-tb-ath:moneyline:home": 0.3529,
+  "mlb-2026-08-11-tb-ath:moneyline:away": 0.6471,
+  "mlb-2026-08-11-hou-sf:moneyline:home": 0.4505,
+  "mlb-2026-08-11-hou-sf:moneyline:away": 0.5495
+ }
+}

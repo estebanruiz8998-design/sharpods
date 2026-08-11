@@ -59,6 +59,12 @@ cycle at maximum capacity, exactly like the 2026-08-01 complete run:
 - **Prediction-market fills decay in minutes** (Timbers ask moved past the
   45c stand-down before bet time): the printed stand-down line is binding and
   the user's execution report is the only fill oracle.
+- **Drift-fills are re-priced, never auto-taken**: both graded
+  resting-trigger fills (Liberty Aug-3, Braves headline Aug-10) arrived via
+  line drift and carried negative CLV - the second one lost. A market that
+  drifts through an order's trigger has changed the premise: re-run the
+  blend at the drifted number and stand down unless EV still clears. Say
+  this on every slip that carries orders.
 - **Venue/home verification**: confirm home team by venue/ticketing, not
   article phrasing (Liberty AT Phoenix reversal; TEX@SEA mis-pairing).
 - **Sport gating**: key-number machinery (Wong teasers, NFL margin middles)
