@@ -1,0 +1,597 @@
+{
+ "_provenance": "Wednesday 2026-08-12 evening card, compiled ~2:30 PM ET (pessimistic-now 3:45 PM ET; clock and evidence agree - Tuesday fully final-indexed, Wednesday content is previews/live-shells only). EVENING-ONLY by gate rule: five afternoon getaway games (BAL@MIN 1:40, PHI@STL 2:15, TB@ATH 3:05, COL@AZ 3:40, HOU@SF 3:45 ET) are gate-excluded and listed, not priced. MIL@SD EXCLUDED on a genuine 2-2 start-time conflict (4:10 PT vs 4:10 ET) - pessimistic rule bars it. Also excluded: Shelton-Tien and Gauff-Rybakina semis (no two-sided book pair), Lynx@Fire (ML range only), Platense-Coquimbo (book-vs-model contradiction + suspiciously thin holds), Cruzeiro-Flamengo (draw leg never surfaced), Toluca-Dallas (Kalshi-only), UEFA afternoon legs (inside the gate). Copa do Brasil premise correction logged: those R16 legs finished Aug 5-7; tonight's Brazilian games are LIBERTADORES. LISTED-PITCHER RULE now standing: every MLB order names its assumed starters; a change voids the premise. DRIFT-CANCEL standing on all orders. Models: BetMGM/FanDuel/Dimers where Aug-12-dated; in-house log5 on printed matchup-page records; --market-weight 0.85.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "Aug-12-dated single-book boards (BetMGM, FanDuel, bet365, ESPN, SBR)"
+  },
+  "consensus-b": {
+   "sharpness": 0.6,
+   "notes": "cross-corroborated dated pairs"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated boards carrying pitcher/total conflicts"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "demoted per ledger; shop-only (none surfaced tonight)"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-12-cle-det",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Tigers",
+   "away": "Guardians",
+   "start_time": "2026-08-12T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.8
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.05
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET Comerica. PITCHERS: Griffin (CLE, 12-4) vs Valdez (DET). BetMGM -125/+105."
+  },
+  {
+   "event_id": "mlb-2026-08-12-pit-mia",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Marlins",
+   "away": "Pirates",
+   "start_time": "2026-08-12T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.833
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.0
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET loanDepot. PITCHERS per Dimers Aug-12: Mlodzinski vs Junk - one conflicting Skenes/Perez snippet traced to adjacent days; verify before any fill. Total conflicted (8.5 vs 7) - not priced. No printed records - third-party model only."
+  },
+  {
+   "event_id": "mlb-2026-08-12-chc-wsh",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Nationals",
+   "away": "Cubs",
+   "start_time": "2026-08-12T22:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.34
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.633
+      }
+     ]
+    }
+   ],
+   "note": "6:45 PM ET Nationals Park. PITCHERS: Peterson (CHC) vs Kent (WSH, debut-thin sample). Total 9.5 number-only."
+  },
+  {
+   "event_id": "mlb-2026-08-12-sea-nyy",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Yankees",
+   "away": "Mariners",
+   "start_time": "2026-08-12T23:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.82
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.04
+      }
+     ]
+    }
+   ],
+   "note": "7:05 PM ET Yankee Stadium. PITCHERS: Miller vs Warren. Public consensus 68% on the SEA dog. RL/total one-sided - not priced."
+  },
+  {
+   "event_id": "mlb-2026-08-12-bos-tor",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Blue Jays",
+   "away": "Red Sox",
+   "start_time": "2026-08-12T23:07:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.05
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.769
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": -1.5,
+       "decimal_odds": 2.39
+      },
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": 1.5,
+       "decimal_odds": 1.595
+      }
+     ]
+    }
+   ],
+   "note": "7:07 PM ET Rogers Centre. PITCHERS: Suarez (BOS) vs Soriano (TOR). BOS on a 4-game skid."
+  },
+  {
+   "event_id": "mlb-2026-08-12-nym-atl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Braves",
+   "away": "Mets",
+   "start_time": "2026-08-12T23:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.641
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.44
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -1.5,
+       "decimal_odds": 2.28
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 1.5,
+       "decimal_odds": 1.649
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 8.5,
+       "decimal_odds": 1.87
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 8.5,
+       "decimal_odds": 1.952
+      }
+     ]
+    }
+   ],
+   "note": "7:15 PM ET Truist, fullest board (FanDuel). PITCHERS: Thornton (NYM, 2.52) vs Mahle (ATL, 4.83) - ERA edge to the road dog going for a sweep."
+  },
+  {
+   "event_id": "mlb-2026-08-12-cin-cws",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "White Sox",
+   "away": "Reds",
+   "start_time": "2026-08-12T23:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.694
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.23
+      }
+     ]
+    }
+   ],
+   "note": "7:40 PM ET Rate Field. PITCHERS: Lowder (CIN) vs Castillo (CWS). Total 9 number-only."
+  },
+  {
+   "event_id": "mlb-2026-08-12-tex-laa",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Angels",
+   "away": "Rangers",
+   "start_time": "2026-08-13T02:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.1
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.769
+      }
+     ]
+    }
+   ],
+   "note": "10:10 PM ET Angel Stadium. PITCHERS: Quantrill (TEX) vs Klassen (LAA, 7.27). Total unnumbered - not priced."
+  },
+  {
+   "event_id": "mlb-2026-08-12-kc-lad",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Dodgers",
+   "away": "Royals",
+   "start_time": "2026-08-13T02:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.444
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.85
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 9.0,
+       "decimal_odds": 1.82
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 9.0,
+       "decimal_odds": 2.0
+      }
+     ]
+    }
+   ],
+   "note": "10:10 PM ET Dodger Stadium, night 3 of the series (both refusals validated). No Polymarket quote surfaced tonight - clean single-book board, priceable. PITCHERS: Lynch (KC, 2.45!) vs Lauer (LAD, 4.89) - the ERA edge runs against the -225 tag; in-house sees it too."
+  },
+  {
+   "event_id": "atp-2026-08-12-jod-nak",
+   "sport": "tennis",
+   "league": "ATP Montreal SF",
+   "home": "Nakashima",
+   "away": "Jodar",
+   "start_time": "2026-08-12T22:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.88
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.481
+      }
+     ]
+    }
+   ],
+   "note": "6:00 PM ET - tightest gate margin on the card (2h15m at pessimistic-now; re-verified at ship). Dimers-quoted pair -208/+188; Dimers sim 59% Jodar vs 65% implied - the model leans Nakashima relative to price."
+  },
+  {
+   "event_id": "wta-2026-08-12-svi-swi",
+   "sport": "tennis",
+   "league": "WTA Toronto SF",
+   "home": "Swiatek",
+   "away": "Svitolina",
+   "start_time": "2026-08-12T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.4
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 3.0
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET Centre Court, bet365 two-sided (-250/+200). Svitolina won both 2026 meetings (both in 3) and rides a 10-match streak; Dimers still 68% Swiatek."
+  },
+  {
+   "event_id": "wnba-2026-08-12-tor-dal",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Wings",
+   "away": "Tempo",
+   "start_time": "2026-08-13T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.235
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 4.25
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -9.5,
+       "decimal_odds": 1.952
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 9.5,
+       "decimal_odds": 1.87
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 184.5,
+       "decimal_odds": 1.909
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 184.5,
+       "decimal_odds": 1.909
+      }
+     ]
+    }
+   ],
+   "note": "8:00 PM ET Arlington, full FanDuel board. Spread moved 8.5 -> 9.5 across the day - re-verify at bet time."
+  },
+  {
+   "event_id": "wnba-2026-08-12-chi-gsv",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Valkyries",
+   "away": "Sky",
+   "start_time": "2026-08-13T02:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-b",
+       "side": "home",
+       "decimal_odds": 1.23
+      },
+      {
+       "book": "consensus-b",
+       "side": "away",
+       "decimal_odds": 4.2
+      }
+     ]
+    }
+   ],
+   "note": "10:00 PM ET Chase Center. GSV -435/CHI +320 consistent across two dated pages. Spread/total juice absent - not priced. Sky won the earlier meeting 69-63."
+  },
+  {
+   "event_id": "lib-2026-08-12-cer-pal",
+   "sport": "soccer",
+   "league": "Copa Libertadores R16 leg 1",
+   "home": "Palmeiras",
+   "away": "Cerro Porteno",
+   "start_time": "2026-08-12T22:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.28
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 5.0
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 10.5
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 2.5,
+       "decimal_odds": 1.91
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 2.5,
+       "decimal_odds": 1.8
+      }
+     ]
+    }
+   ],
+   "note": "6:00 PM ET, Nubank Parque. ESPN board, holds 7.8%/7.9%. Cerro topped the group ahead of Palmeiras. A garbled 60.6% model quote was rejected - market-only."
+  },
+  {
+   "event_id": "lc-2026-08-12-leo-mia",
+   "sport": "soccer",
+   "league": "Leagues Cup MD3",
+   "home": "Inter Miami",
+   "away": "Club Leon",
+   "start_time": "2026-08-12T23:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.05
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 3.8
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 3.25
+      }
+     ]
+    }
+   ],
+   "note": "7:30 PM ET, Nu Stadium Miami (venue-verified). SBR trio +105/+280/+225, hold 5.9%. First-ever meeting; 90-min 1X2 (draws go to pens)."
+  },
+  {
+   "event_id": "lc-2026-08-12-mon-nsh",
+   "sport": "soccer",
+   "league": "Leagues Cup MD3",
+   "home": "Nashville SC",
+   "away": "Monterrey",
+   "start_time": "2026-08-13T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.75
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 3.4
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.35
+      }
+     ]
+    }
+   ],
+   "note": "8:00 PM ET GEODIS Park (home=Nashville verified by venue against conflicting titles). BetMGM trio; road side Monterrey the favorite. Hold 8.3%. Over-3 leg one-sided, not priced."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-12-cle-det:moneyline:home": 0.5551,
+  "mlb-2026-08-12-cle-det:moneyline:away": 0.4449,
+  "mlb-2026-08-12-chc-wsh:moneyline:home": 0.4429,
+  "mlb-2026-08-12-chc-wsh:moneyline:away": 0.5571,
+  "mlb-2026-08-12-sea-nyy:moneyline:home": 0.6037,
+  "mlb-2026-08-12-sea-nyy:moneyline:away": 0.3963,
+  "mlb-2026-08-12-bos-tor:moneyline:home": 0.4783,
+  "mlb-2026-08-12-bos-tor:moneyline:away": 0.5217,
+  "mlb-2026-08-12-nym-atl:moneyline:home": 0.6932,
+  "mlb-2026-08-12-nym-atl:moneyline:away": 0.3068,
+  "mlb-2026-08-12-cin-cws:moneyline:home": 0.5735,
+  "mlb-2026-08-12-cin-cws:moneyline:away": 0.4265,
+  "mlb-2026-08-12-tex-laa:moneyline:home": 0.4179,
+  "mlb-2026-08-12-tex-laa:moneyline:away": 0.5821,
+  "mlb-2026-08-12-kc-lad:moneyline:home": 0.7108,
+  "mlb-2026-08-12-kc-lad:moneyline:away": 0.2892,
+  "mlb-2026-08-12-pit-mia:moneyline:home": 0.475,
+  "mlb-2026-08-12-pit-mia:moneyline:away": 0.525,
+  "atp-2026-08-12-jod-nak:moneyline:home": 0.41,
+  "atp-2026-08-12-jod-nak:moneyline:away": 0.59,
+  "wta-2026-08-12-svi-swi:moneyline:home": 0.68,
+  "wta-2026-08-12-svi-swi:moneyline:away": 0.32
+ }
+}
