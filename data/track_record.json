@@ -1843,14 +1843,263 @@
           "over": 0.4833
         }
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-08-13 (Thu)",
       "decisions": [
         {
           "id": "2026-08-12-ATL-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "NYM @ ATL (7:15 PM ET Wed; PITCHERS: Thornton vs Mahle)",
           "selection": "Braves ML",
           "target": 1.666,
+          "fill": null,
+          "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "worked",
+          "headline": true,
+          "note": "NOT FILLED - the board moved the wrong way all day (-156 -> -158/-175 close); -150 never printed. ATL won 6-3: the FIFTH straight unfilled order whose side won. Pattern reading: our fairs are directionally right and the market agrees too fast to pay our price - which is what near-parity Brier with the close predicts. The bar stays (Walters rule); the edge has to come from being earlier, not looser."
+        },
+        {
+          "id": "2026-08-12-NAK-ORDER",
+          "type": "order_filled_paper",
+          "event": "ATP Montreal SF: Jodar vs Nakashima (6:00 PM ET Wed)",
+          "selection": "Nakashima ML",
+          "target": 2.969,
+          "fill": 2.969,
+          "stake": 0,
+          "result": "won",
+          "pnl": 0,
+          "clv_raw": 0.0099,
+          "clv_novig": -0.0173,
+          "anchor": "clean",
+          "process": "worked",
+          "headline": false,
+          "note": "FILL CONDITION MET VIA CROSS-BOOK SHOPPING - AND WON. +200 (>= the +197 trigger) was genuinely available at a book pre-match while Dimers' board showed +188; Nakashima won 7-6(3) 6-4. At the 2.969 floor vs the 2.94 close: raw CLV +1.0%, no-vig -1.7% - the first fill in this ledger with POSITIVE RAW CLV and the best fill-CLV recorded (prior fills: -5.4% and -3.1% no-vig), precisely because it came from price dispersion across books (allowed) rather than line drift (forbidden). The drift-vs-shopping distinction now has favorable evidence on the shopping side. Paper grade, stake 0 - backup order, user bets headline only."
+        },
+        {
+          "id": "2026-08-12-NYY-ORDER",
+          "type": "order_unfilled",
+          "event": "SEA @ NYY (7:05 PM ET Wed; PITCHERS: Miller vs Warren)",
+          "selection": "Yankees ML",
+          "target": 1.893,
+          "fill": null,
+          "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "worked",
+          "headline": false,
+          "note": "NOT FILLED - opened -119 and firmed to -131; the -112 trigger never printed. NYY won 10-5 anyway (sixth unfilled winner if you count this one alongside the ATL streak)."
+        }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-08-12-nym-atl",
+          "our_home_fair": 0.6152,
+          "source_flag": "clean",
+          "close_home_novig": 0.6152,
+          "home_won": true,
+          "final": "Braves 6, Mets 3 (Mahle strong; 9 runs OVER 8.5; ATL -1.5 covered)",
+          "note": "Total over lean right (3 of last 4); RL away-cover lean wrong. Pitchers held (Thornton/Mahle) - listed-pitcher process worked."
+        },
+        {
+          "event_id": "atp-2026-08-12-jod-nak",
+          "our_home_fair": 0.3452,
+          "source_flag": "clean",
+          "close_home_novig": 0.331,
+          "home_won": true,
+          "final": "Nakashima d. Jodar 7-6(3) 6-4 - first Masters 1000 final"
+        },
+        {
+          "event_id": "mlb-2026-08-12-sea-nyy",
+          "our_home_fair": 0.5414,
+          "source_flag": "clean",
+          "close_home_novig": 0.547,
+          "home_won": true,
+          "final": "Yankees 10, Mariners 5 (despite Warren's 5 R)"
+        },
+        {
+          "event_id": "mlb-2026-08-12-cle-det",
+          "our_home_fair": 0.5377,
+          "source_flag": "clean",
+          "close_home_novig": 0.5502,
+          "home_won": false,
+          "final": "Guardians 6, Tigers 4 (road dog winner)",
+          "note": "Pitchers confirmed Griffin/Valdez."
+        },
+        {
+          "event_id": "mlb-2026-08-12-pit-mia",
+          "our_home_fair": 0.516,
+          "source_flag": "clean",
+          "close_home_novig": 0.5237,
+          "home_won": true,
+          "final": "Marlins 8, Pirates 2 (4th straight MIA win)",
+          "note": "Our pitcher verify-flag was RIGHT: Mlodzinski/Junk started; the Skenes/Perez listing was wrong."
+        },
+        {
+          "event_id": "mlb-2026-08-12-chc-wsh",
+          "our_home_fair": 0.4112,
+          "source_flag": "clean",
+          "close_home_novig": 0.4051,
+          "home_won": false,
+          "final": "Cubs 12, Nationals 6 (Bregman 3 HR, 7 RBI)"
+        },
+        {
+          "event_id": "mlb-2026-08-12-bos-tor",
+          "our_home_fair": 0.4629,
+          "source_flag": "clean",
+          "close_home_novig": 0.4604,
+          "home_won": true,
+          "final": "Blue Jays 6, Red Sox 4 (5-run 8th; BOS skid hits 5)",
+          "note": "RL: our home +1.5 cover lean (60.7%) right - and 98% of RL handle was on BOS -1.5, another sharp-handle loser."
+        },
+        {
+          "event_id": "mlb-2026-08-12-cin-cws",
+          "our_home_fair": 0.5725,
+          "source_flag": "clean",
+          "close_home_novig": 0.574,
+          "home_won": true,
+          "final": "White Sox 5, Reds 0 (Castillo 7 IP 10 K)"
+        },
+        {
+          "event_id": "mlb-2026-08-12-tex-laa",
+          "our_home_fair": 0.449,
+          "source_flag": "clean",
+          "close_home_novig": 0.4442,
+          "home_won": true,
+          "final": "Angels 5, Rangers 2 (home dog winner)"
+        },
+        {
+          "event_id": "mlb-2026-08-12-kc-lad",
+          "our_home_fair": 0.6801,
+          "source_flag": "clean",
+          "close_home_novig": 0.6768,
+          "home_won": true,
+          "final": "Dodgers 4, Royals 2 (sweep; 6 runs UNDER 9)",
+          "note": "Total over lean wrong (3 of last 5 overall)."
+        },
+        {
+          "event_id": "wta-2026-08-12-svi-swi",
+          "our_home_fair": 0.6928,
+          "source_flag": "clean",
+          "close_home_novig": 0.6782,
+          "home_won": true,
+          "final": "Swiatek d. Svitolina 6-3 1-6 6-3 (first 2026 win over her)"
+        },
+        {
+          "event_id": "wnba-2026-08-12-tor-dal",
+          "our_home_fair": 0.7941,
+          "source_flag": "clean",
+          "close_home_novig": 0.8085,
+          "home_won": true,
+          "final": "Wings 94, Tempo 88 (DAL -9.5 LOST; 182 under 184.5)",
+          "note": "Our away-cover spread lean (51.2%) right; total was a 50/50 no-lean."
+        },
+        {
+          "event_id": "wnba-2026-08-12-chi-gsv",
+          "our_home_fair": 0.7954,
+          "source_flag": "clean",
+          "close_home_novig": 0.7909,
+          "home_won": true,
+          "final": "Valkyries 91, Sky 71"
+        },
+        {
+          "event_id": "lib-2026-08-12-cer-pal",
+          "our_home_fair": 0.7599,
+          "close_home_novig": 0.7389,
+          "home_won": false,
+          "final": "Palmeiras 1, Cerro Porteno 1 (draw; heavy favorite held; 2 goals UNDER 2.5)",
+          "source_flag": "flagged",
+          "note": "Closing draw/away legs aggregate-derived, low precision - flagged. Our under-2.5 lean right."
+        },
+        {
+          "event_id": "lc-2026-08-12-leo-mia",
+          "our_home_fair": 0.4683,
+          "close_home_novig": null,
+          "home_won": false,
+          "final": "Leon 3, Inter Miami 2 (+300 away winner; Miami eliminated, Messi returned)",
+          "source_flag": "clean",
+          "note": "Closing draw leg never indexed - no full-trio devig, result-only."
+        },
+        {
+          "event_id": "lc-2026-08-12-mon-nsh",
+          "our_home_fair": 0.3355,
+          "close_home_novig": null,
+          "home_won": false,
+          "final": "Monterrey 2, Nashville 1 (Cuypers 90+2'; Nashville eliminated)",
+          "source_flag": "flagged",
+          "note": "Closing trio is a ~1% hold best-price aggregate with conflicting favorite labels - reference only, no grade."
+        }
+      ],
+      "metrics": {
+        "n": 14,
+        "brier_ours": 0.2223,
+        "brier_close": 0.2222,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0081,
+        "max_abs_fair_vs_close": 0.021,
+        "note": "14 markets graded vs closes (one flagged aggregate close); 2 Leagues Cup results recorded close-less. Pitcher verify-flags resolved correct on both flagged games."
+      },
+      "lessons_applied": [
+        "FIRST POSITIVE-RAW-CLV FILL (Nakashima +200, won; no-vig -1.7%, best fill CLV recorded vs -5.4%/-3.1% priors): the fill came from cross-book price dispersion at listing time, not drift - favorable evidence for the drift-cancel rule's core distinction. Shop the dispersion; refuse the drift.",
+        "Five straight unfilled orders' sides have now won (Swiatek, CIN, DET, TB, ATL - six with NYY). Interpretation stays disciplined: near-parity Brier with the close means our fairs are right roughly when the market is - the +2.5% bar prices only genuine disagreement, which is rare. The path to more fills is earlier scouting (before the market corrects), not a lower bar.",
+        "Listed-pitcher process validated on its first live card: both pitcher verify-flags (PIT@MIA Mlodzinski/Junk, NYM@ATL Thornton/Mahle) resolved exactly as flagged.",
+        "Sharp-handle fade data point #3: 98% of RL handle on BOS -1.5, which lost outright. Handle percentages remain slip color, never model input.",
+        "Totals now 3 of last 5 after 0-for-3 - still order-only, still below any significance floor."
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "sport": "multi",
+      "mode": "degraded - Thursday NIGHT card (gate applied hard): 11 events / 15 markets (3 MLB night games incl. the neutral-site Field of Dreams game, 4 NFL preseason ML-only boards, CFL spread-only, Montreal ATP final, 2 soccer trios). Toronto WTA final gate-excluded on a start-time conflict. First dated third-party TOTAL model on a card (SportsLine over-8.5 60.2% at Dyersville). Neutral-site log5 runs with no home edge - a first.",
+      "engine_verdict": "PASS - seventh straight. A TOTAL tops the raw order board for the first time (FoD over 8.5 >= 1.937, -1.82% now) but totals never headline per standing rule; headline order is Brewers ML >= 2.353 (-2.43% now) in the MIL-LAD first-place showdown. Also: Phillies ML >= 2.063. No refusals - Polymarket and the book agree on the showdown (58c vs ~57.5%).",
+      "predictions_home_fair": {
+        "mlb-2026-08-13-mil-lad": 0.5644,
+        "nfl-2026-08-13-lac-hou": 0.5682,
+        "nfl-2026-08-13-ari-lv": 0.5548,
+        "mlb-2026-08-13-phi-min": 0.5031,
+        "mlb-2026-08-13-tex-laa": 0.4026,
+        "nfl-2026-08-13-ten-sf": 0.4241,
+        "nfl-2026-08-13-ind-ne": 0.4013,
+        "lib-2026-08-13-cor-ros": 0.4036,
+        "atp-2026-08-13-she-nak": 0.3541,
+        "lc-2026-08-13-cru-chi": 0.3462
+      },
+      "predictions_other": {
+        "mlb-2026-08-13-phi-min:total:8.5": {
+          "over": 0.5293,
+          "under": 0.4707
+        },
+        "mlb-2026-08-13-phi-min:spread:1.5": {
+          "home": 0.642,
+          "away": 0.358
+        },
+        "mlb-2026-08-13-tex-laa:spread:1.5": {
+          "home": 0.5473,
+          "away": 0.4527
+        },
+        "mlb-2026-08-13-tex-laa:total:8.0": {
+          "under": 0.5115,
+          "over": 0.4885
+        },
+        "cfl-2026-08-13-bc-cgy:spread:-5.5": {
+          "home": 0.5,
+          "away": 0.5
+        }
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-13-MIL-ORDER",
+          "type": "order_open",
+          "event": "MIL @ LAD (10:10 PM ET Thu; PITCHERS: Drohan vs Sasaki)",
+          "selection": "Brewers ML",
+          "target": 2.353,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -1860,14 +2109,14 @@
           "anchor": "clean",
           "process": "pending",
           "headline": true,
-          "note": "HEADLINE ORDER, +0.96% at listed. Fair 1.625 (market 0.6007 blended with in-house log5 0.6932 - ATL 72-48 vs NYM 53-68). Fires at 1.666+ (-150 -> -145 or better). HONEST TENSION: the pitching matchup leans the other way (Thornton 2.52 ERA vs Mahle 4.83) and the Mets are going for a sweep - the records model can't see arms. LISTED-PITCHER RULE: this order is void if either starter changes. DRIFT-CANCEL: a drift through 1.666 means re-price first, never auto-take."
+          "note": "HEADLINE ORDER - first-place showdown, best team in baseball as the road dog. Fair 2.296 (market away 42.5% blended with model 49.6% - in-house log5 makes this near a coin flip that the market prices at -146 LAD). Fires at 2.353+ (+124 -> +136 or better). Rookie bulk-arm risk on Drohan is the market's case; LISTED-PITCHER rule applies, DRIFT-CANCEL applies, $46 at quarter-Kelly if clean."
         },
         {
-          "id": "2026-08-12-NAK-ORDER",
+          "id": "2026-08-13-FODOVER-ORDER",
           "type": "order_open",
-          "event": "ATP Montreal SF: Jodar vs Nakashima (6:00 PM ET Wed)",
-          "selection": "Nakashima ML",
-          "target": 2.969,
+          "event": "PHI @ MIN, Field of Dreams (7:30 PM ET; Nola vs Bradley; RAIN RISK)",
+          "selection": "Over 8.5",
+          "target": 1.937,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -1877,14 +2126,14 @@
           "anchor": "clean",
           "process": "pending",
           "headline": false,
-          "note": "Fair 2.897: Dimers sims give Jodar only 59% against a market implying 65% - the model leans the Nakashima side relative to price. Fires at 2.969+ (+197 or better vs +188 listed). Tien leads Shelton H2H in the other semi but that board never got two-sided - unpriced."
+          "note": "First total ever to TOP the raw order board (-1.82% at listed 1.855) - driven by the first dated third-party total model (SportsLine 10k-sim: over 8.5 in 60.2%, avg 9.8 runs, short-fence neutral park, Nola 5.47 ERA). Stays a backup per the totals-never-headline rule (totals are 3 of 5 graded, sample meaningless). Rain could postpone - verify the game is on before anything."
         },
         {
-          "id": "2026-08-12-NYY-ORDER",
+          "id": "2026-08-13-PHI-ORDER",
           "type": "order_open",
-          "event": "SEA @ NYY (7:05 PM ET Wed; PITCHERS: Miller vs Warren)",
-          "selection": "Yankees ML",
-          "target": 1.893,
+          "event": "PHI @ MIN, Field of Dreams (same game)",
+          "selection": "Phillies ML",
+          "target": 2.063,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -1894,7 +2143,7 @@
           "anchor": "clean",
           "process": "pending",
           "headline": false,
-          "note": "Fair 1.847 (model 60.4% vs market 53.0% - largest model-market gap on the card; public consensus is 68% on the SEA dog, which cuts the other way). Fires at 1.893+ (-112 or better vs -122 listed)."
+          "note": "Neutral-site fair 2.013 (no home edge in the log5 - PHI 64-58 is simply the better record); market prices MIN -114 partly on Bradley vs Nola, which is legitimate. Fires at 2.063+ only."
         }
       ]
     }

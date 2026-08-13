@@ -1,0 +1,400 @@
+{
+ "_provenance": "Thursday 2026-08-13 night card, compiled ~4:45 PM ET (pessimistic-now 5:30 PM ET; clock and evidence agree - Wednesday fully indexed, Thursday day games in live-shell state). Gate rule applied hard: six afternoon MLB games, the Toronto WTA FINAL (start-time conflict 6-vs-8 PM ET - pessimistic reading fails), two 7:00 PM NFL preseason games, Dream@Sun WNBA, Santos@Union Leagues Cup, three CONMEBOL 6 PM legs, and all afternoon UEFA legs are EXCLUDED with times listed. Also excluded: Sparks@Liberty (Frankenstein spread pair + one-sided ML), Mystics@Aces (aggregate ranges only), NYCFC/Austin/Portland Leagues Cup games (prediction-market-only boards), Cienciano-Botafogo (aggregate legs; 3,400m altitude note logged). NFL preseason boards are ML-only (spread/total prices not quoted) and priced-but-distrusted. Field of Dreams is a NEUTRAL SITE: in-house log5 runs with no home edge there. First dated third-party TOTAL model on a card (SportsLine over-8.5 60.2%). Standing rules on every order: listed pitchers, drift-cancel, live re-verify. --market-weight 0.85.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "Aug-13-dated single-book boards (DK, covers, predictem/lineups, SBD, sportsgambler, Yahoo/SI)"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated boards carrying ambiguity/inconsistency flags"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "demoted per ledger; shop-only"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-13-phi-min",
+   "sport": "mlb",
+   "league": "MLB - Field of Dreams Game",
+   "home": "Twins",
+   "away": "Phillies",
+   "start_time": "2026-08-13T23:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.893
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.962
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": -1.5,
+       "decimal_odds": 2.6
+      },
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": 1.5,
+       "decimal_odds": 1.51
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 8.5,
+       "decimal_odds": 1.855
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 8.5,
+       "decimal_odds": 1.971
+      }
+     ]
+    }
+   ],
+   "note": "Dyersville, Iowa - NEUTRAL SITE (Twins home by designation; in-house log5 runs with NO home edge). Netflix exclusive. PITCHERS: Nola (3-9, 5.47) vs Bradley (9-4, 3.76). RAIN in forecast - delay/postponement risk; 7:30 PM ET first pitch clears the gate with minimal margin - re-verify before any action. SportsLine 10k-sim: over 8.5 hits 60.2% (avg 9.8 runs) - first dated third-party TOTAL model on a card."
+  },
+  {
+   "event_id": "mlb-2026-08-13-tex-laa",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Angels",
+   "away": "Rangers",
+   "start_time": "2026-08-14T02:07:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.36
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.617
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": -1.5,
+       "decimal_odds": 2.1
+      },
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": 1.5,
+       "decimal_odds": 1.758
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 8.0,
+       "decimal_odds": 1.952
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 8.0,
+       "decimal_odds": 1.87
+      }
+     ]
+    }
+   ],
+   "note": "10:07 PM ET Angel Stadium. PITCHERS: deGrom (8-7, 3.87) vs Urena (7-8, 2.83). Yahoo sim 60.3% TEX. LAA 27 games under .500."
+  },
+  {
+   "event_id": "mlb-2026-08-13-mil-lad",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Dodgers",
+   "away": "Brewers",
+   "start_time": "2026-08-14T02:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.685
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.24
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 1.724
+      }
+     ]
+    }
+   ],
+   "note": "10:10 PM ET Dodger Stadium - first-place showdown (MIL 74-47 vs LAD 72-48, one apart in the loss column). PITCHERS: Drohan (rookie, bulk-risk) vs Sasaki. Polymarket 58c home leg only (shop-only; no away cents printed - not fabricated); 58c vs book-implied ~57.5% = no conflict. Dimers 48% LAD carries a 2024-article contamination risk - flagged, used at medium confidence. RL/total juice not visible in dated snippets - not priced."
+  },
+  {
+   "event_id": "nfl-2026-08-13-ind-ne",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 1",
+   "home": "Patriots",
+   "away": "Colts",
+   "start_time": "2026-08-13T23:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.36
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.62
+      }
+     ]
+    }
+   ],
+   "note": "7:30 PM ET - clears the gate with minimal margin. QB plans: Richardson then Leonard for IND; Maye SITS for NE (DeVito/Morton). Spread/total prices not quoted anywhere - ML only. Preseason: variance extreme."
+  },
+  {
+   "event_id": "nfl-2026-08-13-ari-lv",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 1",
+   "home": "Raiders",
+   "away": "Cardinals",
+   "start_time": "2026-08-14T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.74
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.14
+      }
+     ]
+    }
+   ],
+   "note": "8:00 PM ET. Rookie QBs Mendoza (LV) and Beck (ARI) headline; starters sit."
+  },
+  {
+   "event_id": "nfl-2026-08-13-lac-hou",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 1",
+   "home": "Texans",
+   "away": "Chargers",
+   "start_time": "2026-08-14T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.7
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.2
+      }
+     ]
+    }
+   ],
+   "note": "8:00 PM ET. No QB-plan detail surfaced - extra caution."
+  },
+  {
+   "event_id": "nfl-2026-08-13-ten-sf",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 1",
+   "home": "49ers",
+   "away": "Titans",
+   "start_time": "2026-08-14T01:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.24
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.68
+      }
+     ]
+    }
+   ],
+   "note": "9:00 PM ET nightcap. Road Titans favored -3 - classic starters-vs-sitters preseason shape."
+  },
+  {
+   "event_id": "cfl-2026-08-13-bc-cgy",
+   "sport": "cfl",
+   "league": "CFL Wk 11",
+   "home": "Stampeders",
+   "away": "Lions",
+   "start_time": "2026-08-14T01:00:00Z",
+   "markets": [
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "line": -5.5,
+       "decimal_odds": 1.91
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "line": 5.5,
+       "decimal_odds": 1.91
+      }
+     ]
+    }
+   ],
+   "note": "9:00 PM ET McMahon Stadium (venue-verified home CGY). NO moneyline found in any dated snippet - spread market only (CGY -5.5 -110 both ways). CGY 4-5, BC 3-5; CGY won the prior meeting 41-33. Total 63.5 number-only, not priced."
+  },
+  {
+   "event_id": "atp-2026-08-13-she-nak",
+   "sport": "tennis",
+   "league": "ATP Montreal FINAL",
+   "home": "Nakashima",
+   "away": "Shelton",
+   "start_time": "2026-08-14T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.62
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.5
+      }
+     ]
+    }
+   ],
+   "note": "8:00 PM ET, IGA Stadium - all-American final. Shelton (defending champ, 5-0 H2H, d. Tien 6-2 6-3) vs Nakashima (first M1000 final, beat Jodar and our order side cashed on him last night). SBD pair -200/+162; a -222/+185 quote exists at an unnamed book. Toronto WTA final GATE-EXCLUDED (start conflicts 6 vs 8 PM ET - pessimistic reading fails the runway)."
+  },
+  {
+   "event_id": "lc-2026-08-13-cru-chi",
+   "sport": "soccer",
+   "league": "Leagues Cup final MD",
+   "home": "Chicago Fire",
+   "away": "Cruz Azul",
+   "start_time": "2026-08-14T01:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.6
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 3.4
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.3
+      }
+     ]
+    }
+   ],
+   "note": "9:00 PM ET SeatGeek Stadium, Bridgeview IL - home=Fire assigned BY VENUE against the 'Cruz Azul vs Chicago' fixture naming. SBR trio +160/+240/+130 with an internal inconsistency in its own prose (+147 implied vs +130 stated) - consensus-c, re-verify before any action."
+  },
+  {
+   "event_id": "lib-2026-08-13-cor-ros",
+   "sport": "soccer",
+   "league": "Copa Libertadores R16 leg 1",
+   "home": "Rosario Central",
+   "away": "Corinthians",
+   "start_time": "2026-08-13T23:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.33
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 2.8
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 3.45
+      }
+     ]
+    }
+   ],
+   "note": "7:30 PM ET Gigante de Arroyito (venue-verified) - clears the gate at the 2-hour boundary exactly; re-verify before action. Corinthians missing Depay AND Yuri Alberto. Sportsgambler single-book trio, hold ~8.0%."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-13-phi-min:moneyline:home": 0.4672,
+  "mlb-2026-08-13-phi-min:moneyline:away": 0.5328,
+  "mlb-2026-08-13-phi-min:total:over": 0.602,
+  "mlb-2026-08-13-phi-min:total:under": 0.398,
+  "mlb-2026-08-13-tex-laa:moneyline:home": 0.414,
+  "mlb-2026-08-13-tex-laa:moneyline:away": 0.586,
+  "mlb-2026-08-13-mil-lad:moneyline:home": 0.504,
+  "mlb-2026-08-13-mil-lad:moneyline:away": 0.496
+ }
+}
