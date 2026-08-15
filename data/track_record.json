@@ -2092,14 +2092,225 @@
           "away": 0.5
         }
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-08-15 (Sat)",
       "decisions": [
         {
           "id": "2026-08-13-MIL-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "MIL @ LAD (10:10 PM ET Thu; PITCHERS: Drohan vs Sasaki)",
           "selection": "Brewers ML",
           "target": 2.353,
+          "fill": null,
+          "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "worked",
+          "headline": true,
+          "note": "NOT FILLED - EdgeBets' 8-book closing recap tops MIL out at +129 (range +115/+129, consensus +123/+125); the +136 trigger never printed anywhere. Both listed pitchers started (Shane Drohan vs Sasaki) so the premise held; the price just never came. MIL won 5-4 on a 3-run 9th - the SEVENTH unfilled order whose side won. The bar stays (Walters rule): the two orders that ever DID fill via drift carried the ledger's worst CLV."
+        },
+        {
+          "id": "2026-08-13-FODOVER-ORDER",
+          "type": "order_unfilled",
+          "event": "PHI @ MIN, Field of Dreams (7:30 PM ET; Nola vs Bradley; RAIN RISK)",
+          "selection": "Over 8.5",
+          "target": 1.937,
+          "fill": null,
+          "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "worked",
+          "headline": false,
+          "note": "NOT FILLED - Over sat -118/-120 all day and never reached the -107 trigger. Game went UNDER (8 runs): the FIRST unfilled order whose side LOST, i.e. the bar's first visible counterfactual save (~$40 at quarter-Kelly). The unfilled-order ledger is now 7 winners, 1 loser - and the loser is the one the bar refused to pay for. First graded third-party total model (SportsLine 60.2% over): WRONG. Rain clause never triggered - played as scheduled."
+        },
+        {
+          "id": "2026-08-13-PHI-ORDER",
+          "type": "order_unfilled",
+          "event": "PHI @ MIN, Field of Dreams (same game)",
+          "selection": "Phillies ML",
+          "target": 2.063,
+          "fill": null,
+          "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "worked",
+          "headline": false,
+          "note": "NOT FILLED - PHI ranged -102/-104 all day and closed ~-103 (SBR); the +106 trigger needed plus-money that never printed. PHI won 7-1 (Schwarber 2 HR) - the EIGHTH unfilled order graded, 7 of whose sides won."
+        }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-08-13-mil-lad",
+          "our_home_fair": 0.5644,
+          "source_flag": "clean",
+          "close_home_novig": 0.5779,
+          "home_won": false,
+          "final": "Brewers 5, Dodgers 4 (3-run 9th, Bauers RBI single; Sasaki 6 IP 5 BB)",
+          "note": "Pitchers confirmed: Shane Drohan vs Sasaki - listed-pitcher premise held. Home close leg is a pre-game consensus print (-149), medium precision; away close is the midpoint of EdgeBets' 8-book +115/+129 closing range."
+        },
+        {
+          "event_id": "mlb-2026-08-13-phi-min",
+          "our_home_fair": 0.5031,
+          "source_flag": "clean",
+          "close_home_novig": 0.5053,
+          "home_won": false,
+          "final": "Phillies 7, Twins 1 at Dyersville (Schwarber 2 HR; 8 runs UNDER 8.5; no rain delay)",
+          "note": "Field of Dreams played as scheduled - the rain clause never triggered. Nola/Bradley started as priced. Our over-8.5 lean (52.9% blended) was WRONG: 8 runs, under."
+        },
+        {
+          "event_id": "mlb-2026-08-13-tex-laa",
+          "our_home_fair": 0.4026,
+          "source_flag": "clean",
+          "close_home_novig": 0.4032,
+          "home_won": true,
+          "final": "Angels 7, Rangers 0 (deGrom lasted 2 IP/53 pitches; 7 runs UNDER 8)",
+          "note": "Home dog winner - our 40.3% home fair vs ~41% close: both saw it live. Under-8 lean (51.2%) RIGHT; home +1.5 cover lean (54.7%) RIGHT. Urena started as priced."
+        },
+        {
+          "event_id": "nfl-2026-08-13-ari-lv",
+          "our_home_fair": 0.5548,
+          "source_flag": "clean",
+          "close_home_novig": 0.5548,
+          "home_won": false,
+          "final": "Cardinals 27, Raiders 14 (Mendoza TD in Raiders debut; road dog outright)"
+        },
+        {
+          "event_id": "nfl-2026-08-13-lac-hou",
+          "our_home_fair": 0.5682,
+          "source_flag": "clean",
+          "close_home_novig": 0.5682,
+          "home_won": false,
+          "final": "Chargers 27, Texans 7 (road dog outright)"
+        },
+        {
+          "event_id": "nfl-2026-08-13-ten-sf",
+          "our_home_fair": 0.4241,
+          "source_flag": "clean",
+          "close_home_novig": 0.4241,
+          "home_won": false,
+          "final": "Titans 19, 49ers 13 (road favorite held)",
+          "note": "Close is a consensus print with WIDE book variation (one book TEN -250 vs consensus -148) - grade carries extra noise, kept clean per flag semantics (flag = prediction-time anchor, not close quality)."
+        },
+        {
+          "event_id": "atp-2026-08-13-she-nak",
+          "our_home_fair": 0.3541,
+          "source_flag": "clean",
+          "close_home_novig": 0.3272,
+          "home_won": false,
+          "final": "Shelton d. Nakashima 6-3 7-6(4) - title defense, no break points faced, 6-0 H2H"
+        },
+        {
+          "event_id": "nfl-2026-08-13-ind-ne",
+          "our_home_fair": 0.4013,
+          "close_home_novig": null,
+          "home_won": null,
+          "final": "PUSH - Colts 13, Patriots 13 (preseason ties stand; two-way MLs refund)",
+          "source_flag": "clean",
+          "note": "First tie in the ledger: graded like the walkover precedent - no market settled on either side, no Brier entry. Close for reference: NE 1.80 / IND 2.05."
+        },
+        {
+          "event_id": "lc-2026-08-13-cru-chi",
+          "our_home_fair": 0.3462,
+          "close_home_novig": 0.3462,
+          "home_won": true,
+          "final": "Chicago Fire 2, Cruz Azul 1 (Dithejane brace incl. late winner) - home win over the three-way favorite",
+          "source_flag": "clean",
+          "note": "Venue-verified home (SeatGeek Stadium) beat ESPN's nominal-home listing again. Close trio +130/+240/+160 (SBR, single dated source)."
+        },
+        {
+          "event_id": "lib-2026-08-13-cor-ros",
+          "our_home_fair": 0.4036,
+          "close_home_novig": 0.4206,
+          "home_won": false,
+          "final": "Rosario Central 0, Corinthians 0 (Allan sent off 80'; leg 2 Aug 20 in Sao Paulo)",
+          "source_flag": "flagged",
+          "note": "Closing trio is a cross-book best-price aggregate (Tonybet/Stake/1xbet legs) - flagged; a single board would read tighter (~2.25/2.75/4.00)."
+        },
+        {
+          "event_id": "cfl-2026-08-13-bc-cgy",
+          "our_home_fair": null,
+          "close_home_novig": null,
+          "home_won": false,
+          "final": "Lions 30, Stampeders 26 (+184 road dog outright; BC +5.5 covered, CGY -5.5 lost)",
+          "source_flag": "clean",
+          "note": "Spread-only board and our spread prediction was a flat 50/50 no-lean - nothing to grade against. ML close for reference: CGY -225 / BC +184; total 56 under 63.5."
+        }
+      ],
+      "metrics": {
+        "n": 9,
+        "brier_ours": 0.2728,
+        "brier_close": 0.2742,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0067,
+        "max_abs_fair_vs_close": 0.0269,
+        "note": "9 markets graded vs closes (one flagged aggregate close, one wide-variation NFL consensus close); IND@NE 13-13 tie = push, no Brier entry; CFL spread-only carried no lean. Derivative leans: FoD over WRONG (8 under 8.5), FoD home +1.5 cover lean WRONG (PHI won by 6), TEX@LAA under RIGHT and home +1.5 cover RIGHT. Totals now 3 of last 6."
+      },
+      "lessons_applied": [
+        "FIRST COUNTERFACTUAL SAVE by the order bar: the FoD Over 8.5 order (first total ever to top the raw board) went unfilled at -107 and the game went UNDER - the only unfilled order so far whose side lost, and the bar refused it. Unfilled ledger now 7 won / 1 lost: the bar's misses stay visible, and now its saves are too.",
+        "First graded third-party TOTAL model (SportsLine 10k-sim, 60.2% over at Dyersville): WRONG - 8 runs. Totals fall to 3 of 6, still order-only, still below any significance floor (Buchdahl).",
+        "First two-way PUSH handled (IND@NE 13-13 preseason tie): market refunds, no Brier entry - same honest-null class as the Gauff walkover.",
+        "Preseason variance receipt: three road dogs won outright and the fourth game tied across four ML-only boards - the priced-but-distrusted stance (no preseason orders) did its job with zero dollars at risk.",
+        "Listed-pitcher process held on both flagged games (Drohan/Sasaki, Nola/Bradley) and the rain clause on the FoD orders was verified moot before grading - premise checks are now routine, not exceptional."
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "sport": "multi",
+      "mode": "degraded - Saturday FULL card: 26 events / 28 markets (14 MLB of the 15-game slate, 3 NFL preseason ML-only, CFL Argos-Elks ML+total, UFC 330 main+co-main, Zverev-Norrie Cincinnati night session, 5 soccer trios incl. the La Liga opener). Ship gate applied at pessimistic-NOON: everything starts 2:20 PM ET+. Trap calendar verified: EPL does NOT open this weekend (Aug 21-22), Leagues Cup QFs are Aug 25-27, Ligue 1 starts Aug 22-23. In-house log5 on the 8 MLB games with records dated through Aug 14; numberFire ensembled where present (11 games); 12 boards excluded for partial/aggregate/unverified reasons, all documented in the slate provenance.",
+      "engine_verdict": "PASS - eighth straight. Headline order: Royals ML >= 2.465 in KC@LAA (+1.41% at Polymarket's 41c now - the closest any order has opened to its trigger, but degraded bar is 2.5% and Polymarket is not an anchor). Backups: Padres ML >= 2.268, Cubs ML >= 1.673. REFUSAL #9: the MIL@LAD rematch - DK prices MIL -142 while numberFire (52.9% LAD) and our log5 (53.0% LAD) lean the other way and the book-vs-Polymarket cross-hold is NEGATIVE (-1.15%); degraded anchor + negative cross-hold = unpriceable, never an arb.",
+      "predictions_home_fair": {
+        "mlb-2026-08-15-stl-chc": 0.6128,
+        "mlb-2026-08-15-kc-laa": 0.5842,
+        "cfl-2026-08-15-tor-edm": 0.6382,
+        "mlb-2026-08-15-sd-cle": 0.548,
+        "nfl-2026-08-15-dal-sea": 0.5873,
+        "br-2026-08-15-cor-sao": 0.5624,
+        "mlb-2026-08-15-col-sf": 0.624,
+        "nfl-2026-08-15-jax-no": 0.5682,
+        "nfl-2026-08-15-lar-kc": 0.5548,
+        "mlb-2026-08-15-sea-hou": 0.5264,
+        "mlb-2026-08-15-bal-tb": 0.5694,
+        "mlb-2026-08-15-phi-min": 0.4316,
+        "liga-2026-08-15-ray-sev": 0.4175,
+        "mlb-2026-08-15-ari-atl": 0.5907,
+        "mlb-2026-08-15-nyy-tor": 0.4134,
+        "br-2026-08-15-rbb-cap": 0.4771,
+        "mlb-2026-08-15-bos-pit": 0.4631,
+        "mlb-2026-08-15-mia-cin": 0.4228,
+        "mlb-2026-08-15-tex-ath": 0.4251,
+        "arg-2026-08-15-gim-est": 0.4129,
+        "mlb-2026-08-15-wsh-nym": 0.5614,
+        "arg-2026-08-15-boc-pla": 0.265,
+        "ufc-2026-08-15-der-rob": 0.3269,
+        "ufc-2026-08-15-mak-gar": 0.2296,
+        "atp-2026-08-15-zve-nor": 0.2199
+      },
+      "predictions_other": {
+        "liga-2026-08-15-ray-sev:total:2.5": {
+          "under": 0.5958,
+          "over": 0.4042
+        },
+        "cfl-2026-08-15-tor-edm:total:62.5": {
+          "under": 0.5112,
+          "over": 0.4888
+        }
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-15-KC-ORDER",
+          "type": "order_open",
+          "event": "KC @ LAA (9:38 PM ET Sat; PITCHERS: Dobnak vs Detmers)",
+          "selection": "Royals ML",
+          "target": 2.465,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -2109,14 +2320,14 @@
           "anchor": "clean",
           "process": "pending",
           "headline": true,
-          "note": "HEADLINE ORDER - first-place showdown, best team in baseball as the road dog. Fair 2.296 (market away 42.5% blended with model 49.6% - in-house log5 makes this near a coin flip that the market prices at -146 LAD). Fires at 2.353+ (+124 -> +136 or better). Rookie bulk-arm risk on Drohan is the market's case; LISTED-PITCHER rule applies, DRIFT-CANCEL applies, $46 at quarter-Kelly if clean."
+          "note": "HEADLINE ORDER. Fair 2.405 (FanDuel LAA -154/KC +130 power-devigged to 41.25% KC, blended with model 43.5% - two sub-.500 teams where the in-house layer sees near-even and numberFire 59.8% LAA tempers it). Fires at 2.465+ (+147 at a book, or Polymarket KC ask <= 40.6c vs 41c now). $43 at quarter-Kelly if clean. LISTED-PITCHER: Dobnak/Detmers - a change voids. DRIFT-CANCEL: a book that drifts to +147 has changed the premise - re-price before betting. Polymarket fills decay in minutes: the printed trigger is binding and the user's execution report is the only fill oracle."
         },
         {
-          "id": "2026-08-13-FODOVER-ORDER",
+          "id": "2026-08-15-SD-ORDER",
           "type": "order_open",
-          "event": "PHI @ MIN, Field of Dreams (7:30 PM ET; Nola vs Bradley; RAIN RISK)",
-          "selection": "Over 8.5",
-          "target": 1.937,
+          "event": "SD @ CLE (7:10 PM ET Sat; ASSUMED pitchers Vasquez-SD vs Cantillo-CLE, side-assignment UNVERIFIED)",
+          "selection": "Padres ML",
+          "target": 2.268,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -2126,14 +2337,14 @@
           "anchor": "clean",
           "process": "pending",
           "headline": false,
-          "note": "First total ever to TOP the raw order board (-1.82% at listed 1.855) - driven by the first dated third-party total model (SportsLine 10k-sim: over 8.5 in 60.2%, avg 9.8 runs, short-fence neutral park, Nola 5.47 ERA). Stays a backup per the totals-never-headline rule (totals are 3 of 5 graded, sample meaningless). Rain could postpone - verify the game is on before anything."
+          "note": "Backup. Fair 2.213 (CLE -130/SD +118 devig 44.6% SD, model 48.5% SD - numberFire only, no dated records). Fires at 2.268+ (+127). PREMISE CLAUSE: the Vasquez/Cantillo side-assignment came from a garbled snippet - the order is VOID unless the pairing is confirmed at bet time."
         },
         {
-          "id": "2026-08-13-PHI-ORDER",
+          "id": "2026-08-15-CHC-ORDER",
           "type": "order_open",
-          "event": "PHI @ MIN, Field of Dreams (same game)",
-          "selection": "Phillies ML",
-          "target": 2.063,
+          "event": "STL @ CHC (2:20 PM ET Sat; PITCHERS: McGreevy vs Boyd)",
+          "selection": "Cubs ML",
+          "target": 1.673,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -2143,7 +2354,24 @@
           "anchor": "clean",
           "process": "pending",
           "headline": false,
-          "note": "Neutral-site fair 2.013 (no home edge in the log5 - PHI 64-58 is simply the better record); market prices MIN -114 partly on Bradley vs Nola, which is legitimate. Fires at 2.063+ only."
+          "note": "Backup, earliest start on the card (verify vs clock before any action - 2:20 PM ET first pitch). Fair 1.632 (FanDuel -166 devig 60.6%, model 65.1%: log5 on CHC 72-51 vs STL 61-61 plus numberFire 67.8%, the card's biggest model-market agreement gap). Fires at 1.673+ (-149 or better). Boyd is 8-1; a scratch voids."
+        },
+        {
+          "id": "2026-08-15-MILLAD-REFUSAL",
+          "type": "refusal",
+          "event": "MIL @ LAD rematch (7:15 PM ET Sat; Misiorowski vs TBD)",
+          "selection": "no side - market refused",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": false,
+          "note": "REFUSAL #9 (rule is 8-for-8 lifetime). Thursday's showdown rerun, now with MIL the AWAY FAVORITE at DK -142 while numberFire says LAD 52.9%, our log5 says LAD 53.0%, and Polymarket (MIL 53c) sides with the book. Best-price cross-hold LAD 2.18 book + MIL 53c PM = 98.9c round trip: negative hold on a 0.6-sharpness anchor = conflicting quotes, not an arb. Both prior KC@LAD refusals resolved as one side being a garbage print - we don't know which side is garbage here either, and that is exactly the point."
         }
       ]
     }
