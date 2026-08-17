@@ -1,0 +1,41 @@
+{
+ "_provenance": "Tuesday 2026-08-18 card, compiled Monday night. CLOCK TRAP CAUGHT: container clock read Mon 6:45 PM ET but ARI@BOS (a Mon 7:10 PM ET start) was already indexed FINAL - true now is >= ~10:30 PM ET Monday, possibly later. Pessimistic-now for gate math: Tuesday NOON ET. Every Monday event is dead (latest MLB start 8:40 PM ET; the lone 10 PM ET WNBA tip is inside the gate); the card is Tuesday-only. ONE market is priceable at ship time: SEA@MIL is the only Tuesday game with a dated two-sided board (FanDuel via covers' Aug-18 matchup page). Everything else was scouted and excluded as unpriced or unconfirmed: 14 other Tuesday MLB games (boards post Tuesday), all Cincinnati R16 tennis (order of play unpublished; the Dimers boards in the index are SUNDAY-dated - same-tournament prior-day trap, rejected), 4-5 WNBA games (matchup pages exist, no prices in dated snippets; one game's existence conflicts across schedules), UCL playoff first legs (only Fenerbahce-Lyon day-confirmed for Tuesday and no clean 1X2 trio anywhere; Celtic-LASK and NEC-Bodo/Glimt day-unconfirmed), Copa Libertadores R16 second legs (no boards; Flamengo-Cruzeiro date conflict; Universidad Catolica country unverified). Monday-dated prices (PHI -250, LAD -265 Snell game) and the Aug-19 LAD@COL print were all rejected as same-series traps. Standing rules on the order: listed pitchers, drift-cancel, live re-verify. --market-weight 0.85.",
+ "books": {
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "FanDuel board dated FOR Aug 18 but posted Sun/Mon - early line, movement expected; demoted for staleness risk"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-18-sea-mil",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Brewers",
+   "away": "Mariners",
+   "start_time": "2026-08-18T23:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.68
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.26
+      }
+     ]
+    }
+   ],
+   "note": "7:40 PM ET American Family Field (venue-verified; series opener - SEA was at HOU through Sunday, both off Monday, so NO same-series trap and records are final through Monday: MIL 77-48 best in baseball, SEA 59-66). PITCHERS: Bryce Miller (SEA) vs Kyle Harrison (MIL). FanDuel MIL -148 / SEA +126, EARLY line posted ~2 days ahead - re-verify at bet time. SportsGrid model 53% MIL (by 0.3 runs). No total/RL priced; no Polymarket cents surfaced."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-18-sea-mil:moneyline:home": 0.6065,
+  "mlb-2026-08-18-sea-mil:moneyline:away": 0.3935
+ }
+}

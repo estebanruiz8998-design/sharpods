@@ -2303,58 +2303,58 @@
           "over": 0.4888
         }
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-08-17 (Mon night)",
       "decisions": [
         {
           "id": "2026-08-15-KC-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "KC @ LAA (9:38 PM ET Sat; PITCHERS: Dobnak vs Detmers)",
           "selection": "Royals ML",
           "target": 2.465,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER. Fair 2.405 (FanDuel LAA -154/KC +130 power-devigged to 41.25% KC, blended with model 43.5% - two sub-.500 teams where the in-house layer sees near-even and numberFire 59.8% LAA tempers it). Fires at 2.465+ (+147 at a book, or Polymarket KC ask <= 40.6c vs 41c now). $43 at quarter-Kelly if clean. LISTED-PITCHER: Dobnak/Detmers - a change voids. DRIFT-CANCEL: a book that drifts to +147 has changed the premise - re-price before betting. Polymarket fills decay in minutes: the printed trigger is binding and the user's execution report is the only fill oracle."
+          "note": "NOT FILLED - KC never evidenced past +135 (trigger +147) and Polymarket sat pinned at the 41c board price all day; no 40.5c ask printed. Fill oracle open: if your execution says otherwise, report and I regrade. COUNTERFACTUAL SAVE #2, and the biggest yet: KC was SHUT OUT 1-0 (Detmers 8 scoreless, 11 K). The closest-to-live order in ledger history would have lost at any fill price. Dobnak/Detmers premise held."
         },
         {
           "id": "2026-08-15-SD-ORDER",
-          "type": "order_open",
+          "type": "order_void",
           "event": "SD @ CLE (7:10 PM ET Sat; ASSUMED pitchers Vasquez-SD vs Cantillo-CLE, side-assignment UNVERIFIED)",
           "selection": "Padres ML",
           "target": 2.268,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "void",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Backup. Fair 2.213 (CLE -130/SD +118 devig 44.6% SD, model 48.5% SD - numberFire only, no dated records). Fires at 2.268+ (+127). PREMISE CLAUSE: the Vasquez/Cantillo side-assignment came from a garbled snippet - the order is VOID unless the pairing is confirmed at bet time."
+          "note": "VOID ON THE PREMISE CLAUSE, and unfilled anyway: San Diego ran a Wandy Peralta OPENER instead of listed probable Vasquez (Cantillo did start for CLE), and the written clause - 'void unless the pairing is confirmed at bet time' - fired exactly as designed. The price also ran away (+118 -> +105, never +127). SD lost 6-1: save #3 on the same card."
         },
         {
           "id": "2026-08-15-CHC-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "STL @ CHC (2:20 PM ET Sat; PITCHERS: McGreevy vs Boyd)",
           "selection": "Cubs ML",
           "target": 1.673,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Backup, earliest start on the card (verify vs clock before any action - 2:20 PM ET first pitch). Fair 1.632 (FanDuel -166 devig 60.6%, model 65.1%: log5 on CHC 72-51 vs STL 61-61 plus numberFire 67.8%, the card's biggest model-market agreement gap). Fires at 1.673+ (-149 or better). Boyd is 8-1; a scratch voids."
+          "note": "NOT FILLED - CHC shortened hard from -166 to -174/-185 closes; -149 never printed. McGreevy/Boyd started as listed - and Boyd (8-1) was tagged for three Baez HRs in an 8-4 loss. Save #4... third of THREE on this card alone. Every Saturday order's side lost; the bar refused all of them."
         },
         {
           "id": "2026-08-15-MILLAD-REFUSAL",
@@ -2364,14 +2364,273 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "resolved - anchor real",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "flagged",
           "headline": false,
-          "note": "REFUSAL #9 (rule is 8-for-8 lifetime). Thursday's showdown rerun, now with MIL the AWAY FAVORITE at DK -142 while numberFire says LAD 52.9%, our log5 says LAD 53.0%, and Polymarket (MIL 53c) sides with the book. Best-price cross-hold LAD 2.18 book + MIL 53c PM = 98.9c round trip: negative hold on a 0.6-sharpness anchor = conflicting quotes, not an arb. Both prior KC@LAD refusals resolved as one side being a garbage print - we don't know which side is garbage here either, and that is exactly the point."
+          "note": "REFUSAL #9 (rule is 8-for-8 lifetime). Thursday's showdown rerun, now with MIL the AWAY FAVORITE at DK -142 while numberFire says LAD 52.9%, our log5 says LAD 53.0%, and Polymarket (MIL 53c) sides with the book. Best-price cross-hold LAD 2.18 book + MIL 53c PM = 98.9c round trip: negative hold on a 0.6-sharpness anchor = conflicting quotes, not an arb. Both prior KC@LAD refusals resolved as one side being a garbage print - we don't know which side is garbage here either, and that is exactly the point. || SETTLED, and this one is DIFFERENT from refusals 1-8: the DK -142 was REAL (market-wide close MIL -130/-142; Misiorowski 6 IP 1 R, MIL won 4-1). Polymarket 53c was not garbage either - it was LAGGING a sharp ace-driven move, which is what produced the negative cross-hold. First refusal triggered by genuine price dispersion rather than a garbage print - and the refused market contained the winning side at the dispersed price (MIL 53c). Also true: our in-house/numberFire LAD lean was flat wrong. Scoreboard: 8-for-8 catching garbage, 0-for-1 on lag. No rule change on n=1 (Walters); distinction logged."
+        }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-08-15-stl-chc",
+          "our_home_fair": 0.6128,
+          "source_flag": "clean",
+          "close_home_novig": 0.6246,
+          "home_won": false,
+          "final": "Cardinals 8, Cubs 4 (rookie Joshua Baez 3 HR incl. first-career-AB HR off Boyd)",
+          "note": "McGreevy/Boyd started as listed. CHC shortened -166 -> -180s and lost anyway."
+        },
+        {
+          "event_id": "mlb-2026-08-15-kc-laa",
+          "our_home_fair": 0.5842,
+          "source_flag": "clean",
+          "close_home_novig": 0.592,
+          "home_won": true,
+          "final": "Angels 1, Royals 0 (Detmers 8 scoreless IP, 11 K; Schanuel RBI single 8th)",
+          "note": "Dobnak/Detmers started as listed. Our 58.4% home fair vs 58.5% no-vig close - dead on."
+        },
+        {
+          "event_id": "mlb-2026-08-15-sd-cle",
+          "our_home_fair": 0.548,
+          "source_flag": "clean",
+          "close_home_novig": 0.5325,
+          "home_won": true,
+          "final": "Guardians 6, Padres 1 (Cantillo started CLE; SD ran a Wandy Peralta OPENER, not Vasquez)",
+          "note": "SD-side pitcher premise broke silently - day-of previews still listed Vasquez."
+        },
+        {
+          "event_id": "mlb-2026-08-15-col-sf",
+          "our_home_fair": 0.624,
+          "source_flag": "clean",
+          "close_home_novig": 0.6294,
+          "home_won": true,
+          "final": "Giants 7, Rockies 1 (Webb 6 IP 1 R)",
+          "note": "Lorenzen/Webb as scouted."
+        },
+        {
+          "event_id": "mlb-2026-08-15-wsh-nym",
+          "our_home_fair": 0.5614,
+          "source_flag": "clean",
+          "close_home_novig": 0.5666,
+          "home_won": true,
+          "final": "Mets 5, Nationals 4 (Lindor RBI single capped 9th-inning comeback)",
+          "note": "Lord vs Manaea started."
+        },
+        {
+          "event_id": "mlb-2026-08-15-bal-tb",
+          "our_home_fair": 0.5694,
+          "source_flag": "clean",
+          "close_home_novig": 0.5749,
+          "home_won": false,
+          "final": "Orioles 4, Rays 3 in 10 (O'Neill go-ahead single; AL-best TB beaten at home)",
+          "note": "Bradish (not Rogers) started for BAL - scout's pairing partly off; no order, no premise."
+        },
+        {
+          "event_id": "mlb-2026-08-15-mia-cin",
+          "our_home_fair": 0.4228,
+          "source_flag": "clean",
+          "close_home_novig": 0.5068,
+          "home_won": false,
+          "final": "Marlins 8, Reds 4 (coin-flip market)"
+        },
+        {
+          "event_id": "mlb-2026-08-15-phi-min",
+          "our_home_fair": 0.4316,
+          "source_flag": "clean",
+          "close_home_novig": 0.4241,
+          "home_won": false,
+          "final": "Phillies 9, Twins 1 (Luzardo 9 K; Bohm 5 hits; Prielipp 8 R)",
+          "note": "Luzardo/Prielipp as listed. The consensus-c 8/13 series-preview price (-153) was close to the real market (-148 close)."
+        },
+        {
+          "event_id": "mlb-2026-08-15-bos-pit",
+          "our_home_fair": 0.4631,
+          "source_flag": "clean",
+          "close_home_novig": 0.4659,
+          "home_won": false,
+          "final": "Red Sox 4, Pirates 0 (Gray 7 shutout IP, career-best 15th win)"
+        },
+        {
+          "event_id": "mlb-2026-08-15-ari-atl",
+          "our_home_fair": 0.5907,
+          "source_flag": "clean",
+          "close_home_novig": 0.5453,
+          "home_won": false,
+          "final": "D-backs 10, Braves 3 (Arenado 2 HR, 4 RBI; road dog romp)",
+          "note": "The -160 print we kept (vs the rejected -182 Friday-trap print) matched the close (-130 by first pitch) far better - date discipline held."
+        },
+        {
+          "event_id": "mlb-2026-08-15-tex-ath",
+          "our_home_fair": 0.4251,
+          "source_flag": "clean",
+          "close_home_novig": 0.4084,
+          "home_won": false,
+          "final": "Rangers 5, Athletics 3 (Langford go-ahead 2-run HR)",
+          "note": "ATH close side varies +125/+146 across books - midpoint used, extra noise on this grade."
+        },
+        {
+          "event_id": "nfl-2026-08-15-lar-kc",
+          "our_home_fair": 0.5548,
+          "source_flag": "clean",
+          "close_home_novig": 0.5569,
+          "home_won": false,
+          "final": "Rams 20, Chiefs 12 (Ty Simpson 2 TD passes in debut)"
+        },
+        {
+          "event_id": "nfl-2026-08-15-jax-no",
+          "our_home_fair": 0.5682,
+          "source_flag": "clean",
+          "close_home_novig": 0.5453,
+          "home_won": false,
+          "final": "Jaguars 24, Saints 20 (Rattler took the opening drive - Shough did not suit up despite the start report)",
+          "note": "Preseason QB plans unreliable even when 'confirmed' - priced-but-distrusted stance again correct."
+        },
+        {
+          "event_id": "nfl-2026-08-15-dal-sea",
+          "our_home_fair": 0.5873,
+          "source_flag": "clean",
+          "close_home_novig": 0.5759,
+          "home_won": false,
+          "final": "Cowboys 17, Seahawks 7 (SEA's first game since the Super Bowl)",
+          "note": "Road dogs swept all three Saturday preseason games - preseason ML receipts now 6 dog wins + 1 tie in 7 graded."
+        },
+        {
+          "event_id": "cfl-2026-08-15-tor-edm",
+          "our_home_fair": 0.6382,
+          "source_flag": "clean",
+          "close_home_novig": 0.6395,
+          "home_won": true,
+          "final": "Elks 42, Argonauts 12 (27 points off 6 TOR turnovers; Ross 85-yd pick-six)",
+          "note": "Total 54 UNDER 62.5 - our slight under lean (51.1%) right."
+        },
+        {
+          "event_id": "ufc-2026-08-15-mak-gar",
+          "our_home_fair": 0.2296,
+          "source_flag": "clean",
+          "close_home_novig": 0.2337,
+          "home_won": false,
+          "final": "Makhachev UD 49-46x2/48-47 over Machado Garry - retains WW title, record 17th straight UFC win"
+        },
+        {
+          "event_id": "ufc-2026-08-15-der-rob",
+          "our_home_fair": 0.3269,
+          "source_flag": "clean",
+          "close_home_novig": 0.3554,
+          "home_won": false,
+          "final": "Dern UD 49-46x2/48-47 over Robertson - retains SW title (dominant 4 rounds, dropped R5)",
+          "note": "Aug-11 early lines (1.44/2.80) vs close (1.51/2.64): drift toward the dog, consensus-c caution justified."
+        },
+        {
+          "event_id": "atp-2026-08-15-zve-nor",
+          "our_home_fair": 0.2199,
+          "source_flag": "clean",
+          "close_home_novig": 0.2113,
+          "home_won": false,
+          "final": "Zverev d. Norrie 3-6 6-3 6-3 (finished early Sunday; H2H 8-0)"
+        },
+        {
+          "event_id": "mlb-2026-08-15-sea-hou",
+          "our_home_fair": 0.5264,
+          "close_home_novig": null,
+          "home_won": false,
+          "final": "Mariners 10, Astros 5 (Cole Young HR, 4 RBI; SEA closed +106)",
+          "source_flag": "flagged",
+          "note": "PITCHER-METADATA TRAP: our slate listed Kirby vs Lambert - that was FRIDAY'S pairing (actual: Hancock vs Wesneski). Same-series prior-day trap, striking probables instead of prices for the first time. No order on the game; numberFire input was 8/15-dated and unaffected. One-sided close - result recorded, no Brier entry."
+        },
+        {
+          "event_id": "liga-2026-08-15-ray-sev",
+          "our_home_fair": 0.4175,
+          "close_home_novig": 0.4114,
+          "home_won": true,
+          "final": "Sevilla 2, Rayo 1 (Garcia 4' RAY; two second-half Sevilla penalties incl. VAR)",
+          "source_flag": "clean",
+          "note": "3 goals = OVER 2.5: our under lean (59.6%) WRONG. Closing total 2.30/1.63 matched our priced 2.30/1.61 almost exactly - the board was honest, the lean just lost."
+        },
+        {
+          "event_id": "arg-2026-08-15-gim-est",
+          "our_home_fair": 0.4129,
+          "close_home_novig": 0.4878,
+          "home_won": true,
+          "final": "Estudiantes 4, Gimnasia 0 (Gimnasia finished with 9 men)",
+          "source_flag": "flagged",
+          "note": "Close trio SYNTHESIZED from preview implied probs (48.75/27.25/24) - no explicit closing board recoverable; flagged. CONSENSUS-C FLAG VALIDATED: the real market's draw sat ~3.1-3.3 implied, our source's 2.75 was a bad quote, exactly as flagged at ship time."
+        },
+        {
+          "event_id": "br-2026-08-15-rbb-cap",
+          "our_home_fair": 0.4771,
+          "close_home_novig": 0.5033,
+          "home_won": false,
+          "final": "Athletico-PR 1, Bragantino 1 (two goals in an 8-minute span)",
+          "source_flag": "clean"
+        },
+        {
+          "event_id": "br-2026-08-15-cor-sao",
+          "our_home_fair": 0.5624,
+          "close_home_novig": 0.5713,
+          "home_won": false,
+          "final": "Sao Paulo 1, Coritiba 1 (SP now winless in 9 league games)",
+          "source_flag": "flagged",
+          "note": "Draw/away closing legs are midpoints of a wide aggregate range (draw 3.1-3.8) - no single-book trio recoverable; flagged, reference only."
+        },
+        {
+          "event_id": "arg-2026-08-15-boc-pla",
+          "our_home_fair": 0.265,
+          "close_home_novig": 0.2445,
+          "home_won": false,
+          "final": "Platense 1, Boca 1 (Merentiel 79' equalizer; Platense's second goal disallowed by VAR)",
+          "source_flag": "clean",
+          "note": "Easybet single-book closing trio. All three South American evening matches ended 1-1."
+        }
+      ],
+      "metrics": {
+        "n": 23,
+        "brier_ours": 0.2231,
+        "brier_close": 0.2214,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0184,
+        "max_abs_fair_vs_close": 0.084,
+        "note": "23 markets graded vs closes (3 flagged: synthesized Estudiantes trio, aggregate-midpoint Sao Paulo legs, one-sided SEA@HOU excluded from Brier entirely). MIL@LAD carried no prediction (refused). Derivative leans: CFL under 62.5 RIGHT (54), Sevilla under 2.5 WRONG (3 goals)."
+      },
+      "lessons_applied": [
+        "THREE COUNTERFACTUAL SAVES ON ONE CARD: all three unfilled/void orders' sides lost (KC shut out 1-0, SD 1-6 behind a broken premise, CHC 4-8 as -180 closers). Unfilled-order ledger moves 7W-1L -> 7W-4L in a single grading pass - the 'bar too high' narrative is dead; the bar prices both tails.",
+        "SAME-SERIES TRAP, PITCHER EDITION (SEA@HOU): the Kirby/Lambert pairing on our slate was Friday's game - the prior-day trap struck probables metadata rather than prices for the first time. Date discipline now explicitly covers pitcher pairings, not just quotes.",
+        "OPENER RISK: 'probable starter' listings survive to game day even when a team runs a bullpen opener (Peralta for Vasquez). The SD premise clause - written because the pairing was unverified - fired correctly; premise clauses stay mandatory on any order without lineup-lock confirmation.",
+        "REFUSAL #9 taxonomy: negative cross-hold on a degraded anchor has two causes - garbage prints (refusals 1-8) and prediction-market LAG behind a sharp move (this one). The binary rule cannot tell them apart and forfeited a would-be winner at the dispersed price; kept unchanged on n=1 per Walters, but the distinction is now in the ledger for when n grows.",
+        "Consensus-c demotions EARNED THEIR KEEP twice: the Estudiantes 2.75 draw was confirmed off-market (real ~3.1-3.3), and the rejected ARI@ATL -182 Friday-trap print closed nowhere near the market (-130) while our kept -160 print was directionally right.",
+        "Preseason ML receipts: road dogs swept Saturday (now 6 dog wins + 1 tie across 7 graded preseason MLs) - priced-but-distrusted, no orders, zero dollars burned."
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "sport": "mlb",
+      "mode": "degraded - THIN HONEST Tuesday card: 1 event / 1 market. Monday-night GO with a slow clock (caught: a Mon 7:10 PM ET game was already final against a clock reading 6:45 PM) killed every Monday option, and Tuesday boards were not yet posted anywhere except SEA@MIL. All exclusions documented in the slate provenance: 14 unpriced Tuesday MLB games, Cincinnati R16 (OOP unpublished; Sunday-dated Dimers boards rejected as the prior-day trap), 4-5 WNBA games without prices, UCL/Libertadores legs without boards or with date conflicts. Single early FanDuel board demoted to consensus-c (posted ~2 days ahead).",
+      "engine_verdict": "PASS - ninth straight. Only order: Brewers ML >= 1.761 (-131 or better; board -148, -2.20% now) - MIL 77-48 best in baseball at home vs 59-66 SEA, our blend 58.2% vs market 57.8%: near-agreement, so the order only fires if the board softens 17 cents. Mariners side is 5.6% underwater - no order.",
+      "predictions_home_fair": {
+        "mlb-2026-08-18-sea-mil": 0.5821
+      },
+      "predictions_other": {},
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-18-MIL-ORDER",
+          "type": "order_open",
+          "event": "SEA @ MIL (7:40 PM ET Tue, American Family Field; PITCHERS: Miller vs Harrison)",
+          "selection": "Brewers ML",
+          "target": 1.761,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER on a one-market card. Fair 1.718 (FanDuel -148/+126 power-devigged to 57.8% MIL, blended with model 60.7% - log5 on records final through Monday ensembled with SportsGrid's 53%). Fires at 1.761+ (-131 or better). $82 at quarter-Kelly if clean, returns $145. CAVEATS: the board is an EARLY line posted ~2 days out - re-verify price AND pitchers (Miller/Harrison; a change voids) at bet time; DRIFT-CANCEL applies - if the line drifts to -131 the premise has changed, re-price before betting. The other 14 Tuesday games post boards Tuesday; say GO for a morning re-scout if you want the full slate priced before first pitch."
         }
       ]
     }
