@@ -2657,6 +2657,73 @@
         "The one-market thin card graded clean: near-parity fair (58.2% vs 57.8% devig) plus a model lean (60.7%) that the close (61.6%) validated - the order bar refused a price the market itself abandoned within hours. Thin honest cards cost nothing and keep the calibration sample growing.",
         "Order-tally hygiene: prior notes carried a 7W undercount for unfilled-order sides; corrected to 9W-4L across all 13 never-filled orders. Ledger notes are part of the record - arithmetic in them gets the same discipline as stakes."
       ]
+    },
+    {
+      "date": "2026-08-20",
+      "sport": "multi",
+      "mode": "degraded, MARKET-ONLY - thin Thursday card: 4 events / 4 markets (two Libertadores R16 second legs, Dream-Sparks WNBA, 49ers-Chargers preseason). Third straight cycle with a provably slow clock (a 1:10 PM start final against a 3:51 PM reading) - Wednesday declared fully dead, gate applied as if Thursday noon. Thursday MLB is a 9-game slate with ZERO posted boards at ship time (books post day-of), so the in-house log5 layer sits out entirely; CFL number-only, tennis QF order of play unpublished, and 13+ UEL/UECL legs board-less. All exclusions named in the slate provenance. No refusals - nothing conflicted, most things just did not exist yet.",
+      "engine_verdict": "PASS - tenth straight. Engine's top order by EV (Dream ML >= 1.340, -2.07% now) DEMOTED from headline per the Braga/extreme-favorite precedent (a 1.28 favorite fills on cross-book noise, not market moves) plus live injury flux on both sides. Headline order: LDU Quito ML >= 1.682 (-2.52% now) - the altitude leg. Backup: 49ers ML >= 1.879 (preseason, distrusted, backup only). Corinthians home leg sits -6.9% under a fat stitched hold - no order.",
+      "predictions_home_fair": {
+        "lib-2026-08-20-mir-ldu": 0.6092,
+        "nfl-2026-08-20-sf-lac": 0.4546,
+        "lib-2026-08-20-ros-cor": 0.4898,
+        "wnba-2026-08-20-atl-las": 0.235
+      },
+      "predictions_other": {},
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-20-LDU-ORDER",
+          "type": "order_open",
+          "event": "Mirassol @ LDU Quito, Libertadores R16 leg 2 (6:00 PM ET Thu, Quito, 2850m; agg 1-1)",
+          "selection": "LDU Quito ML (3-way; draw/away lose)",
+          "target": 1.682,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER on a market-only card. Fair 1.641 (pure power-devig of a cross-book AVERAGE trio 1.60/3.80/6.20 - consensus-c, the weakest anchor class we have headlined, flagged as such). Fires at 1.682+ AND ONLY on a re-verified live single-book quote - a resting fill on this anchor proves nothing (Braga rule). Wincomparator's dated model (54.8% LDU) sits just under our fair, a mild confirmation. $92 at quarter-Kelly if clean, returns $154. Altitude is the thesis and it is already in the price - the order asks for margin beyond it."
+        },
+        {
+          "id": "2026-08-20-ATL-ORDER",
+          "type": "order_open",
+          "event": "Dream @ Sparks, WNBA (10:00 PM ET Thu, Crypto.com Arena)",
+          "selection": "Dream ML",
+          "target": 1.34,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": false,
+          "note": "Engine's top order by EV, deliberately NOT the headline: a 1.28 favorite 'filling' at 1.34 is usually cross-book variance (Braga/Liberty precedent). PREMISE CLAUSE: Sparks are without Brink and Plum (priced in), but Dream's B.Jones and Reese are QUESTIONABLE - if either is downgraded to OUT the read is void. Covers board may be a consensus feed - live single-book re-verify required."
+        },
+        {
+          "id": "2026-08-20-SF-ORDER",
+          "type": "order_open",
+          "event": "49ers @ Chargers, NFL preseason Wk 2 (10:00 PM ET Thu, SoFi)",
+          "selection": "49ers ML",
+          "target": 1.879,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Strictly a backup: the cleanest board on the card (Sports Interaction two-sided) but PRESEASON - QB plans unverified, variance extreme, and the graded receipts (6 dog wins + 1 tie in 7 preseason MLs) say the market barely knows either. Fires at 1.879+ (-114 or better vs -130 now). Star sizing only. Spread direction conflicted across sources - ML only."
+        }
+      ]
     }
   ]
 }

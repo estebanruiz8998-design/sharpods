@@ -1,0 +1,130 @@
+{
+ "_provenance": "Thursday 2026-08-20 card, compiled Wednesday evening. CLOCK: container read 3:51 PM ET Wed but a 1:10 PM ET start was already final and recapped - the clock is provably slow for the THIRD straight cycle (drift history ~3.5-4h); pessimistic-now = Wednesday ~8:00 PM ET, and the gate was applied as if it were Thursday noon. NOTHING WEDNESDAY QUALIFIES: the latest MLB start is 8:40 PM ET (all West Coast teams are in Eastern/Central parks), the lone 10:00 PM WNBA tip (Lynx-Valkyries) sits exactly at the 2h boundary on cross-article consensus prices, Cincinnati night matches have no verifiable start times, and the 10:30 PM MLS boards are one-legged or date-unverified. THURSDAY PRICED: 4 events / 4 markets. Unpriced/excluded Thursday inventory, by name: all 9 MLB games (no dated Thursday boards exist yet - books post day-of; Wednesday same-series prices incl. NYY -120 rejected), CFL Redblacks-Alouettes (spread -12.5/total 62.5 number-only, no prices; 0-9 vs 8-1), NFL LV@HOU (one-legged ML), all Cincinnati QFs (order of play publishes Wednesday night - no boards), WNBA Fever-Wings (no prices; home=Dallas cross-verified three ways against one bad snippet), Benfica-Aarhus (draw leg missing off a 1.18 favorite), Zvezda-Plzen (tipster page, book unnamed), 15 more UEL/UECL first legs (no boards), LDU 'best-odds' negative-hold set (aggregate, rejected). Argentina fecha 6 and Liga MX jornada 5 confirmed to start Friday - nothing Thursday. MARKET-ONLY CARD: no MLB events means the in-house log5 layer sits out; no dated 2-way models exist for what remains. Standing rules on every order: drift-cancel, live re-verify, injury/premise clauses as noted. --market-weight 0.85.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "dated single-book two-sided board (Sports Interaction, 08/20)"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated boards carrying composition flags (stitched Corinthians trio, Wincomparator average trio, Covers WNBA feed)"
+  }
+ },
+ "events": [
+  {
+   "event_id": "lib-2026-08-20-mir-ldu",
+   "sport": "soccer",
+   "league": "Copa Libertadores R16 leg 2 (agg 1-1)",
+   "home": "LDU Quito",
+   "away": "Mirassol",
+   "start_time": "2026-08-20T22:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.6
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 3.8
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 6.2
+      }
+     ]
+    }
+   ],
+   "note": "6:00 PM ET Estadio Rodrigo Paz Delgado, Quito (venue-verified; 2,850m altitude baked into LDU favoritism). Trio is a cross-book AVERAGE (~4.9% hold) - consensus-c, not a single-book anchor; the circulating 'best odds' set (1.78/3.91/6.00) has NEGATIVE hold and was rejected as a best-price aggregate. Wincomparator model (54.8/23.6/21.6) noted but not ensembled (3-way model blending stays out per house precedent). Leg 1: 1-1 in Mirassol; winner advances."
+  },
+  {
+   "event_id": "lib-2026-08-20-ros-cor",
+   "sport": "soccer",
+   "league": "Copa Libertadores R16 leg 2 (agg 0-0)",
+   "home": "Corinthians",
+   "away": "Rosario Central",
+   "start_time": "2026-08-21T00:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.9
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 2.7
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 4.7
+      }
+     ]
+    }
+   ],
+   "note": "8:30 PM ET Neo Quimica Arena, Sao Paulo (venue-verified via official ticket pages; some listings say 9:30 PM ET - 8:30 is the safe-earliest read). WE GRADED LEG 1 (0-0 at Rosario). STITCHED TRIO: home/away from sportsgambler (-111/+370), draw from Bwin via lance (2.70) - 10.9% combined hold means book mismatch, consensus-c and indicative only. Leg-1 trap prices (3.90/2.80/2.32, the Aug-13 Rosario-home board) are circulating - rejected. Corinthians without Allan (suspended); another draw = penalties."
+  },
+  {
+   "event_id": "wnba-2026-08-20-atl-las",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Sparks",
+   "away": "Dream",
+   "start_time": "2026-08-21T02:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 3.8
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.28
+      }
+     ]
+    }
+   ],
+   "note": "10:00 PM ET Crypto.com Arena (venue-verified home LA). Covers board dated for the Aug-20 game: ATL -360/LAL +280 (~4.4% hold, plausible single-board shape but possibly a consensus feed - consensus-c). INJURY FLUX PRICED IN: Sparks Brink OUT, Plum OUT; Dream B.Jones and Reese QUESTIONABLE - re-verify statuses before any action; a Dream downgrade voids the read. Spread -8.5/total 180.5 number-only, not priced."
+  },
+  {
+   "event_id": "nfl-2026-08-20-sf-lac",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 2",
+   "home": "Chargers",
+   "away": "49ers",
+   "start_time": "2026-08-21T02:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.1
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.769
+      }
+     ]
+    }
+   ],
+   "note": "10:00 PM ET SoFi Stadium (venue-verified LAC home). Sports Interaction two-sided board dated 08/20: SF -130 / LAC +110; Fanatics has SF -125 (shop leg). Spread DIRECTION CONFLICTED across sources (DK LAC +1.5 vs a 'LAC -1.5' read) - spread not priced. Total 38.5-39 number-only. Kalshi 53% SF (prediction market, shop-only reference). Preseason: QB plans unverified, variance extreme, priced-but-distrusted. LAC won their opener 27-7; SF lost 19-13."
+  }
+ ],
+ "model_probabilities": {}
+}
