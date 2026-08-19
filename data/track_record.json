@@ -2613,25 +2613,49 @@
         "mlb-2026-08-18-sea-mil": 0.5821
       },
       "predictions_other": {},
-      "settle": "pending",
+      "settle": "fully settled 2026-08-19 (Wed)",
       "decisions": [
         {
           "id": "2026-08-18-MIL-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "SEA @ MIL (7:40 PM ET Tue, American Family Field; PITCHERS: Miller vs Harrison)",
           "selection": "Brewers ML",
           "target": 1.761,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER on a one-market card. Fair 1.718 (FanDuel -148/+126 power-devigged to 57.8% MIL, blended with model 60.7% - log5 on records final through Monday ensembled with SportsGrid's 53%). Fires at 1.761+ (-131 or better). $82 at quarter-Kelly if clean, returns $145. CAVEATS: the board is an EARLY line posted ~2 days out - re-verify price AND pitchers (Miller/Harrison; a change voids) at bet time; DRIFT-CANCEL applies - if the line drifts to -131 the premise has changed, re-price before betting. The other 14 Tuesday games post boards Tuesday; say GO for a morning re-scout if you want the full slate priced before first pitch."
+          "note": "NOT FILLED - the trigger was -131 or better and the market moved the WRONG way from the first print: -148 early -> -150 open -> -159/-160/-165 -> -168 close. No book ever came within 17 cents of the trigger; no drift-through, so no re-price question. MIL then won 22-0, so the side won - but the close (61.6% no-vig) steamed PAST our 58.2% fair, meaning even a -148 take would have been the slow side of a sharp move our own model layer (60.7% MIL) partly anticipated. CORRECTED RUNNING TALLY of every order that never filled (incl. the voided SD premise): sides are now 9W-4L across 13 (Swiatek, CIN, DET, TB, ATL, NYY, MIL 8/13, PHI 8/13, MIL 8/18 won; FoD Over, KC, CHC, SD lost) - earlier notes' 7W counts undercounted by one, fixed here. Fill oracle stands: report an execution and I regrade."
         }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-08-18-sea-mil",
+          "our_home_fair": 0.5821,
+          "source_flag": "clean",
+          "close_home_novig": 0.6191,
+          "home_won": true,
+          "final": "Brewers 22, Mariners 0 - ties the modern-era record shutout margin (1975 Pirates, 2004 Cleveland); Mariners franchise-record defeat. Yelich/Hamilton/Lara 3-run HRs; Harrison 5 IP 2 H 0 R.",
+          "note": "Miller/Harrison both started as listed - premise held. FanDuel close -168/+156; cross-books -159/-160/-165. The early -148 we priced was the CHEAPEST MIL price that ever existed - the board only steamed toward MIL all day. Close no-vig 61.6% MIL vs our 58.2% fair: the market ran past us, in the direction our model layer (60.7%) leaned."
+        }
+      ],
+      "metrics": {
+        "n": 1,
+        "brier_ours": 0.1746,
+        "brier_close": 0.1451,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.037,
+        "max_abs_fair_vs_close": 0.037,
+        "note": "One market, graded vs a firm multi-book close."
+      },
+      "lessons_applied": [
+        "The one-market thin card graded clean: near-parity fair (58.2% vs 57.8% devig) plus a model lean (60.7%) that the close (61.6%) validated - the order bar refused a price the market itself abandoned within hours. Thin honest cards cost nothing and keep the calibration sample growing.",
+        "Order-tally hygiene: prior notes carried a 7W undercount for unfilled-order sides; corrected to 9W-4L across all 13 never-filled orders. Ledger notes are part of the record - arithmetic in them gets the same discipline as stakes."
       ]
     }
   ]
