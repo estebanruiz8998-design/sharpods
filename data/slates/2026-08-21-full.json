@@ -1,0 +1,181 @@
+{
+ "_provenance": "Friday 2026-08-21 card, compiled Thursday late night (pessimistic-now ~10:30 PM ET Thu - the NYY@BAL night game was fully recapped against a clock reading 5:45 PM; fourth straight slow clock. Gate applied as if Friday NOON: earliest priced start is Arsenal 3:00 PM ET, +3h clear). PRICED: 5 events / 6 markets. The whole 15-game Friday MLB slate is mapped with venues verified but carries ZERO verifiable posted prices in any dated snippet - all unpriced (Covers matchup pages 367964/369594/369153 are the retry targets); log5 sits out with it. Also excluded by name: Aldosivi-Union (1:30 PM ET start fails the Friday-noon gate by 30 min; it was priced), Betis-Real Sociedad (1.4% hold = best-price aggregate, shop-only), CFL Bombers-Elks (spread/total numbers without prices, no ML), Packers-Broncos (no ML - only a spread number; Bo Nix plays a half), all three WNBA games (no prices indexed), Cincinnati QFs Gauff-Kostyuk and Fritz-Nakashima (Dimers model 63% Fritz exists but no book prices; order of play incomplete), Tigres-Atlante (partial Caliente board), Queretaro-Toluca and San Lorenzo-Rio Cuarto (no dated boards). Schedule traps pre-killed: Bundesliga does NOT open this weekend (Aug 28; Aug 21-24 is DFB-Pokal - skip), Brasileirao dark Friday, Championship has no Friday game. Standing rules on every order: drift-cancel, live re-verify, premise clauses as noted. --market-weight 0.85.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "dated single-book boards (CBS/Covers US book for Arsenal, Codere for Juarez-America)"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated boards with flags (unnamed-book Covers preseason pairs, fat-hold Betfred trio with a stale page slug)"
+  }
+ },
+ "events": [
+  {
+   "event_id": "epl-2026-08-21-cov-ars",
+   "sport": "soccer",
+   "league": "Premier League 2026-27 MW1 (opening night)",
+   "home": "Arsenal",
+   "away": "Coventry City",
+   "start_time": "2026-08-21T19:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.174
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 7.5
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 14.0
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 2.5,
+       "decimal_odds": 1.556
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 2.5,
+       "decimal_odds": 2.35
+      }
+     ]
+    }
+   ],
+   "note": "3:00 PM ET Emirates (venue/ticketing verified; 20:00 BST). Season opener: defending champions host newly promoted Coventry (first PL appearance in 25+ years). Single US-book board: -575/+650/+1300 (5.7% hold) and O2.5 -180/U+135 (6.8%). SportsLine model: Arsenal 88% (3-way, NOT ensembled per house precedent), over 2.5 at 64% (2-way, ensembled). The 1.20/8.15/20.0 trio circulating is a 0.6%-hold best-price aggregate - rejected. Season opener = no league form; wide error bars."
+  },
+  {
+   "event_id": "nfl-2026-08-21-nyj-pit",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 2",
+   "home": "Steelers",
+   "away": "Jets",
+   "start_time": "2026-08-21T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.2
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.7
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET Acrisure Stadium. Away Jets favored -142/+120 - Covers Week-2 roundup, BOOK UNNAMED (consensus-c). QB plans not captured. Preseason: priced-but-distrusted (dogs 6-0-1 in our graded sample)."
+  },
+  {
+   "event_id": "nfl-2026-08-21-car-jax",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 2",
+   "home": "Jaguars",
+   "away": "Panthers",
+   "start_time": "2026-08-21T23:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.833
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.0
+      }
+     ]
+    }
+   ],
+   "note": "7:30 PM ET EverBank Stadium. JAX -120/CAR +100 (~4.5% hold) - same unnamed-book Covers roundup, consensus-c. QB plans not captured."
+  },
+  {
+   "event_id": "ligamx-2026-08-21-mty-leo",
+   "sport": "soccer",
+   "league": "Liga MX Apertura J5 (moved to Friday - Leagues Cup QFs)",
+   "home": "Leon",
+   "away": "Monterrey",
+   "start_time": "2026-08-22T01:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.875
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 3.6
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.05
+      }
+     ]
+    }
+   ],
+   "note": "9:00 PM ET Estadio Leon (venue verified; 19:00 centro - reschedule confirmed by Fox Sports MX/Milenio/TV Azteca). Betfred single-book trio at a FAT 11.3% hold (Betfred pads LatAm leagues - single book, not aggregate) and the odds page is still slugged with the pre-reschedule date - consensus-c, re-verify live. Monterrey 4 straight H2H wins; Squawka Signal calls 1-2 (no probability - not ensembled)."
+  },
+  {
+   "event_id": "ligamx-2026-08-21-ame-jua",
+   "sport": "soccer",
+   "league": "Liga MX Apertura J5",
+   "home": "FC Juarez",
+   "away": "Club America",
+   "start_time": "2026-08-22T03:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 3.9
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 3.8
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.82
+      }
+     ]
+    }
+   ],
+   "note": "11:00 PM ET Estadio Olimpico Benito Juarez (venue verified - America visits the border). Codere single-book trio -122/+280/+290 (6.9% hold), bet365 America 1.81 cross-check. America top of table (10 pts), Juarez 4 straight losses (2 GF / 13 GA). SportyTrader model (23/31/46) has an implausible draw weight and SI's AI disagrees - noted, NOT ensembled."
+  }
+ ],
+ "model_probabilities": {
+  "epl-2026-08-21-cov-ars:total:over": 0.64,
+  "epl-2026-08-21-cov-ars:total:under": 0.36
+ }
+}

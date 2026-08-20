@@ -2724,6 +2724,96 @@
           "note": "Strictly a backup: the cleanest board on the card (Sports Interaction two-sided) but PRESEASON - QB plans unverified, variance extreme, and the graded receipts (6 dog wins + 1 tie in 7 preseason MLs) say the market barely knows either. Fires at 1.879+ (-114 or better vs -130 now). Star sizing only. Spread direction conflicted across sources - ML only."
         }
       ]
+    },
+    {
+      "date": "2026-08-21",
+      "sport": "multi",
+      "mode": "degraded - Friday card: 5 events / 6 markets (the EPL OPENER Arsenal-Coventry with ML + total, two Liga MX J5 boards moved up for Leagues Cup rest, two NFL preseason pairs). Fourth straight slow clock caught (NYY@BAL fully recapped vs a 5:45 PM reading; pessimistic-now ~10:30 PM ET Thu); gate applied as Friday noon. The ENTIRE 15-game Friday MLB slate is mapped and venue-verified but carries zero verifiable posted prices - unpriced, log5 sits out. First dated third-party model on an EPL total (SportsLine over-2.5 64%) is ensembled; 3-way model legs stay out per precedent. Exclusions and pre-killed schedule traps (Bundesliga opens Aug 28, Brasileirao dark, Championship no Friday game) documented in the slate.",
+      "engine_verdict": "PASS - eleventh straight. Top candidate Arsenal ML (1.174, -1.66% now) DEMOTED from headline per the Braga/extreme-favorite rule; preseason cannot headline by stance; the total stays order-only by standing rule. Headline order: Club America ML >= 1.945 at Juarez (-4.09% now, clean Codere anchor). Backups: Arsenal ML >= 1.224 (live named-book quote only), Over 2.5 at the Emirates >= 1.662 (SportsLine 64% behind it), Jets ML >= 1.804 (preseason, star sizing).",
+      "predictions_home_fair": {
+        "epl-2026-08-21-cov-ars": 0.8377,
+        "nfl-2026-08-21-car-jax": 0.5233,
+        "nfl-2026-08-21-nyj-pit": 0.4318,
+        "ligamx-2026-08-21-ame-jua": 0.2332,
+        "ligamx-2026-08-21-mty-leo": 0.3091
+      },
+      "predictions_other": {
+        "epl-2026-08-21-cov-ars:total:2.5": {
+          "over": 0.6166,
+          "under": 0.3834
+        }
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-21-AME-ORDER",
+          "type": "order_open",
+          "event": "America @ Juarez, Liga MX J5 (11:00 PM ET Fri, Estadio Olimpico Benito Juarez)",
+          "selection": "Club America ML (3-way; draw/home lose)",
+          "target": 1.945,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER. Fair 1.898 (Codere -122/+280/+290 power-devigged to 52.7% America; 6.9% hold, single book, bet365 cross-check 1.81). Fires at 1.945+ (+95 or better). Table leader vs a side that has lost 4 straight while conceding 13 - the market knows, so the order asks for margin. $66 at quarter-Kelly if clean, returns $129. DRIFT-CANCEL applies; late-night Liga MX boards move - live re-verify at bet time. SportyTrader's model draw weight (31%) is implausible and was not ensembled."
+        },
+        {
+          "id": "2026-08-21-ARS-ORDER",
+          "type": "order_open",
+          "event": "Coventry @ Arsenal, EPL opener (3:00 PM ET Fri, Emirates)",
+          "selection": "Arsenal ML (3-way)",
+          "target": 1.224,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Engine's top EV, deliberately NOT the headline: a 1.17 favorite reaching 1.22 is cross-book noise territory (Braga/Dream precedent) - fires ONLY on a live, named single-book quote at 1.224+. SportsLine has Arsenal 88% (3-way, not ensembled). Season opener, no league form - wide error bars behind a tight number."
+        },
+        {
+          "id": "2026-08-21-ARSOVER-ORDER",
+          "type": "order_open",
+          "event": "Coventry @ Arsenal, same match - total 2.5",
+          "selection": "Over 2.5",
+          "target": 1.662,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Totals never headline (standing rule; totals 3 of 6 graded). Fair 1.622 - devig 61.2% blended with SportsLine's 64% over (the first dated model we have had on an EPL total). Fires at 1.662+ (-151 or better vs -180 now)."
+        },
+        {
+          "id": "2026-08-21-NYJ-ORDER",
+          "type": "order_open",
+          "event": "Jets @ Steelers, NFL preseason Wk 2 (7:00 PM ET Fri, Acrisure)",
+          "selection": "Jets ML",
+          "target": 1.804,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": false,
+          "note": "Strictly a backup at star sizing: preseason (dogs 6-0-1 in our graded MLs) AND the board is an unnamed-book Covers pair (consensus-c) - fires only on a named single-book print at 1.804+ with QB plans checked."
+        }
+      ]
     }
   ]
 }
