@@ -2877,6 +2877,83 @@
           "note": "FanDuel closing trio -550/+600/+1400; DK -475. Our over lean (61.7% blended with SportsLine's 64%) was RIGHT - closing total held -176/-181 over."
         }
       ]
+    },
+    {
+      "date": "2026-08-22",
+      "sport": "multi",
+      "mode": "degraded, MARKET-ONLY - Saturday card: 14 events / 14 markets (five UFC Fight Night Sacramento bouts - the ledger's first UFC-anchored Saturday, six NFL preseason FanDuel pairs, CFL Ham-Tor at reduced grade, two South American trios). Fifth straight slow clock caught. The entire 15-game MLB Saturday slate carries ZERO two-sided boards for the second straight day - unpriced, log5 out; Espanyol-Real Madrid unpriceable (home leg never printed); Cincinnati semis unset+unpriced; WNBA priceless; all five EPL Saturday games gate-excluded (7:30 AM-12:30 PM ET, confirmed). All documented in the slate provenance.",
+      "engine_verdict": "PASS - twelfth straight. Top-EV candidates are all extreme favorites (Judice 1.17, Jones 1.31, de Ridder 1.29) - Braga-demoted; TB (preseason) and Toronto (unnamed board) blocked by stance. Headline order: Cruz Azul ML >= 1.569 (-2.64% now) on the card's cleanest anchor - Caliente and Codere agree within 2 cents. Backups: Hernandez ML >= 1.691 (first UFC order in the ledger) and Argonauts ML >= 1.536 (named-book print only, weather clause).",
+      "predictions_home_fair": {
+        "ufc-2026-08-22-med-jon": 0.7479,
+        "cfl-2026-08-22-ham-tor": 0.6673,
+        "nfl-2026-08-22-kc-tb": 0.6811,
+        "ligamx-2026-08-22-atl-cru": 0.6534,
+        "nfl-2026-08-22-dal-ari": 0.5453,
+        "arg-2026-08-22-ind-riv": 0.4813,
+        "ufc-2026-08-22-spi-pet": 0.6036,
+        "nfl-2026-08-22-chi-cin": 0.4547,
+        "nfl-2026-08-22-phi-ne": 0.4452,
+        "nfl-2026-08-22-no-lar": 0.4013,
+        "nfl-2026-08-22-nyg-mia": 0.4013,
+        "ufc-2026-08-22-her-rod": 0.3937,
+        "ufc-2026-08-22-rdr-dol": 0.2416,
+        "ufc-2026-08-22-jud-cha": 0.1595
+      },
+      "predictions_other": {},
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-22-CRU-ORDER",
+          "type": "order_open",
+          "event": "Atlas @ Cruz Azul, Liga MX J5 (11:00 PM ET Sat, Estadio Banorte/Azteca)",
+          "selection": "Cruz Azul ML (3-way; draw/away lose)",
+          "target": 1.569,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER. Fair 1.530 (Caliente -205/+330/+550 power-devigged to 65.3% Cruz Azul; Codere -200/+325/+525 confirms within 2 cents - two named books, the cleanest anchor of the day). Fires at 1.569+ (-176 or better). The skid-vs-form angle (Cruz Azul 3 straight losses, Atlas 3 of 4) is already priced; the order asks for margin. $110 at quarter-Kelly if clean, returns $172. DRIFT-CANCEL applies; late-night Liga MX boards move - live re-verify. Friday's America lesson pending: if the live market sits far from these boards, stand down and report."
+        },
+        {
+          "id": "2026-08-22-HER-ORDER",
+          "type": "order_open",
+          "event": "Hernandez vs Rodrigues, UFC FN Sacramento main event (~10:15 PM ET walk)",
+          "selection": "Hernandez ML",
+          "target": 1.691,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "FIRST UFC ORDER in the ledger, strictly a backup. Fair 1.649 (DK fight-week -166/+140 devigged to 60.6% Hernandez). Fires at 1.691+ (-145 or better). Fight-week lines drift on weigh-ins - re-verify the day-of board; a drift through the trigger = re-price first."
+        },
+        {
+          "id": "2026-08-22-TOR-ORDER",
+          "type": "order_open",
+          "event": "Hamilton @ Toronto, CFL Wk 12 (7:00 PM ET Sat, BMO Field)",
+          "selection": "Argonauts ML",
+          "target": 1.536,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": false,
+          "note": "Backup with two binding conditions: (1) the Covers board is NOT book-attributed - fires only on a named single-book print at 1.536+ (-187 or better); (2) WEATHER CLAUSE - ~47% thunderstorm risk at kickoff; a delay voids. Bo Levi Mitchell still out for Hamilton."
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,390 @@
+{
+ "_provenance": "Saturday 2026-08-22 card, compiled Friday ~11:30 PM ET (pessimistic-now; fifth straight slow clock - Arsenal's 3 PM Friday match was fully recapped against a 7:03 PM reading). Gate applied as Saturday NOON: earliest priced start is 4:00 PM ET (2 PM+ rule kept; UFC main card 8 PM, Cruz Azul 11 PM). PRICED: 14 events / 14 markets - five UFC Fight Night Sacramento bouts, six NFL preseason FanDuel pairs, CFL Ham-Tor at reduced grade, two South American trios. UNPRICED/EXCLUDED by name: the ENTIRE 15-game MLB Saturday slate (second straight day with zero two-sided boards in the index - only a stale one-sided MIL -145 and an unattributed DET -121; four pitcher-team assignments also unverified), Espanyol-Real Madrid (home leg never printed anywhere - the only La Liga qualifier), both Cincinnati semifinals (participants TBD at ship + no boards), all three WNBA games (Fever-Liberty has only an unjuiced -4.5), Genoa-Napoli and Parma-Cagliari (Serie A openers, qualify but unpriced), five Brasileirao/Argentina/Liga MX fixtures without boards, Wint-Chatman (no odds). GATE-EXCLUDED: all five EPL Saturday games (7:30 AM-12:30 PM ET, confirmed), two Serie A 12:30 PM openers, Cobolli-Fils (1:30 PM), four NFL noon-1 PM games. Verified negatives: no Leagues Cup Saturday (QFs Aug 25-27), Ligue 1 opened Friday. MARKET-ONLY: no dated models exist for what is priced; log5 sits out with MLB. Standing rules: drift-cancel, live re-verify, weather clause on CFL. --market-weight 0.85.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "named single-book fight-week/dated boards (DraftKings, FanDuel, BetMGM-corroborated Caliente/Codere)"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated boards with flags (unnamed books, mixed attribution, wide cross-book spreads, bout-order uncertainty)"
+  }
+ },
+ "events": [
+  {
+   "event_id": "ufc-2026-08-22-her-rod",
+   "sport": "ufc",
+   "league": "UFC FN Sacramento - main event (MW)",
+   "home": "Rodrigues",
+   "away": "Hernandez",
+   "start_time": "2026-08-23T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.4
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.6
+      }
+     ]
+    }
+   ],
+   "note": "Main card 8:00 PM ET Golden 1 Center (ME walk ~10:15 PM). DraftKings fight-week -166/+140; other books -170/-175. Placement high confidence."
+  },
+  {
+   "event_id": "ufc-2026-08-22-spi-pet",
+   "sport": "ufc",
+   "league": "UFC FN Sacramento - co-main (HW)",
+   "home": "Petrino",
+   "away": "Spivac",
+   "start_time": "2026-08-23T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.59
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.34
+      }
+     ]
+    }
+   ],
+   "note": "Co-main ~9:45 PM ET. Petrino -170/-168 - book attribution mixed across fight-week articles, consensus-c."
+  },
+  {
+   "event_id": "ufc-2026-08-22-rdr-dol",
+   "sport": "ufc",
+   "league": "UFC FN Sacramento - main card (LHW)",
+   "home": "Dolidze",
+   "away": "de Ridder",
+   "start_time": "2026-08-23T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 3.7
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.29
+      }
+     ]
+    }
+   ],
+   "note": "~9:15 PM ET. DK -340/+270; other prints to -395 - WIDE cross-book spread, shop the dog side if ever acting. RDR's LHW debut off two straight losses."
+  },
+  {
+   "event_id": "ufc-2026-08-22-med-jon",
+   "sport": "ufc",
+   "league": "UFC FN Sacramento - main card (LW)",
+   "home": "Jones",
+   "away": "Mederos",
+   "start_time": "2026-08-23T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.31
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 3.6
+      }
+     ]
+    }
+   ],
+   "note": "8:00-9:00 PM ET window. BetMGM -325/+260 but books range -290/-325 and +215/+275 - wide disagreement, consensus-c."
+  },
+  {
+   "event_id": "ufc-2026-08-22-jud-cha",
+   "sport": "ufc",
+   "league": "UFC FN Sacramento - main card (WFLW)",
+   "home": "Chaves",
+   "away": "Judice",
+   "start_time": "2026-08-23T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 5.25
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.17
+      }
+     ]
+    }
+   ],
+   "note": "8:00-9:00 PM ET window; bout-order placement MEDIUM confidence (five-bout main card count vs UFC.com roundup conflict). BetMGM -600/+425. Wint-Chatman left unpriced - no two-sided board."
+  },
+  {
+   "event_id": "cfl-2026-08-22-ham-tor",
+   "sport": "cfl",
+   "league": "CFL Wk 12",
+   "home": "Argonauts",
+   "away": "Tiger-Cats",
+   "start_time": "2026-08-22T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.46
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.8
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET BMO Field (venue-verified). Covers TOR -218/HAM +180 NOT book-attributed - consensus-c, confirm a named board before acting. Spread -3 and total 61 number-only, not priced. Bo Levi Mitchell still OUT; ~47% thunderstorm risk at kickoff - weather clause on any action."
+  },
+  {
+   "event_id": "nfl-2026-08-22-no-lar",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 2",
+   "home": "Rams",
+   "away": "Saints",
+   "start_time": "2026-08-22T20:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.36
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.62
+      }
+     ]
+    }
+   ],
+   "note": "4:00 PM ET SoFi. FanDuel NO -162/LAR +136 - Rams historically rest everyone."
+  },
+  {
+   "event_id": "nfl-2026-08-22-nyg-mia",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 2",
+   "home": "Dolphins",
+   "away": "Giants",
+   "start_time": "2026-08-22T20:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.36
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.62
+      }
+     ]
+    }
+   ],
+   "note": "4:00 PM ET Hard Rock. FanDuel NYG -162/MIA +136. No QB-plan detail."
+  },
+  {
+   "event_id": "nfl-2026-08-22-phi-ne",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 2",
+   "home": "Patriots",
+   "away": "Eagles",
+   "start_time": "2026-08-22T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.14
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.74
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET Gillette. FanDuel PHI -135/NE +114. No QB-plan detail."
+  },
+  {
+   "event_id": "nfl-2026-08-22-chi-cin",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 2",
+   "home": "Bengals",
+   "away": "Bears",
+   "start_time": "2026-08-22T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.1
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.77
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET Paycor. CHI -130/CIN +110. Caleb Williams may get a short stint; Burrow limited."
+  },
+  {
+   "event_id": "nfl-2026-08-22-kc-tb",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 2",
+   "home": "Buccaneers",
+   "away": "Chiefs",
+   "start_time": "2026-08-22T23:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.43
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.9
+      }
+     ]
+    }
+   ],
+   "note": "7:30 PM ET Raymond James. TB -230/KC +190 - the slate's biggest QB-driven number: Mahomes OUT all preseason (ACL/LCL rehab), Fields + rookie Nussmeier for KC."
+  },
+  {
+   "event_id": "nfl-2026-08-22-dal-ari",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 2",
+   "home": "Cardinals",
+   "away": "Cowboys",
+   "start_time": "2026-08-23T02:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.77
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 2.1
+      }
+     ]
+    }
+   ],
+   "note": "10:00 PM ET State Farm. ARI -130/DAL +110. Dak sits; Joe Milton in line to start for Dallas."
+  },
+  {
+   "event_id": "arg-2026-08-22-ind-riv",
+   "sport": "soccer",
+   "league": "Argentina Clausura fecha 6",
+   "home": "Independiente",
+   "away": "Independiente Rivadavia",
+   "start_time": "2026-08-22T21:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 3.2
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 4.1
+      }
+     ]
+    }
+   ],
+   "note": "5:30 PM ET Estadio Libertadores de America (venue-verified). Trio 2.00/3.20/4.10 (~5.6% hold - genuine single-board shape) but the BOOK IS UNNAMED - consensus-c, confirm at bet time. H2H trend: under 3 goals in 4 of last 5."
+  },
+  {
+   "event_id": "ligamx-2026-08-22-atl-cru",
+   "sport": "soccer",
+   "league": "Liga MX Apertura J5",
+   "home": "Cruz Azul",
+   "away": "Atlas",
+   "start_time": "2026-08-23T03:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.49
+      },
+      {
+       "book": "consensus-a",
+       "side": "draw",
+       "decimal_odds": 4.3
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 6.5
+      }
+     ]
+    }
+   ],
+   "note": "11:00 PM ET Estadio Banorte (the renamed Azteca; venue-verified via dated ticket-pricing coverage). TWO named single-book boards agree: Caliente -205/+330/+550 (5.9% hold) and Codere -200/+325/+525 (6.2%) - the cleanest anchor on the card. Cruz Azul on a 3-match skid; Atlas won 3 of 4."
+  }
+ ],
+ "model_probabilities": {}
+}
