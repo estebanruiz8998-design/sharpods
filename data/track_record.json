@@ -2670,24 +2670,24 @@
         "wnba-2026-08-20-atl-las": 0.235
       },
       "predictions_other": {},
-      "settle": "partially settled 2026-08-20 late night: Dream order VOIDED pre-game (premise clause); LDU headline, Corinthians leg, and SF@LAC were unresolved/in progress at pessimistic-now (~10:30 PM ET) - LDU is over but no result indexed anywhere (Spanish-language lag; refused to guess). Grade next cycle.",
+      "settle": "fully settled 2026-08-21 (Fri night)",
       "decisions": [
         {
           "id": "2026-08-20-LDU-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Mirassol @ LDU Quito, Libertadores R16 leg 2 (6:00 PM ET Thu, Quito, 2850m; agg 1-1)",
           "selection": "LDU Quito ML (3-way; draw/away lose)",
           "target": 1.682,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER on a market-only card. Fair 1.641 (pure power-devig of a cross-book AVERAGE trio 1.60/3.80/6.20 - consensus-c, the weakest anchor class we have headlined, flagged as such). Fires at 1.682+ AND ONLY on a re-verified live single-book quote - a resting fill on this anchor proves nothing (Braga rule). Wincomparator's dated model (54.8% LDU) sits just under our fair, a mild confirmation. $92 at quarter-Kelly if clean, returns $154. Altitude is the thesis and it is already in the price - the order asks for margin beyond it."
+          "note": "NOT FILLED - no named book was ever pinned at 1.682+ (an unattributed ESPN-visible -145 = 1.690 existed but Pinnacle sat 1.55 simultaneously; the live-single-book-only condition was written for exactly this). COUNTERFACTUAL SAVE #5: the 90-min result was 0-0 - a fill would have LOST even as LDU advanced on penalties. Pricing lesson logged: the 1.60 averaged anchor sat between a 1.55 sharp and a 1.69 soft quote, so the order's 'edge' was partly anchor softness - averaged trios stay consensus-c and live-only forever. Never-filled sides: 9W-5L at this point in the pass."
         },
         {
           "id": "2026-08-20-ATL-ORDER",
@@ -2708,21 +2708,73 @@
         },
         {
           "id": "2026-08-20-SF-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "49ers @ Chargers, NFL preseason Wk 2 (10:00 PM ET Thu, SoFi)",
           "selection": "49ers ML",
           "target": 1.879,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Strictly a backup: the cleanest board on the card (Sports Interaction two-sided) but PRESEASON - QB plans unverified, variance extreme, and the graded receipts (6 dog wins + 1 tie in 7 preseason MLs) say the market barely knows either. Fires at 1.879+ (-114 or better vs -130 now). Star sizing only. Spread direction conflicted across sources - ML only."
+          "note": "NOT FILLED on post-ship evidence - SF only SHORTENED after our card (board 1.769 -> DK close 1.80... vs LAC flipping to dog the line moved through -118 to -125; an SF +102 quote exists but traces to early-week, pre-card). No post-ship 1.879+ at a named book evidenced; fill oracle open. SF won 41-17 - a would-have-won missed at the bar's usual price of discipline."
         }
+      ],
+      "games": [
+        {
+          "event_id": "lib-2026-08-20-mir-ldu",
+          "our_home_fair": 0.6092,
+          "close_home_novig": 0.5812,
+          "home_won": false,
+          "final": "LDU Quito 0-0 Mirassol in 90' (agg 1-1); LDU advanced 5-4 ON PENALTIES",
+          "source_flag": "flagged",
+          "note": "Closing trio is the ESPN-visible board (-145/+265/+500) while Pinnacle sat 1.55/~3.85/6.87 - a huge cross-book gap; flagged. The 90-min ML market our order lived in LOST on the draw even though LDU advanced."
+        },
+        {
+          "event_id": "lib-2026-08-20-ros-cor",
+          "our_home_fair": 0.4898,
+          "close_home_novig": 0.4777,
+          "home_won": true,
+          "final": "Corinthians 1-0 Rosario Central (agg 1-0; finished with 10 men; faces Estudiantes LP)",
+          "source_flag": "clean",
+          "note": "Pinnacle closing trio. Our 49.0% home fair off the stitched 10.9%-hold board vs a 47.4% sharp close - the fat-hold caution was warranted but the direction held."
+        },
+        {
+          "event_id": "wnba-2026-08-20-atl-las",
+          "our_home_fair": 0.235,
+          "source_flag": "clean",
+          "close_home_novig": 0.211,
+          "home_won": false,
+          "final": "Dream 124, Sparks 88 - ATL road blowout (order already VOID pre-game on B. Jones OUT)",
+          "note": "Void validated on process: the clause fired on premise integrity, not prediction - and for the record the voided side won by 36. No stake either way."
+        },
+        {
+          "event_id": "nfl-2026-08-20-sf-lac",
+          "our_home_fair": 0.4546,
+          "source_flag": "clean",
+          "close_home_novig": 0.4654,
+          "home_won": false,
+          "final": "49ers 41, Chargers 17 (game opened LAC -1.5, flipped to SF -1 by kickoff)",
+          "note": "DK close SF -125/LAC +105. Preseason ML receipts: favorites now 1 for 8 in our graded sample (SF the first favorite to cash)."
+        }
+      ],
+      "metrics": {
+        "n": 4,
+        "brier_ours": 0.2233,
+        "brier_close": 0.2179,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0187,
+        "max_abs_fair_vs_close": 0.028,
+        "note": "4 markets graded (one flagged close - conflicting books on the LDU trio). Market-only card: no model layer to grade."
+      },
+      "lessons_applied": [
+        "COUNTERFACTUAL SAVE #5 (LDU): the headline order's 90-minute market lost on a 0-0 even as the team advanced - and the no-fill was doubly right because the averaged anchor was soft (sharp Pinnacle 1.55 vs our 1.60 board). Two rules validated at once: live-single-book-only fills on averaged anchors, and pricing 90-minute markets as 90-minute markets.",
+        "Premise-clause void #2 validated on pure process (Dream): B. Jones OUT fired the clause pre-game; the voided side then won by 36 - the clause protects premise integrity, not prediction accuracy, and that is the point.",
+        "First preseason FAVORITE to cash in our graded sample (SF, 1 for 8): the priced-but-distrusted stance and the flip from LAC -1.5 to SF -1 both say the same thing - preseason lines are playing-time rumors with juice."
       ]
     },
     {
@@ -2743,7 +2795,7 @@
           "under": 0.3834
         }
       },
-      "settle": "pending",
+      "settle": "partially settled 2026-08-21 late night: Arsenal graded (both its orders unfilled - see decisions); Jets-Steelers, Panthers-Jaguars, Leon-Monterrey and the America headline had NO indexed finals at pessimistic-now (~11 PM ET Fri) - grade next cycle.",
       "decisions": [
         {
           "id": "2026-08-21-AME-ORDER",
@@ -2764,37 +2816,37 @@
         },
         {
           "id": "2026-08-21-ARS-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Coventry @ Arsenal, EPL opener (3:00 PM ET Fri, Emirates)",
           "selection": "Arsenal ML (3-way)",
           "target": 1.224,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Engine's top EV, deliberately NOT the headline: a 1.17 favorite reaching 1.22 is cross-book noise territory (Braga/Dream precedent) - fires ONLY on a live, named single-book quote at 1.224+. SportsLine has Arsenal 88% (3-way, not ensembled). Season opener, no league form - wide error bars behind a tight number."
+          "note": "NOT FILLED - best named-book price all day was DK -475 (1.211); the 1.224 trigger never printed (FanDuel closed -550). Arsenal won 3-0: a would-have-won that never offered the price. The extreme-favorite demotion was correct: the market's ceiling sat below our bar all day."
         },
         {
           "id": "2026-08-21-ARSOVER-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Coventry @ Arsenal, same match - total 2.5",
           "selection": "Over 2.5",
           "target": 1.662,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Totals never headline (standing rule; totals 3 of 6 graded). Fair 1.622 - devig 61.2% blended with SportsLine's 64% over (the first dated model we have had on an EPL total). Fires at 1.662+ (-151 or better vs -180 now)."
+          "note": "NOT FILLED - Over 2.5 closed -176/-181 (1.552-1.568); the 1.662 trigger never evidenced. It landed (3 goals) and SportsLine's 64% graded RIGHT on its first EPL outing - a model note for the file, priced away by the market. Never-filled sides after this pass: 12W-5L across 17."
         },
         {
           "id": "2026-08-21-NYJ-ORDER",
@@ -2812,6 +2864,17 @@
           "process": "pending",
           "headline": false,
           "note": "Strictly a backup at star sizing: preseason (dogs 6-0-1 in our graded MLs) AND the board is an unnamed-book Covers pair (consensus-c) - fires only on a named single-book print at 1.804+ with QB plans checked."
+        }
+      ],
+      "games": [
+        {
+          "event_id": "epl-2026-08-21-cov-ars",
+          "our_home_fair": 0.8377,
+          "close_home_novig": 0.8319,
+          "home_won": true,
+          "final": "Arsenal 3-0 Coventry (Havertz 15', Saka 23', Odegaard 49') - 3 goals, OVER 2.5",
+          "source_flag": "clean",
+          "note": "FanDuel closing trio -550/+600/+1400; DK -475. Our over lean (61.7% blended with SportsLine's 64%) was RIGHT - closing total held -176/-181 over."
         }
       ]
     }
