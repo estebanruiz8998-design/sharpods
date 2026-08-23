@@ -3172,5 +3172,20 @@
         }
       ]
     }
+  ],
+  "policy_changes": [
+    {
+      "date": "2026-08-23",
+      "change": "TIERED EV BARS in degraded mode: best price from a venue outside the anchor consensus (dispersion) bets at 1.0x min_ev (+1.0%); model-backed sides at 1.5x (+1.5%); single-anchor market-only sides keep 2.5x (+2.5%). Engine fields dispersion_ev_multiplier / model_ev_multiplier; tests in tests/test_ev_tiers.py; scouting protocol now mandates a second named-book quote + Polymarket cents per key event.",
+      "initiated_by": "USER DIRECTIVE 2026-08-23: 'improve something in the system so that it starts shipping bets and not just passes' - an explicit owner override of the anti-tinkering default, implemented on the ledger's best-evidenced edge classes rather than a blanket bar cut.",
+      "evidence_basis": [
+        "Structural diagnosis: every scouted anchor is sub-0.8 sharpness, so all 13 straight PASS cards ran the 2.5% bar while fair = devig of the same anchor - EV at the anchor's own price is negative by construction; only dispersion or model tilt can ever clear any bar.",
+        "Dispersion class graded: the ledger's only positive-CLV fills are cross-venue (Nakashima +200 shopped, +1.0% raw CLV, won; NYJ paper fill at named books, won 17-0, ~flat floor-CLV); the Polymarket KC price reached +1.41% and sat below only the blanket bar.",
+        "Model class graded: 140 fair lines at Brier 0.2259 vs close 0.2238 (near parity); the model layer's directional leans have repeatedly been confirmed by closes (MIL 8/18: model 60.7%, close 61.6%) and its first total model graded correct (Arsenal over).",
+        "What stays protected: single-anchor sub-2.5% edges (LDU graded: averaged-anchor 'edge' was softness), refusals (rule outranks tiers - tested), drift-cancel (0-for-3 as bets), all premise clauses."
+      ],
+      "rollback_criterion": "After 15 settled tier-1/tier-2 bets: if mean no-vig CLV < 0, revert both multipliers to 2.5x. Interim tripwire: any 5-bet run with mean no-vig CLV < -2% prompts an early review.",
+      "expected_effect": "Real staked bets (quarter-Kelly, 2% cap - typically $20-110 on the $10k reference roll) whenever scouts surface a second-venue price beating blended fair by 1%+ or a model-backed side at 1.5%+. Retroactive check: under these tiers the Aug-15 card ships the Royals ML at Polymarket 41c as a ~$43 BET (it would have lost 0-1) - stated for honesty: the tiers buy volume and a CLV verdict, not guaranteed wins."
+    }
   ]
 }

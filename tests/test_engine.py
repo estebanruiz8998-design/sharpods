@@ -219,9 +219,13 @@ class TestDegradedAnchor:
             ],
         )
 
-    def test_sub_bar_edge_is_not_ticketed_on_soft_anchor(self):
+    def test_dispersion_price_tickets_at_the_floor_on_soft_anchor(self):
         # bet365 (sharpness 0.55) anchors; fair home prob is 0.500, so 2.03
-        # is a +1.5% edge — above the 1% floor, below the 2.5% degraded bar.
+        # at FanDuel is a +1.5% edge. Pre-2026-08-23 policy held this below
+        # the 2.5% degraded bar; the user-directed tier change (see
+        # Engine.dispersion_ev_multiplier) bets prices from OUTSIDE the
+        # anchor consensus at the 1% floor — the ledger's only positive-CLV
+        # fills were exactly this shape.
         snap = self._snapshot(1.909, 1.909)
         snap.quotes.append(
             __import__("sharpods.datatypes", fromlist=["Quote"]).Quote(
@@ -229,12 +233,13 @@ class TestDegradedAnchor:
             )
         )
         card = Engine().run([snap], 10_000)
-        assert card.tickets == []
-        # But it survives as a limit order with a raised requirement.
-        cand = next(c for c in card.candidates if c.side == Side.HOME)
-        assert cand.ev_pct > 0.01
-        assert cand.required_ev == pytest.approx(0.025)
-        assert cand.ev_pct < cand.required_ev
+        assert len(card.tickets) == 1
+        cand = card.tickets[0].candidate
+        assert cand.quote.book == "fanduel"
+        assert cand.required_ev == pytest.approx(0.01)
+        # The anchor-priced away side still carries the full degraded bar.
+        away = next(c for c in card.candidates if c.side == Side.AWAY)
+        assert away.required_ev == pytest.approx(0.025)
 
     def test_big_edge_still_tickets_on_soft_anchor(self):
         # 2.06 at fair 0.500 is +3.0% EV, above the 2.5% bar, and the

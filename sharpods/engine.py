@@ -105,6 +105,20 @@ class Engine:
     # on 2 of 5 graded markets — a 1% bar sits inside that noise.
     sharp_anchor_threshold: float = 0.8
     degraded_ev_multiplier: float = 2.5
+    # Tiered bars (user-directed change, 2026-08-23; graded evidence in
+    # data/track_record.json). Two ledger findings earn lower bars inside
+    # degraded mode: (1) every positive-CLV fill in the record came from a
+    # price at a venue OUTSIDE the anchor consensus (Nakashima cross-book
+    # +200, NYJ paper fill; Polymarket KC was the closest-to-live order) —
+    # such dispersion prices bet at min_ev * dispersion_ev_multiplier;
+    # (2) 140 graded fair lines sit at Brier near-parity with closes, so a
+    # side carrying a model probability bets at min_ev * model_ev_multiplier.
+    # Single-anchor market-only sides keep the full degraded bar — the LDU
+    # grade showed sub-2.5% "edges" there are anchor noise, not value.
+    # Pre-registered rollback: if the first 15 settled tier bets carry mean
+    # no-vig CLV < 0, both multipliers revert to degraded_ev_multiplier.
+    dispersion_ev_multiplier: float = 1.0
+    model_ev_multiplier: float = 1.5
 
     def consensus_line(self, snapshot: MarketSnapshot) -> float | None:
         """Pin spreads/totals to one market number so EV compares like with
@@ -194,16 +208,14 @@ class Engine:
         steam_sides = {s.side for s in steam}
 
         degraded = fair.anchor_sharpness < self.sharp_anchor_threshold
-        required_ev = self.policy.min_ev * (
-            self.degraded_ev_multiplier if degraded else 1.0
-        )
 
         candidates: list[BetCandidate] = []
         for side in snapshot.sides():
             probability = fair.probabilities.get(side)
             if probability is None or not 0.0 < probability < 1.0:
                 continue
-            if model_probabilities and side in model_probabilities:
+            modeled = bool(model_probabilities and side in model_probabilities)
+            if modeled:
                 probability = blend_market_and_model(
                     probability,
                     model_probabilities[side],
@@ -212,10 +224,28 @@ class Engine:
             quote = best_quote(snapshot, side, line)
             if quote is None:
                 continue
+            # Per-side EV bar: full degraded multiplier for single-anchor
+            # market-only sides; dispersion tier when the best price sits at
+            # a venue outside the anchor consensus; model tier when a model
+            # probability tilts the fair.
+            tier = None
+            multiplier = self.degraded_ev_multiplier if degraded else 1.0
+            if degraded and quote.book not in fair.sources:
+                multiplier = self.dispersion_ev_multiplier
+                tier = "dispersion"
+            elif degraded and modeled:
+                multiplier = self.model_ev_multiplier
+                tier = "model-backed"
+            required_ev = self.policy.min_ev * multiplier
             ev = expected_value(probability, quote.decimal_odds)
             target = (1.0 + required_ev) / probability
             tags = [f"best price of {len(snapshot.quotes_for(side, line))} quotes"]
-            if degraded:
+            if degraded and tier is not None:
+                tags.append(
+                    f"{tier} tier: EV bar {required_ev:.1%} "
+                    f"(anchor sharpness {fair.anchor_sharpness:.2f})"
+                )
+            elif degraded:
                 tags.append(
                     f"degraded anchor (max sharpness {fair.anchor_sharpness:.2f}): "
                     f"EV bar raised to {required_ev:.1%}"

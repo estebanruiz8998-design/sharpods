@@ -24,6 +24,10 @@ cycle at maximum capacity, exactly like the 2026-08-01 complete run:
    Brasil/whatever is in season), UFC/boxing full cards, WNBA/NBA, CFL/NFL,
    tennis — every sport with real Saturday/target-day markets. One agent
    fetches team data (records, RS/RA) for the in-house log5/Pythagorean layer.
+   DISPERSION IS THE BET ENGINE (2026-08-23): for every key event, scouts must
+   hunt a SECOND named-book quote and Polymarket/exchange cents alongside the
+   anchor — bets come from cross-venue price gaps, so a card scouted to a
+   single board per event can only produce passes.
 4. **Compile the slate** (`data/slates/YYYY-MM-DD-full.json`): single-book
    boards anchor; prediction markets (Polymarket, Robinhood) are shop-only
    (sharpness 0.45 — ledger-evidenced demotion); multi-book best-price
@@ -86,8 +90,16 @@ cycle at maximum capacity, exactly like the 2026-08-01 complete run:
 - User bets ONLY the slip's best bet (tracker = one card/day, headline only).
 - User's real record lives in `data/track_record.json` (`live_tickets`,
   `decisions`); bankroll history started $30,000 → Cubs win → $59,700.
-- Stake guidance on slips: $10,000 reference roll, ¼ Kelly, 2% cap; the
-  degraded-mode EV bar is 2.5% (1% with a market-maker anchor).
+- Stake guidance on slips: $10,000 reference roll, ¼ Kelly, 2% cap. TIERED EV
+  BARS (user-directed 2026-08-23, recorded in `policy_changes`): a best price
+  from a venue OUTSIDE the anchor consensus (second named book, Polymarket)
+  bets at +1.0%; a model-backed side bets at +1.5%; single-anchor market-only
+  sides keep the +2.5% degraded bar (LDU lesson: sub-2.5% "edges" there are
+  anchor noise); market-maker anchors (sharpness >= 0.8) bet at +1.0% as
+  before. All standing rules still gate every bet: refusals, drift-cancel,
+  premise/weather clauses, named-book live verification, extreme-favorite
+  demotion, totals-never-headline. PRE-REGISTERED ROLLBACK: after 15 settled
+  tier bets, if mean no-vig CLV < 0, both tiers revert to 2.5%.
 - Network policy blocks all odds feeds/sites (403) — prices come from
   WebSearch snippets of date-stamped pages; note provenance on every slip.
 - Commit messages end with the standard co-author/session trailer; push to
