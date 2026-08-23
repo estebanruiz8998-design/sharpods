@@ -2795,24 +2795,24 @@
           "under": 0.3834
         }
       },
-      "settle": "partially settled 2026-08-21 late night: Arsenal graded (both its orders unfilled - see decisions); Jets-Steelers, Panthers-Jaguars, Leon-Monterrey and the America headline had NO indexed finals at pessimistic-now (~11 PM ET Fri) - grade next cycle.",
+      "settle": "fully settled 2026-08-23 (Sun)",
       "decisions": [
         {
           "id": "2026-08-21-AME-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "America @ Juarez, Liga MX J5 (11:00 PM ET Fri, Estadio Olimpico Benito Juarez)",
           "selection": "Club America ML (3-way; draw/home lose)",
           "target": 1.945,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER. Fair 1.898 (Codere -122/+280/+290 power-devigged to 52.7% America; 6.9% hold, single book, bet365 cross-check 1.81). Fires at 1.945+ (+95 or better). Table leader vs a side that has lost 4 straight while conceding 13 - the market knows, so the order asks for margin. $66 at quarter-Kelly if clean, returns $129. DRIFT-CANCEL applies; late-night Liga MX boards move - live re-verify at bet time. SportyTrader's model draw weight (31%) is implausible and was not ensembled."
+          "note": "NOT FILLED - the 1.945 trigger sat above the ENTIRE market all day (best anywhere: a 1.85 aggregate leg; consensus close ~1.76-1.77) and the market shortened toward America, who won 2-1. A would-have-won at a price that never existed - the bar's usual cost. Our Codere 1.82 anchor graded honest (slightly above close); the scary Bet365 -241 capture from Friday night was a bad aggregator read, not the market."
         },
         {
           "id": "2026-08-21-ARS-ORDER",
@@ -2850,20 +2850,20 @@
         },
         {
           "id": "2026-08-21-NYJ-ORDER",
-          "type": "order_open",
+          "type": "order_filled_paper",
           "event": "Jets @ Steelers, NFL preseason Wk 2 (7:00 PM ET Fri, Acrisure)",
           "selection": "Jets ML",
           "target": 1.804,
-          "fill": null,
+          "fill": 1.804,
           "stake": 0,
-          "result": "pending",
+          "result": "won",
           "pnl": 0,
-          "clv_raw": null,
-          "clv_novig": null,
+          "clv_raw": -0.0088,
+          "clv_novig": -0.0479,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Strictly a backup at star sizing: preseason (dogs 6-0-1 in our graded MLs) AND the board is an unnamed-book Covers pair (consensus-c) - fires only on a named single-book print at 1.804+ with QB plans checked."
+          "note": "FILL CONDITION MET AT NAMED BOOKS - AND WON. The 'drift toward PIT' we flagged at ship was the OPENER (PIT -3, Jets 2.47); named books held Jets above the 1.804 trigger all day and DK closed Jets -122 (1.82). Jets won 17-0. Paper grade at the 1.804 floor: raw CLV -0.9%, no-vig -4.8% - roughly flat, because the conservative floor sits at the close; anything nearer the open was strongly positive. Second paper fill in ledger history; both cashed. Lesson: our unnamed-book preseason snapshot (1.70) was the soft side of a market that was never there - named-book conditions turn soft snapshots into real prices. Stake 0 - backup order, user bets headline only."
         }
       ],
       "games": [
@@ -2875,7 +2875,58 @@
           "final": "Arsenal 3-0 Coventry (Havertz 15', Saka 23', Odegaard 49') - 3 goals, OVER 2.5",
           "source_flag": "clean",
           "note": "FanDuel closing trio -550/+600/+1400; DK -475. Our over lean (61.7% blended with SportsLine's 64%) was RIGHT - closing total held -176/-181 over."
+        },
+        {
+          "event_id": "ligamx-2026-08-21-mty-leo",
+          "our_home_fair": 0.3091,
+          "close_home_novig": 0.2868,
+          "home_won": true,
+          "final": "Leon 2, Monterrey 0 (Cortizo; the ~2.05 favorite beaten by the home dog)",
+          "source_flag": "flagged",
+          "note": "xGscore close 3.21/3.62/2.06 (7.3% hold). Post-mortem on our fat-hold Betfred board: the 11.3% hold was all Leon-side shading (2.875 vs sharp 3.21) - the consensus-c demotion was exactly right."
+        },
+        {
+          "event_id": "ligamx-2026-08-21-ame-jua",
+          "our_home_fair": 0.2332,
+          "close_home_novig": null,
+          "home_won": false,
+          "final": "Juarez 1, America 2 (comeback; America stays top) - away favorite cashed",
+          "source_flag": "flagged",
+          "note": "ESPN BET close America -130/Juarez +380 but no single-book DRAW leg pinned - result-only, no Brier. Our Codere 1.82 was NOT stale: it sat slightly above the ~1.76-1.77 consensus close; the Bet365 -241 aggregator capture was the outlier, not the market."
+        },
+        {
+          "event_id": "nfl-2026-08-21-nyj-pit",
+          "our_home_fair": 0.4318,
+          "source_flag": "clean",
+          "close_home_novig": 0.4722,
+          "home_won": false,
+          "final": "Jets 17, Steelers 0 (Geno Smith sharp; PIT opened -3 and the market flipped ~5 pts to Jets -1.5 against 85% public tickets on PIT)",
+          "note": "DK close Jets -122/PIT +102. Our unnamed-book 1.70 board was the SOFT outlier - the real market was never there (open 2.47, close 1.82)."
+        },
+        {
+          "event_id": "nfl-2026-08-21-car-jax",
+          "our_home_fair": 0.5233,
+          "source_flag": "clean",
+          "close_home_novig": 0.4654,
+          "home_won": false,
+          "final": "Panthers 34, Jaguars 17 (Bryce Young 5/6; starters shone) - the flipped market was right",
+          "note": "LIVE STAND-DOWN GRADED: when the user held a JAX 2.05 slip we re-priced the drift (JAX -120 -> +102/+110 market-wide), found ~0 EV, and stood down. JAX closed a home dog and LOST BY 17 - the re-price saved a live unit at roughly the closing price. Drift-re-price protocol: first live-fire test, passed."
         }
+      ],
+      "metrics": {
+        "n": 4,
+        "brier_ours": 0.241,
+        "brier_close": 0.2441,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0316,
+        "max_abs_fair_vs_close": 0.0579,
+        "note": "4 markets graded vs closes (2 flagged: xGscore feed close, synthesized none for Juarez - result-only); Arsenal graded in the first pass. Ship-board post-mortems: Betfred's fat hold was one-sided shading, the unnamed Jets 1.70 was soft vs a 1.82-2.47 real market."
+      },
+      "lessons_applied": [
+        "LIVE DRIFT-RE-PRICE PASSED ITS FIRST FIELD TEST (CAR@JAX): the user held a JAX 2.05 slip that met the printed 'bet at'; we re-priced the market-wide flip live, found no edge, and stood down - JAX lost by 17. The rule's whole design (drift = changed premise) cashed its first real-money save.",
+        "Named-book order conditions WORK in both directions (NYJ): the same discipline that voids soft fills converted a soft 1.70 snapshot into a legitimate 1.804+ paper fill at DK - won 17-0 with ~flat floor-CLV. Snapshot quality is now the binding constraint, not the rule.",
+        "Anchor post-mortems: Betfred's fat 11.3% hold was one-sided shading (Leon 2.875 vs sharp 3.21) - consensus-c demotion earned; Codere's America 1.82 graded honest vs a ~1.77 close - the Friday-night -241 panic read was an aggregator artifact. Grade the anchor, not the scariest quote.",
+        "America order: the trigger sat above the whole market and the side won anyway - the fifteenth never-filled winner-or-loser data point; tally now 14W-7L across 21 never-filled orders."
       ]
     },
     {
@@ -2900,48 +2951,214 @@
         "ufc-2026-08-22-jud-cha": 0.1595
       },
       "predictions_other": {},
-      "settle": "pending",
+      "settle": "fully settled 2026-08-23 (Sun)",
       "decisions": [
         {
           "id": "2026-08-22-CRU-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Atlas @ Cruz Azul, Liga MX J5 (11:00 PM ET Sat, Estadio Banorte/Azteca)",
           "selection": "Cruz Azul ML (3-way; draw/away lose)",
           "target": 1.569,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER. Fair 1.530 (Caliente -205/+330/+550 power-devigged to 65.3% Cruz Azul; Codere -200/+325/+525 confirms within 2 cents - two named books, the cleanest anchor of the day). Fires at 1.569+ (-176 or better). The skid-vs-form angle (Cruz Azul 3 straight losses, Atlas 3 of 4) is already priced; the order asks for margin. $110 at quarter-Kelly if clean, returns $172. DRIFT-CANCEL applies; late-night Liga MX boards move - live re-verify. Friday's America lesson pending: if the live market sits far from these boards, stand down and report."
+          "note": "STOOD DOWN PER DRIFT-CANCEL - and the rule saved the ticket. The board drifted from Caliente -205/Codere -200 THROUGH the 1.569 trigger (a Betway 1.62 shows on Aug-22 comparison pages, timing unverified; Dimers' -190 board does NOT clear). The slip's printed rule covers exactly this: a drift-through is a changed premise - re-price and stand down. The drift was the market fading Cruz Azul, and Cruz Azul lost 0-2 at home. CONDITIONAL SAVE #7 (the drift-taker loses). FILL ORACLE OPEN: if you actually took 1.62, report it and I regrade as a loss at your stake (Braves precedent). Drift-throughs are now 0-for-3 as bets (Liberty, Braves, this)."
         },
         {
           "id": "2026-08-22-HER-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Hernandez vs Rodrigues, UFC FN Sacramento main event (~10:15 PM ET walk)",
           "selection": "Hernandez ML",
           "target": 1.691,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "FIRST UFC ORDER in the ledger, strictly a backup. Fair 1.649 (DK fight-week -166/+140 devigged to 60.6% Hernandez). Fires at 1.691+ (-145 or better). Fight-week lines drift on weigh-ins - re-verify the day-of board; a drift through the trigger = re-price first."
+          "note": "NOT FILLED - the first UFC order's line steamed the wrong way all week (DK -166 -> Hard Rock -185 -> DK -198 close); -145 never existed. COUNTERFACTUAL SAVE #6: Rodrigues won the fight by UD at +164 - a fill would have lost. The steam was information, again."
         },
         {
           "id": "2026-08-22-TOR-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Hamilton @ Toronto, CFL Wk 12 (7:00 PM ET Sat, BMO Field)",
           "selection": "Argonauts ML",
           "target": 1.536,
+          "fill": null,
+          "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "worked",
+          "headline": false,
+          "note": "NOT FILLED - no named book ever better than -225 vs the -187 trigger (the unattributed -218 we demoted was close to true). Argos won 39-20, a would-have-won at a price that never existed. Note: the WEATHER CLAUSE actually TRIGGERED (thunderstorm-delayed start) - had anything filled, the printed clause voided it anyway. Clause class: 3-for-3 firing correctly when conditions hit."
+        }
+      ],
+      "games": [
+        {
+          "event_id": "ligamx-2026-08-22-atl-cru",
+          "our_home_fair": 0.6534,
+          "close_home_novig": 0.6285,
+          "home_won": false,
+          "final": "Atlas 2, Cruz Azul 0 at Estadio Banorte (Zaldivar 30', Monzon 45') - home favorite shut out",
+          "source_flag": "flagged",
+          "note": "Close is the Dimers-cited board (-190/+450/+300) - single preview source while books diverged (Betway 1.62 on comparison pages); flagged. The drift toward 1.62 was the market fading Cruz Azul, correctly."
+        },
+        {
+          "event_id": "ufc-2026-08-22-her-rod",
+          "our_home_fair": 0.3937,
+          "source_flag": "clean",
+          "close_home_novig": 0.3541,
+          "home_won": true,
+          "final": "Rodrigues UD (48-47, 49-46, 48-47) over Hernandez - 4 knockdowns, stuffed 26 of 29 TDs; +164 upset",
+          "note": "p2 Rodrigues = home. DK close -198/+164 after a week of steam toward Hernandez."
+        },
+        {
+          "event_id": "cfl-2026-08-22-ham-tor",
+          "our_home_fair": 0.6673,
+          "source_flag": "clean",
+          "close_home_novig": 0.6745,
+          "home_won": true,
+          "final": "Argonauts 39, Tiger-Cats 20 (weather-delayed start - thunderstorms - completed same night)",
+          "note": "SI/SBR close TOR -225/HAM +185. The unattributed -218 board we demoted read close to true."
+        },
+        {
+          "event_id": "ufc-2026-08-22-spi-pet",
+          "our_home_fair": 0.6036,
+          "source_flag": "clean",
+          "close_home_novig": 0.5884,
+          "home_won": true,
+          "final": "Petrino UD 30-27 x3 over Spivac"
+        },
+        {
+          "event_id": "ufc-2026-08-22-rdr-dol",
+          "our_home_fair": 0.2416,
+          "source_flag": "clean",
+          "close_home_novig": 0.2232,
+          "home_won": false,
+          "final": "de Ridder TKO R1 4:01 over Dolidze (LHW debut)"
+        },
+        {
+          "event_id": "ufc-2026-08-22-med-jon",
+          "our_home_fair": 0.7479,
+          "source_flag": "clean",
+          "close_home_novig": 0.7598,
+          "home_won": false,
+          "final": "Mederos TKO R2 2:07 over Jones - +275 dog stops the -345 favorite",
+          "note": "Our consensus-c caution on the wide-spread board was moot; the dog won by stoppage."
+        },
+        {
+          "event_id": "ufc-2026-08-22-jud-cha",
+          "our_home_fair": 0.1595,
+          "source_flag": "clean",
+          "close_home_novig": 0.1616,
+          "home_won": false,
+          "final": "Judice TKO R1 1:39 over Chaves (body kicks) - chalk in 99 seconds"
+        },
+        {
+          "event_id": "nfl-2026-08-22-no-lar",
+          "our_home_fair": 0.4013,
+          "source_flag": "clean",
+          "close_home_novig": 0.4546,
+          "home_won": true,
+          "final": "Rams 34, Saints 0 (+110 home dog shutout; Saints 3 TO, 12 penalties)"
+        },
+        {
+          "event_id": "nfl-2026-08-22-nyg-mia",
+          "our_home_fair": 0.4013,
+          "source_flag": "clean",
+          "close_home_novig": 0.4007,
+          "home_won": false,
+          "final": "Giants 26, Dolphins 3 (road favorite; Miami sat most starters)"
+        },
+        {
+          "event_id": "nfl-2026-08-22-chi-cin",
+          "our_home_fair": 0.4547,
+          "source_flag": "clean",
+          "close_home_novig": 0.4654,
+          "home_won": true,
+          "final": "Bengals 27, Bears 9 (+105 home dog by 18)"
+        },
+        {
+          "event_id": "nfl-2026-08-22-dal-ari",
+          "our_home_fair": 0.5453,
+          "source_flag": "clean",
+          "close_home_novig": 0.5115,
+          "home_won": false,
+          "final": "Cowboys 34, Cardinals 13 (Milton 3 TD; slight road dog by 21)"
+        },
+        {
+          "event_id": "arg-2026-08-22-ind-riv",
+          "our_home_fair": 0.4813,
+          "close_home_novig": 0.4813,
+          "home_won": false,
+          "final": "Independiente 0, Independiente Rivadavia 0 (Viera's debut; both sides' sub-goal-per-game form held)",
+          "source_flag": "clean",
+          "note": "BetMines closing trio matches our ship board - the unnamed-book demotion cost nothing here."
+        },
+        {
+          "event_id": "nfl-2026-08-22-phi-ne",
+          "our_home_fair": 0.4452,
+          "close_home_novig": null,
+          "home_won": true,
+          "final": "Patriots 24, Eagles 21 (DeGennaro game-winning 4th-quarter drive)",
+          "source_flag": "flagged",
+          "note": "Only the NE close leg surfaced (BetMGM -102); Eagles side never printed - result-only, no Brier."
+        },
+        {
+          "event_id": "nfl-2026-08-22-kc-tb",
+          "our_home_fair": 0.6811,
+          "close_home_novig": null,
+          "home_won": true,
+          "final": "Buccaneers 16, Chiefs 15 (the slate's widest favorite survives by 1)",
+          "source_flag": "flagged",
+          "note": "Only the KC close leg surfaced (+195); TB side not printed - result-only, no Brier."
+        }
+      ],
+      "metrics": {
+        "n": 12,
+        "brier_ours": 0.2543,
+        "brier_close": 0.2482,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0181,
+        "max_abs_fair_vs_close": 0.0533,
+        "note": "12 markets graded vs closes (one flagged Liga MX trio, one same-as-ship Argentine trio); PHI@NE and KC@TB result-only on one-sided closes. Upset-heavy night: Rodrigues +164, Mederos +275, Rams +110 (34-0), Bengals +105."
+      },
+      "lessons_applied": [
+        "DRIFT-THROUGH #3 (Cruz Azul): the third time a market has drifted through one of our triggers, and the third time the drifted side lost value (Liberty -5.4% CLV, Braves lost, Cruz Azul lost 0-2). The drift-cancel rule is now 3-for-3 as a stand-down and 0-for-3 as a hypothetical bet. The two-named-book anchor was honest; the market simply changed its mind - and telling those apart is exactly what the rule is for.",
+        "COUNTERFACTUAL SAVE #6 (Hernandez): the ledger's first UFC order refused a steaming favorite who then lost at +164. Steam toward a side is not an argument for that side at yesterday's price.",
+        "Upset-heavy Saturday: +164 and +275 dogs won UFC fights by decision and stoppage; +110 and +105 preseason home dogs won 34-0 and 27-9. Preseason dog receipts now 8 wins + 1 tie vs 2 favorite wins in 11 graded MLs - the distrusted stance stays.",
+        "Weather clauses join pitcher/injury clauses as validated premise protection: the BMO thunderstorm delay would have voided any Argos action, exactly as printed."
+      ]
+    },
+    {
+      "date": "2026-08-23",
+      "sport": "soccer",
+      "mode": "degraded, MARKET-ONLY - Sunday night thin card: 1 event / 1 market (Racing-Boca, El Cilindro, 8:30 PM ET). Sixth straight slow clock; gate at 8 PM ET+ left exactly one clean qualifier - Seahawks-Titans excluded on the 2-hour boundary with a consensus-only ML, CFL/tennis finals/WNBA all gate-dead, and Monday has zero complete boards (10 MLB games unposted a third straight day, Fulham-Chelsea trio incomplete across two books). Coherent 6.5%-hold trio, book unnamed - consensus-c.",
+      "engine_verdict": "PASS - thirteenth straight. Headline order: Boca Juniors ML >= 2.767 (+177 or better vs a +155 board; -5.54% now) with a NAMED-BOOK condition. Racing and the draw sit deeper (-6.3%, -6.6%). H2H is draw-heavy (6 of last 10) - color, not model.",
+      "predictions_home_fair": {
+        "arg-2026-08-23-boc-rac": 0.3232
+      },
+      "predictions_other": {},
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-23-BOC-ORDER",
+          "type": "order_open",
+          "event": "Boca Juniors @ Racing Club, Clausura fecha 6 (8:30 PM ET Sun, El Cilindro)",
+          "selection": "Boca Juniors ML (3-way; draw/home lose)",
+          "target": 2.767,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -2950,8 +3167,8 @@
           "clv_novig": null,
           "anchor": "degraded",
           "process": "pending",
-          "headline": false,
-          "note": "Backup with two binding conditions: (1) the Covers board is NOT book-attributed - fires only on a named single-book print at 1.536+ (-187 or better); (2) WEATHER CLAUSE - ~47% thunderstorm risk at kickoff; a delay voids. Bo Levi Mitchell still out for Hamilton."
+          "headline": true,
+          "note": "HEADLINE ORDER on a one-market Sunday-night card. Fair 2.699 (coherent unnamed-book trio +190/+205/+155 power-devigged to 37.0% Boca). Fires at 2.767+ (+177 or better) ONLY on a live, named single-book quote - the anchor is unnamed, so a resting fill proves nothing (LDU lesson). $35 at quarter-Kelly if clean, returns $97. Racing unbeaten in 7 H2H with 6 draws in 10 - the draw-heavy profile is exactly why the bar wants +177 on Boca. DRIFT-CANCEL applies (rule is 3-for-3 after Cruz Azul)."
         }
       ]
     }

@@ -1,0 +1,43 @@
+{
+ "_provenance": "Sunday 2026-08-23 night card, compiled ~6 PM ET (pessimistic-now; sixth straight slow clock - Man City's 9 AM ET Sunday final was indexed against a 1:01 PM reading). Gate = starts 8:00 PM ET+ clearing pessimistic-now by 2+ hours. ONE market clears cleanly: Racing-Boca at 8:30 PM ET (+2h30m). Seahawks-Titans (8:00 PM ET) sits EXACTLY on the 2-hour boundary with only a consensus ML - excluded on the boundary rule (Lynx-Valkyries precedent). Also gate-dead tonight: CFL Riders-Lions (7:00 PM ET - the 10 PM hypothesis was wrong), both Cincinnati finals (TODAY, not Monday: Gauff-Pegula is the first all-American women's final there in 56 years, not-before 7 PM; Fils-Tiafoe 4:30 PM), all four WNBA games (7 PM ET or earlier), River-Velez (likely in progress). MONDAY PREVIEW, why tonight ships instead: Monday has ZERO complete priceable boards - Fulham-Chelsea's trio is two legs from two books (BetMGM Chelsea 2.10, DK over 2.5 at 1.67; Fulham/draw legs aggregate-only), all 10 MLB games unposted (third straight day), both WNBA games unposted (and the Dream-Sparks Monday-vs-Tuesday date conflict unresolved), Botafogo-Athletico unpriced. Leagues Cup QFs confirmed Tue-Wed (Chicago Fire-Monterrey Tue 8:30 PM ET). The Racing-Boca trio is internally coherent (~6.5% hold - NOT a best-price aggregate) but the book is UNNAMED - consensus-c, named-book condition on the order. Standing rules: drift-cancel (3-for-3 after Cruz Azul), live re-verify. --market-weight 0.85.",
+ "books": {
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "coherent single-board trio (6.5% hold) from Aug-23-dated US-facing pages, book unnamed - named-book verify required"
+  }
+ },
+ "events": [
+  {
+   "event_id": "arg-2026-08-23-boc-rac",
+   "sport": "soccer",
+   "league": "Argentina Clausura fecha 6",
+   "home": "Racing Club",
+   "away": "Boca Juniors",
+   "start_time": "2026-08-24T00:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.9
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 3.05
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.55
+      }
+     ]
+    }
+   ],
+   "note": "8:30 PM ET, El Cilindro (Estadio Presidente Peron, Avellaneda - venue-verified; FanDuel's reversed listing order rejected against the venue). Racing +190 / draw +205 / Boca +155. H2H is draw-heavy: Racing unbeaten in 7 vs Boca, 6 draws in the last 10. Form: Racing lost 3 straight overall; Boca drew Platense 1-1. A Boca 4.23 quote circulating is from a stale Aug-3 page - rejected. Polymarket page exists, no cents printed. No goal-total price found."
+  }
+ ],
+ "model_probabilities": {}
+}
