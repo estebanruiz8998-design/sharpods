@@ -3151,25 +3151,49 @@
         "arg-2026-08-23-boc-rac": 0.3232
       },
       "predictions_other": {},
-      "settle": "pending",
+      "settle": "fully settled 2026-08-24 (Mon)",
       "decisions": [
         {
           "id": "2026-08-23-BOC-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Boca Juniors @ Racing Club, Clausura fecha 6 (8:30 PM ET Sun, El Cilindro)",
           "selection": "Boca Juniors ML (3-way; draw/home lose)",
           "target": 2.767,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER on a one-market Sunday-night card. Fair 2.699 (coherent unnamed-book trio +190/+205/+155 power-devigged to 37.0% Boca). Fires at 2.767+ (+177 or better) ONLY on a live, named single-book quote - the anchor is unnamed, so a resting fill proves nothing (LDU lesson). $35 at quarter-Kelly if clean, returns $97. Racing unbeaten in 7 H2H with 6 draws in 10 - the draw-heavy profile is exactly why the bar wants +177 on Boca. DRIFT-CANCEL applies (rule is 3-for-3 after Cruz Azul)."
+          "note": "NOT FILLED - no named book ever printed Boca near +177 (best found: bplay 2.60, Betsson 2.55, bet365 DNB 1.62 implying ~2.4-2.6); the trigger sat ~8% above the whole named market. COUNTERFACTUAL SAVE #7: the match ended 1-1, so any filled 90-minute ticket loses - and the draw-heavy H2H that set the high bar was exactly the risk that landed. Never-filled orders' sides now 14W-8L across 22."
         }
+      ],
+      "games": [
+        {
+          "event_id": "arg-2026-08-23-boc-rac",
+          "our_home_fair": 0.3232,
+          "close_home_novig": 0.3071,
+          "home_won": false,
+          "final": "Racing 1, Boca 1 (Rojo VAR penalty 9'; Merentiel backheel equalizer) - the draw-heavy H2H profile delivered its 7th draw in 11",
+          "source_flag": "clean",
+          "note": "Betsson named closing trio 3.05/2.92/2.55. Our unnamed anchor graded FAIR: Boca 2.55 identical to the named print; our draw was longer (3.05 vs 2.92) and Racing shorter - anchor honest, shape slightly off on the draw."
+        }
+      ],
+      "metrics": {
+        "n": 1,
+        "brier_ours": 0.1045,
+        "brier_close": 0.0943,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0161,
+        "max_abs_fair_vs_close": 0.0161,
+        "note": "One market, graded vs a named-book (Betsson) pre-match trio."
+      },
+      "lessons_applied": [
+        "COUNTERFACTUAL SAVE #7 (Boca): the draw-heavy H2H (now 7 draws in 11) was the stated reason for the +177 ask, and the draw duly landed - the bar priced the risk correctly on a market that never offered the price.",
+        "Unnamed-anchor calibration data point: the coherent 6.5%-hold unnamed trio graded IDENTICAL to Betsson's named print on the bet side (2.55 = 2.55). Coherent-hold unnamed boards are usable anchors at consensus-c; the named-book-fill condition stays regardless."
       ]
     }
   ],
