@@ -1,0 +1,227 @@
+{
+ "_provenance": "Monday 2026-08-24 West Coast card, compiled early evening (SEVENTH straight slow clock: Fulham 2-1 Chelsea - a 3 PM ET Monday kickoff - was already final and recapped against a 10:54 AM reading; pessimistic-now ~6:00 PM ET). Gate = 8:00 PM ET+ starts: the four 6:40-7:40 PM games (TB@DET Rasmussen-Valdez, BOS@MIA with the card's best two-book pair, COL@WSH with numberFire 74.2%, TEX@CWS) all FAIL and are excluded with times; the six 9:38-9:45 PM games ship. FIRST CARD UNDER THE TIERED BARS and the dispersion mandate: scouts pulled a second named venue wherever one exists - the PIT@SD pick'em carries bet365 (PIT +100) and Fanatics (SD +100) legs against the FanDuel anchor. Polymarket markets EXIST for CHC@AZ and PHI@SEA but no cents surfaced in any snippet - that leg of the mandate is unfilled tonight. Also excluded: WNBA Lynx-Valkyries (8:00 PM ET = exactly the 2h boundary, Lynx precedent), Dream-Sparks (Mon-vs-Tue date conflict unresolved, no board), Botafogo-Athletico (7 PM ET, gate-dead; trio 2.24/3.17/3.35 logged), Fulham-Chelsea (FINAL - it was the clock evidence). The 'other sports' scout died mid-run on an API error after the Botafogo pull - noted for the record. Tuesday preview: Leagues Cup QFs begin (Chicago Fire-Monterrey 8:30 PM ET). Standing rules on every ticket and order: listed pitchers, drift-cancel, live named-book re-verify. --market-weight 0.85.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "named single-book two-sided boards dated Aug 24 (FanDuel, BetMGM)"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated covers/cluster boards (unattributed feeds, quote-hygiene flags)"
+  },
+  "bet365": {
+   "sharpness": 0.6,
+   "notes": "named dispersion leg (one-sided)"
+  },
+  "fanatics": {
+   "sharpness": 0.6,
+   "notes": "named dispersion leg (one-sided)"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-24-cle-laa",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Angels",
+   "away": "Guardians",
+   "start_time": "2026-08-25T01:38:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.4
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.617
+      }
+     ]
+    }
+   ],
+   "note": "9:38 PM ET Angel Stadium. PITCHERS: Messick (CLE, 2.54 ERA) vs Klassen (LAA). Covers board CLE -162/LAA +140; a second unnamed quote (-166/+135) sits tight to it - dispersion evidence only. Total 8.0 one-source, not priced."
+  },
+  {
+   "event_id": "mlb-2026-08-24-chc-az",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "D-backs",
+   "away": "Cubs",
+   "start_time": "2026-08-25T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 2.18
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.69
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET Chase Field. PITCHERS: Gausman (CHC) vs Kelly (AZ). BetMGM CHC -145/AZ +118. STEAM FLAG: one preview says the line 'crept to -150 by first pitch' - copy may be late-written; live re-verify. A 57.5%-CHC sim quote has weak attribution - NOT ensembled. Total ~9 unpriced."
+  },
+  {
+   "event_id": "mlb-2026-08-24-pit-sd",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Padres",
+   "away": "Pirates",
+   "start_time": "2026-08-25T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.943
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.893
+      },
+      {
+       "book": "bet365",
+       "side": "away",
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "fanatics",
+       "side": "home",
+       "decimal_odds": 2.0
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET Petco Park (venue-verified). PITCHERS: Ashcraft (PIT, 13-5, 3.74) vs Robbie Ray (SD, 11-7, 3.20). True pick'em: FanDuel PIT -112/SD -106 is the anchor; bet365 pays PIT +100 and Fanatics pays SD +100 - two NAMED one-sided dispersion legs at venues outside the anchor. Cross-venue synthetic hold is exactly 0.0% - quote timing risk is real; any action requires the named book to show the price LIVE at bet time. No total surfaced."
+  },
+  {
+   "event_id": "mlb-2026-08-24-min-ath",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Athletics",
+   "away": "Twins",
+   "start_time": "2026-08-25T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.667
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.34
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 10.5,
+       "decimal_odds": 1.855
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 10.5,
+       "decimal_odds": 1.952
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET Sutter Health Park. PITCHERS: Matthews (MIN, 5.12) vs Springs (ATH, 6.02) - both ERA 5+, total 10.5. Cluster board ATH -150/MIN +134 with a quote-hygiene flag ('-150 with implied -162' phrasing) - consensus-c, live re-verify. ATH 2-9 L11 home, MIN 2-9 L11 road."
+  },
+  {
+   "event_id": "mlb-2026-08-24-phi-sea",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Mariners",
+   "away": "Phillies",
+   "start_time": "2026-08-25T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.05
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.87
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET T-Mobile Park. MARQUEE: Wheeler (PHI) vs Gilbert (SEA); PHI on a 9-game win streak. Covers/SBR consensus PHI -115/SEA +105 (books range -115/-123); capperspicks second board unnamed - not anchored. Total 6.5 (lowest on the card) number-only. In-house log5 runs on dated records (PHI 73-58, SEA 62-69)."
+  },
+  {
+   "event_id": "mlb-2026-08-24-cin-sf",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Giants",
+   "away": "Reds",
+   "start_time": "2026-08-25T01:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.36
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.617
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 7.5,
+       "decimal_odds": 1.98
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 7.5,
+       "decimal_odds": 1.833
+      }
+     ]
+    }
+   ],
+   "note": "9:45 PM ET Oracle Park (venue-verified; SF flew home after being swept at Boston - fatigue angle real). PITCHERS: Burns (CIN, 14-2, 2.51) vs Whisenhunt (SF, 7.03). Covers CIN -162/SF +136, total 7.5."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-24-phi-sea:moneyline:home": 0.456,
+  "mlb-2026-08-24-phi-sea:moneyline:away": 0.544
+ }
+}

@@ -3195,6 +3195,67 @@
         "COUNTERFACTUAL SAVE #7 (Boca): the draw-heavy H2H (now 7 draws in 11) was the stated reason for the +177 ask, and the draw duly landed - the bar priced the risk correctly on a market that never offered the price.",
         "Unnamed-anchor calibration data point: the coherent 6.5%-hold unnamed trio graded IDENTICAL to Betsson's named print on the bet side (2.55 = 2.55). Coherent-hold unnamed boards are usable anchors at consensus-c; the named-book-fill condition stays regardless."
       ]
+    },
+    {
+      "date": "2026-08-24",
+      "sport": "mlb",
+      "mode": "degraded - Monday West Coast card: 6 events / 8 markets (the 9:38-9:45 PM ET slate; the four 6:40-7:40 games failed the gate under a seventh straight slow clock - Fulham-Chelsea's Monday 3 PM final was the tell). FIRST CARD under the tiered bars and the dispersion mandate: scouts pulled second named venues, and PIT@SD carries bet365/Fanatics legs against a FanDuel anchor. Polymarket markets exist for two games but printed no cents. In-house log5 on PHI@SEA (dated records); one weak-attribution sim rejected. The non-MLB scout died mid-run on an API error - Botafogo trio logged but gate-dead.",
+      "engine_verdict": "FIRST TIER BET - the 13-pass streak ends. Pirates ML at bet365 2.00 (+100): FanDuel anchor devigs PIT to 50.7%, so evens is +1.39% EV - above the 1.0% dispersion bar; $35 at quarter-Kelly (0.35% of roll), conviction 1 star. Backup order: Phillies ML >= 1.927 (model tier - log5 on dated records leans PHI 54.4% vs market 52.4%). Everything else negative at best price.",
+      "predictions_home_fair": {
+        "mlb-2026-08-24-pit-sd": 0.4931,
+        "mlb-2026-08-24-min-ath": 0.5874,
+        "mlb-2026-08-24-phi-sea": 0.4732,
+        "mlb-2026-08-24-cle-laa": 0.3974,
+        "mlb-2026-08-24-cin-sf": 0.4007,
+        "mlb-2026-08-24-chc-az": 0.4318
+      },
+      "predictions_other": {
+        "mlb-2026-08-24-cin-sf:total:7.5": {
+          "under": 0.5208,
+          "over": 0.4792
+        },
+        "mlb-2026-08-24-min-ath:total:10.5": {
+          "over": 0.5137,
+          "under": 0.4863
+        }
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-24-PIT-TICKET",
+          "type": "ticket",
+          "event": "PIT @ SD (9:40 PM ET Mon, Petco; PITCHERS: Ashcraft vs Robbie Ray)",
+          "selection": "Pirates ML",
+          "target": 2.0,
+          "fill": null,
+          "stake": 35,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": true,
+          "note": "FIRST TIER-1 (DISPERSION) BET - the ledger's first recommended stake since the Cubs ticket. bet365 pays PIT +100 while the FanDuel anchor (-112/-106, 4.3% hold) devigs PIT to 50.69% - fair 1.973, so evens is +1.39% EV vs the 1.0% tier bar. $35 at quarter-Kelly returns $69. BINDING CONDITIONS: (1) bet ONLY if a named book shows PIT at +100 or better (2.00+; the 1%-EV floor price is 1.992) LIVE at bet time - if bet365's price is gone, stand down; (2) if the WHOLE market has moved toward PIT (FanDuel too), that is drift - re-price first; (3) LISTED PITCHERS Ashcraft/Ray - a change voids; (4) your execution report (book, price, stake) is the fill oracle and sets the real P&L. Tier-bet counter: 1 of 15 toward the pre-registered CLV rollback checkpoint."
+        },
+        {
+          "id": "2026-08-24-PHI-ORDER",
+          "type": "order_open",
+          "event": "PHI @ SEA (9:40 PM ET Mon, T-Mobile Park; Wheeler vs Gilbert)",
+          "selection": "Phillies ML",
+          "target": 1.927,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": false,
+          "note": "Backup order at the MODEL TIER (1.5% bar): in-house log5 on dated records (PHI 73-58, SEA 62-69) leans PHI 54.4% vs the market's 52.4% - blended fair 1.898, fires at 1.927+ (-108 or better vs -115 board). Wheeler vs Gilbert; a scratch voids. Books range -115/-123 - a named -108 print is possible on shop."
+        }
+      ]
     }
   ],
   "policy_changes": [
