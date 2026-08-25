@@ -1,0 +1,215 @@
+{
+ "_provenance": "Tuesday 2026-08-25 night card, compiled ~5 PM ET pessimistic (eighth straight slow clock; Monday's West Coast finals all recapped against a 9:36 AM reading). Gate = 7:40 PM ET+: the 7:00-7:15 boundary band is excluded whole - including LAD@ATL, the night's best dispersion (ESPN -156 vs FanDuel -142 on LAD, 14 cents) which also carried a Glasnow-first-start-since-May premise risk, and HOU@NYY/KC@TOR/MIL@NYM (one-sided or unpriced anyway). PRICED: 6 events / 8 markets, three model-backed sides (numberFire on Skenes, scoresandstats on AZ, Bleacher Nation on the Mystics) plus in-house log5 on PHI@SEA. NO DISPERSION FOUND TONIGHT: Polymarket printed no cents across three dedicated hunts, Leagues Cup QF books open near kickoff (Fire-Monterrey 8:30 PM and Leon-RSL 10:30 PM have only Kalshi cents / aggregator fragments - unpriceable, shop live if you want them), and the only 35-cent MLB 'gap' (CHC@AZ) is Monday's board lingering - rejected as the same-series trap. Also excluded: TEX@CWS and CIN@SF (Tuesday boards unposted; every price found was Monday's), CLE@LAA (1.4% hold = aggregate tripwire + unnamed CLE starter), Sky@Sun (7:00 boundary), Fire@Wings (partial board), US OPEN TRAP KILLED: main draw starts Sunday Aug 30 - this week is qualifying and a Federer exhibition; no competitive boards exist. Standing rules on everything: listed pitchers, drift-cancel (0-for-4 after the PHI save), transient-cross vs standing-above taxonomy, live named-book verification. --market-weight 0.85.",
+ "books": {
+  "consensus-a": {
+   "sharpness": 0.6,
+   "notes": "named single-book two-sided boards dated Aug 25 (FanDuel)"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated covers/cluster/consensus boards (unattributed feeds)"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-25-bal-stl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Cardinals",
+   "away": "Orioles",
+   "start_time": "2026-08-25T23:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.8
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.15
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 9.0,
+       "decimal_odds": 1.95
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 9.0,
+       "decimal_odds": 1.87
+      }
+     ]
+    }
+   ],
+   "note": "7:45 PM ET Busch (rubber match, CBS). PITCHERS: Bassitt (4-4, 5.08) vs Liberatore (5-11, 5.04). Covers board STL -125/BAL +115, total 9. BAL team-total over has hit 8 straight road games (color, not model)."
+  },
+  {
+   "event_id": "mlb-2026-08-25-pit-sd",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Padres",
+   "away": "Pirates",
+   "start_time": "2026-08-26T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "home",
+       "decimal_odds": 1.89
+      },
+      {
+       "book": "consensus-a",
+       "side": "away",
+       "decimal_odds": 1.96
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-a",
+       "side": "over",
+       "line": 7.5,
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "consensus-a",
+       "side": "under",
+       "line": 7.5,
+       "decimal_odds": 1.82
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET Petco, game 2 after last night's 12-inning ticket. PITCHERS: SKENES (9-11) vs Michael King (8-9). FanDuel PIT -104/SD -112 (3.9% hold), total 7.5. numberFire 55.8% PIT - the model tier's marquee candidate. A '72% Padres implied' snippet was inconsistent and discarded."
+  },
+  {
+   "event_id": "mlb-2026-08-25-phi-sea",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Mariners",
+   "away": "Phillies",
+   "start_time": "2026-08-26T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.84
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET T-Mobile. PITCHERS: Nola (5.12 ERA) vs Kirby (3.40 home). Covers PHI -119/SEA +100. Records arithmetic-checked through Monday (PHI 73-59, SEA 63-69) - log5 runs."
+  },
+  {
+   "event_id": "mlb-2026-08-25-chc-az",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "D-backs",
+   "away": "Cubs",
+   "start_time": "2026-08-26T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.95
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.95
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET Chase Field. PITCHERS: Holmes vs Pfaadt. Covers pick'em -105/-105; an unattributed CHC -140/+120 quote 35 cents away is almost certainly MONDAY'S board lingering (CHC won 7-0) - same-series trap, REJECTED. scoresandstats model 54.1% AZ. Dimers' #1 play is Over 8.5 at +113 (58%) but the under leg never printed - total unpriceable, and totals never headline anyway."
+  },
+  {
+   "event_id": "mlb-2026-08-25-min-ath",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Athletics",
+   "away": "Twins",
+   "start_time": "2026-08-26T02:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.25
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.69
+      }
+     ]
+    }
+   ],
+   "note": "~10:05 PM ET Sutter Health (standard slot, exact unconfirmed - clears the gate regardless). DocSports MIN -145/ATH +125. PITCHER FLAG: 'Taj Bradley (MIN)' team assignment unverified - any order void unless confirmed. Last night's board here was fully inverted vs the close - extra caution on this venue's quotes."
+  },
+  {
+   "event_id": "wnba-2026-08-25-was-phx",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Mercury",
+   "away": "Mystics",
+   "start_time": "2026-08-26T02:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.13
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.72
+      }
+     ]
+    }
+   ],
+   "note": "10:00 PM ET Footprint Center (venue-verified home PHX; Mercury on a 3-game home skid). Dunkelindex consensus pair -139/+113-ish (5.1% hold) - consensus-c; a -115 Mystics feed floats 24 cents away, book unnamed - verify live, could be movement or softness. Bleacher Nation computer picks: Mystics 63.9%. Mystics won the first meeting by 20."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-25-pit-sd:moneyline:away": 0.558,
+  "mlb-2026-08-25-pit-sd:moneyline:home": 0.442,
+  "mlb-2026-08-25-chc-az:moneyline:home": 0.541,
+  "mlb-2026-08-25-chc-az:moneyline:away": 0.459,
+  "mlb-2026-08-25-phi-sea:moneyline:home": 0.4642,
+  "mlb-2026-08-25-phi-sea:moneyline:away": 0.5358,
+  "wnba-2026-08-25-was-phx:moneyline:away": 0.639,
+  "wnba-2026-08-25-was-phx:moneyline:home": 0.361
+ }
+}

@@ -3326,6 +3326,84 @@
         "Both totals leans right again (ATH over, SF under) - totals 5 of 8 lifetime, still order-only, sample still short of any significance floor.",
         "The pass discipline kept paying alongside the bet: CIN -162 into a 7.03-ERA starter lost outright, and the steamed CHC -150 won - one avoided favorite loss, one avoided chase, zero dollars on either."
       ]
+    },
+    {
+      "date": "2026-08-25",
+      "sport": "multi",
+      "mode": "degraded - Tuesday night card: 6 events / 8 markets (5 MLB + Mystics-Mercury), three model-backed sides + in-house log5 on PHI@SEA. Eighth straight slow clock; gate at 7:40 PM ET+ excluded the 7:00-7:15 boundary band including LAD@ATL - the night's best dispersion (ESPN -156 vs FanDuel -142) which also carried a Glasnow-return premise risk. NO dispersion survived to bet: Polymarket printed no cents in three hunts, Leagues Cup QF books open at kickoff (Kalshi cents only), and the CHC@AZ '35-cent gap' was Monday's lingering board - same-series trap rejected. US Open trap killed (main draw starts Sunday). All exclusions in the slate provenance.",
+      "engine_verdict": "PASS - no tier fires tonight (the system bets when cross-venue or model value EXISTS; tonight it does not). Headline order: D-backs ML >= 2.005 (+100 or better on the -105/-105 pick'em; -1.30% now, MODEL TIER - scoresandstats 54.1% AZ). Backups: Mystics ML >= 1.781 (model tier, Bleacher Nation 63.9%), Pirates ML >= 2.028 behind SKENES (model tier, numberFire 55.8%). Tier scoreboard: 1-0, mean no-vig CLV ~0.0%.",
+      "predictions_home_fair": {
+        "mlb-2026-08-25-chc-az": 0.5062,
+        "mlb-2026-08-25-bal-stl": 0.5457,
+        "mlb-2026-08-25-min-ath": 0.4251,
+        "mlb-2026-08-25-phi-sea": 0.4758,
+        "mlb-2026-08-25-pit-sd": 0.4994,
+        "wnba-2026-08-25-was-phx": 0.4301
+      },
+      "predictions_other": {
+        "mlb-2026-08-25-pit-sd:total:7.5": {
+          "under": 0.5253,
+          "over": 0.4747
+        },
+        "mlb-2026-08-25-bal-stl:total:9.0": {
+          "under": 0.5112,
+          "over": 0.4888
+        }
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-25-AZ-ORDER",
+          "type": "order_open",
+          "event": "CHC @ AZ (9:40 PM ET Tue, Chase Field; Holmes vs Pfaadt)",
+          "selection": "D-backs ML",
+          "target": 2.005,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER at the MODEL TIER (1.5% bar). Covers pick'em -105/-105 devigs to 50/50; scoresandstats' dated model says 54.1% AZ, blending fair to 50.6% (1.976). Fires at 2.005+ (+100 or better at a named book). $37 at quarter-Kelly if clean, returns $75. The unattributed CHC -140 quote nearby is Monday's board - if a live book actually shows AZ +120-ish, that is a DIFFERENT market state: re-verify both sides before anything. Holmes/Pfaadt must start."
+        },
+        {
+          "id": "2026-08-25-WAS-ORDER",
+          "type": "order_open",
+          "event": "WAS @ PHX (10:00 PM ET Tue, Footprint Center)",
+          "selection": "Mystics ML",
+          "target": 1.781,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": false,
+          "note": "Model-tier backup: consensus pair devigs Mystics to 55.7%; Bleacher Nation's computer says 63.9% - blended fair 57.0% (1.755). Fires at 1.781+ (-128 or better) at a NAMED book only (the anchor is a consensus feed; a -115 Mystics quote floats unattributed - verify live). Mercury on a 3-game home skid; Mystics won the first meeting by 20."
+        },
+        {
+          "id": "2026-08-25-PIT-ORDER",
+          "type": "order_open",
+          "event": "PIT @ SD (9:40 PM ET Tue, Petco; SKENES vs Michael King)",
+          "selection": "Pirates ML",
+          "target": 2.028,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "clean",
+          "process": "pending",
+          "headline": false,
+          "note": "Model-tier backup on last night's winning venue: FanDuel -104/-112 devigs PIT to 49.0%; numberFire says 55.8% behind Skenes - blended fair 50.1% (1.998). Fires at 2.028+ (+103 or better). If bet365/Fanatics split the pick'em again like last night, +103 is entirely plausible on shop - that would be a legitimate standing-above fill, not a drift-cross. Skenes/King must start."
+        }
+      ]
     }
   ],
   "policy_changes": [
