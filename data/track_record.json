@@ -3219,7 +3219,7 @@
           "under": 0.4863
         }
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-08-25 (Tue)",
       "decisions": [
         {
           "id": "2026-08-24-PIT-TICKET",
@@ -3227,34 +3227,104 @@
           "event": "PIT @ SD (9:40 PM ET Mon, Petco; PITCHERS: Ashcraft vs Robbie Ray)",
           "selection": "Pirates ML",
           "target": 2.0,
-          "fill": null,
+          "fill": 2.0,
           "stake": 35,
-          "result": "pending",
-          "pnl": 0,
-          "clv_raw": null,
-          "clv_novig": null,
+          "result": "won",
+          "pnl": 35.0,
+          "clv_raw": 0.0477,
+          "clv_novig": 0.0,
           "anchor": "clean",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "FIRST TIER-1 (DISPERSION) BET - the ledger's first recommended stake since the Cubs ticket. bet365 pays PIT +100 while the FanDuel anchor (-112/-106, 4.3% hold) devigs PIT to 50.69% - fair 1.973, so evens is +1.39% EV vs the 1.0% tier bar. $35 at quarter-Kelly returns $69. BINDING CONDITIONS: (1) bet ONLY if a named book shows PIT at +100 or better (2.00+; the 1%-EV floor price is 1.992) LIVE at bet time - if bet365's price is gone, stand down; (2) if the WHOLE market has moved toward PIT (FanDuel too), that is drift - re-price first; (3) LISTED PITCHERS Ashcraft/Ray - a change voids; (4) your execution report (book, price, stake) is the fill oracle and sets the real P&L. Tier-bet counter: 1 of 15 toward the pre-registered CLV rollback checkpoint."
+          "note": "WON - the first tier bet cashes. PIT 3-2 in 12; $35 at 2.00 returns $70 (+$35 at the reference stake - report your actual book/price/stake and I restate real P&L). Ashcraft/Ray premise held; bet365 +100 documented at the latest pre-game snapshot. CLV at the split close: raw +4.8% vs the -110/-110 consensus, no-vig +0.0% (book range -3.3% to +1.3%) - we took the best price on the board and the market ended where we bet it. TIER SCOREBOARD: 1 settled, 1-0, mean no-vig CLV ~0.0%; 14 more to the pre-registered rollback checkpoint."
         },
         {
           "id": "2026-08-24-PHI-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "PHI @ SEA (9:40 PM ET Mon, T-Mobile Park; Wheeler vs Gilbert)",
           "selection": "Phillies ML",
           "target": 1.927,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Backup order at the MODEL TIER (1.5% bar): in-house log5 on dated records (PHI 73-58, SEA 62-69) leans PHI 54.4% vs the market's 52.4% - blended fair 1.898, fires at 1.927+ (-108 or better vs -115 board). Wheeler vs Gilbert; a scratch voids. Books range -115/-123 - a named -108 print is possible on shop."
+          "note": "STOOD DOWN PER DRIFT-CANCEL - SAVE #8. A named-book -108 print IS evidenced intraday (NBC/DK-network content), but it was a TRANSIENT CROSS: the board sat -115 below the trigger, touched -108, and closed back at -115/-118. Taxonomy now codified: a market STANDING above the trigger all day = legitimate fill (Jets precedent); a market that transiently CROSSES the trigger = drift-through, re-price and stand down (Liberty/Braves/Cruz Azul/this - drift-throughs now 0-for-4 as bets). PHI lost 2-9 (Wheeler 5-run 1st); a -108 fill was -1.6% no-vig CLV AND a full-stake loss. Fill oracle open: if you took -108, report it and I regrade."
         }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-08-24-pit-sd",
+          "our_home_fair": 0.4931,
+          "source_flag": "clean",
+          "close_home_novig": 0.5,
+          "home_won": false,
+          "final": "Pirates 3, Padres 2 in 12 (Triolo scores on Gonzales single; Yates escapes bases-loaded 11th; Ramirez K's the side)",
+          "note": "Ashcraft (6 IP) and Robbie Ray (8 K) both started - premise held. Books SPLIT on the favorite at close: Covers -110/-110 (encoded), BetMGM PIT -112, other boards SD -112. A genuine coin flip that bet365 paid at +100."
+        },
+        {
+          "event_id": "mlb-2026-08-24-phi-sea",
+          "our_home_fair": 0.4732,
+          "source_flag": "clean",
+          "close_home_novig": 0.4885,
+          "home_won": true,
+          "final": "Mariners 9, Phillies 2 (5-run 1st off Wheeler; Raleigh 3 HR; PHI streak ends at nine)",
+          "note": "Wheeler/Gilbert started as listed."
+        },
+        {
+          "event_id": "mlb-2026-08-24-cle-laa",
+          "our_home_fair": 0.3974,
+          "source_flag": "clean",
+          "close_home_novig": 0.4077,
+          "home_won": false,
+          "final": "Guardians 4, Angels 2 (CLE's 5th straight; Hedges 2-run HR)"
+        },
+        {
+          "event_id": "mlb-2026-08-24-chc-az",
+          "our_home_fair": 0.4318,
+          "source_flag": "clean",
+          "close_home_novig": 0.4318,
+          "home_won": false,
+          "final": "Cubs 7, D-backs 0 (shutout at Chase Field - the steam toward CHC was right)",
+          "note": "Close band -136/-155; encoded BetMGM -145. The re-verify flag on the steaming line was warranted; no position."
+        },
+        {
+          "event_id": "mlb-2026-08-24-min-ath",
+          "our_home_fair": 0.5874,
+          "source_flag": "clean",
+          "close_home_novig": 0.4032,
+          "home_won": false,
+          "final": "Twins 9, Athletics 6 (15 runs - OVER 10.5 by 4.5; Matthews 7 IP 1 R, pen imploded)",
+          "note": "Our slight over lean (51.4%) RIGHT."
+        },
+        {
+          "event_id": "mlb-2026-08-24-cin-sf",
+          "our_home_fair": 0.4007,
+          "source_flag": "clean",
+          "close_home_novig": 0.4007,
+          "home_won": true,
+          "final": "Giants 5, Reds 0 (Burns, 14-2/2.51, tagged for all 5 by the 4th; Whisenhunt spins the shutout side)",
+          "note": "Big-favorite upset by a 52-78 team; 5 runs UNDER 7.5 - our under lean (52.1%) RIGHT. Passing on -162 into a 7.03-ERA starter graded correct."
+        }
+      ],
+      "metrics": {
+        "n": 6,
+        "brier_ours": 0.2615,
+        "brier_close": 0.231,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0361,
+        "max_abs_fair_vs_close": 0.1842,
+        "note": "6 markets graded vs closes (all consensus-grade article-snippet closes, medium precision). Both derivative leans RIGHT (ATH over 10.5, SF under 7.5) - totals now 5 of 8."
+      },
+      "lessons_applied": [
+        "FIRST TIER BET WON AT FLAT CLV (PIT +100): the dispersion tier's maiden ticket cashed a 12-inning coin flip at the board's best price - raw CLV +4.8% vs the -110 consensus, no-vig ~0.0%. One bet proves nothing (Buchdahl); the checkpoint sample is 1 of 15.",
+        "SAVE #8 and a taxonomy codified: transient trigger-crosses are drift (stand down - 0-for-4 as bets), standing-above markets are fills (Jets, 1-for-1). The PHI order's -108 touch preceded a 9-2 loss and negative CLV - the rule graded correct within hours of the first bet cashing.",
+        "Both totals leans right again (ATH over, SF under) - totals 5 of 8 lifetime, still order-only, sample still short of any significance floor.",
+        "The pass discipline kept paying alongside the bet: CIN -162 into a 7.03-ERA starter lost outright, and the steamed CHC -150 won - one avoided favorite loss, one avoided chase, zero dollars on either."
       ]
     }
   ],
