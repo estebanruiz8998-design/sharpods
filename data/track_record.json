@@ -3350,14 +3350,159 @@
           "over": 0.4888
         }
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-08-26 (Wed)",
       "decisions": [
         {
           "id": "2026-08-25-AZ-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "CHC @ AZ (9:40 PM ET Tue, Chase Field; Holmes vs Pfaadt)",
           "selection": "D-backs ML",
           "target": 2.005,
+          "fill": null,
+          "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "worked",
+          "headline": true,
+          "note": "STOOD DOWN PER DRIFT-CANCEL - and this one is the rule's first counterfactual MISS. DK printed AZ +101 (>= the 2.005 trigger) pre-game, but the board moved TOWARD the Cubs everywhere else (-105/-105 open -> BetMGM -110s, SI CHC -112): a drift-through, not a standing price. Re-priced at the drifted number the blend gave -0.15% - below the model bar - so the stand-down was rule-correct. AZ then won 5-4 on a walk-off. Drift-throughs as hypothetical bets: 1-for-5 (Liberty, Braves, Cruz Azul, PHI lost; this won). The rule keeps its job on the aggregate; the miss is logged, not hidden."
+        },
+        {
+          "id": "2026-08-25-WAS-ORDER",
+          "type": "order_unfilled",
+          "event": "WAS @ PHX (10:00 PM ET Tue, Footprint Center)",
+          "selection": "Mystics ML",
+          "target": 1.781,
+          "fill": null,
+          "stake": 0,
+          "result": "no fill",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "worked",
+          "headline": false,
+          "note": "NOT FILLED - the only -128 print was an unnamed aggregator leg; named books ran -130/-135. The fires-only-at-named-books condition held. Mystics won 94-84: a would-have-won at a price never verified to exist. Never-filled sides: 16W-9L across 26 after this card."
+        },
+        {
+          "id": "2026-08-25-PIT-ORDER",
+          "type": "order_filled_paper",
+          "event": "PIT @ SD (9:40 PM ET Tue, Petco; SKENES vs Michael King)",
+          "selection": "Pirates ML",
+          "target": 2.028,
+          "fill": 2.028,
+          "stake": 0,
+          "result": "won",
+          "pnl": 0,
+          "clv_raw": 0.009,
+          "clv_novig": -0.0243,
+          "anchor": "clean",
+          "process": "worked",
+          "headline": false,
+          "note": "FILLED AT A STANDING CROSS-BOOK PRICE - AND WON. BetMGM's own game blog quoted PIT +105 (2.05 >= the 2.028 trigger) while the FanDuel anchor sat -104/-102: the Jets shape (standing-above, not a transient cross), so the fill is legitimate. PIT won 1-0 behind Skenes. Paper grade at the 2.028 floor: raw CLV +0.9%, no-vig -2.4%. numberFire's 55.8% lean graded RIGHT. Stake 0 - backup order, user bets headline only. TIER SCOREBOARD: 2 settled (Mon ticket + this), 2-0 on results, but no-vig CLV is Mon ~0.0% / this -2.4% - mean ~-1.2%, NEGATIVE. That is the pre-registered rollback metric: if it is still <0 at 15 settled, both tiers revert to 2.5%. 13 to the checkpoint."
+        }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-08-25-chc-az",
+          "our_home_fair": 0.5062,
+          "source_flag": "clean",
+          "close_home_novig": 0.4896,
+          "home_won": true,
+          "final": "D-backs 5, Cubs 4 (Waldschmidt pinch-hit 2-run walk-off HR in the 9th; Holmes 7 scoreless wasted)",
+          "note": "Holmes/Pfaadt started as listed. Close is DK's latest pre-game print (+101/-108), medium-low precision - the board opened -105/-105 and most books moved toward CHC."
+        },
+        {
+          "event_id": "wnba-2026-08-25-was-phx",
+          "our_home_fair": 0.4301,
+          "source_flag": "clean",
+          "close_home_novig": 0.4495,
+          "home_won": false,
+          "final": "Mystics 94, Mercury 84 (Citron 19/9a, Iriafen 18/10r; 2nd-most wins in franchise history)"
+        },
+        {
+          "event_id": "mlb-2026-08-25-pit-sd",
+          "our_home_fair": 0.4994,
+          "source_flag": "clean",
+          "close_home_novig": 0.5189,
+          "home_won": false,
+          "final": "Pirates 1, Padres 0 (Oneil Cruz 2-out 9th-inning HR off Mason Miller - his first HR allowed in 73 appearances; Skenes 6 IP 3 H, King 7 scoreless)",
+          "note": "Skenes/King started as listed. 1 run UNDER 7.5 - our under lean (52.5%) RIGHT."
+        },
+        {
+          "event_id": "mlb-2026-08-25-bal-stl",
+          "our_home_fair": 0.5457,
+          "source_flag": "clean",
+          "close_home_novig": 0.5483,
+          "home_won": false,
+          "final": "Orioles 13, Cardinals 1 (4 in the 3rd, 8 in the 5th) - 14 runs OVER 9",
+          "note": "Bassitt/Liberatore as listed. Our slight under lean (51.1%) WRONG - totals 6 of 10."
+        },
+        {
+          "event_id": "mlb-2026-08-25-phi-sea",
+          "our_home_fair": 0.4758,
+          "source_flag": "clean",
+          "close_home_novig": 0.5177,
+          "home_won": true,
+          "final": "Mariners 4, Phillies 1 (Kirby 7.2 IP 9 K; Raleigh HR in a 4th straight AB, team record)",
+          "note": "Nola/Kirby as listed. Close spread wide across books (-104 to -118 SEA) - representative pair used."
+        },
+        {
+          "event_id": "mlb-2026-08-25-min-ath",
+          "our_home_fair": 0.4251,
+          "source_flag": "clean",
+          "close_home_novig": 0.4223,
+          "home_won": true,
+          "final": "Athletics 4, Twins 2 (Cortes 2-run HR; Taj Bradley threw the first immaculate inning in Twins history IN A LOSS)",
+          "note": "Bradley-MIN assignment was REAL - the verify flag resolved clean. Favorite lost."
+        }
+      ],
+      "metrics": {
+        "n": 6,
+        "brier_ours": 0.2636,
+        "brier_close": 0.2665,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0171,
+        "max_abs_fair_vs_close": 0.0419,
+        "note": "6 markets graded vs closes (medium precision throughout - wide book spreads on two closes). Derivatives: PIT under 7.5 RIGHT (1 run), BAL over 9 hit against our slight under lean - totals 6 of 10. All three dated models' ordered sides WON (AZ, Mystics, PIT)."
+      },
+      "lessons_applied": [
+        "ALL THREE dated models' ordered sides won (scoresandstats AZ walk-off, Bleacher Nation Mystics, numberFire Pirates) - the model tier's first full card went 3-for-3 on direction. Sample tiny; direction noted, bars unchanged.",
+        "Drift-cancel took its first counterfactual loss (AZ +101 would have won) against four prior saves - 1-for-5 as hypothetical bets. A rule that only ever saves is a rule that never binds; this is the cost side, logged per the honesty standard.",
+        "Second consecutive standing-above fill cashed (Pirates +105 BetMGM after Jets +100 DK) - the taxonomy's fill side is 2-for-2 on results with positive raw CLV both times, but no-vig CLV is 0.0% and -2.4%: we are winning coin flips at roughly the market's own price, not beating the close yet. The rollback metric is honest and currently negative.",
+        "The MIN@ATH verify-flag resolved clean (Taj Bradley really is a Twin here) and the favorite lost anyway - flag hygiene costs nothing and keeps premises honest."
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "sport": "multi",
+      "mode": "degraded - Wednesday night card: 9 events / 12 markets (7 MLB, Leagues Cup QF Toluca-Austin, WNBA Tempo-Storm). Ninth straight slow clock. The DISPERSION MANDATE finally got full coverage on its marquee events: Polymarket cents on two MLB games (MIL 60c; LAD 55/ATL 46), an ESPN BET one-sided MIL leg, a Kalshi 90-min trio on the QF, TAB/LowVig derivatives, BetRivers named anchors on four boards. Excluded: TEX@CWS and MIN@ATH (prices not date-pinned - Tuesday-line contamination risk), America-Columbus (partial board; Polymarket 74c is advance-incl-pens, not 90-min-comparable), Valkyries -909 (extreme-favorite demotion), six afternoon games incl. PIT@SD (4:10-vs-9:10 conflict, pessimistic rule excludes). All documented in slate provenance.",
+      "engine_verdict": "PASS on every board - and this pass card is the tier policy's cleanest validation yet: full dispersion coverage everywhere and still no manufactured bet, because the outside venues sit AT fair (Polymarket MIL 60c vs fair 59.8% = -0.36% EV, the closest miss of the tier era; LAD/ATL legs -0.8%/-1.2%). Toluca-Austin REFUSED at -8.95% cross-venue hold (BetUS 1.53 vs Kalshi 2.00 on Toluca - conflicting quotes, not an arb; the Cubs/Polymarket lesson holding). Headline order: Brewers ML >= 1.690 (dispersion tier, model-backed 56.5%), 2 cents from the live Polymarket ask. No other orders - the BOS@MIA model tilt is pitcher-blind log5 against a Sonny Gray-driven market (not a genuine disagreement), BAL@STL's model is 51% on a suspect pitcher pairing, and two-sided fishing on LAD@ATL's near-fair Polymarket book is shopping, not edge.",
+      "predictions_home_fair": {
+        "mlb-2026-08-26-lad-atl": 0.4546,
+        "mlb-2026-08-26-bos-mia": 0.4138,
+        "mlb-2026-08-26-kc-tor": 0.5587,
+        "mlb-2026-08-26-hou-nyy": 0.5646,
+        "mlb-2026-08-26-col-wsh": 0.5324,
+        "mlb-2026-08-26-bal-stl": 0.4955,
+        "mlb-2026-08-26-mil-nym": 0.4023,
+        "wnba-2026-08-26-tor-sea": 0.6707
+      },
+      "predictions_other": {
+        "mlb-2026-08-26-hou-nyy:total:over": 0.5253,
+        "mlb-2026-08-26-mil-nym:total:over": 0.5,
+        "mlb-2026-08-26-bos-mia:total:over": 0.5046
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-26-MIL-ORDER",
+          "type": "order_open",
+          "event": "Brewers @ Mets, MLB (7:10 PM ET Wed, Citi Field)",
+          "selection": "Brewers ML",
+          "target": 1.69,
           "fill": null,
           "stake": 0,
           "result": "pending",
@@ -3367,41 +3512,24 @@
           "anchor": "degraded",
           "process": "pending",
           "headline": true,
-          "note": "HEADLINE ORDER at the MODEL TIER (1.5% bar). Covers pick'em -105/-105 devigs to 50/50; scoresandstats' dated model says 54.1% AZ, blending fair to 50.6% (1.976). Fires at 2.005+ (+100 or better at a named book). $37 at quarter-Kelly if clean, returns $75. The unattributed CHC -140 quote nearby is Monday's board - if a live book actually shows AZ +120-ish, that is a DIFFERENT market state: re-verify both sides before anything. Holmes/Pfaadt must start."
+          "note": "HEADLINE ORDER - dispersion tier (+1.0% bar), model-backed. Fair 1.673 (BetRivers -165/+138 power-devigged to 60.3% MIL, blended at 0.85 with the SportsGrid 59% / Stats Insider 54% logit-avg 56.5%). Fires at 1.690+ = Polymarket 59c or lower, or any named book at -145 or better; live ask at compile was 60c (-0.36% EV, the closest miss since the tiers went in). $37 at quarter-Kelly if filled (returns $63). BINDING CONDITIONS: (1) standing-above only - a tick that CROSSES 59c on news is drift, re-price and stand down (drift-throughs 1-for-5; fills 2-for-2); (2) BetRivers anchor must still sit in the -165 zone - if the whole board moved toward NYM the premise changed; (3) listed pitchers May/Stock - Stock's assignment is flagged unusual, a change voids; (4) ship-time gate: 7:10 PM start vs pessimistic-now stated on the slip."
         },
         {
-          "id": "2026-08-25-WAS-ORDER",
-          "type": "order_open",
-          "event": "WAS @ PHX (10:00 PM ET Tue, Footprint Center)",
-          "selection": "Mystics ML",
-          "target": 1.781,
+          "id": "2026-08-26-TOL-REFUSAL",
+          "type": "refusal",
+          "event": "Toluca vs Austin FC, Leagues Cup QF (8:30 PM ET Wed, Harrison NJ - neutral)",
+          "selection": "none - market refused",
+          "target": null,
           "fill": null,
           "stake": 0,
           "result": "pending",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
-          "anchor": "degraded",
+          "anchor": "conflict",
           "process": "pending",
           "headline": false,
-          "note": "Model-tier backup: consensus pair devigs Mystics to 55.7%; Bleacher Nation's computer says 63.9% - blended fair 57.0% (1.755). Fires at 1.781+ (-128 or better) at a NAMED book only (the anchor is a consensus feed; a -115 Mystics quote floats unattributed - verify live). Mercury on a 3-game home skid; Mystics won the first meeting by 20."
-        },
-        {
-          "id": "2026-08-25-PIT-ORDER",
-          "type": "order_open",
-          "event": "PIT @ SD (9:40 PM ET Tue, Petco; SKENES vs Michael King)",
-          "selection": "Pirates ML",
-          "target": 2.028,
-          "fill": null,
-          "stake": 0,
-          "result": "pending",
-          "pnl": 0,
-          "clv_raw": null,
-          "clv_novig": null,
-          "anchor": "clean",
-          "process": "pending",
-          "headline": false,
-          "note": "Model-tier backup on last night's winning venue: FanDuel -104/-112 devigs PIT to 49.0%; numberFire says 55.8% behind Skenes - blended fair 50.1% (1.998). Fires at 2.028+ (+103 or better). If bet365/Fanatics split the pick'em again like last night, +103 is entirely plausible on shop - that would be a legitimate standing-above fill, not a drift-cross. Skenes/King must start."
+          "note": "CONFLICT REFUSAL, engine-fired: degraded anchor + negative cross-source hold (-8.95%). BetUS (its own copy quotes Toluca as a RANGE, -185 to -200 - soft midpoints) says 65% Toluca; Kalshi 90-min cents say 50%. A 13-15 point venue disagreement on a cup one-off is conflicting quotes, not an arb (Cubs 3.7pt / Polymarket 5-6pt lessons - the graded misses that wrote this rule). The 'free money' leg (Kalshi Toluca 2.00 vs a 1.53 book) is exactly the trap shape. bet365 posts near kickoff - if a sharp named trio prints pre-game and agrees with one side, that settles WHICH venue was wrong, for the ledger, not for a bet. Settle records the 90-min result for calibration of both venues."
         }
       ]
     }

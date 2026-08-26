@@ -1,0 +1,372 @@
+{
+ "_provenance": "Wednesday 2026-08-26 night card, compiled against a NINTH straight slow clock (container read 9:21-9:34 AM ET while Tuesday's full West Coast slate - including a 9:40 PM PIT@SD final - is recapped everywhere; pessimistic-now = container + 7h, ~4:35 PM ET at compile). Gate applied at ship time on the slip. PRICED: 9 events / 12 markets. Dispersion hunt landed: Polymarket cents on TWO MLB games (MIL 60c; LAD 55/ATL 46), an ESPN BET one-sided MIL leg, a Kalshi 90-min trio on Toluca-Austin, and TAB/LowVig derivative quotes - plus BetRivers as the named anchor on four boards (all dated via Covers). EXCLUDED: TEX@CWS and MIN@ATH (moneylines not date-pinned to a named book; MIN@ATH doubly suspect after ATH won Tuesday as home dog - Tuesday-line contamination, and that venue's board was fully inverted on the 24th), America-Columbus QF 10:45 PM (partial board - bet365 home/draw legs unconfirmed; Polymarket 74c is ADVANCE-incl-pens, not comparable to 90-min - unpriceable, shop live), Valkyries@Sun 7:00 PM (DK -909 road favorite = extreme-favorite demotion, plus the earliest start), six afternoon MLB games (1:10-4:10 PM, gate-dead) including PIT@SD with an unresolved 4:10-vs-9:10 listing conflict (pessimistic rule: treat as 4:10, excluded), Real Madrid-Sociedad 3:30 PM and all UCL playoff legs (afternoon ET). US Open qualifying still not main draw. Standing rules on every ticket and order: listed-pitcher premises (NYY TBD; ATL confirmation; BAL/STL pairing suspect), drift-cancel with the standing-above vs transient-cross taxonomy (fills 2-for-2, drift-throughs 1-for-5), named-book live verification, totals never headline. --market-weight 0.85.",
+ "books": {
+  "betrivers": {
+   "sharpness": 0.6,
+   "notes": "named two-sided boards dated Aug 26 via Covers matchup pages"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated but unnamed boards (Covers/SportsGrid/Docsports family)"
+  },
+  "draftkings": {
+   "sharpness": 0.6,
+   "notes": "named two-sided WNBA board dated Aug 26"
+  },
+  "espnbet": {
+   "sharpness": 0.6,
+   "notes": "named one-sided dispersion leg (ESPN odds page)"
+  },
+  "tab": {
+   "sharpness": 0.55,
+   "notes": "named AU book, totals quote via Stats Insider"
+  },
+  "betus": {
+   "sharpness": 0.5,
+   "notes": "named offshore trio quoted as a range in its own copy - midpoints, soft"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "prediction market, shop-only (ledger-evidenced demotion)"
+  },
+  "kalshi": {
+   "sharpness": 0.45,
+   "notes": "exchange cents via Squawka quote, shop-only"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-26-bos-mia",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Marlins",
+   "away": "Red Sox",
+   "start_time": "2026-08-26T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.35
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.613
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 7.5,
+       "decimal_odds": 1.877
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 7.5,
+       "decimal_odds": 1.909
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET loanDepot (standard slot; exact minute unconfirmed - TIGHTEST gate margin on the card). PITCHERS: Sonny Gray (BOS - roster move unverified) vs Ryan Gusto. Covers page dated 8/26 BOS -152/MIA +135; a second unnamed -152/+128 nearby. In-house log5 runs on checked records (BOS 73-59, MIA 67-66) - it is PITCHER-BLIND and Gray is the market's whole case; treat the model tilt toward MIA with that caveat."
+  },
+  {
+   "event_id": "mlb-2026-08-26-col-wsh",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Nationals",
+   "away": "Rockies",
+   "start_time": "2026-08-26T22:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 1.806
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 2.04
+      }
+     ]
+    }
+   ],
+   "note": "6:45 PM ET Nationals Park. PITCHER CONFLICT: Covers says Gordon vs Alvarez, FantasyPros had Waldron for WSH - unresolved, any order void without confirmation. BetRivers WSH -124/COL +104 (Covers, dated 8/26). Total 7.5 number-only (juice was alt-line garbage, discarded). WSH record source sums a game high - medium."
+  },
+  {
+   "event_id": "mlb-2026-08-26-hou-nyy",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Yankees",
+   "away": "Astros",
+   "start_time": "2026-08-26T23:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 1.709
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 2.18
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "over",
+       "line": 8.5,
+       "decimal_odds": 1.82
+      },
+      {
+       "book": "betrivers",
+       "side": "under",
+       "line": 8.5,
+       "decimal_odds": 2.0
+      }
+     ]
+    }
+   ],
+   "note": "7:05 PM ET Yankee Stadium. PREMISE CLAUSE: NYY starter TBD (unannounced) - any position voids on the announcement changing the premise; HOU Lambert also unverified. BetRivers -141/+118, total slipped 9 -> 8.5 with over juiced -122 while 85% of tickets sit on NYY (possible sharp under signal per SBD - color, not model). Records NYY 74-57, HOU 66-66."
+  },
+  {
+   "event_id": "mlb-2026-08-26-kc-tor",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Blue Jays",
+   "away": "Royals",
+   "start_time": "2026-08-26T23:07:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.73
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.16
+      }
+     ]
+    }
+   ],
+   "note": "7:07 PM ET Rogers Centre. PITCHERS: Dobnak vs Miles (both unverified). TOR -137/KC +116, book unnamed (Covers/SportsGrid 8/26 pages). Polymarket's indexed KC-TOR market is THURSDAY'S game - rejected for tonight. Records KC 59-74, TOR 64-69."
+  },
+  {
+   "event_id": "mlb-2026-08-26-mil-nym",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Mets",
+   "away": "Brewers",
+   "start_time": "2026-08-26T23:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 2.38
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 1.606
+      },
+      {
+       "book": "espnbet",
+       "side": "away",
+       "decimal_odds": 1.599
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 1.667
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "tab",
+       "side": "over",
+       "line": 7.5,
+       "decimal_odds": 1.91
+      },
+      {
+       "book": "tab",
+       "side": "under",
+       "line": 7.5,
+       "decimal_odds": 1.91
+      }
+     ]
+    }
+   ],
+   "note": "7:10 PM ET Citi Field. PITCHERS: Dustin May (MIL, 6-8 4.57) vs Robert Stock (NYM, 0-2 5.40 - unusual assignment, flagged). THE CARD'S DISPERSION EVENT: BetRivers MIL -165/NYM +138 anchor, ESPN BET MIL -167 one-sided, Polymarket MIL 60c (1.667). Models both like MIL: SportsGrid 59%, Stats Insider 54% (logit-avg 56.5%). A tonyspicks 'NYM +111' is 27 cents off the board - stale/garbage, rejected. Total 7.5 even is TAB (AU). NYM 59-72."
+  },
+  {
+   "event_id": "mlb-2026-08-26-lad-atl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Braves",
+   "away": "Dodgers",
+   "start_time": "2026-08-26T23:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.1
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.769
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 2.174
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 1.818
+      }
+     ]
+    }
+   ],
+   "note": "7:15 PM ET Truist Park. PITCHERS: Roki Sasaki (LAD) vs AJ Smith-Shawver (ATL) - PREMISE CLAUSE: market-watch sources say wait for Atlanta's starter CONFIRMATION; a change voids. Consensus LAD -130/ATL +110 (unnamed, 8/26-dated) anchors; Polymarket date-stamped page LAD 55c/ATL 46c (101c book, ~fair vs the anchor - both legs priced for the shop). Total number DISPUTED (8.5 vs 9.0) - unpriced."
+  },
+  {
+   "event_id": "mlb-2026-08-26-bal-stl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Cardinals",
+   "away": "Orioles",
+   "start_time": "2026-08-26T23:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 1.935
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 1.909
+      }
+     ]
+    }
+   ],
+   "note": "7:45 PM ET Busch, series finale after BAL's 13-1 Tuesday romp. PITCHERS: Bassitt vs Liberatore per an 8/26 preview - but that EXACT pairing was Tuesday's listed matchup, so it is either a same-series copy error or a rotation slide: UNVERIFIED, any order needs live confirmation. BetRivers BAL -110/STL -107 (4.1% hold). SportsGrid 51% BAL; an unnamed trend model says STL 56.8% - not ensembled (unnamed)."
+  },
+  {
+   "event_id": "lc-2026-08-26-tol-atx",
+   "sport": "soccer",
+   "league": "Leagues Cup QF (90-min 1X2; single elim, straight to pens)",
+   "home": "Toluca",
+   "away": "Austin FC",
+   "start_time": "2026-08-27T00:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betus",
+       "side": "home",
+       "decimal_odds": 1.53
+      },
+      {
+       "book": "betus",
+       "side": "draw",
+       "decimal_odds": 4.1
+      },
+      {
+       "book": "betus",
+       "side": "away",
+       "decimal_odds": 5.75
+      },
+      {
+       "book": "kalshi",
+       "side": "home",
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "kalshi",
+       "side": "draw",
+       "decimal_odds": 3.704
+      },
+      {
+       "book": "kalshi",
+       "side": "away",
+       "decimal_odds": 4.348
+      }
+     ]
+    }
+   ],
+   "note": "8:30 PM ET Sports Illustrated Stadium, Harrison NJ (neutral; Toluca = higher seed 'home', venue-verified via austinfc.com/mlssoccer.com). BetUS (only named trio, quoted AS A RANGE -185/-200 - midpoints encoded, soft) vs Kalshi 90-min cents TOL 50/draw 27/ATX 23 (Squawka-quoted mids). The venues DISAGREE by 13+ points on Toluca - exactly the degraded-anchor-plus-negative-cross-hold shape. bet365 opens near kickoff. Winner meets Monterrey (beat Fire 2-1 Tue)."
+  },
+  {
+   "event_id": "wnba-2026-08-26-tor-sea",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Storm",
+   "away": "Tempo",
+   "start_time": "2026-08-27T02:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "draftkings",
+       "side": "home",
+       "decimal_odds": 1.41
+      },
+      {
+       "book": "draftkings",
+       "side": "away",
+       "decimal_odds": 2.6
+      }
+     ]
+    }
+   ],
+   "note": "10:00 PM ET Climate Pledge Arena (venue-verified via Ticketmaster; USA Network). DraftKings Storm -245/Tempo +160 explicitly attributed. FanDuel has a dated SPREAD quote (Tempo +4.5 -105) and LowVig U177.5 - different markets, so the ML stays single-anchor; the two-book coverage is noted for the shop. Latest start on the card - most gate headroom."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-26-bos-mia:moneyline:home": 0.4906,
+  "mlb-2026-08-26-bos-mia:moneyline:away": 0.5094,
+  "mlb-2026-08-26-mil-nym:moneyline:away": 0.5652,
+  "mlb-2026-08-26-mil-nym:moneyline:home": 0.4348,
+  "mlb-2026-08-26-bal-stl:moneyline:away": 0.51,
+  "mlb-2026-08-26-bal-stl:moneyline:home": 0.49
+ }
+}
