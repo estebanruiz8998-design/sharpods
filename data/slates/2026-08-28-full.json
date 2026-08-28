@@ -1,0 +1,828 @@
+{
+ "_provenance": "Friday 2026-08-28 NIGHT card, compiled ~4:15 PM ET against VERIFIED server time (the scheduler service's created_at timestamp - 2026-08-28T19:43:49Z = 3:43 PM ET at oracle read - is authoritative; the container clock had drifted ~20 HOURS slow, far past the 4-7h band, and is retired as a time source). This file replaces the overnight compile (3 European trios, all PASS at the 2.5% bar with the Bayern draw mirage killed by power devig) which was DESTROYED by a container reclaim before commit - those EU games have since kicked off, so their fairs are NOT re-registered post-hoc; the pass story is recorded here in prose only. PRICED: 18 events / 27 markets. THE DISPERSION MANDATE'S BIGGEST NIGHT: Polymarket cents on four events (LAD 64/DET 37 at $112K; NYY 59/BOS 42; HOU 51/NYM 50; CFL MTL 75/WPG 26), named second books on five more (FanDuel-vs-BetRivers LAD@DET, BET99 TOR leg, DK CLE and SF legs, BetMGM-vs-NBC BOS@NYY), and same-day book-vs-book fights on TEX@MIL (24c) and PIT@STL (favorite flips). EXCLUDED: Fever -2200, Aces -1450, Dream -813 (extreme-favorite demotion - three of four WNBA games), WAS@BAL 6:00 PM (gate-dead), Reds-Cubs matinee (long final), the whole afternoon-EU slate (kicked pre-compile), Itauma-Hrgovic and UFC Shanghai (both SATURDAY - the UFC main card is ~6 AM ET Sat and belongs to tomorrow's cycle with explicit early-AM gating). Aces '56c' Polymarket snippet REJECTED as implausible vs a -1450 board. Standing rules on everything: tiers, conflict refusal outranks all, listed pitchers (Skubal/Anderson, Sandoval/Schlittler, Hancock/Cease all confirmed), drift-cancel + standing-above taxonomy, prediction-market fills decay in minutes (Timbers rule: the printed stand-down line is binding), extreme-favorite demotion, totals never headline. --market-weight 0.85.",
+ "books": {
+  "betrivers": {
+   "sharpness": 0.6,
+   "notes": "named boards dated Aug 28 via Covers matchup/odds pages"
+  },
+  "fanduel": {
+   "sharpness": 0.6,
+   "notes": "named boards dated Aug 28 via FanDuel Research / SportsGrid"
+  },
+  "betmgm": {
+   "sharpness": 0.6,
+   "notes": "named board via BetMGM's own Aug-28 blog"
+  },
+  "draftkings": {
+   "sharpness": 0.6,
+   "notes": "named quotes via DK Network Aug-28 content"
+  },
+  "bet99": {
+   "sharpness": 0.6,
+   "notes": "named one-sided dispersion leg (TOR -155)"
+  },
+  "consensus-b": {
+   "sharpness": 0.55,
+   "notes": "identical board across four outlets incl. a bet365-branded preview - near-named"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated but unnamed boards (Covers/FOX/SI/ESPN/NBC families)"
+  },
+  "consensus-d": {
+   "sharpness": 0.5,
+   "notes": "second unnamed same-day boards (used where sources disagree)"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "prediction market, shop-only (ledger-evidenced demotion); asks decay in minutes"
+  }
+ },
+ "events": [
+  {
+   "event_id": "mlb-2026-08-28-lad-det",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Tigers",
+   "away": "Dodgers",
+   "start_time": "2026-08-28T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 2.88
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 1.444
+      },
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 2.8
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 1.465
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 1.5625
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 2.7027
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "over",
+       "line": 7.5,
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "betrivers",
+       "side": "under",
+       "line": 7.5,
+       "decimal_odds": 1.847
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET Comerica - THE MARQUEE: Skubal (confirmed) first start vs his old team since the deadline trade, vs Drew Anderson. Two named boards agree (BetRivers -225, FanDuel -215); Polymarket says LAD only 64c / DET 37c on $112K volume - a 4-6 POINT venue fight. A -186 print circulating is a probable stale opener, rejected. SportsGrid model 68% LAD."
+  },
+  {
+   "event_id": "mlb-2026-08-28-mia-wsh",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Nationals",
+   "away": "Marlins",
+   "start_time": "2026-08-28T22:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.37
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.68
+      },
+      {
+       "book": "consensus-d",
+       "side": "home",
+       "decimal_odds": 2.32
+      },
+      {
+       "book": "consensus-d",
+       "side": "away",
+       "decimal_odds": 1.641
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 8.5,
+       "decimal_odds": 1.98
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 8.5,
+       "decimal_odds": 1.847
+      }
+     ]
+    }
+   ],
+   "note": "6:45 PM ET Nationals Park. Eury Perez (2.25 ERA last 6; beat this WSH lineup Aug 22) vs rookie Jackson Kent (11 BB in 12.1 IP). Public 91% on Miami. Both boards unnamed - consensus grades only."
+  },
+  {
+   "event_id": "mlb-2026-08-28-bos-nyy",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Yankees",
+   "away": "Red Sox",
+   "start_time": "2026-08-28T23:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betmgm",
+       "side": "home",
+       "decimal_odds": 1.606
+      },
+      {
+       "book": "betmgm",
+       "side": "away",
+       "decimal_odds": 2.35
+      },
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.676
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.38
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 1.6949
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 2.381
+      }
+     ]
+    }
+   ],
+   "note": "7:05 PM ET Yankee Stadium (one source says 7:15 - gate uses 7:05 pessimistically). Sandoval vs Schlittler CONFIRMED - the 'Cole' rumor and the 'BOS -113' rumor both REFUTED (BOS is +135/+140 everywhere). BetMGM -165 vs NBC board -148 vs Polymarket NYY 59c/BOS 42c ($75K). BetMGM model 54% NYY. Total 7.5 number-only (juice never printed - unpriced)."
+  },
+  {
+   "event_id": "mlb-2026-08-28-sd-tb",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Rays",
+   "away": "Padres",
+   "start_time": "2026-08-28T23:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 1.709
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 2.18
+      },
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.741
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.1
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "over",
+       "line": 7.5,
+       "decimal_odds": 1.98
+      },
+      {
+       "book": "betrivers",
+       "side": "under",
+       "line": 7.5,
+       "decimal_odds": 1.847
+      }
+     ]
+    }
+   ],
+   "note": "7:10 PM ET Tropicana. Mize vs McClanahan. TB 79-54 leads the AL. BetMGM model 55.3% TB. Under drawing 73.5% of handle."
+  },
+  {
+   "event_id": "mlb-2026-08-28-hou-nym",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Mets",
+   "away": "Astros",
+   "start_time": "2026-08-28T23:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.07
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.763
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 1.961
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 2.0
+      }
+     ]
+    }
+   ],
+   "note": "7:10 PM ET Citi Field. Hunter Brown vs Christian Scott. The board says HOU -128; Polymarket says 51/50 PICK'EM on $59K - another live venue fight. A Bleacher Nation -123 quote is an Aug-26-written series preview - stale-flagged, not encoded. No dated model. Total 7.5 number-only."
+  },
+  {
+   "event_id": "mlb-2026-08-28-kc-cle",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Guardians",
+   "away": "Royals",
+   "start_time": "2026-08-28T23:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.714
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.15
+      },
+      {
+       "book": "draftkings",
+       "side": "home",
+       "decimal_odds": 1.769
+      },
+      {
+       "book": "draftkings",
+       "side": "away",
+       "decimal_odds": 2.21
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 8.0,
+       "decimal_odds": 1.971
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 8.0,
+       "decimal_odds": 1.855
+      }
+     ]
+    }
+   ],
+   "note": "7:10 PM ET Progressive. Wacha vs Bibee. KC 9-1 last 10 but 59-75 season - BetMGM model 57.6% CLE warns the market may over-anchor the streak. DK -130 vs consensus -140 (10c)."
+  },
+  {
+   "event_id": "mlb-2026-08-28-sea-tor",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Blue Jays",
+   "away": "Mariners",
+   "start_time": "2026-08-28T23:07:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 1.581
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 2.58
+      },
+      {
+       "book": "bet99",
+       "side": "home",
+       "decimal_odds": 1.645
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "over",
+       "line": 7.0,
+       "decimal_odds": 1.833
+      },
+      {
+       "book": "fanduel",
+       "side": "under",
+       "line": 7.0,
+       "decimal_odds": 2.0
+      }
+     ]
+    }
+   ],
+   "note": "7:07 PM ET Rogers Centre. RUMOR REFUTED: not Gilbert-Bieber (Bieber on IL) - it's Hancock vs Dylan Cease. FanDuel -172 vs BET99 -155 one-sided (17 cents, named). numberFire 53% TOR - far below the market's 61%. Total venue gap: FD 7.0 vs an unnamed 7.5 board."
+  },
+  {
+   "event_id": "mlb-2026-08-28-col-atl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Braves",
+   "away": "Rockies",
+   "start_time": "2026-08-28T23:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.426
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.9
+      },
+      {
+       "book": "consensus-d",
+       "side": "home",
+       "decimal_odds": 1.44
+      },
+      {
+       "book": "consensus-d",
+       "side": "away",
+       "decimal_odds": 2.93
+      }
+     ]
+    }
+   ],
+   "note": "7:15 PM ET Truist. Sugano vs Grant Holmes. ATL quoted -226 AND -238 same day (shop note). OddsTrader's '72% ATL' sits next to the -233 break-even - market-derived, NOT ensembled. ATL 1.43 sits just above the 1.31 Braga line - allowed but stretched."
+  },
+  {
+   "event_id": "mlb-2026-08-28-tex-mil",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Brewers",
+   "away": "Rangers",
+   "start_time": "2026-08-28T23:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 1.49
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 2.86
+      },
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.55
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.49
+      }
+     ]
+    }
+   ],
+   "note": "7:40 PM ET AmFam Field. Bradford (back from 2-yr elbow layoff) vs Logan Henderson (8-2, 2.60). MIL 83-51, best in MLB. FanDuel -205 vs scoresandstats consensus -181 - a 24-CENT venue fight on the favorite. Models split: SportsGrid 52% MIL vs docsports 62.8% (logit-avg 57.5% encoded). Total ranged 7.5/8/9 across sources, juice never printed - unpriced."
+  },
+  {
+   "event_id": "mlb-2026-08-28-cws-min",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Twins",
+   "away": "White Sox",
+   "start_time": "2026-08-29T00:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 1.85
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 1.97
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "over",
+       "line": 9.0,
+       "decimal_odds": 1.88
+      },
+      {
+       "book": "betrivers",
+       "side": "under",
+       "line": 9.0,
+       "decimal_odds": 1.8
+      }
+     ]
+    }
+   ],
+   "note": "8:10 PM ET Target Field. Castillo (9.90 FIP last 2) vs Kremer. FIRST-PLACE CWS (70-63) is the road dog at +110 vs 64-70 MIN. An unattributed -135 quote is stale-suspect - not encoded. BetMGM model 51.4% MIN (near coin-flip)."
+  },
+  {
+   "event_id": "mlb-2026-08-28-pit-stl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Cardinals",
+   "away": "Pirates",
+   "start_time": "2026-08-29T00:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.91
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.91
+      },
+      {
+       "book": "consensus-d",
+       "side": "home",
+       "decimal_odds": 1.82
+      },
+      {
+       "book": "consensus-d",
+       "side": "away",
+       "decimal_odds": 2.02
+      }
+     ]
+    }
+   ],
+   "note": "8:15 PM ET Busch. Jared Jones (7.88 August ERA, 3.67 xERA) vs Quinn Mathews (4th MLB start). THE FAVORITE FLIPS across same-day sources: ESPN -110/-110, Action PIT -119, a third board STL -122/PIT +102 - encoded as two consensus boards, conflict expected. Polymarket lists this among tonight's top-volume markets but no cents surfaced - highest-value live re-shop on the card given the pick'em board."
+  },
+  {
+   "event_id": "mlb-2026-08-28-phi-laa",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Angels",
+   "away": "Phillies",
+   "start_time": "2026-08-29T01:38:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.14
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.81
+      },
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 2.14
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 1.746
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 8.0,
+       "decimal_odds": 1.91
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 8.0,
+       "decimal_odds": 1.91
+      }
+     ]
+    }
+   ],
+   "note": "9:38 PM ET Angel Stadium. Painter (6.04 ERA) vs Detmers. PHI price disperses -124 to -145 across boards. MODELS CONFLICT: numberFire 55.8% LAA vs BetMGM 58.8% PHI - logit-avg 48.5% LAA encoded with the conflict flagged; treat the model layer as low-information here."
+  },
+  {
+   "event_id": "mlb-2026-08-28-bal-ath",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Athletics",
+   "away": "Orioles",
+   "start_time": "2026-08-29T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 1.93
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "over",
+       "line": 9.5,
+       "decimal_odds": 1.87
+      },
+      {
+       "book": "fanduel",
+       "side": "under",
+       "line": 9.5,
+       "decimal_odds": 1.95
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET Sutter Health Park, West Sacramento (venue re-verified this cycle - A's home). Brandon Young (9-3, 3.50; BAL 18-4 ATS in his starts) vs Jacob Lopez. FanDuel BAL -108/ATH +100. numberFire 53.4% ATH - a model-backed HOME DOG. A '-143 BAL' quote traced to a stale Orioles-Dodgers page - rejected."
+  },
+  {
+   "event_id": "mlb-2026-08-28-az-sf",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Giants",
+   "away": "D-backs",
+   "start_time": "2026-08-29T02:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.1
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.74
+      },
+      {
+       "book": "consensus-d",
+       "side": "home",
+       "decimal_odds": 2.05
+      },
+      {
+       "book": "consensus-d",
+       "side": "away",
+       "decimal_odds": 1.775
+      },
+      {
+       "book": "draftkings",
+       "side": "home",
+       "decimal_odds": 2.07
+      }
+     ]
+    }
+   ],
+   "note": "10:15 PM ET Oracle. Kohl Drake (5th start) vs Blade Tidwell. SF won Thursday's opener 6-1 - every quote above is from Friday-dated pages (Thu prices are the trap). DK content backs SF +107 'playable to -105' (one-sided named leg). The '59.8% AZ' model is unnamed - NOT ensembled."
+  },
+  {
+   "event_id": "cfl-2026-08-28-mtl-wpg",
+   "sport": "cfl",
+   "league": "CFL Wk 13",
+   "home": "Blue Bombers",
+   "away": "Alouettes",
+   "start_time": "2026-08-29T00:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-b",
+       "side": "home",
+       "decimal_odds": 3.4
+      },
+      {
+       "book": "consensus-b",
+       "side": "away",
+       "decimal_odds": 1.3333
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 3.846
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 1.3333
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-b",
+       "side": "under",
+       "line": 59.5,
+       "decimal_odds": 1.9091
+      }
+     ]
+    }
+   ],
+   "note": "8:30 PM ET Princess Auto Stadium, Winnipeg (venue-verified). MTL 9-1 on a 7-game streak (6-0 ATS L6) at WPG 5-5. Board -300/+240 identical across covers/Yahoo/SIA/bet365-News (consensus-b: bet365-branded preview carries the exact numbers). POLYMARKET: MTL 75c (= the book, no edge) / WPG 26c (pays 3.85 vs ~28.2% no-vig fair - the dog is CHEAPER on the exchange). Line moved -5.5 -> -6.5 toward MTL. WEATHER RE-CHECKED: kickoff-hour is cloudy, 30% evening showers, wind SE 20 km/h going light - no void trigger. Over juice never printed - total one-sided, unpriced (under leg recorded)."
+  },
+  {
+   "event_id": "wnba-2026-08-28-was-la",
+   "sport": "wnba",
+   "league": "WNBA",
+   "home": "Sparks",
+   "away": "Mystics",
+   "start_time": "2026-08-29T02:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.67
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.483
+      }
+     ]
+    }
+   ],
+   "note": "10:00 PM ET Crypto.com Arena (venue re-verified LA home - a reversed FanDuel URL was the Aug-15 meeting in DC, rejected). Mystics -207 road favorites on a back-to-back (won at PHX Thu); Sparks 3 wins in last 17 but 4 of last 6 H2H. DataSkrive projects WSH by 3.4 (no prob published - not ensembled)."
+  },
+  {
+   "event_id": "cfb-2026-08-28-ida-cp",
+   "sport": "cfb",
+   "league": "FCS Week 0",
+   "home": "Cal Poly",
+   "away": "Idaho",
+   "start_time": "2026-08-29T02:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.3
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.5882
+      }
+     ]
+    }
+   ],
+   "note": "10:00 PM ET (ESPN) - the only Friday CFB game with a real board; season opener so no prior-series trap. Idaho -170 consensus; 5-0 vs Cal Poly since the Mustangs joined D1; Cal Poly has a new HC and ~40 new players. No total found."
+  },
+  {
+   "event_id": "nflpre-2026-08-28-cin-phi",
+   "sport": "nfl",
+   "league": "NFL preseason Wk 3",
+   "home": "Eagles",
+   "away": "Bengals",
+   "start_time": "2026-08-29T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.6897
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.25
+      }
+     ]
+    }
+   ],
+   "note": "8:00 PM ET (CBS, the night's only national broadcast). PHI ML moved -135 -> -145. RECORD-ONLY per standing rules: preseason is a QB-rotation lottery and never headlines; fair registered for calibration. WAS@BAL 6:00 PM is gate-dead and excluded."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-28-lad-det:moneyline:home": 0.32,
+  "mlb-2026-08-28-lad-det:moneyline:away": 0.68,
+  "mlb-2026-08-28-bos-nyy:moneyline:home": 0.54,
+  "mlb-2026-08-28-bos-nyy:moneyline:away": 0.46,
+  "mlb-2026-08-28-sd-tb:moneyline:home": 0.553,
+  "mlb-2026-08-28-sd-tb:moneyline:away": 0.447,
+  "mlb-2026-08-28-kc-cle:moneyline:home": 0.576,
+  "mlb-2026-08-28-kc-cle:moneyline:away": 0.424,
+  "mlb-2026-08-28-sea-tor:moneyline:home": 0.53,
+  "mlb-2026-08-28-sea-tor:moneyline:away": 0.47,
+  "mlb-2026-08-28-tex-mil:moneyline:home": 0.5749,
+  "mlb-2026-08-28-tex-mil:moneyline:away": 0.4251,
+  "mlb-2026-08-28-cws-min:moneyline:home": 0.514,
+  "mlb-2026-08-28-cws-min:moneyline:away": 0.486,
+  "mlb-2026-08-28-phi-laa:moneyline:home": 0.4847,
+  "mlb-2026-08-28-phi-laa:moneyline:away": 0.5153,
+  "mlb-2026-08-28-bal-ath:moneyline:home": 0.534,
+  "mlb-2026-08-28-bal-ath:moneyline:away": 0.466
+ }
+}
