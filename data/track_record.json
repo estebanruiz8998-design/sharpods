@@ -3495,24 +3495,24 @@
         "mlb-2026-08-26-mil-nym:total:over": 0.5,
         "mlb-2026-08-26-bos-mia:total:over": 0.5046
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-08-28 (Fri; first settle run lost to a container reclaim, re-run from preserved grading data)",
       "decisions": [
         {
           "id": "2026-08-26-MIL-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Brewers @ Mets, MLB (7:10 PM ET Wed, Citi Field)",
           "selection": "Brewers ML",
           "target": 1.69,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER - dispersion tier (+1.0% bar), model-backed. Fair 1.673 (BetRivers -165/+138 power-devigged to 60.3% MIL, blended at 0.85 with the SportsGrid 59% / Stats Insider 54% logit-avg 56.5%). Fires at 1.690+ = Polymarket 59c or lower, or any named book at -145 or better; live ask at compile was 60c (-0.36% EV, the closest miss since the tiers went in). $37 at quarter-Kelly if filled (returns $63). BINDING CONDITIONS: (1) standing-above only - a tick that CROSSES 59c on news is drift, re-price and stand down (drift-throughs 1-for-5; fills 2-for-2); (2) BetRivers anchor must still sit in the -165 zone - if the whole board moved toward NYM the premise changed; (3) listed pitchers May/Stock - Stock's assignment is flagged unusual, a change voids; (4) ship-time gate: 7:10 PM start vs pessimistic-now stated on the slip."
+          "note": "NOT FILLED - the trigger price is not evidenced as ever standing. Best named-book MIL price found anywhere pre-game: DraftKings -149 (1.671), four cents short of the -145 trigger; BetRivers held -165 and no Polymarket ask at 59c or lower surfaced. MIL won 8-1 - a would-have-won at a price that never existed (never-filled sides now ~17W-9L across 27). Footnote that matters: Dustin May exited after ONE PITCH (comebacker off the scapula). A fill would have survived the premise (he started), but the win would have been carried entirely by Gasser's relief work - the listed-pitcher clause is doing real risk work even on nights it technically holds."
         },
         {
           "id": "2026-08-26-TOL-REFUSAL",
@@ -3522,15 +3522,105 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "validated",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "conflict",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "CONFLICT REFUSAL, engine-fired: degraded anchor + negative cross-source hold (-8.95%). BetUS (its own copy quotes Toluca as a RANGE, -185 to -200 - soft midpoints) says 65% Toluca; Kalshi 90-min cents say 50%. A 13-15 point venue disagreement on a cup one-off is conflicting quotes, not an arb (Cubs 3.7pt / Polymarket 5-6pt lessons - the graded misses that wrote this rule). The 'free money' leg (Kalshi Toluca 2.00 vs a 1.53 book) is exactly the trap shape. bet365 posts near kickoff - if a sharp named trio prints pre-game and agrees with one side, that settles WHICH venue was wrong, for the ledger, not for a bet. Settle records the 90-min result for calibration of both venues."
+          "note": "REFUSAL VALIDATED - and the conflict resolved toward the sportsbook, as our sharpness demotion assumes. An independent named pre-game trio surfaced post-hoc (Toluca -185 / +300 / +425) devigging to ~59.6% Toluca - 5 points from BetUS's 65%, 10 from Kalshi's 50c. Toluca won 2-0 IN THE 90 (Helinho pen 53', Diaz 90+7'; Austin down a man from 40'). One sample, but both the price check and the result say the exchange cents were the off number. The 15-point venue gap was real and unpriceable at bet time; refusing was the only correct position. Kept from the same card: Valkyries -909 (demoted) won by 25 - demotion cost nothing, as designed: it prices risk, not outcomes."
         }
+      ],
+      "games": [
+        {
+          "event_id": "mlb-2026-08-26-bos-mia",
+          "our_home_fair": 0.4138,
+          "source_flag": "clean",
+          "close_home_novig": 0.4161,
+          "home_won": true,
+          "final": "Marlins 4, Red Sox 0 (Gusto 5.2 scoreless; Sanoja 3 hits; BOS streak halted)",
+          "note": "Gray/Gusto started as listed - premise held; the -152 favorite was shut out. 4 runs UNDER 7.5: our slight over lean (50.5%) WRONG - totals 7 of 12. Close is BetRivers -152/+128 (range -129/-153)."
+        },
+        {
+          "event_id": "mlb-2026-08-26-col-wsh",
+          "our_home_fair": 0.5324,
+          "source_flag": "clean",
+          "close_home_novig": 0.5498,
+          "home_won": false,
+          "final": "Rockies 13, Nationals 1 (COL's biggest game of the year out of nowhere)",
+          "note": "Pitcher conflict RESOLVED against our listing: Waldron (7.54 ERA) started WSH, not Alvarez. 51-win COL demolished the ~55% favorite. Close is preview consensus, low precision."
+        },
+        {
+          "event_id": "mlb-2026-08-26-hou-nyy",
+          "our_home_fair": 0.5646,
+          "source_flag": "clean",
+          "close_home_novig": 0.5454,
+          "home_won": true,
+          "final": "Yankees 9, Astros 3 (Bellinger bases-loaded double in the 7th)",
+          "note": "TBD PREMISE RESOLVED: NYY spot-started rookie Elmer Rodriguez-Cruz (17 career IP) - exactly why the clause existed. 12 runs cleared 8.5: our over lean (52.5%) RIGHT. Close BetMGM -130/+110."
+        },
+        {
+          "event_id": "mlb-2026-08-26-kc-tor",
+          "our_home_fair": 0.5587,
+          "source_flag": "clean",
+          "close_home_novig": 0.5855,
+          "home_won": true,
+          "final": "Blue Jays 3, Royals 0 (Lukes 3-run HR; seven pitchers combine on a 6-hitter)",
+          "note": "Close FanDuel Research -146/+136."
+        },
+        {
+          "event_id": "mlb-2026-08-26-mil-nym",
+          "our_home_fair": 0.4023,
+          "source_flag": "clean",
+          "close_home_novig": 0.4093,
+          "home_won": false,
+          "final": "Brewers 8, Mets 1 (Turang 3-run HR; May exited after ONE PITCH - comebacker off the scapula; Gasser 5.1 IP of 1-run relief)",
+          "note": "9 runs OVER 7.5; our total fair was dead 50/50 - no lean, no call. Close DraftKings -149/+139 (the shortest MIL price evidenced anywhere)."
+        },
+        {
+          "event_id": "mlb-2026-08-26-lad-atl",
+          "our_home_fair": 0.4546,
+          "source_flag": "clean",
+          "close_home_novig": 0.4523,
+          "home_won": true,
+          "final": "Braves 6, Dodgers 5 - WALK-OFF (Sasaki left in the 4th with a blister)",
+          "note": "Sasaki/Smith-Shawver premises held. Second straight night an ATL walk-off beat a road favorite. Close FanDuel Research +116/-126."
+        },
+        {
+          "event_id": "mlb-2026-08-26-bal-stl",
+          "our_home_fair": 0.4955,
+          "source_flag": "premise_busted",
+          "close_home_novig": 0.4891,
+          "home_won": false,
+          "final": "Orioles 8, Cardinals 7 (15 runs)",
+          "note": "PREMISE BUSTED, flagged at compile: actual starters Bradish (BAL) vs McGreevy (STL) - NOT the Bassitt/Liberatore pairing our board carried, which was Tuesday's listed duo re-printed. The same-series suspicion was RIGHT; this fair was priced off a phantom matchup and is flagged for calibration. Close DraftKings +101/-108 (near pick'em, consistent with our 49.6/50.4)."
+        },
+        {
+          "event_id": "wnba-2026-08-26-tor-sea",
+          "our_home_fair": 0.6707,
+          "source_flag": "clean",
+          "close_home_novig": 0.7132,
+          "home_won": true,
+          "final": "Storm 90, Tempo 78 (Flau'jae Johnson 20, Malonga 18)",
+          "note": "Close DraftKings -270/+220 - NOT the -245/+160 band we compiled from; the market moved further toward Seattle all day. 168 under 174.5 FWIW."
+        }
+      ],
+      "metrics": {
+        "n": 8,
+        "brier_ours": 0.2281,
+        "brier_close": 0.2263,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0155,
+        "max_abs_fair_vs_close": 0.0425,
+        "note": "8 markets graded vs closes (medium precision - day-of preview quotes, not verified closing timestamps). Chaos night: favorites lost 4 of 8 (BOS shut out, WSH lost 1-13, LAD walked off, STL edged). Totals: HOU@NYY over RIGHT, BOS@MIA over WRONG, MIL@NYM dead-50 no-call - totals 7 of 12 lifetime. BAL@STL settled with a premise_busted flag (phantom pitching pairing, caught at compile)."
+      },
+      "lessons_applied": [
+        "Order discipline priced the fill, not the outcome: MIL -149-best never reached the -145 trigger, the side won 8-1, and the never-filled ledger (~17W-9L) keeps saying our SIDES are good while our BARS refuse bad prices - both can be true; the bars only move on CLV evidence.",
+        "The refusal engine got its first same-night external calibration: a named trio devigged to 59.6% Toluca against Kalshi's 50c - prediction-market demotion (0.45) gains an evidence point; conflict refusal stays outranking all tiers.",
+        "The premise machinery earned its keep three ways in one card: BAL@STL's phantom pairing (flagged, then confirmed busted - settle carries the flag), NYY's TBD resolving to a 17-inning rookie (the over hit), and May's one-pitch exit showing even held premises carry relief-pitcher risk the market prices better than we do.",
+        "Chaos-night reminder recorded: 4 of 8 favorites lost including a 13-1 and a shutout of a -152; pass cards on no-edge boards are cheap insurance against exactly this variance.",
+        "OPERATIONAL (2026-08-28): a container reclaim destroyed the first settle run and the overnight Friday compile before commit - and exposed that the container clock had drifted ~20 HOURS slow, far past the 4-7h band. Two fixes land today: (1) mid-cycle commits after every ledger mutation, (2) the scheduler service is now the clock oracle - a trigger's server-side created_at timestamp is authoritative real time, ending clock pessimism guesswork."
       ]
     }
   ],
