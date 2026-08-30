@@ -3654,7 +3654,7 @@
         "mlb-2026-08-28-sd-tb:total:over": 0.4814,
         "mlb-2026-08-28-cws-min:total:over": 0.4876
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-08-30 (Sun, via fallback wake; clock oracle verified)",
       "decisions": [
         {
           "id": "2026-08-28-WPG-TICKET",
@@ -3662,50 +3662,50 @@
           "event": "Alouettes @ Blue Bombers, CFL Wk 13 (8:30 PM ET Fri, Princess Auto Stadium, Winnipeg)",
           "selection": "Blue Bombers ML (home dog)",
           "target": 3.846,
-          "fill": null,
+          "fill": 3.846,
           "stake": 23,
-          "result": "pending",
-          "pnl": 0,
-          "clv_raw": null,
-          "clv_novig": null,
+          "result": "won",
+          "pnl": 65.46,
+          "clv_raw": 0.1312,
+          "clv_novig": 0.0265,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE BET - dispersion tier, the third ticket since the bars went in. Fair WPG 26.7% (power devig of the -300/+240 board every outlet prints, incl. a bet365-branded preview); Polymarket sells WPG at 26c = 3.846, +2.65% EV, 2.7x the 1% bar. $23 at quarter-Kelly returns $88. BINDING CONDITIONS: (1) TIMBERS RULE - prediction-market asks decay in minutes; 26c is the stand-down line, at 27c (3.70) EV is -1.2% and the bet is OFF - bet only what the live ask actually shows at 26c or better, and your execution report is the fill oracle; (2) weather clause re-checked at compile (cloudy, 30% evening showers, wind going light - no void trigger; a delay/lightning hold before kickoff voids); (3) the book side moved MTL -5.5 -> -6.5 all day - if the ML board moves past -320 the premise has changed, re-price. Honest context: MTL is 9-1 on a 7-game streak and 6-0 ATS in the last 6 - this is strictly a PRICE bet (the exchange selling a 26.7% event at 26c), not an opinion that Winnipeg is good."
+          "note": "WON 44-28 - the third tier ticket cashes, and this one BEAT THE CLOSE decisively: 26c entry vs a book close that held +240 (raw CLV +13.1%) and a no-vig fair of ~28.2% (no-vig CLV +2.7%) while the spread moved toward Montreal all day. $23 at 3.846 returned $88.46 (+$65.46 at the reference stake - report your actual venue/price/stake and I restate real P&L; Polymarket's indexed print held WPG 26c). The Timbers stand-down line never triggered. TIER SCOREBOARD: 3 settled, 3-0, no-vig CLVs 0.0% / -2.4% / +8.3% - mean +2.0%, POSITIVE for the first time; 12 to the rollback checkpoint."
         },
         {
           "id": "2026-08-28-NYY-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Red Sox @ Yankees, MLB (7:05 PM ET Fri, Yankee Stadium)",
           "selection": "Yankees ML",
           "target": 1.721,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Backup order, dispersion tier + model-backed (BetMGM model 54.0% NYY). Fair 1.703 (58.7%) from BetMGM -165 + NBC -148 consensus blended with the model; fires at 1.721+ = Polymarket 58c or lower (currently 59c, -0.50% EV - one cent short) or any named book -139 or better. Standing-above fills only; Sandoval/Schlittler premise; 7:05 start stated vs oracle-now on the slip."
+          "note": "NOT FILLED - no named book ever printed NYY -139 or better (evidenced range -148 to -173) and Polymarket stood at 59c (a Covers column even flagged taking NYY 'up to 59 cents' - consistent with our one-cent miss). NYY won 1-0: another would-have-won at a price that never existed. Never-filled sides ~18W-9L."
         },
         {
           "id": "2026-08-28-ATH-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Orioles @ Athletics, MLB (9:40 PM ET Fri, Sutter Health Park, West Sacramento)",
           "selection": "Athletics ML (home dog)",
           "target": 2.041,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Backup order, model tier (numberFire 53.4% ATH - a model-backed home dog against BAL -108). Fair 2.011; fires at 2.041+ (+104 or better) at a NAMED book - FanDuel sits at exactly +100 now (-0.53% EV). Venue re-verified (A's home, West Sacramento; hitter-friendly park note stands). Young/Lopez premise; drift-cancel; the stale '-143 BAL' quote from an Orioles-Dodgers page is rejected and must not be used for fills."
+          "note": "NOT FILLED - AND THE CONDITION SAVED A LOSS. Aggregator picks-tables printed ATH +119/+120, but no NAMED book was ever behind those numbers and FanDuel (the named board) sat +100, under the +104 trigger. The fires-only-on-a-named-book-print condition held - and ATH LOST 3-4 in 10 innings, so an aggregator-print fill would have been a full-stake loser. This is the named-book condition's cleanest save yet (distinct from the 8 drift-cancel saves). Never-filled sides ~18W-10L across 29."
         },
         {
           "id": "2026-08-28-LADDET-REFUSAL",
@@ -3715,14 +3715,14 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "validated",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "conflict",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "CONFLICT REFUSAL on the game everyone wanted: Skubal's revenge start. Two named books agree (BetRivers -225, FanDuel -215, ~67-69% LAD) while Polymarket sells LAD at 64c on $112K of volume - a 4-6 point venue fight whose best-price synthetic hold is NEGATIVE (-1.29%). The rule (degraded + negative cross-hold = unpriceable, never an arb) is 4-for-4 lifetime and was validated 48h ago by Toluca. POLICY QUESTION PRE-REGISTERED, not acted on: this shape differs from past conflicts - BOTH named books agree and only the exchange is off, and the candidate bet (LAD at PM 64c) is AT the outlier venue in the DIRECTION of the anchor consensus (+5.0% EV if the books are right, -0.6% if PM is right - positive under any mixture). Settle must record which venue was right here AND in the other three refusals (HOU@NYM, SEA@TOR, TEX@MIL); if the books-agree-exchange-off subtype keeps grading book-side-right, that is the ledger evidence a refinement needs. No parameter moves tonight (Walters rule)."
+          "note": "CONFLICT REFUSAL on the game everyone wanted: Skubal's revenge start. Two named books agree (BetRivers -225, FanDuel -215, ~67-69% LAD) while Polymarket sells LAD at 64c on $112K of volume - a 4-6 point venue fight whose best-price synthetic hold is NEGATIVE (-1.29%). The rule (degraded + negative cross-hold = unpriceable, never an arb) is 4-for-4 lifetime and was validated 48h ago by Toluca. POLICY QUESTION PRE-REGISTERED, not acted on: this shape differs from past conflicts - BOTH named books agree and only the exchange is off, and the candidate bet (LAD at PM 64c) is AT the outlier venue in the DIRECTION of the anchor consensus (+5.0% EV if the books are right, -0.6% if PM is right - positive under any mixture). Settle must record which venue was right here AND in the other three refusals (HOU@NYM, SEA@TOR, TEX@MIL); if the books-agree-exchange-off subtype keeps grading book-side-right, that is the ledger evidence a refinement needs. No parameter moves tonight (Walters rule). || SETTLED: the gap was REAL and the BOOKS were the better venue. FanDuel closed ~-215/+180 (no-vig LAD ~65.7%) vs Polymarket's 63-64c - a genuine ~2-point cross-venue disagreement that never converged. LAD won 2-1 behind Skubal (6 IP, 1 R in his Comerica return; under 7.5 cashed - our registered under lean RIGHT). Policy-question tally opens: books-agree-exchange-off subtype 1-0 books. A PM-side LAD bet at 64c would have won and carried positive CLV vs the book close - logged as the cost side of the refusal, per the honesty standard."
         },
         {
           "id": "2026-08-28-CONFLICTS-REFUSAL",
@@ -3732,15 +3732,159 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "graded",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "conflict",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "Grouped refusal, engine-fired on all three: HOU@NYM (board HOU -128 vs Polymarket 51/50 pick'em on thin $59K - hold -0.70%), SEA@TOR (FanDuel -172 vs BET99 -155 one-sided - hold -0.45%; numberFire 53% TOR also far under the market), TEX@MIL (FanDuel -205 vs scoresandstats -181, 24 cents - hold -0.52%). Four refusals in one night is the dispersion mandate working as designed: hunting second venues finds gaps, and most gaps are somebody's bad quote, not value. Settle records the truth venue per game for the refusal-calibration ledger."
+          "note": "Grouped refusal, engine-fired on all three: HOU@NYM (board HOU -128 vs Polymarket 51/50 pick'em on thin $59K - hold -0.70%), SEA@TOR (FanDuel -172 vs BET99 -155 one-sided - hold -0.45%; numberFire 53% TOR also far under the market), TEX@MIL (FanDuel -205 vs scoresandstats -181, 24 cents - hold -0.52%). Four refusals in one night is the dispersion mandate working as designed: hunting second venues finds gaps, and most gaps are somebody's bad quote, not value. Settle records the truth venue per game for the refusal-calibration ledger. || SETTLED, venue verdicts: TEX@MIL - FanDuel RIGHT (close clustered -190/-205; scoresandstats -181 was the stale outlier; MIL won 6-1). SEA@TOR - FanDuel RIGHT (close -161/-179 with FD dead-center; BET99 -155 sat outside the whole range; TOR won 8-1). HOU@NYM - THE EXCHANGE WAS RIGHT: the -128 board was stale and the market closed -105/-106, converging exactly to Polymarket's 51/50 (HOU won 3-1 - outcome noise; the close is the verdict). Running venue-calibration: named books 3, exchange 1 - and the exchange's win came against an unnamed consensus board, not against fresh named books. The sharpness hierarchy (named > consensus > exchange) survives the night."
         }
+      ],
+      "games": [
+        {
+          "event_id": "cfl-2026-08-28-mtl-wpg",
+          "our_home_fair": 0.2669,
+          "source_flag": "clean",
+          "close_home_novig": 0.2669,
+          "home_won": true,
+          "final": "Blue Bombers 44, Alouettes 28 - WPG (5-5) blew out the 9-1, seven-game-streak Alouettes before a sold-out home crowd",
+          "note": "HEADLINE. Close held at MTL -300/+240 (identical across every outlet); the spread moved TOWARD Montreal all day (-5.5 -> -6.5/-7), so our 26c entry beat the close on both venues. No weather delay (five recaps, none mention one)."
+        },
+        {
+          "event_id": "mlb-2026-08-28-bos-nyy",
+          "our_home_fair": 0.587,
+          "source_flag": "clean",
+          "close_home_novig": 0.6009,
+          "home_won": true,
+          "final": "Yankees 1, Red Sox 0 (Goldschmidt solo HR; Schlittler 5.2 IP 8 K vs his hometown team)",
+          "note": "Sandoval/Schlittler premises held. Close BetMGM -165 (range -148/-173)."
+        },
+        {
+          "event_id": "mlb-2026-08-28-mia-wsh",
+          "our_home_fair": 0.411,
+          "source_flag": "clean",
+          "close_home_novig": 0.4127,
+          "home_won": true,
+          "final": "Nationals 9, Marlins 2 (Brady House 445-ft 3-run HR; Kent 7 IP 1 R first MLB win; Eury Perez 5 R in 3 IP)",
+          "note": "Perez/Kent premises held; the ~-150 favorite lost big. 11 runs OVER 8.5 - our slight under lean WRONG. Consensus-precision close."
+        },
+        {
+          "event_id": "mlb-2026-08-28-sd-tb",
+          "our_home_fair": 0.557,
+          "source_flag": "clean",
+          "close_home_novig": 0.5503,
+          "home_won": true,
+          "final": "Rays 9, Padres 4 (five unearned in the 4th off Mize's botched DP throw)",
+          "note": "Mize/McClanahan premises held. 13 runs OVER 7.5 - our under lean WRONG. Close BetMGM -135."
+        },
+        {
+          "event_id": "mlb-2026-08-28-kc-cle",
+          "our_home_fair": 0.5612,
+          "source_flag": "clean",
+          "close_home_novig": 0.5559,
+          "home_won": false,
+          "final": "Royals 3, Guardians 0 (Wacha 8 IP 10 K no-walk gem; Bibee hard-luck loss)",
+          "note": "Wacha/Bibee premises held; KC won as ~+120 dog. 3 runs UNDER 8 - our under lean RIGHT. Consensus-precision close."
+        },
+        {
+          "event_id": "mlb-2026-08-28-col-atl",
+          "our_home_fair": 0.6811,
+          "source_flag": "clean",
+          "close_home_novig": 0.6714,
+          "home_won": true,
+          "final": "Braves 6, Rockies 4 (Harris HR; ATL's 5th straight)",
+          "note": "Close BetRivers -220 (range -220/-235)."
+        },
+        {
+          "event_id": "mlb-2026-08-28-cws-min",
+          "our_home_fair": 0.5164,
+          "source_flag": "clean",
+          "close_home_novig": 0.5505,
+          "home_won": false,
+          "final": "White Sox 7, Twins 4 (Kremer 5 ER; Walker Jenkins MLB debut for MIN)",
+          "note": "Castillo/Kremer premises held; first-place CWS won as the road dog, as the record book said it should. 11 runs OVER 9 - our under lean WRONG."
+        },
+        {
+          "event_id": "mlb-2026-08-28-pit-stl",
+          "our_home_fair": 0.5132,
+          "source_flag": "clean",
+          "close_home_novig": 0.4832,
+          "home_won": true,
+          "final": "Cardinals 4, Pirates 1 (Quinn Mathews first MLB win; Crooks 2-run HR)",
+          "note": "Jones/Mathews premises held. The pre-game favorite FLIP resolved to PIT favored at close (~-110/-112) - and STL won as the home dog. Our fair had leaned STL 51.3% against the flip chaos: direction RIGHT."
+        },
+        {
+          "event_id": "mlb-2026-08-28-phi-laa",
+          "our_home_fair": 0.4564,
+          "source_flag": "clean",
+          "close_home_novig": 0.447,
+          "home_won": false,
+          "final": "Phillies 5, Angels 3 - Edmundo Sosa pinch-hit GRAND SLAM with 2 outs in the 9th (Painter: 2 R in the 1st, then 5 hitless IP)",
+          "note": "Painter/Detmers premises held. 8 runs = PUSH on the total (our fair was dead 50/50 - no call either way). The conflicting models (nF 55.8% LAA vs MGM 58.8% PHI) resolved to the market side: PHI won."
+        },
+        {
+          "event_id": "mlb-2026-08-28-bal-ath",
+          "our_home_fair": 0.4973,
+          "source_flag": "clean",
+          "close_home_novig": 0.4909,
+          "home_won": false,
+          "final": "Orioles 4, Athletics 3 in 10 (Mayo and Encarnacion-Strand 10th-inning singles; Brandon Young 7 IP 1 R)",
+          "note": "Young/Lopez premises held. 7 runs UNDER 9.5 - our slight over lean WRONG. numberFire's 53.4% ATH lean graded WRONG (extra-innings close). FanDuel cluster used for the close; a -143 cluster also circulated - dispersed, snippet precision."
+        },
+        {
+          "event_id": "mlb-2026-08-28-az-sf",
+          "our_home_fair": 0.4551,
+          "source_flag": "clean",
+          "close_home_novig": 0.4621,
+          "home_won": false,
+          "final": "D-backs 10, Giants 6 (Tawa 3-run HR; Drake bailed out by the offense)",
+          "note": "Drake/Tidwell premises held. DK Network's SF pick lost; our pass graded correct. Consensus-precision close."
+        },
+        {
+          "event_id": "wnba-2026-08-28-was-la",
+          "our_home_fair": 0.3465,
+          "source_flag": "clean",
+          "close_home_novig": 0.332,
+          "home_won": true,
+          "final": "Sparks 88, Mystics 82 (Ogwumike 24; Burrell 12 of 15 in the 4th) - the road favorite LOST",
+          "note": "Market moved further toward WAS all day (-207 -> -222) and lost anyway. Our fair 34.7% LAS vs close ~36%: the pass on a back-to-back road favorite graded correct."
+        },
+        {
+          "event_id": "cfb-2026-08-28-ida-cp",
+          "our_home_fair": 0.3994,
+          "source_flag": "clean",
+          "close_home_novig": 0.3876,
+          "home_won": true,
+          "final": "Cal Poly 38, Idaho 34 - go-ahead TD with 9 seconds left; the -170 favorite lost",
+          "note": "Season opener, no prior-series trap. Home dog won at ~+145."
+        },
+        {
+          "event_id": "nflpre-2026-08-28-cin-phi",
+          "our_home_fair": 0.575,
+          "source_flag": "clean",
+          "close_home_novig": 0.5749,
+          "home_won": false,
+          "final": "Bengals 30, Eagles 13 (record-only; neither Burrow nor Hurts played)",
+          "note": "Preseason record-only entry graded for calibration; the -145 favorite lost with backups - exactly why preseason never headlines."
+        }
+      ],
+      "metrics": {
+        "n": 14,
+        "brier_ours": 0.2823,
+        "brier_close": 0.2884,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0108,
+        "max_abs_fair_vs_close": 0.0341,
+        "note": "14 markets graded vs closes (snippet precision throughout - no timestamped closing prints). FAVORITE MASSACRE outside our bet: MIA -150, Mystics -222, Idaho -170, Eagles -145, Dream -813, CLE -130 and PIT (flip-close favorite) all lost; our card's only position was the 26c home dog that won 44-28. Totals: 3 right (LAD@DET u, KC@CLE u, SEA@TOR o-lean on the refused board), 4 wrong (MIA@WSH, SD@TB, CWS@MIN, BAL@ATH), 1 push (PHI@LAA) - lifetime 10 of 19."
+      },
+      "lessons_applied": [
+        "THIRD TIER BET WON WITH THE FIRST STRONGLY POSITIVE CLV (+13.1% raw / +8.3% no-vig): the tier-era scoreboard is 3-0 with mean no-vig CLV +2.0% - positive for the first time, 12 settled bets from the pre-registered checkpoint. The bet was pure price (26c for a 26.7% event); Winnipeg winning by 16 is variance, the CLV is the signal.",
+        "The named-book-print-only condition banked its cleanest save: ATH +119/+120 existed only on aggregator tables, the named board sat +100, no fill - and the side lost in extras. Aggregator prints are not prices; this is why.",
+        "Refusal venue-calibration opened at named-books 3, exchange 1: FanDuel was right twice (stale-outlier gaps), the books were right on the Skubal marquee (real 2pt gap, never converged), and the exchange's one win came against a stale UNNAMED board. The sharpness ladder holds; the books-agree-exchange-off policy question stays open at 1-0 books, no parameter moves (Walters rule).",
+        "Friday was a favorite massacre (MIA -150, Mystics -222, Idaho -170, Eagles -145, Dream -813, CLE -130 all lost) and the card's only dollars were on a 26c dog - the demotion/pass architecture kept every losing favorite at zero stake. Fresh direct evidence for the extreme-favorite rule: an -813 favorite lost by 18 to an expansion team.",
+        "Scheduling: WNBA goes dark Aug 31-Sep 16 (FIBA World Cup) after Sunday's four games; the US Open main draw starts today (Sun Aug 30) and supplies daily boards for two weeks. Saturday context for the record: Song Yadong KO2 Umar Nurmagomedov (-600, would have been demoted) and Hrgovic TKO9 Itauma (-900 side lost) - two more extreme-favorite corpses in one weekend."
       ]
     }
   ],
