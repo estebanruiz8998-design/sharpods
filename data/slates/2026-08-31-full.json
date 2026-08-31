@@ -1,0 +1,547 @@
+{
+ "_provenance": "Monday 2026-08-31 card, compiled ~11:30 AM ET against ORACLE-VERIFIED server time (scheduler timestamps; container clock retired). Gate = ship-time + 2h, stated per action on the slip; earliest priced start is Atalanta-Bologna 2:45 PM ET. PRICED: 15 events / 18 markets across MLB (12), US Open R1 (3 - the fortnight's first tennis fairs) and European soccer (2). DISPERSION HUNT, honest result: Polymarket cents indexed on only ONE bettable event (Barca 89c - exactly the DK board, no gap); Kalshi cents on Shelton-Griekspoor (coherent, no gap); the one loud 'gap' (Polymarket 50c on MIL -196) is 16 points off every book with unknown volume and was REJECTED as implausible data per the Aces-56c precedent, alongside a garbled Covers -106/-114 fragment and an undated 'Mariners 52%' snippet. Named second venues that DID land: 1xbet/888Starz legs on Barca tails, Yahoo's SEA +151, a 5-cent second board at Coors. EXCLUDED: Lecce-Roma 12:30 PM and all US Open day-session opens (gate-dead), Safiullin-Alcaraz (sequencing risk ~1 PM + first match since April fitness premise + one-sided board), Swiatek-Wang and ATH@TEX deGrom and DET@MIN (one-sided boards - unpriceable, no fabrication), WNBA (dark until ~Sep 16), CFL (dark until Friday), Leagues Cup semis WEDNESDAY Sep 2 (Toluca-Leon 9 PM ET Houston; America-Monterrey 11:30 PM ET LA - Tuesday planning corrected). Standing rules on everything: tiers, conflict refusal, extreme-favorite demotion (Barca 1.13, Shelton 1.15, Osaka 1.10, Tiafoe 1.25 all demoted), listed pitchers (WSH debut-name premise flagged; CWS starter unverified), retirement-risk flags on tennis, drift-cancel + standing-above taxonomy, named-book prints only. --market-weight 0.85.",
+ "books": {
+  "fanduel": {
+   "sharpness": 0.6,
+   "notes": "named board dated Aug 31 (SEA@BOS + total)"
+  },
+  "betrivers": {
+   "sharpness": 0.6,
+   "notes": "named board dated Aug 31 (Coors + total)"
+  },
+  "draftkings": {
+   "sharpness": 0.6,
+   "notes": "named La Liga trio dated Aug 31"
+  },
+  "eighteight": {
+   "sharpness": 0.6,
+   "notes": "888sport named tennis board dated Aug 31"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated but unnamed boards (Covers/TheSpread/SI/Yahoo/Docsports families)"
+  },
+  "consensus-d": {
+   "sharpness": 0.5,
+   "notes": "second unnamed same-day boards"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "prediction market, shop-only; implausible quotes rejected, not encoded"
+  },
+  "kalshi": {
+   "sharpness": 0.45,
+   "notes": "exchange cents, shop-only"
+  }
+ },
+ "events": [
+  {
+   "event_id": "seriea-2026-08-31-bol-ata",
+   "sport": "soccer",
+   "league": "Serie A Round 2",
+   "home": "Atalanta",
+   "away": "Bologna",
+   "start_time": "2026-08-31T18:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.9
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 3.6
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 4.0
+      }
+     ]
+    }
+   ],
+   "note": "2:45 PM ET, New Balance Arena Bergamo. Board 1.90/3.60/4.00 from dated 8/31 aggregation pages - unnamed, consensus-c, named-book verify for any action. Polymarket market EXISTS but cents never indexed - the dispersion leg is unfilled here. H2H caution: Bologna won 3 of the last 4 in Bergamo. U2.5 pushed by previews but no two-sided total printed - unpriced. TIGHTEST gate margin on the card."
+  },
+  {
+   "event_id": "laliga-2026-08-31-ray-bar",
+   "sport": "soccer",
+   "league": "La Liga MD3",
+   "home": "Barcelona",
+   "away": "Rayo Vallecano",
+   "start_time": "2026-08-31T19:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "draftkings",
+       "side": "home",
+       "decimal_odds": 1.13
+      },
+      {
+       "book": "draftkings",
+       "side": "draw",
+       "decimal_odds": 9.5
+      },
+      {
+       "book": "draftkings",
+       "side": "away",
+       "decimal_odds": 19.0
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 1.1236
+      }
+     ]
+    }
+   ],
+   "note": "3:30 PM ET Camp Nou. DraftKings trio -750/+850/+1800 (named, dated); Polymarket Barca 89c (= DK's 88.5% - ZERO cross-venue gap on the favorite). AGGREGATE TRIPWIRE, documented kill: a SportyTrader table offered '1xbet Rayo 26.0 / 888Starz draw 10.8' - that is a best-odds MODULE (multi-book best-price aggregation wearing name tags), excluded per standing rule; on a first engine pass those legs manufactured a Rayo-at-26 'ticket' at +3.8% EV off tail-price noise - the America-lesson shape, killed at compile. Barca 1.13 = extreme-favorite demotion regardless; 20 straight home league wins, 11 straight H2H under 3.5."
+  },
+  {
+   "event_id": "mlb-2026-08-31-sf-atl",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Braves",
+   "away": "Giants",
+   "start_time": "2026-08-31T22:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.61
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.35
+      }
+     ]
+    }
+   ],
+   "note": "6:05 PM ET Truist. Molina (SF opener, ex-Brave) vs Elder. ATL -165/-170 across dated pages, book unnamed. ATL going for an 8th straight win. Total split 8/8.5 across sources, juice one-sided - unpriced. ATL 82-55, SF 56-81."
+  },
+  {
+   "event_id": "mlb-2026-08-31-sd-cin",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Reds",
+   "away": "Padres",
+   "start_time": "2026-08-31T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.26
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.68
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET GABP. Michael King vs Brady Singer. Covers board SD -148 (opened -150); Covers computer 58.4% SD backs the favorite side. 81-83% of tickets on SD. No total found. SD 72-65, CIN 65-72."
+  },
+  {
+   "event_id": "mlb-2026-08-31-nym-tb",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Rays",
+   "away": "Mets",
+   "start_time": "2026-08-31T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.58
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.41
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET Tropicana. Robert Stock (0-3, 7.40, 1.94 WHIP - the Aug-26 flag keeps aging badly) vs Ian Seymour. TB quotes ranged -162 open to -181 across unnamed sources - movement toward TB, all same-side and unnamed so encoded single-board. Total 8 number-only. TB 82-54, NYM 61-76."
+  },
+  {
+   "event_id": "mlb-2026-08-31-mia-wsh",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Nationals",
+   "away": "Marlins",
+   "start_time": "2026-08-31T22:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.99
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.84
+      }
+     ]
+    }
+   ],
+   "note": "6:45 PM ET Nationals Park, game 4. Gusto vs a WSH 26-year-old LHP making his MLB DEBUT behind an opener (name unverified) - PREMISE RISK, any order void without a confirmed name. MIA 5-0 last 5 H2H. Single unnamed board."
+  },
+  {
+   "event_id": "mlb-2026-08-31-sea-bos",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Red Sox",
+   "away": "Mariners",
+   "start_time": "2026-08-31T22:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 1.6
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 2.4
+      },
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.599
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.37
+      },
+      {
+       "book": "consensus-d",
+       "side": "home",
+       "decimal_odds": 1.617
+      },
+      {
+       "book": "consensus-d",
+       "side": "away",
+       "decimal_odds": 2.51
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "over",
+       "line": 8.0,
+       "decimal_odds": 1.91
+      },
+      {
+       "book": "fanduel",
+       "side": "under",
+       "line": 8.0,
+       "decimal_odds": 1.91
+      }
+     ]
+    }
+   ],
+   "note": "6:45 PM ET Fenway. Kirby vs rookie Payton Tolle (8-6, 3.09). FanDuel -166 named anchor; Covers -167 and a Yahoo board with SEA +151 (best dog price, consensus-grade). Both teams were blown out Sunday (BOS 1-16, SEA 0-7). A 'Mariners 52%' Polymarket snippet contradicts every board and is undated - REJECTED (Aces-56c rule)."
+  },
+  {
+   "event_id": "atp-2026-08-31-she-gri",
+   "sport": "tennis",
+   "league": "US Open R1 (Ashe night, match 1)",
+   "home": "Griekspoor",
+   "away": "Shelton",
+   "start_time": "2026-08-31T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "eighteight",
+       "side": "home",
+       "decimal_odds": 7.0
+      },
+      {
+       "book": "eighteight",
+       "side": "away",
+       "decimal_odds": 1.15
+      },
+      {
+       "book": "kalshi",
+       "side": "away",
+       "decimal_odds": 1.1494
+      },
+      {
+       "book": "kalshi",
+       "side": "home",
+       "decimal_odds": 7.143
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET fixed session start (p2 Griekspoor = home per house convention). 888sport 1.15/7.00 named; Kalshi 87c/14c cents coherent with the book (101c). Shelton 1.15 = extreme-favorite demotion. First career meeting; Griekspoor carries a mild retirement-risk flag (recurring injuries). VSiN leans games-based, no numeric prob - not ensembled."
+  },
+  {
+   "event_id": "wta-2026-08-31-osa-zak",
+   "sport": "tennis",
+   "league": "US Open R1 (Ashe night, match 2)",
+   "home": "Zakharova",
+   "away": "Osaka",
+   "start_time": "2026-09-01T01:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 9.0
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.098
+      }
+     ]
+    }
+   ],
+   "note": "Not before ~9 PM ET (follows Shelton-Griekspoor - sequencing start, could slip past 10). Osaka -1020 consensus (unnamed pair; only named quote is a bet365 games handicap). Dimers 86% Osaka. Extreme favorite + unnamed board = display/calibration only."
+  },
+  {
+   "event_id": "atp-2026-08-31-dam-tia",
+   "sport": "tennis",
+   "league": "US Open R1 (Armstrong evening, match 2)",
+   "home": "Tiafoe",
+   "away": "Damm",
+   "start_time": "2026-09-01T00:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.25
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 4.0
+      }
+     ]
+    }
+   ],
+   "note": "Not before ~8:30-9 PM ET (follows Swiatek-Wang). Tiafoe 1.25/Damm 4.00 (AU aggregation, dated; US consensus -382). Models agree with the market exactly: Stats Insider 78% / Dimers 79% (logit-avg 78.5% encoded). Rematch of last year's R2 (Tiafoe in 4). Tiafoe 1.25 = extreme-favorite demotion; Damm young-player data flag."
+  },
+  {
+   "event_id": "mlb-2026-08-31-mil-chc",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Cubs",
+   "away": "Brewers",
+   "start_time": "2026-08-31T23:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.62
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.51
+      }
+     ]
+    }
+   ],
+   "note": "7:40 PM ET Wrigley. Kyle Harrison (10-3, 2.79) vs Clay Holmes (2.26). Docsports/Bleacher Nation agree MIL -196/+162. REJECTED DATA, both per the Aces-56c rule: a Polymarket 50c/49c snippet (16 points off every book, volume unknown - implausible, verify-live only) and a Covers -106/-114 fragment (irreconcilable, likely juice numbers). Total conflict 8 vs 9.5 - unpriced. MIL 84-51 vs CHC 76-59: first-vs-second in the NL Central."
+  },
+  {
+   "event_id": "mlb-2026-08-31-cws-hou",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Astros",
+   "away": "White Sox",
+   "start_time": "2026-09-01T00:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.75
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.11
+      }
+     ]
+    }
+   ],
+   "note": "8:10 PM ET Daikin Park. CWS starter UNVERIFIED vs Peter Lambert. ~75% of tickets on HOU while the price moved TOWARD CWS (-136 -> -133): reverse move noted, color only. Division leaders on both sides; HOU has a losing home record."
+  },
+  {
+   "event_id": "mlb-2026-08-31-bal-col",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Rockies",
+   "away": "Orioles",
+   "start_time": "2026-09-01T00:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 2.18
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 1.71
+      },
+      {
+       "book": "consensus-d",
+       "side": "home",
+       "decimal_odds": 2.16
+      },
+      {
+       "book": "consensus-d",
+       "side": "away",
+       "decimal_odds": 1.735
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "over",
+       "line": 10.5,
+       "decimal_odds": 1.82
+      },
+      {
+       "book": "betrivers",
+       "side": "under",
+       "line": 10.5,
+       "decimal_odds": 1.97
+      }
+     ]
+    }
+   ],
+   "note": "8:40 PM ET COORS. Bradish vs Tanner Gordon. BetRivers BAL -141/COL +118 named anchor; a second board sits -136/+116 (5 cents, both in consensus). Coors total 10.5. COL just hung 13 on WSH Friday; regression both ways at altitude."
+  },
+  {
+   "event_id": "mlb-2026-08-31-nyy-laa",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Angels",
+   "away": "Yankees",
+   "start_time": "2026-09-01T01:38:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.18
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.72
+      }
+     ]
+    }
+   ],
+   "note": "9:38 PM ET Angel Stadium. Rookie duel: Elmer Rodriguez-Cruz (the Aug-26 spot-starter, 2 outings since June) vs Walbert Urena (2.54 home ERA). Covers computer 53.1% NYY - i.e. the model likes LAA relative to -138. NYY 78-59, LAA 52-85."
+  },
+  {
+   "event_id": "mlb-2026-08-31-phi-az",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "D-backs",
+   "away": "Phillies",
+   "start_time": "2026-09-01T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.85
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 8.5,
+       "decimal_odds": 1.98
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 8.5,
+       "decimal_odds": 1.83
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET Chase Field - THE CARD'S MODEL-MARKET GAP: numberFire has the home dog AZ at 52.85% against a PHI -118/AZ +100 board (unnamed, via a numberFire-fed dated article). Nola vs Pfaadt (7-1, 3.51). Any order fires on a NAMED book print only. AZ 73-65, PHI 77-60."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-08-31-sd-cin:moneyline:home": 0.4161,
+  "mlb-2026-08-31-sd-cin:moneyline:away": 0.5839,
+  "mlb-2026-08-31-nyy-laa:moneyline:home": 0.4689,
+  "mlb-2026-08-31-nyy-laa:moneyline:away": 0.5311,
+  "mlb-2026-08-31-phi-az:moneyline:home": 0.5285,
+  "mlb-2026-08-31-phi-az:moneyline:away": 0.4715,
+  "atp-2026-08-31-dam-tia:moneyline:home": 0.785,
+  "atp-2026-08-31-dam-tia:moneyline:away": 0.215,
+  "wta-2026-08-31-osa-zak:moneyline:home": 0.14,
+  "wta-2026-08-31-osa-zak:moneyline:away": 0.86
+ }
+}

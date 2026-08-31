@@ -3886,6 +3886,56 @@
         "Friday was a favorite massacre (MIA -150, Mystics -222, Idaho -170, Eagles -145, Dream -813, CLE -130 all lost) and the card's only dollars were on a 26c dog - the demotion/pass architecture kept every losing favorite at zero stake. Fresh direct evidence for the extreme-favorite rule: an -813 favorite lost by 18 to an expansion team.",
         "Scheduling: WNBA goes dark Aug 31-Sep 16 (FIBA World Cup) after Sunday's four games; the US Open main draw starts today (Sun Aug 30) and supplies daily boards for two weeks. Saturday context for the record: Song Yadong KO2 Umar Nurmagomedov (-600, would have been demoted) and Hrgovic TKO9 Itauma (-900 side lost) - two more extreme-favorite corpses in one weekend."
       ]
+    },
+    {
+      "date": "2026-08-31",
+      "sport": "multi",
+      "mode": "degraded - Monday card: 15 events / 18 markets (12 MLB, the US Open's first three tennis fairs of the fortnight, two European trios). Oracle-verified clock throughout (scheduler timestamps). Weekend gap-days Aug 29-30 carried no cards (no GO; Sunday's fallback wake settled Friday instead). DISPERSION, honest result: exchange cents indexed only where there is NO gap (Polymarket Barca 89c = DK's 88.5%; Kalshi Shelton 87c = 888sport's 1.15); the one loud 'gap' - Polymarket 50c on MIL -196 - was 16 points off every book with unknown volume and was REJECTED as implausible data (Aces-56c precedent), along with a garbled Covers juice fragment and an undated 'Mariners 52%' snippet. THE COMPILE-TIME KILL OF THE DAY: a SportyTrader best-odds table ('1xbet Rayo 26.0 / 888Starz draw 10.8') was first encoded as named legs and the engine dutifully manufactured a Rayo-at-26 ticket at +3.8% EV and 4-star conviction - caught in hand-verification as the aggregate trap wearing name tags (best-price modules understate hold and fabricate tail value; the America -241 lesson), legs stripped, re-run passed clean. Extreme-favorite demotion took four boards (Barca 1.13, Shelton 1.15, Osaka 1.10, Tiafoe 1.25). Alcaraz's return excluded (sequencing ~1 PM + five-month-layoff fitness premise + one-sided board). WNBA dark to ~Sep 16; CFL dark to Friday; Leagues Cup semis WEDNESDAY Sep 2.",
+      "engine_verdict": "PASS on all 18 markets - closest miss Shelton at 888sport 1.15 (-0.44%, extreme-favorite demoted regardless). Headline order: D-backs ML >= 2.085 (+109) at a NAMED book - numberFire has the home dog at 52.85% against a PHI -118/AZ +100 board, the card's only real model-market gap (5 points); blended fair 2.055, model tier +1.5% bar, $34 at quarter-Kelly if it prints. No other orders: the LAA and SD model tilts sit 9-14 cents from their bars on unnamed boards, and everything with genuine cross-venue coverage shows zero gap.",
+      "predictions_home_fair": {
+        "laliga-2026-08-31-ray-bar": 0.8749,
+        "mlb-2026-08-31-sea-bos": 0.6069,
+        "atp-2026-08-31-dam-tia": 0.7828,
+        "mlb-2026-08-31-phi-az": 0.4867,
+        "mlb-2026-08-31-nym-tb": 0.6116,
+        "seriea-2026-08-31-bol-ata": 0.5085,
+        "mlb-2026-08-31-sf-atl": 0.6,
+        "mlb-2026-08-31-nyy-laa": 0.4422,
+        "mlb-2026-08-31-cws-hou": 0.5498,
+        "atp-2026-08-31-she-gri": 0.1343,
+        "mlb-2026-08-31-bal-col": 0.4386,
+        "mlb-2026-08-31-mia-wsh": 0.4791,
+        "mlb-2026-08-31-sd-cin": 0.4213,
+        "mlb-2026-08-31-mil-chc": 0.3567,
+        "wta-2026-08-31-osa-zak": 0.101
+      },
+      "predictions_other": {
+        "mlb-2026-08-31-sea-bos:total:over": 0.5,
+        "mlb-2026-08-31-bal-col:total:over": 0.5215,
+        "mlb-2026-08-31-phi-az:total:over": 0.4788,
+        "seriea-2026-08-31-bol-ata:moneyline:draw": 0.2594,
+        "laliga-2026-08-31-ray-bar:moneyline:draw": 0.0852
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-08-31-AZ-ORDER",
+          "type": "order_open",
+          "event": "Phillies @ D-backs, MLB (9:40 PM ET Mon, Chase Field)",
+          "selection": "D-backs ML (home dog)",
+          "target": 2.085,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER - model tier (+1.5% bar). numberFire/FanDuel Research has AZ 52.85% at home against Nola while the (unnamed) board pays only +100; blended fair 2.055 (48.7%). Fires at 2.085+ (+109 or better) ON A NAMED BOOK PRINT ONLY - the compile board is unattributed, so no named print, no fill, whatever aggregators show (today's Rayo-at-26 kill is the reason this clause exists). BINDING: Nola and Pfaadt listed - a change voids; standing-above fills only, drift-cancel applies (a market that crosses +109 on news is a re-price, not a fill); 9:40 PM ET start has hours of gate headroom. $34 at quarter-Kelly if filled (returns $71)."
+        }
+      ]
     }
   ],
   "policy_changes": [
