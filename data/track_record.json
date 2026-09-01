@@ -3916,25 +3916,178 @@
         "seriea-2026-08-31-bol-ata:moneyline:draw": 0.2594,
         "laliga-2026-08-31-ray-bar:moneyline:draw": 0.0852
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-09-01 (Tue, via fallback wake; oracle clock)",
       "decisions": [
         {
           "id": "2026-08-31-AZ-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Phillies @ D-backs, MLB (9:40 PM ET Mon, Chase Field)",
           "selection": "D-backs ML (home dog)",
           "target": 2.085,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER - model tier (+1.5% bar). numberFire/FanDuel Research has AZ 52.85% at home against Nola while the (unnamed) board pays only +100; blended fair 2.055 (48.7%). Fires at 2.085+ (+109 or better) ON A NAMED BOOK PRINT ONLY - the compile board is unattributed, so no named print, no fill, whatever aggregators show (today's Rayo-at-26 kill is the reason this clause exists). BINDING: Nola and Pfaadt listed - a change voids; standing-above fills only, drift-cancel applies (a market that crosses +109 on news is a re-price, not a fill); 9:40 PM ET start has hours of gate headroom. $34 at quarter-Kelly if filled (returns $71)."
+          "note": "NOT FILLED BY ONE CENT - AND THE CLAUSE SAVED A LOSER AGAIN. Best named-book print all day: DraftKings +108 (2.08), one cent under the +109 trigger; FanDuel +100, consensus +105/+106; a lone '+109' mention appears in a snippet that simultaneously says 'best odds +103' - no verified standing print. AZ then LOST 1-2 (Nola out-dueled Pfaadt), so a fill would have graded L at ~flat CLV vs the +105/+106 close. That is the second consecutive card where the named-book/one-cent discipline refused a bet that loses (Fri ATH, Mon AZ). numberFire's 52.9% AZ graded WRONG. Never-filled sides ~18W-11L across 30 - the bars keep refusing the right ones lately."
         }
+      ],
+      "games": [
+        {
+          "event_id": "seriea-2026-08-31-bol-ata",
+          "our_home_fair": 0.5085,
+          "source_flag": "clean",
+          "close_home_novig": 0.6375,
+          "home_won": true,
+          "final": "Atalanta 1-0 Bologna (Samardzic winner deep in stoppage time)",
+          "note": "A draw until the ~90th minute. Close shaded home to 1.85 (preview trio)."
+        },
+        {
+          "event_id": "laliga-2026-08-31-ray-bar",
+          "our_home_fair": 0.8749,
+          "source_flag": "clean",
+          "close_home_novig": 0.9211,
+          "home_won": true,
+          "final": "Barcelona 5-2 Rayo (Raphinha x2, Yamal x2; Rayo led 1-0 early)",
+          "note": "Close Barca ~-1000, Rayo 19.0 EXACTLY the board - confirming the killed '26.0' was aggregator fabrication. The kill was right on process AND outcome (Rayo lost)."
+        },
+        {
+          "event_id": "mlb-2026-08-31-sf-atl",
+          "our_home_fair": 0.6,
+          "source_flag": "clean",
+          "close_home_novig": 0.5958,
+          "home_won": false,
+          "final": "Giants 7, Braves 3 (ATL's 7-game streak snapped)",
+          "note": "Abnormal cross-book close dispersion (-158 to -200); BetRivers -159/+135 used."
+        },
+        {
+          "event_id": "mlb-2026-08-31-sd-cin",
+          "our_home_fair": 0.4213,
+          "source_flag": "clean",
+          "close_home_novig": 0.4152,
+          "home_won": false,
+          "final": "Padres 5, Reds 0 (King 6 scoreless)",
+          "note": "King/Singer premises held; Covers computer's SD lean graded RIGHT. Close SD -148, exactly the board."
+        },
+        {
+          "event_id": "mlb-2026-08-31-nym-tb",
+          "our_home_fair": 0.6116,
+          "source_flag": "clean",
+          "close_home_novig": 0.626,
+          "home_won": false,
+          "final": "Mets 3, Rays 2 - Robert Stock (7.40 ERA) beat the -181 favorite",
+          "note": "Stock/Seymour premises held. The much-flagged Stock premise finally paid the other way: the fade side lost."
+        },
+        {
+          "event_id": "mlb-2026-08-31-mia-wsh",
+          "our_home_fair": 0.4791,
+          "source_flag": "clean",
+          "close_home_novig": 0.4791,
+          "home_won": true,
+          "final": "Nationals 6, Marlins 3 - Will Dion won his MLB debut",
+          "note": "Debut-name premise RESOLVED: Will Dion, 26-yo LHP. Near-pick'em close matched the board; the debutant's side won."
+        },
+        {
+          "event_id": "mlb-2026-08-31-sea-bos",
+          "our_home_fair": 0.6069,
+          "source_flag": "clean",
+          "close_home_novig": 0.6063,
+          "home_won": true,
+          "final": "Red Sox 9, Mariners 8 in 10 (Story walk-off single; 8-8 through nine)",
+          "note": "Kirby/Tolle premises held. 17 runs OVER 8 - our fair was dead 50/50, no call. Close FanDuel -166/+140, the board exactly."
+        },
+        {
+          "event_id": "atp-2026-08-31-she-gri",
+          "our_home_fair": 0.1343,
+          "source_flag": "clean",
+          "close_home_novig": 0.1303,
+          "home_won": false,
+          "final": "Shelton d. Griekspoor 1-6 6-1 7-6(3) 6-2 (no retirement)",
+          "note": "Demoted favorite cashed but dropped set one 6-1 first. Close ~-790, moved toward Shelton from our 1.15 board."
+        },
+        {
+          "event_id": "wta-2026-08-31-osa-zak",
+          "our_home_fair": 0.101,
+          "source_flag": "clean",
+          "close_home_novig": 0.0859,
+          "home_won": false,
+          "final": "Osaka d. Zakharova 7-6(6) 7-6(3) (blew 5-2 and 5-3 leads)",
+          "note": "The -1200 extreme favorite needed two tiebreaks - demotion vindicated on process even as the price cashed."
+        },
+        {
+          "event_id": "atp-2026-08-31-dam-tia",
+          "our_home_fair": 0.7828,
+          "source_flag": "clean",
+          "close_home_novig": 0.7824,
+          "home_won": true,
+          "final": "Tiafoe d. Damm 6-4 4-6 3-6 6-3 6-4 in 3h48m (down 2-1 in sets)",
+          "note": "Demoted 1.25 favorite survived five sets. Close -400 = the board; models 78-79% graded RIGHT on direction, barely on comfort."
+        },
+        {
+          "event_id": "mlb-2026-08-31-mil-chc",
+          "our_home_fair": 0.3567,
+          "source_flag": "phantom_anchor",
+          "close_home_novig": 0.5112,
+          "home_won": true,
+          "final": "Cubs 17, Brewers 3 - franchise-record 9 HR; Bregman 3",
+          "note": "THE GRADE THAT MATTERS: our -196 'anchor' was PHANTOM. Every dated close source (BetMGM -105/-115, Covers ~+100/-108, Polymarket 50c/51c at $181K volume) shows a TRUE PICK'EM - the Docsports/Bleacher Nation -196 was stale or mis-attributed, and the Polymarket 50c we rejected as 'implausible' was the REAL market. Fair flagged phantom_anchor; the inversion is logged in lessons. Harrison/Holmes premises held."
+        },
+        {
+          "event_id": "mlb-2026-08-31-cws-hou",
+          "our_home_fair": 0.5498,
+          "source_flag": "clean",
+          "close_home_novig": 0.5548,
+          "home_won": true,
+          "final": "Astros 6, White Sox 3",
+          "note": "CWS starter resolved: Anthony Kay. Close BetRivers -136, board within a tick."
+        },
+        {
+          "event_id": "mlb-2026-08-31-bal-col",
+          "our_home_fair": 0.4386,
+          "source_flag": "premise_changed",
+          "close_home_novig": 0.4356,
+          "home_won": false,
+          "final": "Orioles 2, Rockies 1 (98-min rain delay; Cowser robbed a walk-off HR for the final out)",
+          "note": "PREMISE CHANGED: Bradish did NOT start - pushed to Sep 1; Cade Povich (recalled same day) started and threw 5 solid. Flagged - the fair was priced off Bradish. 3 runs UNDER 10.5 at Coors (rain-affected): our over lean (52.2%) WRONG. Close BetRivers -141 = the board."
+        },
+        {
+          "event_id": "mlb-2026-08-31-nyy-laa",
+          "our_home_fair": 0.4422,
+          "source_flag": "clean",
+          "close_home_novig": 0.4649,
+          "home_won": true,
+          "final": "Angels 10, Yankees 1 (error-filled NYY blowout loss)",
+          "note": "Rodriguez-Cruz/Urena premises held. The market moved hard toward LAA all day (-138 board -> -119 close) and LAA romped - the Covers computer's LAA lean graded RIGHT on direction, and our blended fair beat the board."
+        },
+        {
+          "event_id": "mlb-2026-08-31-phi-az",
+          "our_home_fair": 0.4867,
+          "source_flag": "clean",
+          "close_home_novig": 0.4736,
+          "home_won": false,
+          "final": "Phillies 2, D-backs 1 (Nola 5+ IP 1 R; Pfaadt 6 IP 2 R)",
+          "note": "Nola/Pfaadt premises held. 3 runs UNDER 8.5: our under lean (52.1%) RIGHT. numberFire's 52.9% AZ lean graded WRONG. Close AZ +105/+106."
+        }
+      ],
+      "metrics": {
+        "n": 15,
+        "brier_ours": 0.2018,
+        "brier_close": 0.1795,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0279,
+        "max_abs_fair_vs_close": 0.1545,
+        "note": "15 markets graded vs closes (preview-article precision, flagged per game). Two flags: MIL@CHC phantom_anchor (the -196 was fiction - true market was pick'em, and the exchange cents we rejected were right), BAL@COL premise_changed (Povich for Bradish). Totals: PHI@AZ under RIGHT, BAL@COL over WRONG, SEA@BOS dead-50 no-call - lifetime 11 of 21. Favorites chaos again: ATL, TB -181, MIA and the entire NYY -138 side lost; both registered draw fairs lost (Atalanta 90'+1 winner, Barca 5-2)."
+      },
+      "lessons_applied": [
+        "THE INVERSION, logged loudly: MIL@CHC's -196 anchor was PHANTOM (true market: pick'em everywhere, incl. Polymarket 50c on $181K volume - the exact quote we rejected as 'implausible'). The Aces-56c rule mis-fired because it tested the exchange against a wrong anchor. Pattern now pre-registered with the LAD@DET/HOU@NYM data: when volume-bearing exchange cents contradict an UNNAMED article board by 15+ points, the right treatment is UNPRICEABLE/refuse - not 'reject the exchange'. Venue-truth calibration: named books 3, exchange 2 - and both exchange wins came against unnamed/stale boards, so the hierarchy refines to named-book > exchange > unnamed-article-board. No parameter change (Walters rule); evidence accumulating.",
+        "One-cent discipline saved a second straight loser: AZ's best named print (+108) sat under the +109 trigger and the side lost 1-2. With Friday's ATH save (+119 aggregator-only, lost in extras), the named-print/exact-trigger clauses are now 2-for-2 on refused-then-lost in four days.",
+        "Premise machinery again: the WSH debut-name flag resolved (Will Dion, won), the BAL Bradish slide was caught by the clause (Povich started - fair flagged), and Alcaraz's excluded comeback cruised (the fitness premise was defensible pregame and cost nothing).",
+        "Extreme-favorite demotions all cashed but two sweated hard (Osaka double-tiebreak at -1200, Tiafoe from 2-1 down at -400) - demotion prices risk, not outcomes, and tonight's card again put zero dollars on any favorite while ATL -165, TB -181, MIA -119 and NYY -138 all lost.",
+        "The Rayo aggregate kill graded perfect: real close 19.0 (the 26.0 never existed at any book), Rayo lost 5-2 - right on process and outcome."
       ]
     }
   ],
