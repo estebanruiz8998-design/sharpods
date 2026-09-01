@@ -4089,6 +4089,69 @@
         "Extreme-favorite demotions all cashed but two sweated hard (Osaka double-tiebreak at -1200, Tiafoe from 2-1 down at -400) - demotion prices risk, not outcomes, and tonight's card again put zero dollars on any favorite while ATL -165, TB -181, MIA -119 and NYY -138 all lost.",
         "The Rayo aggregate kill graded perfect: real close 19.0 (the 26.0 never existed at any book), Rayo lost 5-2 - right on process and outcome."
       ]
+    },
+    {
+      "date": "2026-09-01",
+      "sport": "multi",
+      "mode": "degraded - Tuesday card: 16 events / 16 markets (13 MLB, Copa do Brasil QF return leg on a NAMED Betfair trio, 2 US Open R1). Oracle clock throughout. Dispersion reality: Polymarket MLB markets carry real volume tonight ($539K SEA@BOS) but no cents surfaced anywhere - the exchange leg is unreadable this cycle. The MIA@KC book fight (BetRivers KC -117 vs YouWager MIA -160, 50+ cents) was encoded INTACT per the post-phantom-anchor hierarchy and the engine refused it at -7.41% cross-hold - settle will record which board was real, feeding the phantom-vs-conflict calibration. Only attributed models ensembled: numberFire 61.3% PIT, Dimers 55% Vallejo, Stats Insider 81% Eala; three unattributed floating probs skipped. Extreme favorites demoted or excluded: Gauff -3800, Zverev -2400, Fritz -5000 (all one-sided anyway), Eala 1.25 (priced but demotion-blocked). First-leg Copa do Brasil boards rejected wholesale (Aug-25 Cruzeiro-home trap). WNBA dark; CFB opens Thursday; Leagues Cup semis tomorrow with the America trio verified and the early Toluca trio FAILED at verification.",
+      "engine_verdict": "PASS on 15 of 16 markets, one conflict refusal (MIA@KC). Closest miss: Eala at Kalshi 80c (-0.96%, demotion-blocked regardless). Headline order: Pirates ML >= 1.689 (-145) behind SKENES vs Webb - numberFire 61.3% is the day's only attributed model and the board sits -162; fires on a NAMED-book print only (the anchor is a RawChili roundup number). $42 at quarter-Kelly if filled. No Stoiana order despite the Kalshi tick-proximity: the model (19%) dislikes the side the dispersion bar would buy (20.6c) - a model-adverse exchange tail on a Slam debutante is not a bet we register.",
+      "predictions_home_fair": {
+        "wta-2026-09-01-sto-eal": 0.7923,
+        "mlb-2026-09-01-sea-bos": 0.5351,
+        "mlb-2026-09-01-tor-cle": 0.6243,
+        "mlb-2026-09-01-sf-pit": 0.6009,
+        "mlb-2026-09-01-stl-lad": 0.6229,
+        "mlb-2026-09-01-nym-tb": 0.5397,
+        "mlb-2026-09-01-sd-cin": 0.447,
+        "mlb-2026-09-01-phi-az": 0.447,
+        "cdb-2026-09-01-cru-atlmg": 0.3813,
+        "mlb-2026-09-01-mil-chc": 0.453,
+        "mlb-2026-09-01-bal-col": 0.4318,
+        "atp-2026-09-01-val-mon": 0.3969,
+        "mlb-2026-09-01-atl-wsh": 0.3975,
+        "mlb-2026-09-01-det-min": 0.4299,
+        "mlb-2026-09-01-nyy-laa": 0.3726
+      },
+      "predictions_other": {
+        "cdb-2026-09-01-cru-atlmg:moneyline:draw": 0.3147
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-09-01-PIT-ORDER",
+          "type": "order_open",
+          "event": "Giants @ Pirates, MLB (6:40 PM ET Tue, PNC Park) - Skenes vs Webb",
+          "selection": "Pirates ML",
+          "target": 1.689,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER - model tier (+1.5% bar). numberFire 61.3% PIT behind Skenes (29.5% K) against Webb; blended fair 1.664 (60.1%); board -162 unnamed. Fires at 1.689+ (-145 or better) ON A NAMED-BOOK PRINT ONLY. The Pirates' August ledger says this shape fills: bet365 +100 (won), BetMGM +105 (won), numberFire backing both times. BINDING: Skenes and Webb listed - a change voids; standing-above fills only, drift-cancel applies; 6:40 PM ET start stated vs oracle-now on the slip. $42 at quarter-Kelly if filled (returns $71)."
+        },
+        {
+          "id": "2026-09-01-MIAKC-REFUSAL",
+          "type": "refusal",
+          "event": "Marlins @ Royals, MLB (7:40 PM ET Tue, Kauffman Stadium)",
+          "selection": "none - market refused",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "conflict",
+          "process": "pending",
+          "headline": false,
+          "note": "CONFLICT REFUSAL, engine-fired at -7.41% cross-hold: BetRivers prints KC -117 while YouWager prints MIA -160 - 50+ cents apart, the favorite FLIPS between boards. Per the post-phantom-anchor hierarchy (adopted after the MIL -196 grade), a conflict this size is encoded intact and refused, never resolved by hand - one of these boards is fiction and settle will record WHICH, feeding the calibration that already reads named-book > exchange > unnamed-article. DK splits (86% ML handle on KC) lean toward BetRivers being live, but handle is color, not truth."
+        }
+      ]
     }
   ],
   "policy_changes": [

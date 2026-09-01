@@ -1,0 +1,500 @@
+{
+ "_provenance": "Tuesday 2026-09-01 card, compiled ~11:45 AM ET on oracle-verified server time (10:47 AM ET read). PRICED: 16 events / 16 markets (13 MLB, Copa do Brasil QF return leg, 2 US Open R1). DISPERSION, honest state: Polymarket's MLB markets carry real volume tonight ($539K on SEA@BOS; NYM@TB top-3) but NO cents surfaced in any snippet - the exchange leg is structurally unreadable this cycle, so the outside-venue 1.0% tier mostly cannot fire; named second venues that did land are one-sided legs (docsports TOR/SF, DK Atletico/Monfils, Kalshi Eala 80c/21c). THE ENCODED CONFLICT: MIA@KC carries BetRivers KC -117 against YouWager MIA -160 (50+ cents apart) - per the post-phantom-anchor hierarchy this is encoded intact for the engine to refuse, not resolved by hand. Models: only numberFire's 61.3% PIT (Skenes vs Webb) is attributed; three other floating win-probs are unattributed and skipped (STL/AZ precedents). EXCLUDED: ATH@TEX (no two-sided board + Arnold-vs-Basso starter conflict), CWS@HOU (no board), Gauff -3800 / Zverev -2400 / Fritz -5000 (extreme-favorite demotion, one-sided boards, Fritz also sequencing-dead), all US Open day-session opens (gate), Musetti/Jovic (sequencing + unpriced). First-leg Copa do Brasil boards rejected wholesale (Cruzeiro-home Aug-25 trap). WNBA dark (FIBA break, resumes ~Sep 17); CFL Friday; CFB Week 1 opens Thursday; Leagues Cup semis TOMORROW (America trio verified 2.22/3.40/3.25 incl. a bet365 leg; the early Toluca 1.50/4.20/5.75 trio FAILED verification - live consensus 1.80/3.80/4.33 + Caliente 1.85; Kalshi advance cents egress-blocked, read them live). Standing rules bind everything: tiers, conflict refusal, extreme-favorite demotion, listed-starter premises (SEA@BOS Paez soft-confirmed; STL@LAD and NYM@TB starters unsurfaced; COL starter missing), weather clause (Wrigley wind), named-book prints only. --market-weight 0.85.",
+ "books": {
+  "betfair": {
+   "sharpness": 0.6,
+   "notes": "named trio dated to the Copa do Brasil return leg"
+  },
+  "betrivers": {
+   "sharpness": 0.6,
+   "notes": "named board via Covers matchup page (MIA@KC)"
+  },
+  "draftkings": {
+   "sharpness": 0.6,
+   "notes": "named one-sided legs dated Sep 1 (Atletico 2.45, Monfils 2.04)"
+  },
+  "kalshi": {
+   "sharpness": 0.45,
+   "notes": "exchange cents, shop-only (Eala 80c / Stoiana 21c)"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated but unnamed boards (RawChili/previews/tonyspicks families)"
+  },
+  "consensus-d": {
+   "sharpness": 0.5,
+   "notes": "second unnamed boards and one-sided legs (YouWager, docsports)"
+  }
+ },
+ "events": [
+  {
+   "event_id": "cdb-2026-09-01-cru-atlmg",
+   "sport": "soccer",
+   "league": "Copa do Brasil QF, 2nd leg (agg 1-1; draw -> straight to pens)",
+   "home": "Atletico-MG",
+   "away": "Cruzeiro",
+   "start_time": "2026-09-02T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betfair",
+       "side": "home",
+       "decimal_odds": 2.5
+      },
+      {
+       "book": "betfair",
+       "side": "draw",
+       "decimal_odds": 3.0
+      },
+      {
+       "book": "betfair",
+       "side": "away",
+       "decimal_odds": 3.1
+      },
+      {
+       "book": "draftkings",
+       "side": "home",
+       "decimal_odds": 2.45
+      }
+     ]
+    }
+   ],
+   "note": "8:00 PM ET, Arena MRV, Belo Horizonte. NAMED anchor: Betfair 2.50/3.00/3.10 dated to the return leg; DraftKings Atletico 2.45 as a second named venue (worse price - confirmation, not value). THE TRAP, dodged: nearly every indexed board (Hiperbet/bet365/Novibet ~1.95-2.02) is the AUG-25 FIRST LEG with Cruzeiro home - rejected wholesale. Sportytrader's model is leg-1-oriented - not ensembled. 90-min market; advancement on pens if drawn. Atletico unbeaten in 13; Cruzeiro lost 3-1 to Vasco at the weekend."
+  },
+  {
+   "event_id": "atp-2026-09-01-val-mon",
+   "sport": "tennis",
+   "league": "US Open R1 (Armstrong evening, match 1)",
+   "home": "Monfils",
+   "away": "Vallejo",
+   "start_time": "2026-09-01T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.39
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.57
+      },
+      {
+       "book": "draftkings",
+       "side": "home",
+       "decimal_odds": 2.04
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET fixed start (p2 Monfils = home). Unnamed dated pair 1.57/2.39 anchors; DK's named Monfils +104 leg sits 35 cents shorter - a real spread on the dog side, all under the 15-point conflict bar. Dimers model 55% Vallejo (ensembled). RETIREMENT-RISK FLAG: Monfils ~40, farewell season, 4-9 on the year. First career meeting. OddsChecker aggregator excluded per rule."
+  },
+  {
+   "event_id": "wta-2026-09-01-sto-eal",
+   "sport": "tennis",
+   "league": "US Open R1 (Armstrong evening, match 2)",
+   "home": "Eala",
+   "away": "Stoiana",
+   "start_time": "2026-09-02T00:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.235
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 4.0
+      },
+      {
+       "book": "kalshi",
+       "side": "home",
+       "decimal_odds": 1.25
+      },
+      {
+       "book": "kalshi",
+       "side": "away",
+       "decimal_odds": 4.76
+      }
+     ]
+    }
+   ],
+   "note": "Not before ~8:30 PM ET (follows Vallejo-Monfils). Three-way agreement: board -425 (~81%), Kalshi 80c, Stats Insider 81% - the day's cleanest multi-venue board and therefore no edge. Eala seeded 17; Stoiana is a qualifying Slam debutante (variance flag, no retirement risk)."
+  },
+  {
+   "event_id": "mlb-2026-09-01-tor-cle",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Guardians",
+   "away": "Blue Jays",
+   "start_time": "2026-09-01T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.56
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.52
+      },
+      {
+       "book": "consensus-d",
+       "side": "away",
+       "decimal_odds": 2.59
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET Progressive. Arrighetti (4.81) vs Gavin Williams (204 K). CLE -180 series-preview board (unnamed); docsports +159 TOR leg. DK splits: 89% of RL handle on CLE -1.5. Bieber and Yesavage on the TOR IL."
+  },
+  {
+   "event_id": "mlb-2026-09-01-mia-kc",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Royals",
+   "away": "Marlins",
+   "start_time": "2026-09-01T23:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 1.85
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "consensus-d",
+       "side": "home",
+       "decimal_odds": 2.32
+      },
+      {
+       "book": "consensus-d",
+       "side": "away",
+       "decimal_odds": 1.625
+      }
+     ]
+    }
+   ],
+   "note": "7:40 PM ET Kauffman. THE FLAGGED CONFLICT, encoded for the engine to refuse per the new hierarchy (never resolved by hand): BetRivers says KC -117 favorite; YouWager says MIA -160 favorite - 50+ cents apart on the same game. One board is stale or mis-oriented; without a third named book there is no truth to price. Phillips vs Dobnak (unverified). DK splits: 86% of ML handle on KC."
+  },
+  {
+   "event_id": "mlb-2026-09-01-det-min",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Twins",
+   "away": "Tigers",
+   "start_time": "2026-09-01T23:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.2
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.69
+      }
+     ]
+    }
+   ],
+   "note": "7:40 PM ET Target Field (start unconfirmed, standard slot). Troy Melton (1.86 ERA) vs Prielipp. DET -144 road with a 63-74 record - the price is Melton, not the standings. DK sharp-consensus pick of the slate is Detroit (88% ML handle, 99% RL). Single unnamed board."
+  },
+  {
+   "event_id": "mlb-2026-09-01-sf-pit",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Pirates",
+   "away": "Giants",
+   "start_time": "2026-09-01T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.62
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.36
+      },
+      {
+       "book": "consensus-d",
+       "side": "away",
+       "decimal_odds": 2.42
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET PNC - the pitching marquee: SKENES vs Logan Webb. PIT -162 (RawChili/Bleacher Nation agree); docsports SF +142 leg. numberFire 61.3% PIT - the only attributed model today, ensembled. Under-heavy handle on 7.5 (juice unprinted - total unpriced)."
+  },
+  {
+   "event_id": "mlb-2026-09-01-sd-cin",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Reds",
+   "away": "Padres",
+   "start_time": "2026-09-01T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.14
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.75
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET GABP. Vasquez vs Lodolo. SD -134. A 'SD 57.72%' win-prob floats UNATTRIBUTED - not ensembled (standing rule)."
+  },
+  {
+   "event_id": "mlb-2026-09-01-atl-wsh",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Nationals",
+   "away": "Braves",
+   "start_time": "2026-09-01T22:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.38
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.61
+      }
+     ]
+    }
+   ],
+   "note": "6:45 PM ET Nationals Park (VENUE RE-VERIFIED - Braves are the road favorite despite inverted article phrasing). Smith-Shawver vs Jake Irvin, both ERAs 5.60+. An 'ATL 52.29%' prob floats unattributed - not ensembled."
+  },
+  {
+   "event_id": "mlb-2026-09-01-sea-bos",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Red Sox",
+   "away": "Mariners",
+   "start_time": "2026-09-01T23:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.84
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.11
+      }
+     ]
+    }
+   ],
+   "note": "7:10 PM ET Fenway (Polymarket's '10:45 PM' listing rejected as inconsistent). Woo vs call-up Jedixson Paez (Gray pushed - starter soft-confirmed, premise flag). Unnamed -119 board; PM market carries $539K volume but cents never surfaced - the exchange leg is unreadable tonight. A 'BOS 57.22%' prob is unattributed - not ensembled."
+  },
+  {
+   "event_id": "mlb-2026-09-01-mil-chc",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Cubs",
+   "away": "Brewers",
+   "start_time": "2026-09-01T23:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.1
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.76
+      }
+     ]
+    }
+   ],
+   "note": "7:40 PM ET Wrigley, night after the 17-3 (and after yesterday's PHANTOM-ANCHOR grade on this exact pairing - extra caution, single YouWager board at consensus grade only). Gasser vs Boyd. WEATHER: wind blowing out per one preview - clause on any total (unpriced anyway)."
+  },
+  {
+   "event_id": "mlb-2026-09-01-nyy-laa",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Angels",
+   "away": "Yankees",
+   "start_time": "2026-09-02T01:38:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.53
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.55
+      }
+     ]
+    }
+   ],
+   "note": "9:38 PM ET Angel Stadium. Gerrit Cole (really, this time - confirmed by two dated sources) vs Grayson Rodriguez (6.03). NYY -183 single board after last night's 10-1 LAA romp."
+  },
+  {
+   "event_id": "mlb-2026-09-01-stl-lad",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Dodgers",
+   "away": "Cardinals",
+   "start_time": "2026-09-02T02:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.56
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.5
+      }
+     ]
+    }
+   ],
+   "note": "10:10 PM ET Chavez Ravine (start unconfirmed, standard slot). Starters not surfaced - premise unverified. LAD -178. TOTAL CONFLICT: DK splits 7.5 vs RawChili 8.5, a full run - unpriced. DK's sharpest RL signal: 97% of handle on STL +1.5."
+  },
+  {
+   "event_id": "mlb-2026-09-01-phi-az",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "D-backs",
+   "away": "Phillies",
+   "start_time": "2026-09-02T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.14
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.75
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET Chase Field. Luzardo (30.3% K, slate-best) vs Eduardo Rodriguez (14-4, 2.50). PHI -134. DK splits point opposite ways (71% ML handle AZ / 94% RL handle PHI) - noisy, color only."
+  },
+  {
+   "event_id": "mlb-2026-09-01-bal-col",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Rockies",
+   "away": "Orioles",
+   "start_time": "2026-09-02T00:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.2
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.7
+      }
+     ]
+    }
+   ],
+   "note": "8:40 PM ET Coors. Bradish REALLY starts tonight (the Monday push, corroborated twice) vs a COL starter never surfaced - half-premise flag. BAL -142. No total surfaced."
+  },
+  {
+   "event_id": "mlb-2026-09-01-nym-tb",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Rays",
+   "away": "Mets",
+   "start_time": "2026-09-01T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.79
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.08
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET Tropicana (assumed standard slot). Starters not surfaced - premise unverified. TB -126 after last night's Stock upset. Top-3 Polymarket MLB market by volume tonight; cents unreadable."
+  }
+ ],
+ "model_probabilities": {
+  "mlb-2026-09-01-sf-pit:moneyline:home": 0.6131,
+  "mlb-2026-09-01-sf-pit:moneyline:away": 0.3869,
+  "atp-2026-09-01-val-mon:moneyline:home": 0.45,
+  "atp-2026-09-01-val-mon:moneyline:away": 0.55,
+  "wta-2026-09-01-sto-eal:moneyline:home": 0.81,
+  "wta-2026-09-01-sto-eal:moneyline:away": 0.19
+ }
+}
