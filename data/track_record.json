@@ -4115,24 +4115,24 @@
       "predictions_other": {
         "cdb-2026-09-01-cru-atlmg:moneyline:draw": 0.3147
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-09-02 (Wed, via fallback wake; oracle clock)",
       "decisions": [
         {
           "id": "2026-09-01-PIT-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Giants @ Pirates, MLB (6:40 PM ET Tue, PNC Park) - Skenes vs Webb",
           "selection": "Pirates ML",
           "target": 1.689,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER - model tier (+1.5% bar). numberFire 61.3% PIT behind Skenes (29.5% K) against Webb; blended fair 1.664 (60.1%); board -162 unnamed. Fires at 1.689+ (-145 or better) ON A NAMED-BOOK PRINT ONLY. The Pirates' August ledger says this shape fills: bet365 +100 (won), BetMGM +105 (won), numberFire backing both times. BINDING: Skenes and Webb listed - a change voids; standing-above fills only, drift-cancel applies; 6:40 PM ET start stated vs oracle-now on the slip. $42 at quarter-Kelly if filled (returns $71)."
+          "note": "NOT FILLED - no named book ever printed PIT -145 or better; the dated band was -158 (Athlon) to -162 (Predictem/DK -161). PIT then won 13-12 on a walk-off THROWING ERROR after blowing a six-run lead with Skenes shelled for 5 - a would-have-won that would have spent nine innings looking like a loser. The resting-order design priced the fill, not the outcome; a fill at the trigger would have carried ~+4% raw CLV vs the -161 close, which is exactly why the trigger sits where it sits. Never-filled sides ~19W-11L across 31."
         },
         {
           "id": "2026-09-01-MIAKC-REFUSAL",
@@ -4142,15 +4142,168 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "validated",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "conflict",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "CONFLICT REFUSAL, engine-fired at -7.41% cross-hold: BetRivers prints KC -117 while YouWager prints MIA -160 - 50+ cents apart, the favorite FLIPS between boards. Per the post-phantom-anchor hierarchy (adopted after the MIL -196 grade), a conflict this size is encoded intact and refused, never resolved by hand - one of these boards is fiction and settle will record WHICH, feeding the calibration that already reads named-book > exchange > unnamed-article. DK splits (86% ML handle on KC) lean toward BetRivers being live, but handle is color, not truth."
+          "note": "CONFLICT REFUSAL, engine-fired at -7.41% cross-hold: BetRivers prints KC -117 while YouWager prints MIA -160 - 50+ cents apart, the favorite FLIPS between boards. Per the post-phantom-anchor hierarchy (adopted after the MIL -196 grade), a conflict this size is encoded intact and refused, never resolved by hand - one of these boards is fiction and settle will record WHICH, feeding the calibration that already reads named-book > exchange > unnamed-article. DK splits (86% ML handle on KC) lean toward BetRivers being live, but handle is color, not truth. || SETTLED: KC closed the favorite at -117 (BetRivers) / -120 (DraftKings, sharps 66% bets / 88% dollars). The YouWager 'MIA -160' board was FICTION - a 40-cent inversion of the real market that appears only on that blog. Refusal validated on process; MIA won 6-3 as the +100 dog (outcome noise - the close is the verdict). Venue-truth ledger: named books 4, exchange 2, blog boards 0-for-3 this week."
         }
+      ],
+      "games": [
+        {
+          "event_id": "cdb-2026-09-01-cru-atlmg",
+          "our_home_fair": 0.3813,
+          "source_flag": "clean",
+          "close_home_novig": 0.5365,
+          "home_won": true,
+          "final": "Atletico-MG 2-1 Cruzeiro in 90 (agg 3-2, no pens; Cruzeiro led via Kaio Jorge pen, Villalba sent off, Victor Hugo + late Fred winner)",
+          "note": "Betfair close = the board exactly. Registered draw fair (31.5%) lost."
+        },
+        {
+          "event_id": "atp-2026-09-01-val-mon",
+          "our_home_fair": 0.3969,
+          "source_flag": "clean",
+          "close_home_novig": 0.4483,
+          "home_won": true,
+          "final": "Monfils d. Vallejo 2-6 6-1 6-2 6-0 on his 40th birthday (no retirement)",
+          "note": "STALE-BOARD LESSON, tennis edition: our 1.57/2.39 anchor was behind a market that had already moved to ~1.77/2.16 (Monfils no-vig ~45% at close vs ~42% on the board); DK's +104 leg was actually the fresher price. Dimers' 55% Vallejo lean graded WRONG. The retirement flag never bit."
+        },
+        {
+          "event_id": "wta-2026-09-01-sto-eal",
+          "our_home_fair": 0.7923,
+          "source_flag": "clean",
+          "close_home_novig": 0.8025,
+          "home_won": true,
+          "final": "Eala d. Stoiana 6-1 6-2 in 77 minutes",
+          "note": "Close TAB 1.22/4.33 - flat to the board (-425) and to Kalshi 80c. Stats Insider 81% graded RIGHT. The unregistered Stoiana tail (model-adverse) lost - correct not to order it."
+        },
+        {
+          "event_id": "mlb-2026-09-01-tor-cle",
+          "our_home_fair": 0.6243,
+          "source_flag": "clean",
+          "close_home_novig": 0.6292,
+          "home_won": true,
+          "final": "Guardians 6, Blue Jays 1 (Gavin Williams 7 IP, career-high 13 K)",
+          "note": "Arrighetti/Williams premises held. Close BetMGM -175 (band -175/-184)."
+        },
+        {
+          "event_id": "mlb-2026-09-01-det-min",
+          "our_home_fair": 0.4299,
+          "source_flag": "premise_changed",
+          "close_home_novig": 0.4778,
+          "home_won": true,
+          "final": "Twins 15, Tigers 2 (10-run 6th)",
+          "note": "PREMISE CHANGED: Prielipp did NOT start - MIN ran a bullpen game (Morris opener, Prielipp 5 scoreless in relief). Melton started for DET and got shelled. Close LOW precision (DET -116/-119 tracked vs a stale FanDuel -144 snapshot); the board -144 sat at the stale end. Flagged."
+        },
+        {
+          "event_id": "mlb-2026-09-01-sf-pit",
+          "our_home_fair": 0.6009,
+          "source_flag": "clean",
+          "close_home_novig": 0.6093,
+          "home_won": true,
+          "final": "Pirates 13, Giants 12 - walk-off on a Basabe throwing error after PIT blew a 6-run lead (Skenes 4.2 IP 5 R; Webb 2 IP 9 R)",
+          "note": "Skenes/Webb both started and both got shelled. Close DK -161 (band -158/-162); the board -162 was live. numberFire 61.3% graded RIGHT on the result, wrong on the shape of the game."
+        },
+        {
+          "event_id": "mlb-2026-09-01-sd-cin",
+          "our_home_fair": 0.447,
+          "source_flag": "clean",
+          "close_home_novig": 0.4422,
+          "home_won": true,
+          "final": "Reds 4, Padres 3 (2-run 8th; Pagan save despite a Tatis 9th-inning HR - Tatis 2 HR)",
+          "note": "Vasquez/Lodolo premises held. The -134 favorite lost; close -136 FanDuel."
+        },
+        {
+          "event_id": "mlb-2026-09-01-atl-wsh",
+          "our_home_fair": 0.3975,
+          "source_flag": "clean",
+          "close_home_novig": 0.3714,
+          "home_won": true,
+          "final": "Nationals 9, Braves 5 (Yohandy Morales HR + 3 hits in his MLB debut)",
+          "note": "Smith-Shawver/Irvin premises held. ATL steamed -165 -> -178 and LOST; the board -164 was 12 cents short of the close on the losing side."
+        },
+        {
+          "event_id": "mlb-2026-09-01-sea-bos",
+          "our_home_fair": 0.5351,
+          "source_flag": "clean",
+          "close_home_novig": 0.5211,
+          "home_won": false,
+          "final": "Mariners 9, Red Sox 6 (Paez 3.2 IP 8 R in his first career start; Arozarena 3-run HR)",
+          "note": "Paez premise CONFIRMED (soft-confirm resolved) - and he was the reason. Woo 6 IP 1 ER. Close FanDuel -118 (band -115/-126)."
+        },
+        {
+          "event_id": "mlb-2026-09-01-mil-chc",
+          "our_home_fair": 0.453,
+          "source_flag": "phantom_anchor",
+          "close_home_novig": 0.539,
+          "home_won": false,
+          "final": "Brewers 9, Cubs 4",
+          "note": "PHANTOM ANCHOR - SECOND STRAIGHT DAY ON THIS PAIRING: our board said MIL -132; every named book (FanDuel CHC -126, CBS -125, others -135) AND Polymarket (CHC 54c / MIL 47c) had the CUBS favored. The YouWager blog board was inverted vs the whole market. VSiN: MIL drew 96% of DK handle on 41% of tickets - the sharp side won as the +108 dog. Fair flagged; source blacklisted (see lessons)."
+        },
+        {
+          "event_id": "mlb-2026-09-01-nyy-laa",
+          "our_home_fair": 0.3726,
+          "source_flag": "clean",
+          "close_home_novig": 0.3648,
+          "home_won": false,
+          "final": "Yankees 7, Angels 3 (Cole 5.1 IP 3 R, W; Jones/Chisholm back-to-back HR in the 1st)",
+          "note": "Cole/G.Rodriguez premises held. Close -188/-193."
+        },
+        {
+          "event_id": "mlb-2026-09-01-stl-lad",
+          "our_home_fair": 0.6229,
+          "source_flag": "clean",
+          "close_home_novig": 0.638,
+          "home_won": false,
+          "final": "Cardinals 13, Dodgers 8 (STL 5 HR; Lauer 3 IP 7 R)",
+          "note": "Starters resolved: Lauer (LAD) vs McGreevy (STL). LAD steamed -175 -> -190 at DK (93% of dollars) and lost by five. Close -190 favorite side, +160 inferred (+/-5)."
+        },
+        {
+          "event_id": "mlb-2026-09-01-phi-az",
+          "our_home_fair": 0.447,
+          "source_flag": "clean",
+          "close_home_novig": 0.4454,
+          "home_won": false,
+          "final": "Phillies 7, D-backs 1 (Luzardo 6.2 IP 1 R; PHI's 6th straight)",
+          "note": "Luzardo/E.Rodriguez premises held. Close FanDuel -136."
+        },
+        {
+          "event_id": "mlb-2026-09-01-bal-col",
+          "our_home_fair": 0.4318,
+          "source_flag": "clean",
+          "close_home_novig": 0.4251,
+          "home_won": true,
+          "final": "Rockies 4, Orioles 2 (De Leon's debut go-ahead HR in the 7th after a Holliday error; COL's first home win since Aug 2)",
+          "note": "Bradish started (the Monday push, confirmed); COL starter resolved: Gabriel Hughes (0-6 entering) - and the -146 favorite lost. Close FanDuel -146 (band -140/-156)."
+        },
+        {
+          "event_id": "mlb-2026-09-01-nym-tb",
+          "our_home_fair": 0.5397,
+          "source_flag": "clean",
+          "close_home_novig": 0.5578,
+          "home_won": true,
+          "final": "Rays 6, Mets 2 (Peralta 6 IP 0 BB 7 K vs his old club; Manaea 11 H)",
+          "note": "Starters resolved: Peralta (TB) vs Manaea (NYM). Close FanDuel -136; the board -126 was 10 cents short of the close on the winning side."
+        }
+      ],
+      "metrics": {
+        "n": 15,
+        "brier_ours": 0.2558,
+        "brier_close": 0.2436,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0305,
+        "max_abs_fair_vs_close": 0.1552,
+        "note": "15 markets graded vs closes (named-book snippet precision, +/-3-5 cents; DET@MIN low precision). Two flags: MIL@CHC phantom_anchor (second straight day - blog board inverted vs books AND Polymarket), DET@MIN premise_changed (bullpen game). MLB favorites 6-7: ATL, BOS, LAD, BAL, SD all lost as chalk; no dollars aboard any of them. Tennis stale-board lesson on Monfils (market had moved 1.57/2.39 -> 1.77/2.16 before we compiled)."
+      },
+      "lessons_applied": [
+        "SOURCE BLACKLIST, ledger-evidenced: YouWager/preview-blog boards produced two fictions in two days (MIA -160 inverted vs a KC -117/-120 market; MIL -132 inverted vs books AND Polymarket that all had CHC favored) on top of Monday's MIL -196 phantom from the Docsports/Bleacher Nation family. Blog 'preview boards' are no longer anchors - named-book pages (Covers/BetRivers, FanDuel Research, BetMGM blog, DK Network) or nothing. Recorded in CLAUDE.md with the three graded misses; this is a data-hygiene exclusion like the aggregate rule, not a parameter change.",
+        "The Skenes order priced the fill, not the outcome: best named print -158 vs the -145 trigger, no fill, and the side 'won' 13-12 on a walk-off error after a six-run blown lead - the kind of result that teaches nothing except why we bet prices. Never-filled sides ~19W-11L.",
+        "MIA@KC conflict refusal validated - blog board fiction, named books right; the post-phantom-anchor hierarchy (named-book > exchange > unnamed-article > blog) now has a fourth data point in its favor.",
+        "Tennis stale-board lesson: the Monfils 1.57/2.39 anchor was a roundup number the market had already left (close 1.77/2.16) - DK's one-sided +104 was the fresher truth. For US Open compiles, prefer a same-day named board over any roundup pair, and treat a named one-sided leg 30+ cents inside the roundup as a staleness signal, not dispersion.",
+        "Premise machinery: DET@MIN flipped to a bullpen game (flagged, favorite blown out 15-2); Paez's soft-confirm resolved true and he was the reason BOS lost; STL@LAD/NYM@TB unsurfaced starters resolved cleanly. Favorites 6-7 in MLB with zero of our dollars on the losing chalk."
       ]
     }
   ],

@@ -82,6 +82,13 @@ cycle at maximum capacity, exactly like the 2026-08-01 complete run:
 - **Parameter changes only on ledger evidence**, citing the graded miss
   (Walters anti-tinkering rule). Every change lands in
   `lessons_applied` in the track record.
+- **Blog 'preview boards' never anchor** (2026-09-01/02 grades): YouWager
+  printed MIA -160 against a real KC -117/-120 market and MIL -132 against
+  a market (books AND Polymarket) that had CHC favored; the Docsports/
+  Bleacher Nation MIL -196 (08-31) was a phantom too. Named-book pages
+  (Covers/BetRivers, FanDuel Research, BetMGM blog, DK Network) or nothing;
+  a blog board that flips the favorite vs any named book is fiction, not
+  dispersion. Volume-bearing exchange cents outrank unnamed article boards.
 - **Verify the headline bet's math by hand** (devig → EV → Kelly) before it
   goes on the slip, and re-check slip captions against the actual run.
 
