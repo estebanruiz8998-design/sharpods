@@ -4305,6 +4305,54 @@
         "Tennis stale-board lesson: the Monfils 1.57/2.39 anchor was a roundup number the market had already left (close 1.77/2.16) - DK's one-sided +104 was the fresher truth. For US Open compiles, prefer a same-day named board over any roundup pair, and treat a named one-sided leg 30+ cents inside the roundup as a staleness signal, not dispersion.",
         "Premise machinery: DET@MIN flipped to a bullpen game (flagged, favorite blown out 15-2); Paez's soft-confirm resolved true and he was the reason BOS lost; STL@LAD/NYM@TB unsurfaced starters resolved cleanly. Favorites 6-7 in MLB with zero of our dollars on the losing chalk."
       ]
+    },
+    {
+      "date": "2026-09-03",
+      "sport": "multi",
+      "mode": "degraded - Thursday card: 12 events / 15 markets (6 MLB, 2 US Open R2, 3 soccer incl. Gre-Nal 454, the CFB Week-1 Thursday opener). Oracle clock (1:16 PM ET at launch). Polymarket egress-blocked for MLB entirely; Kalshi cents on tennis coherent with DraftKings; the blacklist caught YouWager's LAD -144 fiction on sight AND caught my own encoding error: a Bleacher Nation -833 Rybakina quote slipped in as consensus-c and the engine 'ticketed' Rybakina at Kalshi 84c for +4.3%, 5-star - killed in hand-verification (blacklisted anchor, 1.19 extreme-favorite demotion, heel-tendon retirement flag) and the event dropped as unpriceable. The two European kicks (2:45/3:00 PM ET) register fairs pre-kick but are gate-dead for action (Real Sociedad at ESPN BET 2.10 shows +1.7% vs a two-book fair - sub-bar AND gate-dead). Attributed models: ESPN FPI + Dimers on Colorado-Georgia Tech (logit-avg 60% GT vs a 69% market), Dimers on Zverev. Leagues Cup final Toluca-Monterrey Sun 9:15 PM ET Houston, no board yet.",
+      "engine_verdict": "PASS on all 15 markets after the Rybakina kill. Headline order: Colorado ML >= 3.23 (+223) at a NAMED book - FanDuel pays +205; ESPN FPI (59%) and Dimers (61%) both sit ~9 points under the market on Georgia Tech, whose QB Alberto Mendoza makes his first career start behind a rebuilt line. Model tier +1.5% bar; $16 at quarter-Kelly if it prints. No Monfils tail order (Kalshi 19c sits one tick from the dispersion bar, but a 40-year-old on a protected ranking in a second five-set night match is a retirement-risk premise we do not buy at 5.3). Closest MLB miss: Marlins 1.862 at -1.97%.",
+      "predictions_home_fair": {
+        "laliga-2026-09-03-cel-rso": 0.4844,
+        "cfb-2026-09-03-col-gt": 0.6858,
+        "atp-2026-09-03-mon-tie": 0.8121,
+        "mlb-2026-09-03-ath-sea": 0.6521,
+        "mlb-2026-09-03-stl-lad": 0.735,
+        "mlb-2026-09-03-mia-kc": 0.4735,
+        "mlb-2026-09-03-mil-chc": 0.4885,
+        "mlb-2026-09-03-tb-tex": 0.46,
+        "mlb-2026-09-03-bos-bal": 0.4546,
+        "cdb-2026-09-03-int-gre": 0.3774,
+        "lig1-2026-09-03-lil-tou": 0.2669,
+        "atp-2026-09-03-zve-hal": 0.1526
+      },
+      "predictions_other": {
+        "laliga-2026-09-03-cel-rso:moneyline:draw": 0.2679,
+        "mlb-2026-09-03-tb-tex:total:over": 0.5,
+        "mlb-2026-09-03-ath-sea:total:over": 0.4884,
+        "cdb-2026-09-03-int-gre:total:over": 0.3816,
+        "cdb-2026-09-03-int-gre:moneyline:draw": 0.3223,
+        "lig1-2026-09-03-lil-tou:moneyline:draw": 0.2799
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-09-03-COL-ORDER",
+          "type": "order_open",
+          "event": "Colorado @ Georgia Tech, CFB Week 1 (8:00 PM ET Thu, Bobby Dodd Stadium, ESPN)",
+          "selection": "Colorado ML (road dog)",
+          "target": 3.23,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER - model tier (+1.5% bar), the ledger's first CFB order. FanDuel GT -255 / CU +205 anchors (Polymarket GT 69c agrees on the favorite); ESPN FPI 59% and Dimers 61% GT logit-average to 60%, blended fair CU 31.4% (3.185). Fires at 3.23+ (+223 or better) ON A NAMED-BOOK PRINT ONLY - FanDuel sits 18 cents short, so this needs a genuine move toward Georgia Tech. PREMISES: GT starts Alberto Mendoza (first career start, new coordinators, rebuilt OL); Colorado starts Julian Lewis - a QB change on either side voids. Standing-above fills only; drift-cancel applies (a market crossing +223 on Mendoza news is a re-price, not a fill). $16 at quarter-Kelly if filled (returns $52)."
+        }
+      ]
     }
   ],
   "policy_changes": [

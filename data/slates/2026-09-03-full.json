@@ -1,0 +1,486 @@
+{
+ "_provenance": "Thursday 2026-09-03 card, compiled ~1:45 PM ET on oracle-verified server time (1:16 PM ET read at launch; re-read at ship). PRICED: 14 events / 16 markets (6 MLB, 3 tennis, 3 soccer, 1 CFB). Gate applied at ship (~4 PM ET bar): the two European kicks (2:45/3:00 PM ET) register fairs pre-kick but carry NO action; everything else starts 6:35 PM ET or later. DISPERSION STATE: Polymarket is fully egress-blocked today (no MLB cents anywhere; only an On3 roundup gives CFB cents - GT 69c); Kalshi cents landed on two tennis matches, both coherent with DraftKings. Named MLB quotes are DK one-sided legs only (TB -130, MIL -117); the MLB two-way boards are dated-but-unnamed consensus (Athlon/TheSpread/AP) - and the BLACKLIST caught YouWager's LAD -144 fiction on sight. Attributed models: ESPN FPI + Dimers on Colorado-Georgia Tech (both ~60% GT vs a 69% market - the card's model-market gap), Dimers on Zverev. Skipped as unattributed/non-preferred: MyGameSim (MIL, LAD), a floating 64.1% LAD. EXCLUDED: Bouzas-Rybakina (its only two-sided board was a Bleacher Nation -833 - BLACKLISTED source; a first engine pass off that quote 'ticketed' Rybakina at Kalshi 84c for +4.3% - killed three ways: blacklisted anchor, 1.19 extreme-favorite demotion, heel-tendon retirement flag), Badosa-Gauff (one-sided -770), Osaka/Fritz/Swiatek/Sakkari/Bonzi (day-session gate or sequencing), Rutgers/Wake/Utah/Illinois (1.01-1.03 extreme favorites, FCS guarantee games), UCF/Missouri/Minnesota (no ML), SF@PIT, TOR@CLE, CWS@HOU (afternoon, gate-dead), Nautico (partial board), Perez-Mchunu boxing (aggregate-only, ~1.14). CONTEXT: Leagues Cup final is Toluca vs Monterrey, Sun Sep 6 9:15 PM ET, Shell Energy Stadium Houston - no board yet. NFL opens Wed Sep 9. WNBA dark to Sep 17. --market-weight 0.85.",
+ "books": {
+  "draftkings": {
+   "sharpness": 0.6,
+   "notes": "named DK Network quotes dated Sep 3 (tennis two-way; MLB one-sided legs)"
+  },
+  "fanduel": {
+   "sharpness": 0.6,
+   "notes": "named FanDuel Research board dated Sep 3 (Colorado-Georgia Tech)"
+  },
+  "betfair": {
+   "sharpness": 0.6,
+   "notes": "Betfair BR trio quoted by Metropoles, dated Sep 3 (Gre-Nal)"
+  },
+  "betano": {
+   "sharpness": 0.6,
+   "notes": "named two-sided total (Gre-Nal)"
+  },
+  "bet365": {
+   "sharpness": 0.6,
+   "notes": "named trio (RSO, Sep 2 10:30 PM ET stamp) + Lille leg"
+  },
+  "espnbet": {
+   "sharpness": 0.6,
+   "notes": "ESPN odds page trio (RSO) - unstamped, possibly stale opener"
+  },
+  "kalshi": {
+   "sharpness": 0.45,
+   "notes": "exchange cents, shop-only (tennis)"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "prediction market via On3 roundup (CFB); MLB egress-blocked"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated but unnamed boards (Athlon/TheSpread/AP-Data Skrive/ESPN-page families)"
+  },
+  "consensus-d": {
+   "sharpness": 0.5,
+   "notes": "second unnamed same-day boards"
+  }
+ },
+ "events": [
+  {
+   "event_id": "lig1-2026-09-03-lil-tou",
+   "sport": "soccer",
+   "league": "Ligue 1 MD3",
+   "home": "Toulouse",
+   "away": "Lille",
+   "start_time": "2026-09-03T18:45:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 3.45
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 3.3
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.1
+      },
+      {
+       "book": "bet365",
+       "side": "away",
+       "decimal_odds": 2.15
+      }
+     ]
+    }
+   ],
+   "note": "2:45 PM ET Stadium de Toulouse - GATE-DEAD for action at ship (fairs registered pre-kick only). Trio +245/+230/+110 surfaced under ESPN's odds page but unnamed in the snippet - consensus-c; bet365 Lille 2.15 is the named leg. Lille unbeaten, 7 straight away league wins; Toulouse winless."
+  },
+  {
+   "event_id": "laliga-2026-09-03-cel-rso",
+   "sport": "soccer",
+   "league": "La Liga MD4",
+   "home": "Real Sociedad",
+   "away": "Celta Vigo",
+   "start_time": "2026-09-03T19:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "bet365",
+       "side": "home",
+       "decimal_odds": 1.91
+      },
+      {
+       "book": "bet365",
+       "side": "draw",
+       "decimal_odds": 3.6
+      },
+      {
+       "book": "bet365",
+       "side": "away",
+       "decimal_odds": 3.9
+      },
+      {
+       "book": "espnbet",
+       "side": "home",
+       "decimal_odds": 2.1
+      },
+      {
+       "book": "espnbet",
+       "side": "draw",
+       "decimal_odds": 3.45
+      },
+      {
+       "book": "espnbet",
+       "side": "away",
+       "decimal_odds": 3.7
+      }
+     ]
+    }
+   ],
+   "note": "3:00 PM ET Reale Arena - GATE-DEAD for action at ship (fairs only). TWO NAMED TRIOS: bet365 (Sep 2 10:30 PM ET stamp) vs ESPN BET (unstamped - possibly a stale opener): 19 cents apart on the favorite. Real dispersion if live, unverifiable in time, and academic under the gate. Sportytrader's model (25% RSO) looks broken - not ensembled."
+  },
+  {
+   "event_id": "cdb-2026-09-03-int-gre",
+   "sport": "soccer",
+   "league": "Copa do Brasil QF 2nd leg (1st leg 0-0; draw -> pens)",
+   "home": "Gremio",
+   "away": "Internacional",
+   "start_time": "2026-09-03T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betfair",
+       "side": "home",
+       "decimal_odds": 2.5
+      },
+      {
+       "book": "betfair",
+       "side": "draw",
+       "decimal_odds": 2.9
+      },
+      {
+       "book": "betfair",
+       "side": "away",
+       "decimal_odds": 3.1
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "betano",
+       "side": "over",
+       "line": 2.5,
+       "decimal_odds": 2.47
+      },
+      {
+       "book": "betano",
+       "side": "under",
+       "line": 2.5,
+       "decimal_odds": 1.57
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET, Arena do Gremio (CBF fixture + ticketing verified). Gre-Nal 454 after a 0-0 first leg at Beira-Rio; winner meets Atletico-MG. Betfair BR trio named (Metropoles quote dated today); Betano two-sided total 2.5 (O 2.47 / U 1.57 - 25% of Gremio's CdB games went over). No second trio - single-anchor 2.5% bar. Gremio 3 straight home wins; Inter lost 2-3 at Bahia. Polymarket has no Copa do Brasil markets."
+  },
+  {
+   "event_id": "atp-2026-09-03-zve-hal",
+   "sport": "tennis",
+   "league": "US Open R2 (Ashe night, match 2)",
+   "home": "Halys",
+   "away": "Zverev",
+   "start_time": "2026-09-04T00:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "draftkings",
+       "side": "home",
+       "decimal_odds": 5.31
+      },
+      {
+       "book": "draftkings",
+       "side": "away",
+       "decimal_odds": 1.154
+      }
+     ]
+    }
+   ],
+   "note": "Not before ~8:30 PM ET (follows Badosa-Gauff). DraftKings -650/+431 named - DK itself calls it 'surprisingly tight for the top seed'. Dimers 83.3% Zverev. FATIGUE FLAG: Zverev needed a five-hour escape in R1. Zverev 1.154 = extreme-favorite demotion regardless."
+  },
+  {
+   "event_id": "atp-2026-09-03-mon-tie",
+   "sport": "tennis",
+   "league": "US Open R2 (Armstrong evening, match 1)",
+   "home": "Tien",
+   "away": "Monfils",
+   "start_time": "2026-09-03T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "draftkings",
+       "side": "home",
+       "decimal_odds": 1.204
+      },
+      {
+       "book": "draftkings",
+       "side": "away",
+       "decimal_odds": 4.44
+      },
+      {
+       "book": "kalshi",
+       "side": "home",
+       "decimal_odds": 1.2195
+      },
+      {
+       "book": "kalshi",
+       "side": "away",
+       "decimal_odds": 5.263
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET fixed (usopen.org preview lists Tien vs Monfils; p2 Tien = home per DK/Kalshi listing - listing order verified on usopen.org before assignment). DK -491/+344 named; Kalshi Tien 82c / Monfils 19c coherent. RETIREMENT FLAG: Monfils 40, rank #311 on a protected ranking, second five-set night in three days. Tien 1.204 = extreme-favorite demotion."
+  },
+  {
+   "event_id": "cfb-2026-09-03-col-gt",
+   "sport": "cfb",
+   "league": "CFB Week 1",
+   "home": "Georgia Tech",
+   "away": "Colorado",
+   "start_time": "2026-09-04T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 1.392
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 3.05
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 1.449
+      }
+     ]
+    }
+   ],
+   "note": "8:00 PM ET Bobby Dodd Stadium (ESPN) - the ONLY Thursday CFB game with a real two-way ML. FanDuel GT -255 / CU +205 named; Polymarket GT 69c (pays 1.449 - cheaper than the book on the favorite). MODELS DISAGREE WITH THE MARKET: ESPN FPI 59% GT, Dimers 61% GT (logit-avg 60.0%) vs ~69% no-vig - the model side is COLORADO. QB PREMISE: GT's Alberto Mendoza makes his first career start behind a rebuilt OL with new coordinators; Colorado's Julian Lewis is the confirmed starter. Spread GT -6.5, total 51.5 (FanDuel) - not priced (key-number machinery is football-only and totals never headline)."
+  },
+  {
+   "event_id": "mlb-2026-09-03-bos-bal",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Orioles",
+   "away": "Red Sox",
+   "start_time": "2026-09-03T22:35:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.09
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.763
+      }
+     ]
+    }
+   ],
+   "note": "7:15 PM ET Camden Yards per ticketing/FOX (a 6:35 snippet is the pessimistic reading - encoded). Jake Bennett (3.27) vs Brandon Young (3.38). NO NAMED ML - DK Network confirms BOS favored (95% of ML handle) without printing the price; unnamed boards range BOS -117 to -131 (TheSpread -131/+109 encoded). Total 8.5 over-only - unpriced. BOS 8 of 9 at Camden."
+  },
+  {
+   "event_id": "mlb-2026-09-03-mil-chc",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Cubs",
+   "away": "Brewers",
+   "start_time": "2026-09-03T23:15:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.952
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.87
+      },
+      {
+       "book": "draftkings",
+       "side": "away",
+       "decimal_odds": 1.8547
+      }
+     ]
+    }
+   ],
+   "note": "7:15 PM ET Wrigley, series finale (third straight day on this pairing after two phantom-anchor grades - blog boards EXCLUDED; the encoded pair is TheSpread's MIL -115/CHC -105 with DK's named MIL -117 leg, all coherent). Henderson (0.825 WHIP, best on the slate) vs Gausman. MyGameSim 58% MIL is not on the preferred model list - not ensembled. Total 8.5 over-only."
+  },
+  {
+   "event_id": "mlb-2026-09-03-mia-kc",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Royals",
+   "away": "Marlins",
+   "start_time": "2026-09-03T23:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.971
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.862
+      },
+      {
+       "book": "consensus-d",
+       "side": "home",
+       "decimal_odds": 2.06
+      },
+      {
+       "book": "consensus-d",
+       "side": "away",
+       "decimal_odds": 1.781
+      }
+     ]
+    }
+   ],
+   "note": "7:40 PM ET Kauffman, series finale. Alcantara vs Wacha. Unnamed boards MIA -116/-103 (Athlon) and -128/+106 (capperspicks) - 12 cents of spread, favorite consistent, no named ML. DK Network: Over 9 carries 96% of handle on 31% of bets - the slate's widest sharp split (over one-sided, unpriced)."
+  },
+  {
+   "event_id": "mlb-2026-09-03-tb-tex",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Rangers",
+   "away": "Rays",
+   "start_time": "2026-09-04T00:05:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 2.07
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.781
+      },
+      {
+       "book": "draftkings",
+       "side": "away",
+       "decimal_odds": 1.769
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 8.0,
+       "decimal_odds": 1.909
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 8.0,
+       "decimal_odds": 1.909
+      }
+     ]
+    }
+   ],
+   "note": "8:05 PM ET Globe Life, series opener (no prior-day trap). McClanahan (3.19) vs Quantrill (3.01). DK Rays -130 named (99% of handle); Athlon TB -128/TEX +107. Total moved 7.5 -> 8 against two sub-3.20 starters. Rays have lost 9 straight in Arlington."
+  },
+  {
+   "event_id": "mlb-2026-09-03-ath-sea",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Mariners",
+   "away": "Athletics",
+   "start_time": "2026-09-04T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.4975
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.71
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 7.5,
+       "decimal_odds": 1.9524
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 7.5,
+       "decimal_odds": 1.8696
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET T-Mobile. Jack Perkins (3-10) vs rookie Kade Anderson (3rd MLB start) - premise: a rookie's third start behind a -205 price. Unnamed boards -201/+171 and -206/+174 (tight). SEA 3-0 vs ATH this year."
+  },
+  {
+   "event_id": "mlb-2026-09-03-stl-lad",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Dodgers",
+   "away": "Cardinals",
+   "start_time": "2026-09-04T02:10:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.328
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 3.4
+      }
+     ]
+    }
+   ],
+   "note": "10:10 PM ET Chavez Ravine, series finale (STL won the first two). SKUBAL (30.6% K, slate-best) vs Quinn Mathews. AP/Data Skrive line LAD -305/STL +240 (BetMGM-conventional but unattributed in the snippet - consensus-c). BLACKLIST IN ACTION: YouWager printed LAD -144 - 160 cents off every board, cited as fiction. LAD 1.328 sits a hair above the Braga line. Total 7.5 no juice."
+  }
+ ],
+ "model_probabilities": {
+  "cfb-2026-09-03-col-gt:moneyline:home": 0.6,
+  "cfb-2026-09-03-col-gt:moneyline:away": 0.4,
+  "atp-2026-09-03-zve-hal:moneyline:home": 0.167,
+  "atp-2026-09-03-zve-hal:moneyline:away": 0.833
+ }
+}
