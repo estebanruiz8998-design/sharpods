@@ -4333,25 +4333,151 @@
         "cdb-2026-09-03-int-gre:moneyline:draw": 0.3223,
         "lig1-2026-09-03-lil-tou:moneyline:draw": 0.2799
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-09-04 (Fri, via fallback wake; oracle clock)",
       "decisions": [
         {
           "id": "2026-09-03-COL-ORDER",
-          "type": "order_open",
+          "type": "order_unfilled",
           "event": "Colorado @ Georgia Tech, CFB Week 1 (8:00 PM ET Thu, Bobby Dodd Stadium, ESPN)",
           "selection": "Colorado ML (road dog)",
           "target": 3.23,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "no fill",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE ORDER - model tier (+1.5% bar), the ledger's first CFB order. FanDuel GT -255 / CU +205 anchors (Polymarket GT 69c agrees on the favorite); ESPN FPI 59% and Dimers 61% GT logit-average to 60%, blended fair CU 31.4% (3.185). Fires at 3.23+ (+223 or better) ON A NAMED-BOOK PRINT ONLY - FanDuel sits 18 cents short, so this needs a genuine move toward Georgia Tech. PREMISES: GT starts Alberto Mendoza (first career start, new coordinators, rebuilt OL); Colorado starts Julian Lewis - a QB change on either side voids. Standing-above fills only; drift-cancel applies (a market crossing +223 on Mendoza news is a re-price, not a fill). $16 at quarter-Kelly if filled (returns $52)."
+          "note": "NOT FILLED BY THREE CENTS - AND THE SIDE WON 14-13. Best named print all day: DraftKings +220 (3.20) against the +223 (3.23) trigger; FanDuel and bet365 +205; the unnamed +240 was the pre-ship opener. The market moved TOWARD Colorado all day on sharp money (DK: 10% of tickets / 63% of handle), which is why the trigger - set 1.5% above a blended fair that weights the market 0.85 - drifted out of reach instead of into it. Colorado won on a TD with 0:42 left and a blocked field goal. The ledger's first CFB order: a missed winner, honestly logged. Never-filled sides ~20W-11L across 32."
         }
+      ],
+      "games": [
+        {
+          "event_id": "lig1-2026-09-03-lil-tou",
+          "our_home_fair": 0.2669,
+          "source_flag": "clean",
+          "close_home_novig": 0.4121,
+          "home_won": false,
+          "final": "Toulouse 0-1 Lille (Ueda 73')",
+          "note": "Gate-dead fair (kicked 2:45 PM ET, registered pre-kick). Close = the board; bet365's Lille 2.15 leg was the best price on the winner. Draw fair (28%) lost."
+        },
+        {
+          "event_id": "laliga-2026-09-03-cel-rso",
+          "our_home_fair": 0.4844,
+          "source_flag": "clean",
+          "close_home_novig": 0.6465,
+          "home_won": true,
+          "final": "Real Sociedad 3-1 Celta Vigo",
+          "note": "Gate-dead fair. VENUE VERDICT on the two-trio gap: bet365 (1.77-1.91 home) was the live market; ESPN's odds-page +110 (2.10) carried a 3.6% hold - implausibly thin, a stale/mis-rendered print. LESSON: an unstamped ESPN odds-page trio is preview-board grade, not a named anchor - encoded at 0.6 tonight, should have been consensus. Home won; draw fair (27%) lost."
+        },
+        {
+          "event_id": "cdb-2026-09-03-int-gre",
+          "our_home_fair": 0.3774,
+          "source_flag": "clean",
+          "close_home_novig": 0.5365,
+          "home_won": true,
+          "final": "Gremio 3-1 Internacional in 90 (agg 3-1; Carlos Vinicius x2, Krovinovic; no pens) - Gremio to the semis vs Atletico-MG",
+          "note": "Close = the Betfair board exactly. 4 goals OVER 2.5: our under lean (38% over) WRONG - totals 11 of 23. Draw fair (32%) lost."
+        },
+        {
+          "event_id": "atp-2026-09-03-mon-tie",
+          "our_home_fair": 0.8121,
+          "source_flag": "clean",
+          "close_home_novig": 0.814,
+          "home_won": true,
+          "final": "Tien d. Monfils 6-3 6-4 6-3 (no retirement; Monfils' final Grand Slam match)",
+          "note": "Close = the DK board. Kalshi 82c sat at the cheap end of the -476/-550 range - no edge vs no-vig; the demoted favorite cashed; the flagged tail (19c) lost."
+        },
+        {
+          "event_id": "atp-2026-09-03-zve-hal",
+          "our_home_fair": 0.1526,
+          "source_flag": "clean",
+          "close_home_novig": 0.1479,
+          "home_won": false,
+          "final": "Zverev d. Halys 6-4 4-6 7-6(3) 6-7(3) 6-3 in 4h33m - second straight five-setter, finished 2:15 AM",
+          "note": "Close = the DK board. Dimers 83.3% graded RIGHT on result, wrong on comfort again. FATIGUE PREMISE for R3 vs Tabilo: two five-setters and a 2 AM finish."
+        },
+        {
+          "event_id": "cfb-2026-09-03-col-gt",
+          "our_home_fair": 0.6858,
+          "source_flag": "clean",
+          "close_home_novig": 0.6974,
+          "home_won": false,
+          "final": "Colorado 14, Georgia Tech 13 - Lewis-to-Williams TD with 0:42 left; CU blocked GT's walk-off FG",
+          "note": "THE MODEL SIDE WON. FPI/Dimers had CU ~40% vs a 31% market; Colorado won outright as the +205/+220 dog. Mendoza (first start, ankle knock, returned) and Lewis both started - premises held. Close DK -238/+220; the market drifted TOWARD Colorado all day (opener +240 unnamed -> +220 close), so our +223 trigger sat above every closing quote. Under 51.5."
+        },
+        {
+          "event_id": "mlb-2026-09-03-bos-bal",
+          "our_home_fair": 0.4546,
+          "source_flag": "clean",
+          "close_home_novig": 0.4654,
+          "home_won": false,
+          "final": "Red Sox 6, Orioles 5 (Rutschman 2 HR in his Baltimore return; Sogard 2-run HR in the 8th)",
+          "note": "Bennett/Young premises held. Close DK BOS -125 (BAL side estimated +105; unnamed pairs -130/+110 to -136/+113). 11 runs over 8.5 (over-only board, unpriced)."
+        },
+        {
+          "event_id": "mlb-2026-09-03-mil-chc",
+          "our_home_fair": 0.4885,
+          "source_flag": "clean",
+          "close_home_novig": 0.4885,
+          "home_won": true,
+          "final": "Cubs 2, Brewers 1 (Crow-Armstrong 39th HR; Gausman 7 IP 9 K)",
+          "note": "Henderson/Gausman premises held. Close DK MIL -115/CHC -105 = the board (a clean coherent board on this pairing at last, after two phantom days). 99% of DK handle on MIL lost."
+        },
+        {
+          "event_id": "mlb-2026-09-03-mia-kc",
+          "our_home_fair": 0.4735,
+          "source_flag": "clean",
+          "close_home_novig": 0.4838,
+          "home_won": true,
+          "final": "Royals 7, Marlins 3 (Carter Jensen 2-run HR off Alcantara)",
+          "note": "Alcantara/Wacha premises held. CLOSE PRECISION LOW: FanDuel read KC -116 favorite while Hard Rock/consensus had MIA -117/-128 - a genuine favorite flip between named books; consensus pair used. 10 runs over 9 (over-only board, unpriced)."
+        },
+        {
+          "event_id": "mlb-2026-09-03-tb-tex",
+          "our_home_fair": 0.46,
+          "source_flag": "clean",
+          "close_home_novig": 0.4546,
+          "home_won": true,
+          "final": "Rangers 6, Rays 0 (Quantrill 7 scoreless; Seager 2-run HR)",
+          "note": "McClanahan/Quantrill premises held. Close DK TB -130 / BetRivers -139; TEX side +110/+116. 6 runs UNDER 8 - our total fair was dead 50/50, no call. TB drew 99% of DK ML handle and got shut out."
+        },
+        {
+          "event_id": "mlb-2026-09-03-ath-sea",
+          "our_home_fair": 0.6521,
+          "source_flag": "clean",
+          "close_home_novig": 0.6552,
+          "home_won": false,
+          "final": "Athletics 7, Mariners 4 (Perkins allowed 3 in the 1st and won anyway)",
+          "note": "Perkins/rookie Anderson premises held. Close FanDuel -205/+172 = the board. 11 runs OVER 7.5: our slight under lean (48.8% over) WRONG. The -205 favorite lost."
+        },
+        {
+          "event_id": "mlb-2026-09-03-stl-lad",
+          "our_home_fair": 0.735,
+          "source_flag": "clean",
+          "close_home_novig": 0.7311,
+          "home_won": true,
+          "final": "Dodgers 3, Cardinals 2 - walk-off Teoscar Hernandez double in the 9th",
+          "note": "Skubal/Mathews premises held. LINEUP NOTE: Ohtani was OUT for LAD - material for a -305 favorite that needed a walk-off; recorded, not flagged (pitcher premise intact). Close FanDuel -295/+240 = the board. Under 7.5."
+        }
+      ],
+      "metrics": {
+        "n": 12,
+        "brier_ours": 0.2322,
+        "brier_close": 0.2164,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.0432,
+        "max_abs_fair_vs_close": 0.1621,
+        "note": "12 markets graded vs closes (named-book snippet precision; MIA@KC low - favorite flipped between FanDuel and Hard Rock). MLB chalk lost 4 of 6 (MIL, MIA, TB -130 shut out, SEA -205); tennis and soccer favorites all cashed, two of them sweating. Totals: Gre-Nal over and ATH@SEA over both beat our under leans, TB@TEX dead-50 no-call - lifetime 11 of 23. All three registered draw fairs lost."
+      },
+      "lessons_applied": [
+        "A model-tier order missed an outright winner by three cents for the second time in four days (AZ +108 vs +109 Monday - lost; COL +220 vs +223 Thursday - WON). Never-filled sides now ~20W-11L. PRE-REGISTERED HYPOTHESIS, not a change: when attributed models disagree with a SOFT anchor by 8+ points, the 0.85 market weight may be over-trusting the anchor and pricing model-tier orders just out of reach. Test: at 20 settled model-tier orders, compare the never-filled sides' win rate to their blended fair; if the sides beat the fair by a margin the sample supports, that is the ledger evidence a market-weight refinement needs. Nothing moves tonight (Walters rule).",
+        "HONESTY LEDGER: the killed Rybakina-at-Kalshi-84c ticket would have paid - she won 6-2 6-4, fit, no MTO. The kill stays correct on process (blacklisted anchor, 1.19 extreme-favorite demotion, documented heel-tendon flag) and the contract was roughly fair-to-negative EV at ~82-84% true probability; the cost side is recorded, n=1, no change.",
+        "Source-grade correction: an UNSTAMPED ESPN odds-page trio is preview-board grade, not a named anchor - the Real Sociedad +110 print carried a 3.6% hold and was the outlier vs bet365/LVSB. Encoded at 0.6 tonight; future ESPN-page quotes without a timestamp ride consensus-c. Added to the phantom-board audit trail (5 entries this week).",
+        "Premise machinery: all 12 listed starters started; Mendoza's ankle knock did not become a QB change; Ohtani's absence for a -305 Dodgers favorite that needed a walk-off is recorded as a lineup note - a candidate for a formal star-absence clause if it recurs. Zverev carries a live fatigue flag into R3 (two five-setters, 2 AM finish).",
+        "MLB chalk lost 4 of 6 with zero of our dollars aboard (TB -130 shut out on 99% of DK handle; SEA -205 lost to the 54-86 A's); the pass architecture keeps paying on nights the boards are unnamed and the exchange is dark."
       ]
     }
   ],
