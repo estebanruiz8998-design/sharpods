@@ -4479,6 +4479,67 @@
         "Premise machinery: all 12 listed starters started; Mendoza's ankle knock did not become a QB change; Ohtani's absence for a -305 Dodgers favorite that needed a walk-off is recorded as a lineup note - a candidate for a formal star-absence clause if it recurs. Zverev carries a live fatigue flag into R3 (two five-setters, 2 AM finish).",
         "MLB chalk lost 4 of 6 with zero of our dollars aboard (TB -130 shut out on 99% of DK handle; SEA -205 lost to the 54-86 A's); the pass architecture keeps paying on nights the boards are unnamed and the exchange is dark."
       ]
+    },
+    {
+      "date": "2026-09-04",
+      "sport": "multi",
+      "mode": "degraded - Friday card: 11 events / 12 markets (2 CFB, 3 MLB, 3 US Open R3, 3 soccer). Oracle clock. MLB dispersion was a bust - zero Polymarket cents with volume on any game and exactly ONE clean named anchor across the whole sport (BetRivers at Coors) - but two real cross-venue situations landed elsewhere and both were actionable in opposite directions: Kalshi's Pachuca 46c against a coherent ESPN BET board (the bet), and Toledo-Michigan State's three-way venue fight with Polymarket 5+ points clear of both Kalshi and the book (the refusal). Six events excluded for stated structural reasons incl. an MLS 'trio' summing to a 36% hold and a PSG-Monaco trio assembled from three different books. Two scout catches recorded: the Yankees-Padres venue reversal (Petco) and a circulating 'Thursday finals' list that is actually Wednesday's results.",
+      "engine_verdict": "BET (fourth ticket of the tier era): Pachuca ML at Kalshi 46c (2.174) vs a blended fair of 48.24% (2.073) - EV +4.86%, 4.9x the dispersion bar, $104 at quarter-Kelly. Hand-verified end to end (power devig k=1.059 -> market 49.24%, logit blend at 0.85 with Dimers' 42.6% -> 48.24%, Kelly 4.13% full / 1.03% quartered). REFUSED Toledo-Michigan State at -5.25% cross-venue hold. No orders: the SJSU +128 model candidate sits 10 cents from its bar (-3.0%) and the ATL Polymarket leg is 2 cents short of even money on a fair coin flip.",
+      "predictions_home_fair": {
+        "cfb-2026-09-04-sjsu-emu": 0.5746,
+        "ligamx-2026-09-04-pac-jua": 0.2605,
+        "bund-2026-09-04-kol-stu": 0.6424,
+        "mlb-2026-09-04-stl-col": 0.4393,
+        "mlb-2026-09-04-nyy-sd": 0.4474,
+        "atp-2026-09-04-vac-tia": 0.6382,
+        "mlb-2026-09-04-atl-phi": 0.5011,
+        "wta-2026-09-04-svi-kal": 0.2874,
+        "atp-2026-09-04-she-sha": 0.2264,
+        "laliga-2026-09-04-rma-bet": 0.115
+      },
+      "predictions_other": {
+        "mlb-2026-09-04-nyy-sd:total:over": 0.5,
+        "ligamx-2026-09-04-pac-jua:moneyline:draw": 0.2564,
+        "laliga-2026-09-04-rma-bet:moneyline:draw": 0.1604,
+        "bund-2026-09-04-kol-stu:moneyline:draw": 0.202
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-09-04-PAC-TICKET",
+          "type": "ticket",
+          "event": "Pachuca @ FC Juarez, Liga MX Apertura J7 (11:00 PM ET Fri, Estadio Olimpico Benito Juarez)",
+          "selection": "Pachuca to win in 90 minutes (draw loses)",
+          "target": 2.174,
+          "fill": null,
+          "stake": 104,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE BET - dispersion tier, the fourth ticket since the bars went in and the second sourced from an exchange. ESPN BET's trio (+270 / +260 / -105) is coherent at a 6.03% hold and power-devigs to Pachuca 49.24%; Dimers' attributed 42.6% pulls the blend to 48.24% at market-weight 0.85 - and Kalshi is selling the same outcome at 46c (2.174). $104 at quarter-Kelly returns $226. BINDING CONDITIONS: (1) STAND-DOWN LINE 47c - at 48c the edge collapses to +0.5%, under the bar, and the bet is OFF (Timbers rule: exchange asks decay in minutes and the printed line is binding); (2) SETTLEMENT CHECK - this must be the 90-minute 'Pachuca wins' market where a draw LOSES, matching the 1X2 away leg; if Kalshi's contract resolves any other way the premise is void; (3) the 46c quote reached us through a single snippet-sourced page with no volume figure - verify the ask is live before staking, and your execution report is the fill oracle. HONEST CONTEXT: the model is a HEADWIND here, not support - Dimers likes Pachuca less than the book does, and the edge survives only because the exchange price is three points below even the model-dragged fair. This is a pure price bet on two bad teams (Juarez 18th on zero points from six; Pachuca 15th on five). Gate: 11 PM start clears ship-time by 9+ hours."
+        },
+        {
+          "id": "2026-09-04-TOLMSU-REFUSAL",
+          "type": "refusal",
+          "event": "Toledo @ Michigan State, CFB Week 1 (8:00 PM ET Fri, Spartan Stadium)",
+          "selection": "none - market refused",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "conflict",
+          "process": "pending",
+          "headline": false,
+          "note": "CONFLICT REFUSAL, engine-fired at -5.25% best-price cross-venue hold. FanDuel's -420 devigs to ~77% Michigan State and KALSHI AGREES at 78c on $79K of volume - but POLYMARKET sits at 83c, five-plus points clear of both. Taking the cheap Toledo side at Polymarket's 17c against Kalshi's MSU 78c is the synthetic-arb shape that has graded wrong three times in this ledger. Note the asymmetry that makes this different from Wednesday's phantom-anchor inversion: there the lone outlier was an unnamed blog board and the exchange was right; here a NAMED book and an exchange agree and the other exchange is the outlier - which is exactly why the hierarchy says refuse rather than pick. Settle records which venue was right. Independent reason to stay away: SP+ has MSU by 13.8 and FPI by 5.4 - a two-touchdown model disagreement on a game with two first-time starting QBs under two new head coaches."
+        }
+      ]
     }
   ],
   "policy_changes": [

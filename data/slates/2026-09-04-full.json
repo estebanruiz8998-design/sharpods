@@ -1,0 +1,416 @@
+{
+ "_provenance": "Friday 2026-09-04 card, compiled late morning ET on oracle-verified server time (9:23 AM read at launch; re-read at ship). PRICED: 11 events / 12 markets (2 CFB, 3 MLB, 3 tennis, 3 soccer). DISPERSION STATE: genuinely poor on MLB - no Polymarket cents with volume surfaced for a single game and only ONE clean named anchor exists (BetRivers at Coors) - but two real cross-venue situations landed elsewhere: Kalshi's Pachuca 46c against an ESPN BET board at 1.952, and the Toledo-Michigan State three-way venue fight (FanDuel ~77% / Kalshi 78c / Polymarket 83c) encoded intact for the engine to refuse. EXCLUDED, each for a stated reason: NYCFC-Nashville (the ESPN trio +150/+240/-200 sums to a 36% hold - a broken parse, not a board, and its bet365 'pair' is a two-way; unpriceable), PSG-Monaco (a trio assembled from THREE different books - the composite rule kills it), Ipswich-Liverpool (draw leg parses to an impossible price), Lyon-Auxerre (1 PM ET, gate-dead), WSH@LAD (a -335 quote that may be a stale April page against a blacklisted -160: a 15+ point conflict with no third source - unpriceable), CFL BC@Montreal (NO two-sided moneyline at any named book; the spread itself disagrees 4.5 vs 3.5 across sources), MIL@CIN and BOS@BAL (blacklisted blogs only), SF@PIT and OAK@SEA (TAB is an approved book nowhere in this ledger - second-book color at best; SF@PIT also reads 12:35 PM ET), UTEP@Oklahoma (FanDuel prints ML as N/A), Fresno@USC one-sided, Miami@Stanford (-4000/+1400 = 104%+ hold), Indiana State@Purdue (-12000, unattributed), Sabalenka-Rakhimova (11 AM start - the '4 PM' listing was wrong, verified against the official order of play), Bublik-Paul and Wu-Alcaraz (day-session sequencing, ~1 PM). TWO SCOUT CATCHES worth recording: the Yankees-Padres VENUE REVERSAL (Petco, NYY on the road) and a 15-game 'Thursday finals' list circulating in snippets that is actually WEDNESDAY's results - contradicted by three verified box scores. Attributed models only: Dimers + BetMGM's model on EMU, Dimers on Liga MX and Tiafoe. --market-weight 0.85.",
+ "books": {
+  "fanduel": {
+   "sharpness": 0.6,
+   "notes": "named FanDuel Research boards dated Sep 4 (CFB)"
+  },
+  "betmgm": {
+   "sharpness": 0.6,
+   "notes": "named BetMGM blog board dated Sep 4 (SJSU@EMU)"
+  },
+  "betrivers": {
+   "sharpness": 0.6,
+   "notes": "named boards dated Sep 4 via Covers-family matchup pages"
+  },
+  "draftkings": {
+   "sharpness": 0.6,
+   "notes": "named DK Network US Open Day 6 board"
+  },
+  "espnbet": {
+   "sharpness": 0.6,
+   "notes": "ESPN odds board, Liga MX (coherent 6.0% hold)"
+  },
+  "kalshi": {
+   "sharpness": 0.45,
+   "notes": "exchange cents, shop-only; Timbers rule on fills"
+  },
+  "polymarket": {
+   "sharpness": 0.45,
+   "notes": "prediction market, shop-only; MSU 83c is the flagged outlier"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "dated but unnamed boards and comparator snapshots"
+  }
+ },
+ "events": [
+  {
+   "event_id": "bund-2026-09-04-kol-stu",
+   "sport": "soccer",
+   "league": "Bundesliga MD2 (Friday opener)",
+   "home": "VfB Stuttgart",
+   "away": "1. FC Koln",
+   "start_time": "2026-09-04T18:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.5
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 4.33
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 5.5
+      }
+     ]
+    }
+   ],
+   "note": "2:30 PM ET MHPArena - TIGHTEST gate margin on the card. NO named book: the 1.50/4.33/5.50 trio is a comparator snapshot (wettfreunde 11:30 CEST), corroborated loosely by wettbasis 1.51 and sport.de 1.53 on the home leg. Tipico has a lineups page and a 20.0 boost (2 EUR max - not a real board). Consensus-c; named-book verify for any action. Total is one-sided O3.5 - unpriced."
+  },
+  {
+   "event_id": "laliga-2026-09-04-rma-bet",
+   "sport": "soccer",
+   "league": "La Liga J4 (Friday opener)",
+   "home": "Real Betis",
+   "away": "Real Madrid",
+   "start_time": "2026-09-04T19:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 7.5
+      },
+      {
+       "book": "consensus-c",
+       "side": "draw",
+       "decimal_odds": 5.5
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.35
+      }
+     ]
+    }
+   ],
+   "note": "3:00 PM ET Estadio de La Cartuja (Betis' temporary home - venue verified). Comparator trio only (winga.es 14:25 CEST); depor 1.39 and redgol 1.44 on Madrid disagree by 9 cents, and a wincomparator 'Betis 5.06 at 888Starz' is irreconcilable with 7.50 - discarded. Madrid 1.35 = extreme-favorite demotion regardless. Injury lists circulating on tipster sites are UNVERIFIED (one names a player who left Betis) - not used. Fixture moved to Friday because both clubs open the Champions League Tuesday."
+  },
+  {
+   "event_id": "cfb-2026-09-04-sjsu-emu",
+   "sport": "cfb",
+   "league": "CFB Week 1",
+   "home": "Eastern Michigan",
+   "away": "San Jose State",
+   "start_time": "2026-09-04T22:30:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 1.685
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 2.22
+      },
+      {
+       "book": "betmgm",
+       "side": "home",
+       "decimal_odds": 1.649
+      },
+      {
+       "book": "betmgm",
+       "side": "away",
+       "decimal_odds": 2.28
+      }
+     ]
+    }
+   ],
+   "note": "6:30 PM ET Rynearson Stadium (home verified) - THE CARD'S TWO-BOOK EVENT: FanDuel EMU -146/SJSU +122 vs BetMGM EMU -154/SJSU +128, an 8-cent spread with SJSU's best price at BetMGM. Two ATTRIBUTED models split hard: Dimers 51% EMU (a near coin-flip, ~7 points under the market) and BetMGM's own model 58.3% EMU (above it) - logit-averaged to 54.7% and encoded honestly rather than cherry-picking the one that helps. Kalshi lists only a spread market (EMU -1.5 at 54/56c, consistent with the book) - no ML cents, so no exchange leg."
+  },
+  {
+   "event_id": "cfb-2026-09-04-tol-msu",
+   "sport": "cfb",
+   "league": "CFB Week 1",
+   "home": "Michigan State",
+   "away": "Toledo",
+   "start_time": "2026-09-05T00:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 1.238
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 4.2
+      },
+      {
+       "book": "polymarket",
+       "side": "home",
+       "decimal_odds": 1.2048
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 5.88
+      },
+      {
+       "book": "kalshi",
+       "side": "home",
+       "decimal_odds": 1.282
+      },
+      {
+       "book": "kalshi",
+       "side": "away",
+       "decimal_odds": 4.545
+      }
+     ]
+    }
+   ],
+   "note": "8:00 PM ET Spartan Stadium (FS1). ENCODED FOR REFUSAL, not resolved: FanDuel MSU -420 devigs to ~77%, KALSHI agrees at 78c ($79K volume), and POLYMARKET sits at 83c - five-plus points above both, the exact Polymarket-outlier shape that graded wrong three times in this ledger. Best-price synthetic across venues goes NEGATIVE, so the conflict rule should fire. MSU 1.238 is extreme-favorite territory anyway. Both QBs are new starters under new head coaches (MSU's Milivojevic for Fitzgerald; Toledo's Richter for Jacobs) - transfer-rebuilt rosters, high variance. SP+ MSU by 13.8 vs FPI MSU by 5.4 - the models disagree by two touchdowns, which is its own reason not to price this."
+  },
+  {
+   "event_id": "mlb-2026-09-04-atl-phi",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Phillies",
+   "away": "Braves",
+   "start_time": "2026-09-04T22:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.909
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.917
+      },
+      {
+       "book": "polymarket",
+       "side": "away",
+       "decimal_odds": 2.0
+      }
+     ]
+    }
+   ],
+   "note": "6:40 PM ET Citizens Bank Park (standard slot, unconfirmed). Sanchez (16-4, 2.52) vs Sale (inferred, UNVERIFIED - premise flag). Near pick'em -109/-110 on an unnamed board; Polymarket has ATL at 50c, which AGREES with the board's ~50% - a coherent second venue with no gap. A 'total 8 / SportsLine 10.5' figure floating around belongs to SUNDAY's national-TV game between these teams - rejected, totals left unpriced. ATL 83-57, PHI 79-61."
+  },
+  {
+   "event_id": "mlb-2026-09-04-stl-col",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Rockies",
+   "away": "Cardinals",
+   "start_time": "2026-09-05T00:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 2.18
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 1.73
+      }
+     ]
+    }
+   ],
+   "note": "8:40 PM ET Coors Field (venue confirmed via Baseball-Reference preview). Leahy (1 ER or fewer in 4 of his last 5) vs Feltner (5+ ER in 2 of 3). BetRivers STL -137/COL +118 is the ONLY clean named-book anchor dated today on the whole MLB card. Totals conflict 11.5 vs 8 across unnamed sources - unpriced (11.5 is the Coors-plausible number, but plausible is not a price)."
+  },
+  {
+   "event_id": "mlb-2026-09-04-nyy-sd",
+   "sport": "mlb",
+   "league": "MLB",
+   "home": "Padres",
+   "away": "Yankees",
+   "start_time": "2026-09-05T01:40:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 2.12
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 1.758
+      },
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 2.14
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 1.735
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "over",
+       "line": 7.5,
+       "decimal_odds": 1.909
+      },
+      {
+       "book": "consensus-c",
+       "side": "under",
+       "line": 7.5,
+       "decimal_odds": 1.909
+      }
+     ]
+    }
+   ],
+   "note": "9:40 PM ET PETCO PARK - VENUE REVERSAL CAUGHT: the Yankees are the ROAD favorite here, not the host (Bleacher Nation's home-first series titles plus a Padres team page settle it; the scout flagged its own task framing as wrong). Max Fried (2.80) vs Walker Buehler (4.66). Two named books within a point (FanDuel NYY -132, BetRivers -136) - agreement, not dispersion. Total 7.5 at -110/-110, book unnamed."
+  },
+  {
+   "event_id": "atp-2026-09-04-she-sha",
+   "sport": "tennis",
+   "league": "US Open R3 (Ashe night, match 2)",
+   "home": "Shapovalov",
+   "away": "Shelton",
+   "start_time": "2026-09-05T01:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "draftkings",
+       "side": "home",
+       "decimal_odds": 3.81
+      },
+      {
+       "book": "draftkings",
+       "side": "away",
+       "decimal_odds": 1.26
+      }
+     ]
+    }
+   ],
+   "note": "Not before ~9:00 PM ET - DOUBLES-FIRST SEQUENCING: the Williams sisters open the Ashe night session at 7 PM, so this cannot start before ~8:30-9. DraftKings -385/+281 named. H2H Shelton 4-0 (3-0 on hard) but their Dallas semi went to a deciding tiebreak. FATIGUE: Shelton needed four tight sets against Hurkacz (6-3 5-7 7-6 7-5). No attributed model - the circulating picks are editorial."
+  },
+  {
+   "event_id": "atp-2026-09-04-vac-tia",
+   "sport": "tennis",
+   "league": "US Open R3 (Armstrong evening, match 1)",
+   "home": "Tiafoe",
+   "away": "Vacherot",
+   "start_time": "2026-09-04T23:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.5
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.55
+      }
+     ]
+    }
+   ],
+   "note": "7:00 PM ET fixed start. Board -200/+155 is UNATTRIBUTED (consensus-c); a bet365 Vacherot 2.75 appears only inside an aggregator best-price table - 20 cents off the consensus dog price and excluded as a multi-book composite, not encoded. Dimers 62% Tiafoe. Tiafoe went five sets in R1 (vs Damm) then straights in R2."
+  },
+  {
+   "event_id": "wta-2026-09-04-svi-kal",
+   "sport": "tennis",
+   "league": "US Open R3 (Armstrong evening, match 2)",
+   "home": "Kalinskaya",
+   "away": "Svitolina",
+   "start_time": "2026-09-05T01:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 3.1
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 1.36
+      }
+     ]
+    }
+   ],
+   "note": "Follows Vacherot-Tiafoe, ~9 PM ET. Board -278/+210 UNATTRIBUTED. Both players went three sets in round two. H2H Svitolina 4-1 (2-1 on hard). No attributed model."
+  },
+  {
+   "event_id": "ligamx-2026-09-04-pac-jua",
+   "sport": "soccer",
+   "league": "Liga MX Apertura J7 (Viernes Botanero)",
+   "home": "FC Juarez",
+   "away": "Pachuca",
+   "start_time": "2026-09-05T03:00:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "espnbet",
+       "side": "home",
+       "decimal_odds": 3.7
+      },
+      {
+       "book": "espnbet",
+       "side": "draw",
+       "decimal_odds": 3.6
+      },
+      {
+       "book": "espnbet",
+       "side": "away",
+       "decimal_odds": 1.952
+      },
+      {
+       "book": "kalshi",
+       "side": "away",
+       "decimal_odds": 2.174
+      }
+     ]
+    }
+   ],
+   "note": "11:00 PM ET Estadio Olimpico Benito Juarez - the card's DISPERSION EVENT and the latest start on it. ESPN BET trio +270/+260/-105 (6.0% hold, coherent); KALSHI prices Pachuca at 46c = 2.174, twenty-two cents better than the book's 1.952 on the same side. Models straddle the board: Dimers has Pachuca 42.6% (below), an unnamed 'Signal' 48% (at) - only Dimers is attributed and encoded. Juarez are 18th on ZERO points from six, all losses; Pachuca 15th on five. Caliente's trio never indexed. TIMBERS RULE applies to any Kalshi fill - the ask decays and the printed line is binding."
+  }
+ ],
+ "model_probabilities": {
+  "cfb-2026-09-04-sjsu-emu:moneyline:home": 0.5468,
+  "cfb-2026-09-04-sjsu-emu:moneyline:away": 0.4532,
+  "ligamx-2026-09-04-pac-jua:moneyline:home": 0.324,
+  "ligamx-2026-09-04-pac-jua:moneyline:draw": 0.25,
+  "ligamx-2026-09-04-pac-jua:moneyline:away": 0.426,
+  "atp-2026-09-04-vac-tia:moneyline:home": 0.62,
+  "atp-2026-09-04-vac-tia:moneyline:away": 0.38
+ }
+}
