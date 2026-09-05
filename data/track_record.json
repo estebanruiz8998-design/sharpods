@@ -4503,7 +4503,7 @@
         "laliga-2026-09-04-rma-bet:moneyline:draw": 0.1604,
         "bund-2026-09-04-kol-stu:moneyline:draw": 0.202
       },
-      "settle": "pending",
+      "settle": "fully settled 2026-09-05 (Sat, via fallback wake; oracle clock)",
       "decisions": [
         {
           "id": "2026-09-04-PAC-TICKET",
@@ -4511,16 +4511,16 @@
           "event": "Pachuca @ FC Juarez, Liga MX Apertura J7 (11:00 PM ET Fri, Estadio Olimpico Benito Juarez)",
           "selection": "Pachuca to win in 90 minutes (draw loses)",
           "target": 2.174,
-          "fill": null,
+          "fill": 2.174,
           "stake": 104,
-          "result": "pending",
-          "pnl": 0,
-          "clv_raw": null,
-          "clv_novig": null,
+          "result": "won",
+          "pnl": 122.1,
+          "clv_raw": 0.1137,
+          "clv_novig": 0.0,
           "anchor": "degraded",
-          "process": "pending",
+          "process": "worked",
           "headline": true,
-          "note": "HEADLINE BET - dispersion tier, the fourth ticket since the bars went in and the second sourced from an exchange. ESPN BET's trio (+270 / +260 / -105) is coherent at a 6.03% hold and power-devigs to Pachuca 49.24%; Dimers' attributed 42.6% pulls the blend to 48.24% at market-weight 0.85 - and Kalshi is selling the same outcome at 46c (2.174). $104 at quarter-Kelly returns $226. BINDING CONDITIONS: (1) STAND-DOWN LINE 47c - at 48c the edge collapses to +0.5%, under the bar, and the bet is OFF (Timbers rule: exchange asks decay in minutes and the printed line is binding); (2) SETTLEMENT CHECK - this must be the 90-minute 'Pachuca wins' market where a draw LOSES, matching the 1X2 away leg; if Kalshi's contract resolves any other way the premise is void; (3) the 46c quote reached us through a single snippet-sourced page with no volume figure - verify the ask is live before staking, and your execution report is the fill oracle. HONEST CONTEXT: the model is a HEADWIND here, not support - Dimers likes Pachuca less than the book does, and the edge survives only because the exchange price is three points below even the model-dragged fair. This is a pure price bet on two bad teams (Juarez 18th on zero points from six; Pachuca 15th on five). Gate: 11 PM start clears ship-time by 9+ hours."
+          "note": "WON - Pachuca 2-0 at Juarez, the fourth tier ticket and the second sourced from an exchange. $104 at 2.174 returns $226.10 (+$122.10 at the reference stake - report your actual venue, price and size and I restate real P&L). SETTLEMENT PREMISE CONFIRMED INDEPENDENTLY: Robinhood's listing of the same contract words it '90 minutes plus stoppage, excluding extra time and penalties' - exactly the market we priced, and both goals came in regulation, so there was no ambiguity. The 46c ask was corroborated as a real quoted price by a second source ('Kalshi has Pachuca at 46%'), though NO volume or depth figure is indexed anywhere - fill size remains unverified by anything but your own report. CLV IS GENUINELY AMBIGUOUS and is recorded conservatively. Raw +11.4%% against the ESPN BET board we anchored on, which re-indexed unchanged at 1.952. But that page serves a single untimestamped snapshot, and a second dated board had Pachuca LENGTHENING to +102 while Juarez shortened - implying a closing Pachuca near 45.8%% against ESPN BET's 49.2%%. The honest bracket on no-vig CLV is -0.4%% to +7.0%%; clv_novig is set to 0.0 at the conservative end BECAUSE this figure feeds the pre-registered rollback metric, and a metric that can retire a policy should never be flattered. TIER SCOREBOARD: 4 settled, 4-0 on results, mean no-vig CLV ~+0.1%% - still barely above zero after four bets; 11 to the checkpoint. This ticket is money in hand and a neutral process verdict: it is NOT evidence the Liga MX blend works."
         },
         {
           "id": "2026-09-04-TOLMSU-REFUSAL",
@@ -4530,15 +4530,123 @@
           "target": null,
           "fill": null,
           "stake": 0,
-          "result": "pending",
+          "result": "validated",
           "pnl": 0,
           "clv_raw": null,
           "clv_novig": null,
           "anchor": "conflict",
-          "process": "pending",
+          "process": "worked",
           "headline": false,
-          "note": "CONFLICT REFUSAL, engine-fired at -5.25% best-price cross-venue hold. FanDuel's -420 devigs to ~77% Michigan State and KALSHI AGREES at 78c on $79K of volume - but POLYMARKET sits at 83c, five-plus points clear of both. Taking the cheap Toledo side at Polymarket's 17c against Kalshi's MSU 78c is the synthetic-arb shape that has graded wrong three times in this ledger. Note the asymmetry that makes this different from Wednesday's phantom-anchor inversion: there the lone outlier was an unnamed blog board and the exchange was right; here a NAMED book and an exchange agree and the other exchange is the outlier - which is exactly why the hierarchy says refuse rather than pick. Settle records which venue was right. Independent reason to stay away: SP+ has MSU by 13.8 and FPI by 5.4 - a two-touchdown model disagreement on a game with two first-time starting QBs under two new head coaches."
+          "note": "CONFLICT REFUSAL, engine-fired at -5.25% best-price cross-venue hold. FanDuel's -420 devigs to ~77% Michigan State and KALSHI AGREES at 78c on $79K of volume - but POLYMARKET sits at 83c, five-plus points clear of both. Taking the cheap Toledo side at Polymarket's 17c against Kalshi's MSU 78c is the synthetic-arb shape that has graded wrong three times in this ledger. Note the asymmetry that makes this different from Wednesday's phantom-anchor inversion: there the lone outlier was an unnamed blog board and the exchange was right; here a NAMED book and an exchange agree and the other exchange is the outlier - which is exactly why the hierarchy says refuse rather than pick. Settle records which venue was right. Independent reason to stay away: SP+ has MSU by 13.8 and FPI by 5.4 - a two-touchdown model disagreement on a game with two first-time starting QBs under two new head coaches. || SETTLED - VALIDATED ON PROCESS AND OUTCOME. Michigan State won 30-20 (and did NOT cover -10.5), so the refused Toledo ticket would have LOST outright. The venue ranking against a ~77% closing consensus: FanDuel -420 was dead on (error ~0.0-0.7 points), KALSHI's 78c tracked it within a point, and POLYMARKET's 83c was six points off and NEVER CONVERGED - its market ranged 75-83% across $79K of volume, so the quote we saw sat at the extreme top of its own band. That is the unstable-cross-source signature the refusal rule exists to catch: the apparent six-point edge on Toledo at 17c was venue noise inside an eight-point band, not dispersion. Venue-truth ledger: named books 5, exchange 2. Polymarket stays demoted at 0.45 - nothing here argues otherwise."
         }
+      ],
+      "games": [
+        {
+          "event_id": "ligamx-2026-09-04-pac-jua",
+          "our_home_fair": 0.2605,
+          "source_flag": "clean",
+          "close_home_novig": 0.3856,
+          "home_won": false,
+          "final": "FC Juarez 0-2 Pachuca (Rondon 53', Bautista 90'+10') - Juarez to zero points from seven, a seventh straight loss",
+          "note": "HEADLINE GAME. Close recorded from the ESPN BET trio we anchored on, which was re-indexed unchanged - but the page serves one snapshot and cannot be timestamped to kickoff, so 'unchanged' may mean 'cached'. A second dated board (sportsgambler) had Pachuca LENGTHENING to +102 while Juarez shortened to +235, implying a closing Pachuca near 45.8% against ESPN BET's 49.2%. Close precision LOW as a result. CORRECTION TO THE GRADER: it reported this trio over-rounding to 116% and called the anchor degraded - it read +270 as decimal 2.70. American +270 is 3.70; the true over-round is 6.03%, exactly what was hand-verified pre-ship. No degraded-anchor finding stands, and its proposed 'flag trios over 110% hold' rule is withdrawn as built on that error."
+        },
+        {
+          "event_id": "cfb-2026-09-04-sjsu-emu",
+          "our_home_fair": 0.5746,
+          "source_flag": "clean",
+          "close_home_novig": 0.5655,
+          "home_won": false,
+          "final": "San Jose State 27, Eastern Michigan 21 (Weaver 316 yds; SJSU scored the go-ahead TD and a late FG after trailing entering the fourth)",
+          "note": "Close EMU -142/SJSU +118 - the market drifted TOWARD San Jose State from our -146/-154 boards, and the dog then won outright. Our blended fair had EMU at 57.5% against a ~57-58% close: the number was right and the pass was right; an EMU ticket would have lost AND carried negative CLV. Two attributed models split seven points here (Dimers 51%, BetMGM's own 58.3%) and the coin-flip model was closer to the truth."
+        },
+        {
+          "event_id": "mlb-2026-09-04-atl-phi",
+          "our_home_fair": 0.5011,
+          "source_flag": "clean",
+          "close_home_novig": 0.5095,
+          "home_won": false,
+          "final": "Braves 5, Phillies 2",
+          "note": "SALE PREMISE RESOLVED: Chris Sale did start for Atlanta (13-9, 2.06) opposite Sanchez - the 'unverified' tag was conservative and the premise held. Close FanDuel PHI -112/ATL -104 (3.8% hold), a one-cent move toward Philadelphia. Polymarket's ATL 50c sat within a point of the closing no-vig - correctly read as agreement, not dispersion."
+        },
+        {
+          "event_id": "mlb-2026-09-04-stl-col",
+          "our_home_fair": 0.4393,
+          "source_flag": "clean",
+          "close_home_novig": 0.4543,
+          "home_won": false,
+          "final": "Cardinals 7, Rockies 6 - Herrera's 430-ft three-run homer in the 9th after a Rockies throwing error",
+          "note": "Close STL -136 against our BetRivers -137 board: ZERO CLV either way, the definition of a no-information quote. 13 runs went OVER the 11 total (unpriced - the totals sources conflicted 11.5 vs 8). Decided by a ninth-inning error; low-information for calibration."
+        },
+        {
+          "event_id": "mlb-2026-09-04-nyy-sd",
+          "our_home_fair": 0.4474,
+          "source_flag": "clean",
+          "close_home_novig": 0.4505,
+          "home_won": true,
+          "final": "Padres 4, Yankees 1 (Fried 4.2 IP on a 72-pitch build-up; 5 runs total)",
+          "note": "Fried/Buehler premises held. Close FanDuel NYY -132 = our anchor exactly, and the favorite LOST. 5 runs UNDER 7.5 - our total fair was dead 50/50, no call. SCOUTING MISS RECORDED: the cross-book band on the Yankees ran -102 to -135, roughly eight points of implied probability, and our slate carried a single -132 anchor. The second-book sweep found that only in grading - exactly the dispersion the mandate exists to hunt."
+        },
+        {
+          "event_id": "bund-2026-09-04-kol-stu",
+          "our_home_fair": 0.6424,
+          "source_flag": "clean",
+          "close_home_novig": 0.7692,
+          "home_won": true,
+          "final": "VfB Stuttgart 4-1 1. FC Koln",
+          "note": "Close FanDuel Stuttgart -240; the favorite shortened from our comparator 1.50. SHAPE CORRECTION: the grader reported draw +600 / Koln +340, which would put the draw LONGER than the away dog in a 1.42-favorite match - implausible (a 7.00 draw implies 14.3%, far below any football base rate). The legs are swapped; recorded as draw 4.40 / Koln 7.00. Home fair is unaffected either way. Our fair 64.2% vs a 65.6% close - good. Bleacher Report indexes this fixture a day late with the teams reversed: a feed artifact, logged."
+        },
+        {
+          "event_id": "laliga-2026-09-04-rma-bet",
+          "our_home_fair": 0.115,
+          "source_flag": "comparator_skew",
+          "close_home_novig": 0.2485,
+          "home_won": true,
+          "final": "Real Betis 1-0 Real Madrid (Parrott 81'; Mbappe's stoppage-time penalty saved by Valles) - Madrid's first defeat since Mourinho's return",
+          "note": "THE DAY'S CALIBRATION MISS, and it is a source lesson. Our comparator snapshot had Madrid at 1.35 and Betis at 7.50; the market CLOSED Madrid 1.4444 and Betis 6.00. The unnamed comparator overpriced the favorite by nine cents, which is precisely why the Betis leg screened long - our fair had Betis at 11.5% against a 15.6% close, a four-point miss on the side that then WON OUTRIGHT. Flagged comparator_skew: comparator snapshots are not just unnamed, they appear to lag the favorite move."
+        },
+        {
+          "event_id": "atp-2026-09-04-she-sha",
+          "our_home_fair": 0.2264,
+          "source_flag": "clean",
+          "close_home_novig": 0.2262,
+          "home_won": false,
+          "final": "Shelton d. Shapovalov 7-6 6-7 6-3 6-4 (no retirement)",
+          "note": "Our board WAS the DraftKings close, verbatim -385/+281: a zero-information quote in both directions. Favorite held after splitting two tiebreak sets."
+        },
+        {
+          "event_id": "atp-2026-09-04-vac-tia",
+          "our_home_fair": 0.6382,
+          "source_flag": "clean",
+          "close_home_novig": 0.6511,
+          "home_won": true,
+          "final": "Tiafoe d. Vacherot 6-4 6-2 6-4 (straight sets)",
+          "note": "Close -210/+160 from an aggregator page timestamped at first ball - a true close but an excluded venue, so precision is medium. Tiafoe SHORTENED from our -200 board and won comfortably. Dimers' 62% sat well under the market's ~64% no-vig and the market was right."
+        },
+        {
+          "event_id": "wta-2026-09-04-svi-kal",
+          "our_home_fair": 0.2874,
+          "source_flag": "clean",
+          "close_home_novig": 0.2816,
+          "home_won": true,
+          "final": "Kalinskaya d. Svitolina 6-3 2-6 6-3 - the underdog won",
+          "note": "Svitolina SHORTENED into the close (our -278 board, DraftKings -291) and lost; Kalinskaya at +210 beat the close and won. Precision MIXED: the favorite leg is an exact DraftKings print, the dog leg is an unattributed carryover - pairing them would fabricate a hold, so they are not devigged as one book. Our fair had Kalinskaya at 28.7%."
+        }
+      ],
+      "metrics": {
+        "n": 10,
+        "brier_ours": 0.2749,
+        "brier_close": 0.2543,
+        "brier_coinflip": 0.25,
+        "mean_abs_fair_vs_close": 0.044,
+        "max_abs_fair_vs_close": 0.1335,
+        "note": "10 markets graded vs closes (mixed precision - two legs carry shape/attribution corrections, and the Liga MX close is genuinely ambiguous between two dated boards). FAVORITES WENT 1-4 where a comparison exists: EMU, PHI, NYY and Real Madrid all lost, Michigan State won without covering, only Stuttgart and the Cardinals held. Two graders each had one leg wrong and both were caught by hand-checking: a +270-read-as-2.70 devig error and a swapped draw/away pair."
+      },
+      "lessons_applied": [
+        "FOURTH TIER BET WON ON MONEY, NEUTRAL ON PROCESS: Pachuca 2-0 pays $122 at the reference stake, but the closing evidence splits between two dated boards (-0.4% to +7.0% no-vig) and clv_novig is booked at the conservative end precisely because it feeds the rollback metric. Scoreboard 4-0 with a mean around +0.1% - four wins have still not produced a demonstrated CLV edge, and saying so is the whole point of grading on the close.",
+        "BOTH GRADERS HAD A LEG WRONG AND HAND-CHECKING CAUGHT BOTH: one devigged American +270 as decimal 2.70 and declared our anchor 'degraded' at a 116% over-round (true figure 6.03%), recommending a new 110%-hold rule that is now withdrawn; the other reported a Bundesliga draw at +600 against an away dog at +340, a shape that implies a 14.3% draw and cannot be real. Subagent output is evidence, not authority - the verify-the-math rule protects the ledger in both directions, not just against our own errors.",
+        "CONFLICT REFUSAL VALIDATED ON PROCESS AND OUTCOME for the first time on both axes at once: Polymarket's 83c never converged toward the 77% close (its own range spanned 75-83% on $79K), FanDuel and Kalshi agreed within a point, and Toledo lost outright. Named books 5, exchange 2 on the venue-truth ledger; the 0.45 demotion stands.",
+        "COMPARATOR SNAPSHOTS APPEAR TO LAG THE FAVORITE, not merely to be unnamed: our Betis-Madrid comparator had Madrid at 1.35 against a 1.4444 close, which inflated the dog leg to 7.50 versus a 6.00 close and produced a four-point fair miss (11.5% vs 15.6%) on a side that WON OUTRIGHT. Flagged comparator_skew in the settle; treat comparator trios as directionally biased toward short favorites, not just low-confidence.",
+        "SCOUTING GAP, recorded against ourselves: the Yankees-Padres market carried an eight-point cross-book band (-102 to -135) that our slate never surfaced - we anchored a single -132 board and the second-book sweep found the spread only during grading. The favorite lost anyway, but taking -132 while -102 was live would have been an execution error stacked on top of a losing side."
       ]
     }
   ],
