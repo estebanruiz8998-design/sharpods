@@ -89,6 +89,19 @@ cycle at maximum capacity, exactly like the 2026-08-01 complete run:
   (Covers/BetRivers, FanDuel Research, BetMGM blog, DK Network) or nothing;
   a blog board that flips the favorite vs any named book is fiction, not
   dispersion. Volume-bearing exchange cents outrank unnamed article boards.
+- **A prediction-market pair summing to exactly 100c is a MID, not two asks**
+  (2026-09-09 compile): Polymarket's NE@SEA read (ML 62/38, spread 49/51) was
+  encoded as two tradeable quotes and manufactured a zero-vig venue that won
+  the best-price comparison on BOTH sides, then tripped the conflict refusal
+  on a rounding artifact and killed the whole game. Kalshi's 63/39 sums to
+  102c - a real two-sided quote with a real spread - and is fine. Rule: a
+  complementary pair is one number, not a board; encode it as a single
+  reference or not at all.
+- **A line number with no juice attached is not a price** (ARI@LAC, same
+  card): a per-book spread table split 9.5 / 10 / 10.5 across six books is a
+  genuine full-point dispersion finding and still unpriceable, because
+  assuming -110 to fill the gap is fabricating the very number the edge
+  would come from.
 - **Verify the headline bet's math by hand** (devig → EV → Kelly) before it
   goes on the slip, and re-check slip captions against the actual run.
 

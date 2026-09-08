@@ -1,0 +1,280 @@
+{
+ "_provenance": "Tuesday 2026-09-08 compile for the NFL Week 1 opening window, on oracle-verified server time (scheduler last_fired 13:12Z; container 13:39Z - they agree, so pessimistic-now is 9:39 AM ET Tue). Kickoffs: NE@SEA Wed 8:20 PM ET (+34.5h), SF@LAR Thu 8:35 PM ET (+58h). Both clear the 2-hour staleness gate enormously. FIRST FOOTBALL CARD OF THE SEASON and the first production use of sharpods.models.football: the NFL spread is the sharp, high-limit market, so each game's two-sided spread board is devigged to a true expected margin and converted to a fair moneyline, then ensembled 50/50 in logit space with the dated third-party models and fed as model_probabilities on the MONEYLINE ONLY (feeding it back into the spread would be circular - that board is its own input). PRICED: 2 events / 6 markets. EXCLUDED, each for a stated reason: DEN@KC Monday (Mahomes has NOT received final medical clearance nine months off a torn ACL+LCL, and the BetMGM page contradicts itself between -2.5/-145 and -3/-105 - a premise-risked market on a self-inconsistent board, six days out); ARI@LAC (a real full-point spread split, FanDuel -9.5 against four books at -10.5, but the chargers.com per-book table quotes NO JUICE on any leg - a line number without a price is not a price, and assuming -110 would be fabricating one); Bills-Texans and Packers-Vikings (no two-sided named board); Cowboys-Giants (the 'DraftKings -125' is 30 cents off FanDuel and Kalshi - a stale opening line in an old article, the exact 09-01/02 phantom-board shape). bet365's NE@SEA -217/+208 EXCLUDED: one uncorroborated snippet implying ~1% hold with a dog price 48 cents clear of the field. POLYMARKET EXCLUDED WHOLESALE on NE@SEA - see the event note; this is a new lesson. Blacklisted blogs sighted and refused as boards: YouWager (two Week 1 previews), Predictem, Athlon. Aggregators used for schedule/context only, never as a price. STAFFORD PREMISE RESOLVED AS A YEAR-CONFUSION: the 'missed all of camp with a back issue' storyline is 2025 - those pages name a Sep 7 opener vs Houston, which was LAST season's Week 1. NETWORK: all direct fetches 403; every price is a search-snippet read of a dated page, and most book MLs here are current-shaped but not hard-dated - the Kalshi cents (Sep 8, $438,959) and the VegasInsider consensus page (stamped 09/07) are the firmest timestamps on the card.",
+ "books": {
+  "fanduel": {
+   "sharpness": 0.6,
+   "notes": "FanDuel Research board, only fully two-sided board on all three markets"
+  },
+  "draftkings": {
+   "sharpness": 0.6,
+   "notes": "DraftKings ML off a -180/+150 open; spread held 3.5 since May 14"
+  },
+  "betrivers": {
+   "sharpness": 0.6,
+   "notes": "named BetRivers board via Covers matchup; WIDEST hold on the card (5.13%)"
+  },
+  "bmr": {
+   "sharpness": 0.55,
+   "notes": "BookmakersReview analysis board - an analysis site, not a book; consensus-grade"
+  },
+  "consensus-c": {
+   "sharpness": 0.55,
+   "notes": "ESPN Week 1 odds listing / VegasInsider consensus (page stamped 09/07)"
+  },
+  "letsbetmd": {
+   "sharpness": 0.6,
+   "notes": "named MD-licensed book; best SEA -3.5 price found (one side only)"
+  },
+  "espnbet": {
+   "sharpness": 0.6,
+   "notes": "ESPN BET via the ESPN odds page (gameId 401872657)"
+  },
+  "betmgm": {
+   "sharpness": 0.6,
+   "notes": "named BetMGM blog board; one-sided on LAR"
+  },
+  "kalshi": {
+   "sharpness": 0.45,
+   "notes": "NE@SEA 63/39c dated Sep 8 at $438,959 volume; SF@LAR 64.5/38c at $311,349. Shop-only, Timbers rule"
+  }
+ },
+ "events": [
+  {
+   "event_id": "nfl-2026-09-09-ne-sea",
+   "sport": "nfl",
+   "league": "NFL Week 1 (Kickoff game)",
+   "home": "Seattle Seahawks",
+   "away": "New England Patriots",
+   "start_time": "2026-09-10T00:20:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 1.5435
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 2.54
+      },
+      {
+       "book": "draftkings",
+       "side": "home",
+       "decimal_odds": 1.5714
+      },
+      {
+       "book": "draftkings",
+       "side": "away",
+       "decimal_odds": 2.45
+      },
+      {
+       "book": "betrivers",
+       "side": "home",
+       "decimal_odds": 1.5
+      },
+      {
+       "book": "betrivers",
+       "side": "away",
+       "decimal_odds": 2.6
+      },
+      {
+       "book": "consensus-c",
+       "side": "home",
+       "decimal_odds": 1.5556
+      },
+      {
+       "book": "consensus-c",
+       "side": "away",
+       "decimal_odds": 2.5
+      },
+      {
+       "book": "bmr",
+       "side": "home",
+       "decimal_odds": 1.5376
+      },
+      {
+       "book": "bmr",
+       "side": "away",
+       "decimal_odds": 2.56
+      },
+      {
+       "book": "kalshi",
+       "side": "home",
+       "decimal_odds": 1.5873
+      },
+      {
+       "book": "kalshi",
+       "side": "away",
+       "decimal_odds": 2.5641
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "line": -3.5,
+       "decimal_odds": 1.9434
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "line": 3.5,
+       "decimal_odds": 1.8772
+      },
+      {
+       "book": "bmr",
+       "side": "home",
+       "line": -3.5,
+       "decimal_odds": 1.9259
+      },
+      {
+       "book": "bmr",
+       "side": "away",
+       "line": 3.5,
+       "decimal_odds": 1.8929
+      },
+      {
+       "book": "letsbetmd",
+       "side": "home",
+       "line": -3.5,
+       "decimal_odds": 2.0
+      },
+      {
+       "book": "kalshi",
+       "side": "home",
+       "line": -3.5,
+       "decimal_odds": 1.8868
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "over",
+       "line": 44.5,
+       "decimal_odds": 1.909
+      },
+      {
+       "book": "fanduel",
+       "side": "under",
+       "line": 44.5,
+       "decimal_odds": 1.909
+      },
+      {
+       "book": "bmr",
+       "side": "over",
+       "line": 44.5,
+       "decimal_odds": 1.909
+      },
+      {
+       "book": "bmr",
+       "side": "under",
+       "line": 44.5,
+       "decimal_odds": 1.909
+      }
+     ]
+    }
+   ],
+   "note": "8:20 PM ET Wed, Lumen Field (open-air), NBC. Super Bowl LX rematch. IN-HOUSE MODEL LAYER: the two two-sided spread boards devig to a true margin of SEA 3.29, which sharpods.models.football converts to SEA 0.6098. Four dated third-party models ensemble to 0.6036. The posted MONEYLINES devig 0.617 (DK) to 0.645 (BetRivers) - a 25-cent scatter on a spread that has not moved since May. PREMISES: Maye and Darnold both off the injury report entirely; NE C Ben Brown OUT; NE RB TreVeyon Henderson DNP three straight, final designation still outstanding as of compile. WEATHER: 20-30 mph gusts and moderate-to-heavy rain forecast over the 5:20-8:30 PM PT window - the under thesis is the cleanest read on the card, but totals never headline and we carry no calibrated weather model, so no model prob is attached to the total. The ESPN listing's 45.5 is one-sided and undated; only the 44.5 pair is priced. POLYMARKET EXCLUDED: its ML (62/38) and spread (49/51) both sum to exactly 100c - those are MID prices, not two executable asks. Encoding them manufactures a zero-vig venue that wins every best-price comparison on both sides and then trips the conflict refusal on a rounding artifact. Kalshi's 63/39 sums to 102c - a genuine two-sided quote, dated Sep 8, $438,959 volume - and is kept."
+  },
+  {
+   "event_id": "nfl-2026-09-10-sf-lar",
+   "sport": "nfl",
+   "league": "NFL Week 1 (Melbourne)",
+   "home": "Los Angeles Rams",
+   "away": "San Francisco 49ers",
+   "start_time": "2026-09-11T00:35:00Z",
+   "markets": [
+    {
+     "kind": "moneyline",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "decimal_odds": 1.5102
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "decimal_odds": 2.64
+      },
+      {
+       "book": "espnbet",
+       "side": "home",
+       "decimal_odds": 1.5405
+      },
+      {
+       "book": "espnbet",
+       "side": "away",
+       "decimal_odds": 2.54
+      },
+      {
+       "book": "betmgm",
+       "side": "home",
+       "decimal_odds": 1.5
+      },
+      {
+       "book": "kalshi",
+       "side": "home",
+       "decimal_odds": 1.5504
+      },
+      {
+       "book": "kalshi",
+       "side": "away",
+       "decimal_odds": 2.6316
+      }
+     ]
+    },
+    {
+     "kind": "spread",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "home",
+       "line": -3.5,
+       "decimal_odds": 1.8929
+      },
+      {
+       "book": "fanduel",
+       "side": "away",
+       "line": 3.5,
+       "decimal_odds": 1.9259
+      }
+     ]
+    },
+    {
+     "kind": "total",
+     "quotes": [
+      {
+       "book": "fanduel",
+       "side": "over",
+       "line": 48.5,
+       "decimal_odds": 1.952
+      },
+      {
+       "book": "fanduel",
+       "side": "under",
+       "line": 48.5,
+       "decimal_odds": 1.87
+      }
+     ]
+    }
+   ],
+   "note": "8:35 PM ET Thu (10:35 AM Fri local), MCG - LAR is the DESIGNATED HOME side at a neutral international venue, so the usual home edge is nominal and that is part of why the models sit under the board. IN-HOUSE: FanDuel's spread (LAR -3.5 -112 / SF +3.5 -108) devigs to a true margin of LAR 3.64 -> LAR 0.6209; FPI (LAR by 2.9, 60.5%) and Dimers (62.9%) ensemble to 0.6171. Posted MLs run LAR -185 (ESPN BET) to -200 (BetMGM) - 15 cents of named-book dispersion, the widest on the Week 1 board. KALSHI CORRECTED AT COMPILE: a secondhand tracker printed the Rams at -171 AND 64.5c together - internally contradictory, since -171 is 63.1c. Kalshi own-source is 64.5c (LAR -195) on $311,349 volume, which is WORSE than every book on the Rams, not better - the near-miss that number produced was an artifact. PREMISE RESOLVED: the 'Stafford missed all of camp with a back issue' storyline is a 2025 story - those pages name a Sep 7 opener vs Houston, which was LAST year's Week 1. Dated 2026 reporting has him sharp in camp, a team captain, and speaking at the Week 1 Australia press conference; the modified camp schedule was planned load management. Not a formal game-status designation, so it stays a stated premise. OPEN: Puka Nacua (hip) unresolved. Line moved LAR -2.5 -> -3.5 on the Myles Garrett trade and Aaron Donald unretirement."
+  }
+ ],
+ "model_probabilities": {
+  "nfl-2026-09-09-ne-sea:moneyline:home": 0.6067,
+  "nfl-2026-09-09-ne-sea:moneyline:away": 0.3933,
+  "nfl-2026-09-10-sf-lar:moneyline:home": 0.619,
+  "nfl-2026-09-10-sf-lar:moneyline:away": 0.381
+ }
+}

@@ -4648,6 +4648,59 @@
         "COMPARATOR SNAPSHOTS APPEAR TO LAG THE FAVORITE, not merely to be unnamed: our Betis-Madrid comparator had Madrid at 1.35 against a 1.4444 close, which inflated the dog leg to 7.50 versus a 6.00 close and produced a four-point fair miss (11.5% vs 15.6%) on a side that WON OUTRIGHT. Flagged comparator_skew in the settle; treat comparator trios as directionally biased toward short favorites, not just low-confidence.",
         "SCOUTING GAP, recorded against ourselves: the Yankees-Padres market carried an eight-point cross-book band (-102 to -135) that our slate never surfaced - we anchored a single -132 board and the second-book sweep found the spread only during grading. The favorite lost anyway, but taking -132 while -102 was live would have been an execution error stacked on top of a losing side."
       ]
+    },
+    {
+      "date": "2026-09-09",
+      "sport": "nfl",
+      "mode": "degraded - FIRST FOOTBALL CARD OF THE SEASON, compiled Tue Sep 8 for the Wed/Thu Week 1 opening window (NE@SEA +34.5h, SF@LAR +58h from oracle-verified now). 2 events / 6 markets. First production use of sharpods/models/football.py: each game's two-sided SPREAD board is devigged to a true expected margin and converted to a fair moneyline, ensembled 50/50 in logit space with the dated third-party models, and fed as model_probabilities ON THE MONEYLINE ONLY - feeding a spread-derived number back into the spread market would be circular. That layer is the whole reason this card has a model tilt at all: NE@SEA's spread has not moved off SEA -3.5 since it opened in May, and it devigs to a true margin of 3.29 -> SEA 0.6098, while the same books' posted MONEYLINES devig 0.617 (DK) to 0.645 (BetRivers). A 25-cent moneyline scatter on a frozen spread is the derived market being lazy, and all four dated third-party models (FPI .611, Dimers .620, FanDuel .601, OddsShopper .582) side with the spread against the boards. Same shape at SF@LAR (in-house .6209 vs a .6445 FanDuel board). EXCLUSIONS, each stated in _provenance: DEN@KC (Mahomes still without final medical clearance nine months off a torn ACL+LCL, on a BetMGM page that contradicts itself -2.5/-145 vs -3/-105), ARI@LAC (a genuine full-point spread split, FanDuel -9.5 vs four books at -10.5, but the per-book table quotes NO JUICE - a line number without a price is not a price), Cowboys-Giants ('DK -125' is a stale opening line 30 cents off FanDuel and Kalshi - the 09-01/02 phantom shape), bet365's NE@SEA -217/+208 (one uncorroborated snippet, ~1% implied hold, dog 48 cents clear of the field). Blacklisted blogs sighted and refused: YouWager x2, Predictem, Athlon.",
+      "engine_verdict": "PASS on all 6 markets at live prices. Closest live miss: Seahawks ML at Kalshi 63c (-0.61%). Headline ORDER: Patriots ML at Kalshi 37c or better - the ONLY price on the card that both frameworks endorse (+1.03% on the 85/15 blend, +6.30% on the model ensemble alone), engine-confirmed as a dispersion-tier ticket at 1 star, $15 at quarter-Kelly. NO Seattle order despite it being the closest live number: at any reachable price the blend likes Seattle only because Kalshi is the cheapest venue, while all six of our probability estimates dislike the side - a bet our own model scores negative is how the tier CLV went negative in the first place. TOTALS: the cleanest qualitative read on the card is UNDER 44.5 at Lumen (20-30 mph gusts and moderate-to-heavy rain forecast straight through the 5:20-8:30 PM PT window, open-air stadium) - NOT BET, and deliberately so: both books sit -110/-110 with no dispersion, we carry no calibrated weather model, and totals never headline. Saying it out loud so settle can grade the read we refused to price.",
+      "predictions_home_fair": {
+        "nfl-2026-09-09-ne-sea": 0.6262,
+        "nfl-2026-09-10-sf-lar": 0.6347
+      },
+      "predictions_other": {
+        "nfl-2026-09-09-ne-sea:spread:home:-3.5": 0.4929,
+        "nfl-2026-09-10-sf-lar:spread:home:-3.5": 0.5046,
+        "nfl-2026-09-09-ne-sea:total:over:44.5": 0.5,
+        "nfl-2026-09-10-sf-lar:total:over:48.5": 0.4885
+      },
+      "settle": "pending",
+      "decisions": [
+        {
+          "id": "2026-09-09-NE-ORDER",
+          "type": "order_open",
+          "event": "Patriots @ Seahawks, NFL Week 1 (8:20 PM ET Wed, Lumen Field)",
+          "selection": "Patriots ML (road dog)",
+          "target": 2.7027,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": true,
+          "note": "HEADLINE ORDER - dispersion tier (+1.0% bar; Kalshi at 0.45 sharpness sits below the 0.50 fair-line floor, so it is a shop venue, never a fair source). Fires at 37c or better (2.7027, +170). Blended fair 2.675 (37.38%); the model ensemble alone says 39.33%, so a 37c fill is +1.03% on the blend and +6.30% on the model. Best live prices: BetRivers +160 (a fair source, so it carries the +1.5% model-tier bar = 2.715 and misses), Kalshi 39c = 2.5641. TWO BINDING CLAUSES. (1) DRIFT-CANCEL WITH A NAMED TRIGGER: TreVeyon Henderson (NE RB) has not practiced since Aug 24 and his final designation was still outstanding at compile. If New England reaches 37c ON A HENDERSON-OUT HEADLINE, that is a drift, not a fill - the premise our fair was built on changed, the true probability moved down with the price, and we stand down and re-price. A 37c print on ordinary two-way flow with no news is a legitimate standing-above fill. Both graded drift-fills (Liberty Aug-3, Braves Aug-10) arrived exactly this way and both carried negative CLV. (2) BOOK-INTEGRITY FLOOR: the order is void if Kalshi's two legs sum to 100c or less (e.g. NE 36c against SEA 64c). Our own conflict rule refuses a zero/negative synthetic hold on a degraded anchor, and an exchange showing one is showing a stale side, not a gift. Verified at compile: NE 39c + SEA 63c = 102c. PREMISES HELD AT COMPILE: Maye and Darnold both entirely absent from the injury report; NE C Ben Brown OUT. $15 at quarter-Kelly if filled at 37c (returns $41); ~$54 at 36c."
+        },
+        {
+          "id": "2026-09-09-SEA-TOTAL-NOBET",
+          "type": "refusal",
+          "event": "Patriots @ Seahawks, NFL Week 1 - total 44.5",
+          "selection": "none - under 44.5 read declined, not priced",
+          "target": null,
+          "fill": null,
+          "stake": 0,
+          "result": "pending",
+          "pnl": 0,
+          "clv_raw": null,
+          "clv_novig": null,
+          "anchor": "degraded",
+          "process": "pending",
+          "headline": false,
+          "note": "DECLINED READ, registered so it can be graded. Forecast for the 5:20-8:30 PM PT window at open-air Lumen: 20-30 mph gusts across the Puget Sound lowlands strengthening into the evening, plus moderate-to-heavy rain. That is a real under thesis and it is the most confident qualitative statement on this card. It is NOT BET for three independent reasons, any one of which is sufficient: totals never headline (standing rule); FanDuel and BookmakersReview both sit 44.5 -110/-110 with zero cross-venue dispersion, so there is no venue to buy it at; and we carry no calibrated weather model, so any probability we asserted would be invented. The ESPN listing's 45.5 would be the number to buy under if it were real, but it is one-sided and undated. Settle should record whether the game went under 44.5 - if this read keeps grading right while unpriced, that is evidence for building a weather layer, which is a parameter change and needs ledger evidence first."
+        }
+      ]
     }
   ],
   "policy_changes": [
