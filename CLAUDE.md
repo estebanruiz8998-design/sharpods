@@ -107,6 +107,20 @@ cycle at maximum capacity, exactly like the 2026-08-01 complete run:
   premise/weather clauses, named-book live verification, extreme-favorite
   demotion, totals-never-headline. PRE-REGISTERED ROLLBACK: after 15 settled
   tier bets, if mean no-vig CLV < 0, both tiers revert to 2.5%.
+- NFL (added 2026-09-08, season opener): `sharpods/models/football.py` turns a
+  point spread into probabilities — `win_probability_from_spread`,
+  `fair_moneyline_from_spread`, and `cover_probabilities` returning
+  (cover, push, loss) so `edges.spread_ev` can finally be called with real
+  numbers. Sigma is 11.8, LEAST-SQUARES FITTED to the book spread->moneyline
+  table, NOT the textbook 13.5 margin SD (13.5 understates favourites by 2-3
+  points; the calibration table is pinned in tests/test_football.py). Push mass
+  comes from the empirical `NFL_MARGIN_FREQ` table, never the normal, because
+  margins clump on 3 and 7. USE: in the NFL the spread is the primary market
+  and moneylines are derived, often lazily at soft books — so a fair ML
+  computed from a sharp SPREAD is genuine information about a soft book's
+  posted ML. That is cross-market dispersion, and it feeds the engine as a
+  `model_probabilities` entry, so no engine change was needed. Key-number
+  machinery (Wong teasers, middles) was already wired to `FOOTBALL_SPORTS`.
 - Network policy blocks all odds feeds/sites (403) — prices come from
   WebSearch snippets of date-stamped pages; note provenance on every slip.
 - Commit messages end with the standard co-author/session trailer; push to
