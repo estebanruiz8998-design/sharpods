@@ -4664,7 +4664,7 @@
         "nfl-2026-09-09-ne-sea:total:over:44.5": 0.5,
         "nfl-2026-09-10-sf-lar:total:over:48.5": 0.4885
       },
-      "settle": "partially settled 2026-09-10 (Thu, fallback wake; oracle clock) - SF@LAR pending",
+      "settle": "fully settled 2026-09-11 (Fri, fallback wake; oracle clock)",
       "decisions": [
         {
           "id": "2026-09-09-NE-ORDER",
@@ -4710,16 +4710,25 @@
           "home_won": true,
           "final": "Seahawks 13, Patriots 10 (margin EXACTLY 3)",
           "note": "THE MODULE'S FIRST LIVE TEST, AND IT LANDED. Our in-house spread-derived fair (SEA 0.6098, from devigging SEA -3.5 to a true margin of 3.29) missed the closing no-vig by 0.07 POINTS. The blended fair we actually registered - 0.6262, which is 85% posted-moneyline - missed by 1.57. Every compile-time posted ML devig (DK .6166, FD .6297, ESPN .6240, BMR .6325, BetRivers .6446) was too high on Seattle, and the market spent the week moving TO our number: DK went -175 -> -170, and the spread went -3.5 -> -3 at DK and Caesars. We said the true number sat under 3.5; it closed at 3; the game landed on EXACTLY 3. The 0.85 market weight actively hurt here - it dragged a correct number 1.5 points toward moneylines that were wrong. n=1. NO PARAMETER CHANGE (Walters rule); this is evidence to accumulate, and the NFL sample builds fast. In-game: Darnold hurt his hip on the last play of the opening drive, Drew Lock relieved and led three second-half scoring drives; NE led 10-0 at half and threw 3 fourth-quarter INTs, the last a toe-tap in the end zone with ~26 seconds left. Maye 22/33, 178, 1 TD, 3 INT."
+        },
+        {
+          "event_id": "nfl-2026-09-10-sf-lar",
+          "our_home_fair": 0.6347,
+          "source_flag": "clean",
+          "close_home_novig": 0.6478,
+          "home_won": false,
+          "final": "49ers 27, Rams 7 (SF by 20; Rams were the designated home favourite)",
+          "note": "THE COUNTER-DATA POINT TO WEDNESDAY, AND IT ARRIVED IMMEDIATELY. Here the in-house spread-derived fair (LAR 0.6209, from a devigged true margin of 3.64) was the WORSE number: it missed the close by 2.69 points while the blended 0.6347 missed by 1.31. Exactly the reverse of NE@SEA. Across the two games the in-house layer is 1.38 mean points and the blend 1.44 - a dead heat, split one apiece. Wednesday's 0.07-point hit does not generalise on this evidence, and the caution recorded yesterday was right. CLOSE SELECTION MATTERS HERE AND IS DOCUMENTED: FanDuel closed LAR -210, which devigs to 0.6606 and is a clear OUTLIER - Fanatics (-200/+165) 0.6478, the Covers board (-198/+164) 0.6459, Kalshi (65c/36c) 0.6457 and Polymarket (65c/36c) 0.6457 all cluster within 0.2 points of each other. The Fanatics pair is used above: a named book, both sides, sitting in the cluster. Taking FanDuel's outlier instead would have inflated our recorded error to 2.59 (blended) and 3.97 (in-house) - flattering neither, but wrong. Both exchange quotes summed to 101c and were explicitly checked against the complementary-mid rule adopted at compile: real two-sided markets, not mids. MARKET DIRECTION: this line moved AWAY from our number all week (opened LAR -2.5, peaked -4, closed -3.5 with books split to -4), the opposite of Wednesday. OTHER MARKETS: spread closed LAR -3.5/-4 and San Francisco won OUTRIGHT by 20, so every +3.5 and +4 ticket cashed; our spread fair had LAR covering 0.5046, a dead-even call earning no credit either way. Total closed 48.5 against an actual 34 - UNDER by 14.5 - and our fair of 0.4885 over was a 51.15% under lean, so the totals lean graded RIGHT. PREMISES ALL HELD AND THE COMPILE-TIME CATCH WAS VINDICATED: Stafford started and played (15/25, 155 yds, pulled late in the blowout) with no injury issue, confirming that the 'missed all of camp with a back problem' storyline really was a 2025 page misread as current; Nacua played and led the game in receiving (5-74). Conditions benign - sunny, 57F, 4 mph wind, natural grass, 100,021 at the MCG. Purdy 25/34, 205, 3 TD."
         }
       ],
       "metrics": {
-        "n": 1,
-        "brier_ours": 0.1397,
-        "brier_close": 0.1517,
+        "n": 2,
+        "brier_ours": 0.2713,
+        "brier_close": 0.2857,
         "brier_coinflip": 0.25,
-        "mean_abs_fair_vs_close": 0.0157,
+        "mean_abs_fair_vs_close": 0.0144,
         "max_abs_fair_vs_close": 0.0157,
-        "note": "1 of 2 events settled; SF@LAR (Melbourne) kicks off Thu 8:35 PM ET and grades Friday. Close taken from the DraftKings -170/+142 pair (best-attested two-sided book quote; Fanatics -180/+150 devigs to SEA .6240 and a Covers article asserts .6377 vig-free - the DK pair is the conservative, best-sourced choice and is what the numbers above use). Spread and total closing JUICE on both sides was not findable at any single book, so no spread/total no-vig close is recorded - the registered spread fair was at -3.5 and the market closed at -3, a different proposition, so those are not comparable anyway."
+        "note": "Both events settled. Closes: NE@SEA from the DraftKings -170/+142 pair; SF@LAR from the Fanatics -200/+165 pair, chosen over FanDuel's -210 because four independent venues (Fanatics, Covers, Kalshi, Polymarket) cluster at 0.6457-0.6478 while FanDuel alone sat 1.5 points above at 0.6606. No spread or total no-vig closes recorded for either game - two-sided closing JUICE was not findable at any single book, and NE@SEA's registered spread fair was at -3.5 against a -3 close, a different proposition. TOTALS LEANS: 2 for 2 this card (NE@SEA was a dead 50/50 no-call and went under; SF@LAR leaned under 51.15% and went under by 14.5). FAVOURITES: both home favourites lost, one outright by 20."
       },
       "lessons_applied": [
         "THE FOOTBALL MODULE'S FIRST LIVE GRADE, AND IT IS THE STRONGEST SINGLE-GAME RESULT IN THE LEDGER: the spread-derived fair (SEA 0.6098) missed the closing no-vig by 0.07 points while the blended fair we registered (0.6262) missed by 1.57 and every posted moneyline at compile was too high on Seattle. The market converged TO our number over the week (ML -175 -> -170, spread -3.5 -> -3) and the game landed on exactly 3, the margin we said was true. The thesis the module was built on - NFL spreads are sharp, posted moneylines are derived and lazy - is doing real work. n=1, no parameter change.",
@@ -4727,7 +4736,12 @@
         "OUR OWN DRIFT-CANCEL CLAUSE MISFIRED, and by the CLV standard we set ourselves this is a miss: NE at 37c graded +5.28% no-vig, the best CLV of any order in the ledger against five straight negative fills. The clause assumed a cheaper price after bad news meant a lower true probability; the market instead spent the week correcting toward the number our own module had computed. The refinement - ask whether price is moving away from or toward our model - is pre-registered, not adopted.",
         "IT STILL DID NOT FILL AND IT STILL WOULD HAVE LOST: Kalshi sat 62 bid / 63 ask on Seattle all week, so 37c on New England was the bid side and never a takeable offer, and New England lost 13-10. Good CLV, losing ticket, no money at risk. Recording all three facts rather than picking the flattering one.",
         "THE UNDER READ WE REFUSED TO PRICE CASHED BY 21.5 POINTS ON A THESIS THAT WAS FACTUALLY FALSE - the forecast wind and rain never arrived (gusts topped 9 mph, zero precipitation) and the low total came from turnovers. Right answer, wrong model. This is evidence AGAINST a weather layer and is logged so no future cycle cites it as support.",
-        "Compile-board sourcing validated: our DK moneyline read at compile (-175/+145) sat within a few cents of the close (-170/+142), so the 'current-shaped but not hard-dated' snippet prices were in fact live. The bet365 -217/+208 we excluded as a phantom remained uncorroborated anywhere."
+        "Compile-board sourcing validated: our DK moneyline read at compile (-175/+145) sat within a few cents of the close (-170/+142), so the 'current-shaped but not hard-dated' snippet prices were in fact live. The bet365 -217/+208 we excluded as a phantom remained uncorroborated anywhere.",
+        "THE WEDNESDAY RESULT DID NOT GENERALISE, AND IT TOOK ONE DAY TO FIND OUT. On SF@LAR the in-house spread-derived fair was the WORSE number (2.69 points off the close vs the blend's 1.31), exactly reversing NE@SEA. Two games, one each, mean error 1.38 in-house against 1.44 blended - a dead heat with no signal. Yesterday's refusal to touch market_weight on a single spectacular result is now directly vindicated; had we cut the market weight on Wednesday's evidence we would have degraded Thursday's fair. This is the Walters rule earning its keep in real time, and it is worth more than the parameter would have been.",
+        "DIRECTION OF LINE MOVEMENT IS NOT A CONSTANT: NE@SEA moved toward our number all week (spread 3.5 -> 3, ML -175 -> -170), SF@LAR moved away from it (opened -2.5, peaked -4, closed -3.5/-4). The pre-registered drift-cancel refinement - ask whether price is moving toward or away from our model - therefore cannot be evaluated on one game's worth of convergence. Still not adopted. Count stands at 1 case each way.",
+        "CLOSE SELECTION IS ITSELF A GRADING DECISION AND MUST BE SHOWN: FanDuel's LAR -210 close devigged 1.5 points above a four-venue cluster (Fanatics/Covers/Kalshi/Polymarket all 0.6457-0.6478). Picking the outlier would have inflated our recorded error on both fairs. Rule going forward: when venues cluster and one book sits well outside, grade against the cluster and record the outlier explicitly rather than averaging it in or silently preferring the best-known name.",
+        "THE COMPILE-TIME YEAR-CONFUSION CATCH WAS VINDICATED: Stafford started and played with no injury issue, confirming that the 'missed all of camp with a back problem' pages really were 2025 stories (they named a Sep 7 opener against Houston, last season's Week 1). Excluding that game on a stale premise would have cost us a priceable market for nothing. Same-name-different-year is now twice-burned, once-caught.",
+        "TOTALS LEANS WENT 2 FOR 2 ON THIS CARD while carrying zero dollars, and the honest accounting is that only one was a real call: SF@LAR leaned under 51.15% and cashed by 14.5; NE@SEA was a dead 50/50 that cannot be scored. Lifetime totals record moves to roughly 12 of 22. Still never a headline."
       ]
     }
   ],
